@@ -1,0 +1,528 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: tokaikiza\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-22 04:06+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.3; wp-6.0.2\n"
+"X-Domain: tokaikiza"
+
+#: woocommerce/content-single-product.php:43
+msgid " products"
+msgstr ""
+
+#. used between list items, there is a space after the comma
+#: inc/template-tags.php:63
+msgid ", "
+msgstr ""
+
+#: woocommerce/myaccount/dashboard.php:34
+#: woocommerce/myaccount/dashboard.php:36
+#: woocommerce/myaccount/form-edit-account.php:21
+#: woocommerce/myaccount/navigation.php:30
+msgid "Account details"
+msgstr ""
+
+#: functions.php:139 functions.php:150 functions.php:161
+msgid "Add widgets here."
+msgstr ""
+
+#: inc/functions-shipping-woo.php:676
+msgid "Address"
+msgstr ""
+
+#: inc/custom_woo.php:234 inc/custom_woo.php:236
+msgid "Availability: "
+msgstr ""
+
+#: inc/elementor/parts-finder.php:60
+msgid "Brand"
+msgstr ""
+
+#: inc/elementor/breadcrumb_elementor.php:12
+msgid "Breadcrumb Elementor"
+msgstr ""
+
+#: inc/custom_woo.php:274
+msgid "Buy It Now"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:44
+msgid "Change Password"
+msgstr ""
+
+#: woocommerce/archive-product.php:236
+msgid "Clear All"
+msgstr ""
+
+#: woocommerce/archive-product.php:237
+msgid "Close Filters"
+msgstr ""
+
+#: comments.php:68
+msgid "Comments are closed."
+msgstr ""
+
+#: inc/custom_woo.php:293
+msgid "Complete Order"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:55
+msgid "Confirm password"
+msgstr ""
+
+#. %s: Name of current post. Only visible to screen readers
+#: template-parts/content.php:40
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: inc/functions-shipping-woo.php:673
+msgid "Country"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:47
+msgid "Current Password"
+msgstr ""
+
+#: inc/functions-shipping-woo.php:38 inc/functions-shipping-woo.php:201
+msgid "Delivery To:"
+msgstr ""
+
+#. Description of the theme
+msgid "Description"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:57
+msgid "Do not have an account?"
+msgstr ""
+
+#: woocommerce/myaccount/dashboard.php:59
+#: woocommerce/myaccount/form-edit-account.php:64
+msgid "Edit"
+msgstr ""
+
+#. %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:100 template-parts/content-page.php:39
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-address.php:33
+msgid "Edit Address"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:26
+msgid "Edit Information"
+msgstr ""
+
+#: woocommerce/myaccount/dashboard.php:51
+#: woocommerce/myaccount/form-edit-account.php:37
+msgid "email"
+msgstr ""
+
+#: inc/functions-shipping-woo.php:660 inc/functions-shipping-woo.php:663
+#: inc/functions-shipping-woo.php:705
+msgid "Email Address"
+msgstr ""
+
+#: inc/functions-shipping-woo.php:675
+msgid "Enter a post code or ZIP"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:56
+msgid "Enter confirm password"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:48
+msgid "Enter current password"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:52
+msgid "Enter new password"
+msgstr ""
+
+#: inc/functions-shipping-woo.php:666
+msgid "Enter notes about your orders, delivery, etc."
+msgstr ""
+
+#: inc/functions-shipping-woo.php:661 inc/functions-shipping-woo.php:664
+#: inc/functions-shipping-woo.php:706
+msgid "Enter your email address"
+msgstr ""
+
+#: inc/functions-shipping-woo.php:678
+msgid "Enter your first name"
+msgstr ""
+
+#: inc/functions-shipping-woo.php:679
+msgid "Enter your last name"
+msgstr ""
+
+#: inc/functions-shipping-woo.php:655 inc/functions-shipping-woo.php:658
+#: inc/functions-shipping-woo.php:702
+msgid "Enter your phone number"
+msgstr ""
+
+#: woocommerce/cart/cart.php:179 woocommerce/checkout/form-coupon.php:34
+msgid "Enter your promotion code"
+msgstr ""
+
+#: inc/functions-shipping-woo.php:680
+msgid "Enter your town/city"
+msgstr ""
+
+#: inc/functions-shipping-woo.php:131
+msgid "Enter: 0 or 1"
+msgstr ""
+
+#: inc/custom_woo.php:60
+msgid "Filter"
+msgstr ""
+
+#: woocommerce/myaccount/dashboard.php:41
+#: woocommerce/myaccount/form-edit-account.php:29
+msgid "first name"
+msgstr ""
+
+#: inc/functions-shipping-woo.php:302
+msgid "Free shipping"
+msgstr ""
+
+#: inc/elementor/hitch-member.php:12
+msgid "Hitch Member"
+msgstr ""
+
+#: inc/functions-shipping-woo.php:677
+msgid "House number, street name, etc."
+msgstr ""
+
+#. URI of the theme
+#. Author URI of the theme
+msgid "http://tokaikiza.me/"
+msgstr ""
+
+#: footer.php:16
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: inc/custom_woo.php:234 inc/custom_woo.php:236
+msgid "In stock"
+msgstr ""
+
+#: 404.php:22
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: woocommerce/myaccount/dashboard.php:46
+#: woocommerce/myaccount/form-edit-account.php:33
+msgid "last name"
+msgstr ""
+
+#. %s: post title
+#: inc/template-tags.php:83
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#. used between list items, there is a space after the comma
+#: inc/template-tags.php:70
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#: woocommerce/myaccount/navigation.php:38
+msgid "Log Out"
+msgstr ""
+
+#: woocommerce/archive-product.php:202 inc/elementor/parts-finder.php:77
+msgid "Model"
+msgstr ""
+
+#: 404.php:31
+msgid "Most Used Categories"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:51
+msgid "New password"
+msgstr ""
+
+#: single.php:25
+msgid "Next:"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: woocommerce/archive-product.php:166
+msgid "OEM Parts Finder"
+msgstr ""
+
+#. 1: title.
+#: comments.php:35
+#, php-format
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#: 404.php:18
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: template-parts/content-page.php:25 template-parts/content.php:53
+msgid "Pages:"
+msgstr ""
+
+#: inc/elementor/parts-finder.php:12
+msgid "Parts Finder"
+msgstr ""
+
+#: woocommerce/myaccount/dashboard.php:56
+msgid "password"
+msgstr ""
+
+#: woocommerce/checkout/payment.php:25
+msgid "Payment"
+msgstr ""
+
+#: inc/functions-shipping-woo.php:654 inc/functions-shipping-woo.php:657
+#: inc/functions-shipping-woo.php:701
+msgid "Phone Number"
+msgstr ""
+
+#: functions.php:159
+msgid "Popup send mail"
+msgstr ""
+
+#. %s: post author.
+#: inc/template-tags.php:46
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#: inc/functions-shipping-woo.php:674
+msgid "Post Code/ZIP"
+msgstr ""
+
+#. %s: post date.
+#: inc/template-tags.php:30
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#. 1: list of categories.
+#: inc/template-tags.php:66
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#: single.php:24
+msgid "Previous:"
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/grouped.php:46
+msgid "Price"
+msgstr ""
+
+#: functions.php:55
+msgid "Primary"
+msgstr ""
+
+#: header.php:52
+msgid "Primary Menu"
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/grouped.php:45
+msgid "Product"
+msgstr ""
+
+#: inc/custom_woo.php:183
+msgid "Product Number: "
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:55
+msgid "Promotion"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:27
+msgid "Promotion Code"
+msgstr ""
+
+#. %s: CMS name, i.e. WordPress.
+#: footer.php:19
+#, php-format
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/grouped.php:47
+msgid "Qty"
+msgstr ""
+
+#: inc/custom_woo.php:224
+msgid "Quantity:"
+msgstr ""
+
+#. 1: link to WP admin new post page.
+#: template-parts/content-none.php:24
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: functions.php:148
+msgid "Recently viewed products widget"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:57
+msgid "Register here"
+msgstr ""
+
+#: woocommerce/archive-product.php:212 inc/elementor/hitch-member.php:106
+#: inc/elementor/parts-finder.php:105
+msgid "Reset"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:64
+msgid "Save"
+msgstr ""
+
+#: functions.php:266 woocommerce/archive-product.php:213
+#: inc/elementor/hitch-member.php:105 inc/elementor/parts-finder.php:104
+msgid "Search"
+msgstr ""
+
+#. %s: search query.
+#: search.php:22
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: inc/functions-shipping-woo.php:440 inc/elementor/parts-finder.php:62
+msgid "Select Brand"
+msgstr ""
+
+#: inc/functions-shipping-woo.php:204
+msgid "Select delivery"
+msgstr ""
+
+#: inc/functions-shipping-woo.php:45
+msgid "Select delivery shipping"
+msgstr ""
+
+#: inc/functions-shipping-woo.php:461 woocommerce/archive-product.php:204
+#: inc/elementor/parts-finder.php:79
+msgid "Select Model"
+msgstr ""
+
+#: inc/functions-shipping-woo.php:487 inc/functions-shipping-woo.php:508
+#: inc/elementor/hitch-member.php:45 inc/elementor/hitch-member.php:62
+#: inc/elementor/hitch-member.php:79
+msgid "Select option"
+msgstr ""
+
+#: woocommerce/archive-product.php:187 inc/elementor/parts-finder.php:45
+msgid "Select Year"
+msgstr ""
+
+#: inc/custom_woo.php:241
+msgid "Send An Email For Details"
+msgstr ""
+
+#: inc/functions-shipping-woo.php:34
+msgid "Setting Delivery Shipping"
+msgstr ""
+
+#: inc/custom_woo.php:141
+msgid "Share via: "
+msgstr ""
+
+#: inc/functions-shipping-woo.php:218
+msgid "Shipping Fee:"
+msgstr ""
+
+#: functions.php:137
+msgid "Sidebar"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:117
+msgid "Sign In Now"
+msgstr ""
+
+#: header.php:28
+msgid "Skip to content"
+msgstr ""
+
+#: template-parts/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: woocommerce/loop/orderby.php:25
+msgid "Sort by"
+msgstr ""
+
+#. 1: list of tags.
+#: inc/template-tags.php:73
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#. 1: Theme name, 2: Theme author.
+#: footer.php:25
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#. Name of the theme
+msgid "tokaikiza"
+msgstr ""
+
+#. Author of the theme
+msgid "tokaikiza.me"
+msgstr ""
+
+#. %1$s: smiley
+#: 404.php:49
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: inc/custom_woo.php:63
+msgid "View as"
+msgstr ""
+
+#: woocommerce/archive-product.php:185 inc/elementor/parts-finder.php:43
+msgid "Year"
+msgstr ""
+
+#: inc/elementor/hitch-member.php:43
+msgid "メーカー"
+msgstr ""
+
+#: inc/elementor/hitch-member.php:60
+msgid "車種"
+msgstr ""
+
+#: inc/elementor/hitch-member.php:77
+msgid "適合型式"
+msgstr ""

@@ -1,0 +1,173 @@
+# Translation of Plugins - Login Lockdown &#8211; Protect Login Form - Stable (latest release) in Japanese
+# This file is distributed under the same license as the Plugins - Login Lockdown &#8211; Protect Login Form - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-05-25 07:29:39+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.0-alpha.4\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Plugins - Login Lockdown &#8211; Protect Login Form - Stable (latest release)\n"
+
+#: libs/ajax.php:86
+msgid "Captcha verification failed."
+msgstr "CAPTCHA 認証に失敗しました。"
+
+#: loginlockdown.php:35
+msgid "Do not open this file directly."
+msgstr "このファイルのディレクトリを開かないでください。"
+
+#: libs/setup.php:75
+msgid "Login Lockdown plugin <b>requires PHP version 5.6.20</b> or higher to function properly. You are using PHP version %s. Please <a href=\"%s\" target=\"_blank\">update it</a>."
+msgstr "Login Lockdown プラグインは、適切に機能するのに<b>PHP バージョン5.6.20以降が必要</b>です。現在、PHP バージョン%sを使用中です。<a href=\"%s\" target=\"_blank\">更新してください</a>。"
+
+#: libs/setup.php:64
+msgid "Login Lockdown plugin <b>requires WordPress version 4.6</b> or higher to function properly. You are using WordPress version %s. Please <a href=\"%s\">update it</a>."
+msgstr "Login Lockdown プラグインは、適切に機能するのに<b>WordPress バージョン4.6以降が必要</b>です。現在、WordPress バージョン%sを使用中です。<a href=\"%s\">更新してください</a>。"
+
+#: libs/functions.php:202
+msgid "<strong>ERROR</strong>: captcha verification failed.<br /><br />Please try again."
+msgstr "<strong>エラー</strong>: CAPTCHA 認証に失敗しました。<br /><br />再度お試しください。"
+
+#: libs/ajax.php:102
+msgid "Unknown tool."
+msgstr "不明のツール。"
+
+#: libs/admin.php:476
+msgid "Save Changes"
+msgstr "変更を保存"
+
+#: libs/admin.php:285
+msgid "PRO"
+msgstr "PRO"
+
+#: libs/admin.php:284
+msgid "Temp Access"
+msgstr "一時的アクセス"
+
+#: libs/admin.php:283
+msgid "Cloud Protection"
+msgstr "クラウド保護"
+
+#: libs/admin.php:282
+msgid "Captcha"
+msgstr "キャプチャ"
+
+#: libs/admin.php:281
+msgid "2FA"
+msgstr "2要素認証"
+
+#: libs/admin.php:280
+msgid "Country Blocking"
+msgstr "国別ブロック"
+
+#: libs/admin.php:278
+msgid "Login Protection"
+msgstr "ログイン保護"
+
+#: libs/admin.php:181
+msgid "Support"
+msgstr "サポート"
+
+#: libs/admin.php:181
+msgid "Get help"
+msgstr "お困りですか"
+
+#: libs/admin.php:162
+msgid "Get EXTRA login protection"
+msgstr "追加のログイン保護を購入"
+
+#: libs/admin.php:159
+msgid "Login Lockdown Settings"
+msgstr "Login Lockdown 設定"
+
+#: libs/admin.php:52
+msgid "OK"
+msgstr "OK"
+
+#: libs/admin.php:51
+msgid "Cancel"
+msgstr "Cancel"
+
+#: libs/admin.php:42
+msgid "An error has occurred."
+msgstr "エラーが発生しました。"
+
+#: libs/admin.php:41
+msgid "An undocumented error has occurred. Please refresh the page and try again."
+msgstr "登録されていないエラーが発生しました。ページを更新し再度お試しください。"
+
+#: interface/tab_login_form.php:15
+msgid "Tools"
+msgstr "ツール"
+
+#: interface/tab_login_form.php:14
+msgid "Advanced"
+msgstr "高度"
+
+#: interface/tab_login_form.php:13
+msgid "Basic"
+msgstr "基本"
+
+#: interface/tab_activity.php:13
+msgid "Failed Logins"
+msgstr "ログイン失敗数"
+
+#: interface/tab_activity.php:12
+msgid "Lockdowns"
+msgstr "締め出した数"
+
+#: libs/functions.php:136 libs/functions.php:162
+msgid "<strong>ERROR</strong>: We're sorry, but this IP has been blocked due to too many recent failed login attempts.<br /><br />Please try again later."
+msgstr "<strong>エラー</strong>: すみません。この IP は多数回のログイン試行の失敗によりブロックされています。<br /><br />あとで再度お試しください。"
+
+#: libs/functions.php:187
+msgid "<strong>ERROR</strong>: Incorrect password. <a href=\"%s\" title=\"Password Lost and Found\">Lost your password</a>?"
+msgstr "<strong>エラー</strong>:  パスワードが正しくありません。<a href=\"%s\" title=\"Password Lost and Found\">パスワードをお忘れですか</a> ?"
+
+#: libs/functions.php:178
+msgid "<strong>ERROR</strong>: Invalid username. <a href=\"%s\" title=\"Password Lost and Found\">Lost your password</a>?"
+msgstr "<strong>エラー</strong>: 無効なユーザー名です。<a href=\"%s\" title=\"Password Lost and Found\">パスワードをお忘れですか</a> ?"
+
+#: libs/functions.php:172
+msgid "<strong>ERROR</strong>: The password field is empty."
+msgstr "<strong>エラー</strong>: パスワード欄が空です。"
+
+#: libs/functions.php:169
+msgid "<strong>ERROR</strong>: The username field is empty."
+msgstr "<strong>エラー</strong>: ユーザー名欄が空です。"
+
+#: libs/functions.php:238
+msgid "Login form protected by"
+msgstr "ログインを保護中:"
+
+#: libs/admin.php:279
+msgid "Activity"
+msgstr "作動状況"
+
+#: libs/admin.php:161
+msgid "Settings"
+msgstr "設定"
+
+#. Author URI of the plugin
+msgid "https://www.webfactoryltd.com/"
+msgstr "https://www.webfactoryltd.com/"
+
+#. Author of the plugin
+msgid "WebFactory Ltd"
+msgstr "WebFactory Ltd"
+
+#. Description of the plugin
+msgid "Protect the login form by banning IPs after multiple failed login attempts."
+msgstr "ログイン画面で何回もログインに失敗した IP を追放します。"
+
+#. Plugin URI of the plugin
+msgid "https://wploginlockdown.com/"
+msgstr "https://wploginlockdown.com/"
+
+#. Plugin Name of the plugin
+#: libs/admin.php:43 libs/admin.php:86
+msgid "Login Lockdown"
+msgstr "Login Lockdown"

@@ -1,0 +1,6 @@
+10-03-2023 @ 15:24:24 - ---[ New import started at 2023-10-03 06:24:24 ] PHP Memory: 2 GB, WP Memory: 40 MB
+10-03-2023 @ 15:24:24 - Preparing for import.
+10-03-2023 @ 15:24:24 - Row :1 - Parsing item.
+10-03-2023 @ 15:24:24 - > skipped: cannot insert user without email.
+10-03-2023 @ 15:24:24 - Row :1 - Parsing failed. Reason: > skipped: cannot insert user without email.
+10-03-2023 @ 15:24:24 - ---[ Import ended at 2023-10-03 06:24:24]---

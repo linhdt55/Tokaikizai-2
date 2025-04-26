@@ -1,0 +1,183 @@
+#temp_load {
+    position: fixed;
+    background-color: rgba(255, 255, 255, .8);
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#temp_load .loading__anim {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 4px solid rgba(222, 13, 16, .5);
+    display: inline-block;
+}
+
+#temp_load .loading__anim:before {
+    display: block;
+    position: relative;
+    left: calc(4px * -1);
+    top: calc(4px * -1);
+    content: ' ';
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 4px solid;
+    border-color: #DE0D10 transparent transparent transparent;
+    animation: loading-rotate .8s ease-out infinite;
+}
+
+@keyframes loading-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#masthead section.elementor-top-section.logo_search .elementor-widget-site-logo {
+    margin-bottom: 0;
+}
+
+body:not(.home) #menu-button.elementor-element {
+    top: 32px;
+}
+
+.home #masthead.fixed section.elementor-top-section.logo_search {
+    padding-bottom: 16px;
+}
+
+#masthead section.menu_main {
+    position: relative;
+    z-index: 999;
+}
+
+#menu-button.elementor-element {
+    position: absolute;
+    left: 12px;
+    padding: 0;
+    top: 24px;
+    width: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+}
+
+#masthead.fixed #menu-button.elementor-element {
+    opacity: 1;
+    visibility: visible;
+}
+
+#masthead.fixed .hfe-site-logo {
+    margin-left: 40px;
+}
+.woocommerce-checkout .woocommerce #payment .payment_methods li.payment_method_authnet .payment_box {
+    background-color: #f8f8fb;
+}
+.woocommerce-checkout .woocommerce #payment .payment_methods li.payment_method_authnet .payment_box:before {
+    border-bottom: 1em solid #f8f8fb;
+}
+.woocommerce-checkout #payment div.payment_box .wc-credit-card-form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+.woocommerce-checkout #payment div.payment_box .wc-credit-card-form .form-row-wide {
+    width: 100%;
+	padding: 0 10px;
+}
+.woocommerce-checkout #payment div.payment_box .wc-credit-card-form .form-row.form-row-last, .woocommerce-checkout #payment div.payment_box .wc-credit-card-form .form-row.form-row-first {
+    width: 50%;
+    padding: 0 10px;
+}
+.woocommerce-checkout #payment div.payment_box .wc-credit-card-form .form-row.form-row-last input {
+    width: 100% !important;
+    margin: 0;
+}
+@-webkit-keyframes stuckMoveDown{0%{-webkit-transform:translateY(-100%);transform:translateY(-100%)}100%{-webkit-transform:translateY(0);transform:translateY(0)}}@keyframes stuckMoveDown{0%{-webkit-transform:translateY(-100%);transform:translateY(-100%)}100%{-webkit-transform:translateY(0);transform:translateY(0)}}
+.ehf-header #masthead.fixed {
+    -webkit-animation: stuckMoveDown .6s;
+    animation: stuckMoveDown .6s;
+}
+.wpf_item_pa_car-model, .wpf_item_pa_hitch-manufacturer, .wpf_item_pa_applicable-model {
+    display: none;
+}
+.parts-finder .form-control.item-field {
+    margin-right: 16px;
+}
+.parts-finder .form-control.item-field {
+    margin-right: 16px;
+}
+.parts-finder .form-control.item-field.control-pa_applicable-model {
+    margin-right: 24px;
+}
+body.not-login .summary .open-addcart-div {
+    display: none;
+}
+@media (min-width: 1025px) {
+	#masthead.fixed section.top_bar,
+	#masthead.fixed section.elementor-top-section.logo_search {
+		position: relative;
+		z-index: 2;
+	}
+	#masthead.fixed .elementor section.menu_main {
+		display: block;
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 0;
+		z-index: 1;
+		opacity: 0;
+		visibility: hidden;
+	}
+	#masthead.fixed .elementor section.menu_main.closed {
+		transition: all 1s ease;
+	}
+	#masthead.fixed .elementor section.menu_main.open {
+		top: 99px;
+		opacity: 1;
+		visibility: visible;
+		transition: all 1s ease;
+	}
+	#masthead.fixed section.top_bar {
+		display: none;
+	}
+    #masthead.fixed #menu-button.elementor-element {
+        opacity: 1 !important;
+        visibility: visible !important;;
+    }
+}
+@media (max-width: 1240px) {
+    #menu-button.elementor-element {
+        left: 15px;
+    }
+    #masthead.fixed .hfe-site-logo {
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    #masthead.fixed .hfe-site-logo {
+        margin-left: 0;
+    }
+    #menu-button.elementor-element {
+        display: none;
+    }
+}
+@media (max-width: 767.98px){
+	.parts-finder .form-control.item-field, .parts-finder .form-control.item-field.control-pa_applicable-model {
+		margin-right: 0;
+	}
+}
+@media (max-width: 600px) {
+    .admin-bar #masthead.fixed section.elementor-top-section.logo_search {
+        top: 0;
+    }
+}

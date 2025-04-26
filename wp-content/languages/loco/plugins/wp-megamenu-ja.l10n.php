@@ -1,0 +1,2 @@
+<?php
+return ['project-id-version'=>'WP Mega Menu','report-msgid-bugs-to'=>'','pot-creation-date'=>'2024-10-07 05:24+0000','po-revision-date'=>'2024-10-07 05:24+0000','last-translator'=>'','language-team'=>'日本語','language'=>'ja','plural-forms'=>'nplurals=1; plural=0;','mime-version'=>'1.0','content-type'=>'text/plain; charset=UTF-8','content-transfer-encoding'=>'8bit','x-generator'=>'Loco https://localise.biz/','x-loco-version'=>'2.6.11; wp-6.6.2','x-domain'=>'wp-megamenu','messages'=>[]];

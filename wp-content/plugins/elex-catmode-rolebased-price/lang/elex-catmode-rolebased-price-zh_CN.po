@@ -1,0 +1,851 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ELEX WooCommerce Role-based Pricing Plugin & WooCommerce "
+"Catalog Mode\n"
+"POT-Creation-Date: 2020-02-18 13:02+0530\n"
+"PO-Revision-Date: 2020-02-18 13:12+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: elex-catmode-rolebased-price.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: elex-catmode-rolebased-price.php:35
+msgid ""
+"<b>WooCommerce</b> plugin must be active for <b>WooCommerce Catalog Mode, "
+"Wholesale & Role Based Pricing</b> to work. "
+msgstr ""
+"<b>伍商务</b>插件必须处于活动状态的<b>伍商业目录模式，批发和基于角色的定价</"
+"b>工作。"
+
+#: elex-catmode-rolebased-price.php:50
+msgid ""
+"Oops! You tried installing the premium version without deactivating and "
+"deleting the basic version. Kindly deactivate and delete WooCommerce Catalog "
+"Mode, Wholesale & Role Based Pricing (BASIC) and then try again. For any "
+"issues, kindly contact our <a target='_blank' href='https://elextensions.com/"
+"support/'>support</a>."
+msgstr ""
+"哎呀！您尝试安装高级版本而不停用和删除基本版本。请停用并删除 WooCommerce 目录"
+"模式、批发和基于角色的定价 （BASIC），然后重试。如有任何疑问，请联系我们<a "
+"target='_blank' href='https://elextensions.com/support/'>的支持</a>。"
+
+#: elex-catmode-rolebased-price.php:81
+msgid "Settings"
+msgstr "设置"
+
+#: elex-catmode-rolebased-price.php:82
+msgid "Documentation"
+msgstr "文档"
+
+#: elex-catmode-rolebased-price.php:83
+msgid "Support"
+msgstr "支持"
+
+#: elex-catmode-rolebased-price.php:99
+#: includes/elex-price-discount-settings.php:80
+msgid "Role-based Pricing"
+msgstr "基于角色的定价"
+
+#: elex-includes/elex-functions.php:138
+#, php-format
+msgctxt "Price range: from-to"
+msgid "%1$s &ndash; %2$s"
+msgstr "%1$s &ndash; %2$s"
+
+#: includes/elex-html-price-adjustment-manage-user-role.php:14
+msgid "Add Custom User Role"
+msgstr "添加自定义用户角色"
+
+#: includes/elex-html-price-adjustment-manage-user-role.php:20
+#: includes/elex-html-price-adjustment-table.php:15
+#: includes/elex-html-price-suffix.php:15
+#: includes/elex-html-product-price-adjustment.php:258
+#: includes/elex-html-product-role-based-price.php:19
+#: includes/elex-html-tax-options.php:17
+#: includes/elex-html-variation-product-role-based-price.php:18
+msgid "User Role"
+msgstr "用户角色"
+
+#: includes/elex-html-price-adjustment-manage-user-role.php:25
+msgid ""
+"Enter the name of the user role you want to create and click the Save "
+"Changes button."
+msgstr "输入要创建的用户角色的名称，然后单击\"保存更改\"按钮。"
+
+#: includes/elex-html-price-adjustment-manage-user-role.php:32
+msgid "Remove User Role"
+msgstr "删除用户角色"
+
+#: includes/elex-html-price-adjustment-manage-user-role.php:49
+msgid ""
+"Select the user role you want to delete and click the Save Changes button."
+msgstr "选择要删除的用户角色，然后单击\"保存更改\"按钮。"
+
+#: includes/elex-html-price-adjustment-table.php:16
+msgid "Categories"
+msgstr "分类"
+
+#: includes/elex-html-price-adjustment-table.php:17
+#: includes/elex-html-product-price-adjustment.php:259
+#, php-format
+msgid "Price Adjustment (%s)"
+msgstr "价格调整（％s）"
+
+#: includes/elex-html-price-adjustment-table.php:18
+#: includes/elex-html-product-price-adjustment.php:260
+msgid "Price Adjustment (%)"
+msgstr "价格调整 （％）"
+
+#: includes/elex-html-price-adjustment-table.php:19
+#: includes/elex-html-product-price-adjustment.php:33
+#: includes/elex-html-product-price-adjustment.php:57
+#: includes/elex-html-product-price-adjustment.php:85
+#: includes/elex-html-product-price-adjustment.php:101
+#: includes/elex-html-product-price-adjustment.php:261
+#: includes/elex-html-product-price-adjustment_catalog.php:14
+#: includes/elex-html-product-price-adjustment_catalog.php:39
+#: includes/elex-html-product-price-adjustment_catalog.php:67
+#: includes/elex-html-product-price-adjustment_catalog.php:81
+#: includes/elex-price-discount-settings.php:228
+#: includes/elex-price-discount-settings.php:283
+#: includes/elex-price-discount-settings.php:316
+#: includes/elex-price-discount-settings.php:349
+#: includes/elex-price-discount-settings.php:365
+#: includes/elex-price-discount-settings.php:373
+#: includes/elex-price-discount-settings.php:397
+#: includes/elex-price-discount-settings.php:429
+#: includes/elex-price-discount-settings.php:461
+#: includes/elex-price-discount-settings.php:469
+#: includes/elex-price-discount-settings.php:485
+msgid "Enable"
+msgstr "启用"
+
+#: includes/elex-html-price-suffix.php:11
+msgid "Price Suffix Table"
+msgstr "价格后缀表"
+
+#: includes/elex-html-price-suffix.php:16
+#: includes/elex-price-discount-settings.php:249
+msgid "Suffix Text"
+msgstr "后缀文本"
+
+#: includes/elex-html-product-price-adjustment.php:30
+#: includes/elex-html-product-price-adjustment_catalog.php:11
+#: includes/elex-price-discount-settings.php:281
+#: includes/elex-price-discount-settings.php:395
+#: includes/elex-price-discount-settings.php:513
+msgid "Remove Add to Cart"
+msgstr "删除添加到购物车"
+
+#: includes/elex-html-product-price-adjustment.php:35
+#: includes/elex-html-product-price-adjustment_catalog.php:16
+msgid "Check to remove Add to Cart."
+msgstr "选中以删除添加到购物车。"
+
+#: includes/elex-html-product-price-adjustment.php:41
+#: includes/elex-html-product-price-adjustment.php:129
+#: includes/elex-html-product-price-adjustment_catalog.php:23
+#: includes/elex-price-discount-settings.php:289
+#: includes/elex-price-discount-settings.php:403
+#: includes/elex-price-discount-settings.php:522
+msgid "Shop Page"
+msgstr "商城页面"
+
+#: includes/elex-html-product-price-adjustment.php:43
+#: includes/elex-html-product-price-adjustment.php:131
+#: includes/elex-html-product-price-adjustment_catalog.php:25
+#: includes/elex-price-discount-settings.php:297
+#: includes/elex-price-discount-settings.php:411
+#: includes/elex-price-discount-settings.php:530
+msgid "Product Page"
+msgstr "产品页面"
+
+#: includes/elex-html-product-price-adjustment.php:46
+#: includes/elex-html-product-price-adjustment.php:90
+#: includes/elex-html-product-price-adjustment.php:134
+#: includes/elex-html-product-price-adjustment.php:196
+#: includes/elex-html-product-price-adjustment_catalog.php:28
+#: includes/elex-html-product-price-adjustment_catalog.php:72
+msgid "Placeholder text"
+msgstr "占位符文本"
+
+#: includes/elex-html-product-price-adjustment.php:49
+#: includes/elex-html-product-price-adjustment.php:137
+#: includes/elex-price-discount-settings.php:307
+#: includes/elex-price-discount-settings.php:421
+#: includes/elex-price-discount-settings.php:540
+msgid ""
+"Enter a text or html content to display when Add to Cart button is removed. "
+"Leave it empty if you don't want to show any content."
+msgstr ""
+"输入文本或 html 内容，在删除\"添加到购物车\"按钮时显示。如果不想显示任何内"
+"容，请将其留空。"
+
+#: includes/elex-html-product-price-adjustment.php:54
+#: includes/elex-html-product-price-adjustment_catalog.php:36
+#: includes/elex-price-discount-settings.php:314
+#: includes/elex-price-discount-settings.php:427
+#: includes/elex-price-discount-settings.php:546
+msgid "Customize Add to Cart"
+msgstr "自定义添加到购物车"
+
+#: includes/elex-html-product-price-adjustment.php:59
+#: includes/elex-html-product-price-adjustment_catalog.php:41
+#: includes/elex-price-discount-settings.php:319
+msgid "Check to customize Add to Cart."
+msgstr "选中以自定义添加到购物车。"
+
+#: includes/elex-html-product-price-adjustment.php:62
+#: includes/elex-html-product-price-adjustment.php:159
+#: includes/elex-html-product-price-adjustment_catalog.php:44
+#: includes/elex-price-discount-settings.php:322
+#: includes/elex-price-discount-settings.php:435
+#: includes/elex-price-discount-settings.php:555
+msgid "Change Button Text (Product Page)"
+msgstr "更改按钮文本（产品页面）"
+
+#: includes/elex-html-product-price-adjustment.php:65
+#: includes/elex-html-product-price-adjustment.php:162
+#: includes/elex-html-product-price-adjustment_catalog.php:47
+#: includes/elex-price-discount-settings.php:324
+#: includes/elex-price-discount-settings.php:437
+#: includes/elex-price-discount-settings.php:557
+msgid ""
+"Enter a text to replace the existing Add to Cart button text on the product "
+"page."
+msgstr "输入文本以替换产品页面上现有的\"添加到购物车\"按钮文本。"
+
+#: includes/elex-html-product-price-adjustment.php:68
+#: includes/elex-html-product-price-adjustment.php:165
+#: includes/elex-html-product-price-adjustment_catalog.php:50
+#: includes/elex-price-discount-settings.php:330
+#: includes/elex-price-discount-settings.php:443
+#: includes/elex-price-discount-settings.php:563
+msgid "Change Button Text (Shop Page)"
+msgstr "更改按钮文本（商店页面）"
+
+#: includes/elex-html-product-price-adjustment.php:71
+#: includes/elex-html-product-price-adjustment.php:168
+#: includes/elex-html-product-price-adjustment_catalog.php:53
+#: includes/elex-price-discount-settings.php:332
+#: includes/elex-price-discount-settings.php:445
+#: includes/elex-price-discount-settings.php:565
+msgid ""
+"Enter a text to replace the existing Add to Cart button text on the shop "
+"page."
+msgstr "输入文本以替换商店页面上现有的\"添加到购物车\"按钮文本。"
+
+#: includes/elex-html-product-price-adjustment.php:74
+#: includes/elex-html-product-price-adjustment.php:171
+#: includes/elex-html-product-price-adjustment_catalog.php:56
+#: includes/elex-price-discount-settings.php:338
+#: includes/elex-price-discount-settings.php:451
+#: includes/elex-price-discount-settings.php:571
+msgid "Change Button URL"
+msgstr "更改按钮 URL"
+
+#: includes/elex-html-product-price-adjustment.php:77
+#: includes/elex-html-product-price-adjustment.php:174
+#: includes/elex-html-product-price-adjustment_catalog.php:59
+#: includes/elex-price-discount-settings.php:340
+#: includes/elex-price-discount-settings.php:453
+#: includes/elex-price-discount-settings.php:573
+msgid ""
+"Enter a url to redirect customers from Add to Cart button. Leave this field "
+"empty to not change the button functionality. Make sure to enter a text in "
+"the above fields to apply these changes."
+msgstr ""
+"输入 URL 以将客户从\"添加到购物车\"按钮重定向。将此字段留空以不更改按钮功能。"
+"请确保在上面的字段中输入文本以应用这些更改。"
+
+#: includes/elex-html-product-price-adjustment.php:82
+#: includes/elex-html-product-price-adjustment_catalog.php:64
+#: includes/elex-price-discount-settings.php:347
+#: includes/elex-price-discount-settings.php:467
+#: includes/elex-price-discount-settings.php:588
+msgid "Hide Price"
+msgstr "隐藏价格"
+
+#: includes/elex-html-product-price-adjustment.php:87
+#: includes/elex-html-product-price-adjustment_catalog.php:69
+msgid "Check to hide price."
+msgstr "检查以隐藏价格。"
+
+#: includes/elex-html-product-price-adjustment.php:93
+#: includes/elex-html-product-price-adjustment.php:199
+#: includes/elex-price-discount-settings.php:357
+#: includes/elex-price-discount-settings.php:477
+msgid ""
+"Enter the text you want to display when price is removed. Leave it empty if "
+"you don't want to show any placeholder text."
+msgstr "输入删除价格时要显示的文本。如果不想显示任何占位符文本，请将其留空。"
+
+#: includes/elex-html-product-price-adjustment.php:98
+msgid "Hide Product"
+msgstr "隐藏产品"
+
+#: includes/elex-html-product-price-adjustment.php:103
+msgid "Check to hide product."
+msgstr "检查以隐藏产品。"
+
+#: includes/elex-html-product-price-adjustment.php:109
+msgid " Remove Add to Cart"
+msgstr "删除添加到购物车"
+
+#: includes/elex-html-product-price-adjustment.php:123
+msgid " Select the user role(s) for which you want to remove Add to Cart."
+msgstr "选择要将其删除添加到购物车的用户角色。"
+
+#: includes/elex-html-product-price-adjustment.php:142
+msgid " Customize Add to Cart"
+msgstr "自定义添加到购物车"
+
+#: includes/elex-html-product-price-adjustment.php:156
+msgid " Select the user role(s) for which you want to customize Add to Cart."
+msgstr "选择要为其自定义添加到购物车的用户角色。"
+
+#: includes/elex-html-product-price-adjustment.php:179
+msgid " Hide Price"
+msgstr "隐藏价格"
+
+#: includes/elex-html-product-price-adjustment.php:193
+msgid " Select the user role(s) for which you want to hide price."
+msgstr "选择要隐藏价格的用户角色。"
+
+#: includes/elex-html-product-price-adjustment.php:204
+msgid " Hide Product"
+msgstr "隐藏产品"
+
+#: includes/elex-html-product-price-adjustment.php:218
+msgid " Select the user role(s) for which you want to hide product."
+msgstr "选择要为其隐藏产品的用户角色。"
+
+#: includes/elex-html-product-price-adjustment.php:244
+msgid " Individual Product Price Adjustment"
+msgstr "个别产品价格调整"
+
+#: includes/elex-html-product-price-adjustment.php:247
+msgid " Enable"
+msgstr " 允许"
+
+#: includes/elex-html-product-price-adjustment.php:253
+msgid ""
+" Drag and drop user roles to set priority. If a single user has multiple "
+"user roles assigned, the user role with the highest priority will be chosen. "
+"Choose 'D' for DISCOUNT and 'M' for MARKUP."
+msgstr ""
+"拖放用户角色以设置优先级。如果单个用户分配了多个用户角色，则将选择具有最高优"
+"先级的用户角色。选择\"D\"表示\"折扣\"，为\"标记\"选择\"M\"。"
+
+#: includes/elex-html-product-price-adjustment_catalog.php:8
+msgid "Catalog mode options:"
+msgstr "目录模式选项："
+
+#: includes/elex-html-product-price-adjustment_catalog.php:9
+msgid ""
+"The changes you make here will be applicable across user roles. You can "
+"exclude Administrator role from these settings. Catalog Mode Settings will "
+"override Role Based & Unregistered User Settings."
+msgstr ""
+"您在此处所做的更改将适用于用户角色。可以从这些设置中排除管理员角色。目录模式"
+"设置将覆盖基于角色和未注册的用户设置。"
+
+#: includes/elex-html-product-price-adjustment_catalog.php:31
+msgid ""
+"Enter a text or html content to show as placeholder when Add to Cart button "
+"is removed. Leave it empty if you don't want to show any content."
+msgstr ""
+"删除\"添加到购物车\"按钮时，输入文本或 html 内容以显示为占位符。如果不想显示"
+"任何内容，请将其留空。"
+
+#: includes/elex-html-product-price-adjustment_catalog.php:75
+msgid ""
+"Enter the text you want to show when price is removed. Leave it empty if you "
+"don't want to show any placeholder text."
+msgstr "输入删除价格时要显示的文本。如果不想显示任何占位符文本，请将其留空。"
+
+#: includes/elex-html-product-price-adjustment_catalog.php:78
+#: includes/elex-price-discount-settings.php:371
+msgid "Exclude Administrator"
+msgstr "排除管理员"
+
+#: includes/elex-html-product-price-adjustment_catalog.php:83
+msgid ""
+"Check to exclude Administrator role from the above catalog mode settings."
+msgstr "选中以从上述目录模式设置中排除管理员角色。"
+
+#: includes/elex-html-product-role-based-price.php:11
+#: includes/elex-html-variation-product-role-based-price.php:11
+msgid "Role Based Price"
+msgstr "基于角色的价格"
+
+#: includes/elex-html-product-role-based-price.php:20
+#: includes/elex-html-variation-product-role-based-price.php:19
+#, php-format
+msgid "Price (%s)"
+msgstr "价钱 (%s)"
+
+#: includes/elex-html-product-role-based-price.php:58
+#: includes/elex-html-variation-product-role-based-price.php:58
+msgid "Role Based Price "
+msgstr "基于角色的价格"
+
+#: includes/elex-html-product-role-based-price.php:61
+#: includes/elex-html-variation-product-role-based-price.php:61
+msgid ""
+"For setting up user roles eligible for individual price adjustment, go to "
+"Role Based Pricing settings -> Add roles for the field \"Individual Price "
+"Adjustment\"."
+msgstr ""
+"要设置符合个人价格调整条件的用户角色，转到基于角色的定价设置 -= 为\"个人价格"
+"调整\"字段添加角色。"
+
+#: includes/elex-html-tax-options.php:10
+msgid "Tax Options Table"
+msgstr "税务选项表"
+
+#: includes/elex-html-tax-options.php:11
+msgid "This table handles only tax display option. To modify tax rate go to "
+msgstr "此表仅处理税务显示选项。要修改税率，请转到"
+
+#: includes/elex-html-tax-options.php:13
+msgid "of Woocommerce."
+msgstr "伍商业。"
+
+#: includes/elex-html-tax-options.php:19
+msgid "Tax Type"
+msgstr "税种"
+
+#: includes/elex-html-tax-options.php:26 includes/elex-html-tax-options.php:80
+msgid "Default"
+msgstr "默认"
+
+#: includes/elex-html-tax-options.php:27
+msgid "Show Price Including Tax"
+msgstr "显示价格（含税）"
+
+#: includes/elex-html-tax-options.php:28
+msgid "Show Price Excluding Tax"
+msgstr "显示价格不含税"
+
+#: includes/elex-html-tax-options.php:29
+msgid "Show Price Including Tax in Shop"
+msgstr "显示价格包括商店税"
+
+#: includes/elex-html-tax-options.php:30
+msgid "Show Price Including Tax in Cart and Checkout"
+msgstr "显示价格（包括购物车和结帐中的税费）"
+
+#: includes/elex-html-tax-options.php:31
+msgid "Show Price Excluding Tax in Shop"
+msgstr "在商店中显示不含税的价格"
+
+#: includes/elex-html-tax-options.php:32
+msgid "Show Price Excluding Tax in Cart and Checkout"
+msgstr "在购物车和结帐中显示不含税的价格"
+
+#: includes/elex-price-discount-admin.php:1403
+#, php-format
+msgctxt "Price range: from-to"
+msgid "%1$s&ndash;%2$s"
+msgstr "%1$s&ndash;%2$s"
+
+#: includes/elex-price-discount-admin.php:1407
+msgid "String(Free!)"
+msgstr "字符串（免费！"
+
+#: includes/elex-price-discount-settings.php:62
+#: includes/elex-price-discount-settings.php:674
+msgid "Role-based Settings"
+msgstr "基于角色的设置"
+
+#: includes/elex-price-discount-settings.php:63
+msgid "Unregistered User"
+msgstr "未注册"
+
+#: includes/elex-price-discount-settings.php:64
+msgid "Tax Option"
+msgstr "税务选项"
+
+#: includes/elex-price-discount-settings.php:65
+msgid "Manage User Role"
+msgstr "管理用户角色"
+
+#: includes/elex-price-discount-settings.php:81
+#: includes/elex-price-discount-settings.php:679
+msgid "Catalog Mode"
+msgstr "目录模式"
+
+#: includes/elex-price-discount-settings.php:163
+msgid "Please select atleast one role to delete"
+msgstr "请至少选择要删除的一个角色"
+
+#: includes/elex-price-discount-settings.php:182
+msgid "User Role created successfully"
+msgstr "已成功创建用户角色"
+
+#: includes/elex-price-discount-settings.php:187
+msgid "User Role creation failed"
+msgstr "用户角色创建失败"
+
+#: includes/elex-price-discount-settings.php:200
+msgid "User Role deleted successfully"
+msgstr "已成功删除用户角色"
+
+#: includes/elex-price-discount-settings.php:220
+msgid "General and Tax Options:"
+msgstr "一般和税务选项："
+
+#: includes/elex-price-discount-settings.php:226
+msgid "Enable Tax Options"
+msgstr "启用税务选项"
+
+#: includes/elex-price-discount-settings.php:231
+msgid "Check to enable Role specific tax options."
+msgstr "选中以启用角色特定税务选项。"
+
+#: includes/elex-price-discount-settings.php:239
+msgid "Price Suffix"
+msgstr "价格后缀"
+
+#: includes/elex-price-discount-settings.php:242
+msgid ""
+"Select the price suffix option you want to have. Choose General to apply "
+"globally. Choose Role specific to set different suffixes to different Roles."
+msgstr ""
+"选择您想要的价格后缀选项。选择\"常规\"以全局应用。选择\"特定角色\"以将不同的"
+"后缀设置为不同的角色。"
+
+#: includes/elex-price-discount-settings.php:251
+msgid "Enter the text you want to add as suffix to the price."
+msgstr "输入要添加的文本作为价格的后缀。"
+
+#: includes/elex-price-discount-settings.php:275
+msgid "Catalog Mode Option:"
+msgstr "目录模式选项："
+
+#: includes/elex-price-discount-settings.php:277
+msgid ""
+"The changes you make here will be applicable across the site. You can "
+"exclude Administrator role from these changes.<br>Catalog Mode Settings will "
+"override Role Based, Unregistered User & Individual Product Settings."
+msgstr ""
+"您在此处所做的更改将适用于整个站点。可以从这些更改中排除管理员角色。<br>目录"
+"模式设置将覆盖基于角色、未注册的用户和单个产品设置。"
+
+#: includes/elex-price-discount-settings.php:286
+#: includes/elex-price-discount-settings.php:400
+msgid "Check to remove Add to Cart option."
+msgstr "选中以删除添加到购物车的选项。"
+
+#: includes/elex-price-discount-settings.php:305
+#: includes/elex-price-discount-settings.php:355
+#: includes/elex-price-discount-settings.php:419
+#: includes/elex-price-discount-settings.php:475
+#: includes/elex-price-discount-settings.php:597
+msgid "Placeholder Text"
+msgstr "占位符文本"
+
+#: includes/elex-price-discount-settings.php:352
+msgid "Check to hide product price. This will also remove Add to Cart button."
+msgstr "选中以隐藏产品价格。这也将删除添加到购物车按钮。"
+
+#: includes/elex-price-discount-settings.php:363
+#: includes/elex-price-discount-settings.php:483
+#: includes/elex-price-discount-settings.php:605
+msgid "Hide Cart and Checkout Page"
+msgstr "隐藏购物车和结帐页面"
+
+#: includes/elex-price-discount-settings.php:368
+#: includes/elex-price-discount-settings.php:488
+msgid "Check to disable access to Cart and Checkout pages."
+msgstr "选中以禁用对购物车和结帐页面的访问。"
+
+#: includes/elex-price-discount-settings.php:376
+msgid ""
+"Check to exclude Administrator role from the above catalog mode settings"
+msgstr "检查以从上述目录模式设置中排除管理员角色"
+
+#: includes/elex-price-discount-settings.php:389
+msgid "Unregistered User Options:"
+msgstr "未注册的用户选项："
+
+#: includes/elex-price-discount-settings.php:432
+msgid "Check to customize Add to Cart option."
+msgstr "选中\"自定义添加到购物车\"选项。"
+
+#: includes/elex-price-discount-settings.php:459
+#: includes/elex-price-discount-settings.php:579
+#: includes/elex-price-discount-settings.php:689
+msgid "Hide Regular Price"
+msgstr "隐藏常规价格"
+
+#: includes/elex-price-discount-settings.php:464
+msgid "Check to hide regular price when sale price is provided."
+msgstr "在提供销售价格时，检查以隐藏常规价格。"
+
+#: includes/elex-price-discount-settings.php:472
+msgid "Check to hide product price. This will also remove Add to Cart option."
+msgstr "选中以隐藏产品价格。这也将删除添加到购物车选项。"
+
+#: includes/elex-price-discount-settings.php:501
+msgid "Sale Price"
+msgstr "销售价格"
+
+#: includes/elex-price-discount-settings.php:502
+msgid "Regular & Sale Price"
+msgstr "常规 + 销售价格"
+
+#: includes/elex-price-discount-settings.php:507
+msgid "User Role Specific Options:"
+msgstr "用户角色特定选项："
+
+#: includes/elex-price-discount-settings.php:515
+msgid "Select the user role(s) for which you want to hide Add to Cart option."
+msgstr "选择要为其隐藏\"添加到购物车\"选项的用户角色。"
+
+#: includes/elex-price-discount-settings.php:538
+msgid "Placeholder Content"
+msgstr "占位符内容"
+
+#: includes/elex-price-discount-settings.php:548
+msgid ""
+"Select the user role(s) for which you want to customize Add to Cart option."
+msgstr "选择要为其自定义\"添加到购物车\"选项的用户角色。"
+
+#: includes/elex-price-discount-settings.php:581
+msgid ""
+"Select the user role(s) for which you want to hide regular price of all the "
+"simple products which have sale prices."
+msgstr "选择要隐藏具有销售价格的所有简单产品的常规价格的用户角色。"
+
+#: includes/elex-price-discount-settings.php:590
+msgid ""
+"Select the user role(s) for which you want to hide product price. This will "
+"also remove Add to Cart option."
+msgstr "选择要隐藏产品价格的用户角色。这也将删除添加到购物车选项。"
+
+#: includes/elex-price-discount-settings.php:599
+msgid ""
+"Enter a text you want to display when price is removed. Leave it empty if "
+"you don't want to show any text."
+msgstr "输入删除价格时要显示的文本。如果不想显示任何文本，请将其留空。"
+
+#: includes/elex-price-discount-settings.php:607
+msgid ""
+"Select the user role(s) for which you do not want to provide access to Cart "
+"and Checkout page"
+msgstr "选择要不希望提供对购物车和结帐页的访问权限的用户角色"
+
+#: includes/elex-price-discount-settings.php:614
+msgid "Individual Product Adjustment"
+msgstr "个别产品调整"
+
+#: includes/elex-price-discount-settings.php:616
+msgid ""
+"Select the user role(s) for product level price adjustments. The price "
+"adjustments can be made in the individual product edit page."
+msgstr "选择产品级别价格调整的用户角色。价格调整可以在单个产品编辑页面进行。"
+
+#: includes/elex-price-discount-settings.php:627
+msgid "Price Adjustment: (Discount/Markup)"
+msgstr "价格调整：（折扣/加价）"
+
+#: includes/elex-price-discount-settings.php:629
+msgid ""
+"Drag and drop User Roles to set priority. If a single User has multiple User "
+"Roles assigned, the User Role with the highest priority will be chosen. "
+"Select a category to apply price adjustment to the products which belong to "
+"that category. If no particular category is selected, the price adjustment "
+"will be applied to all the products.<br><p><strong>Price Adjustment - Choose "
+"'D' for DISCOUNT and 'M' for MARKUP.</strong></p>"
+msgstr ""
+"拖放用户角色以设置优先级。如果单个用户分配了多个用户角色，则将选择具有最高优"
+"先级的用户角色。选择一个类别，对属于该类别的产品应用价格调整。如果未选择特定"
+"类别，则价格调整将应用于所有产品。<br><p><strong>价格调整 - 为 DISCOUNT 选择"
+"\"D\"，为 MARKUP 选择\"M\"。</strong></p>"
+
+#: includes/elex-price-discount-settings.php:633
+msgid " Price Adjustment applied to "
+msgstr "价格调整适用于"
+
+#: includes/elex-price-discount-settings.php:636
+msgid ""
+"Select where you want to apply the discount/markup. This is applicable to "
+"individual product level price adjustment also. If a product does not have "
+"sale price, adjustment will be applied only to the regular price."
+msgstr ""
+"选择要应用折扣/标记的位置。这也适用于个别产品水平的价格调整。如果产品没有销售"
+"价格，则调整将仅应用于常规价格。"
+
+#: includes/elex-price-discount-settings.php:691
+msgid "Check to hide product regular price"
+msgstr "检查以隐藏产品常规价格"
+
+#: includes/elex-price-discount-settings.php:907
+msgid "Category Name Background Color"
+msgstr "类别 名称 背景颜色"
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:373
+#, php-format
+msgid ""
+"The license key for %s has expired. You can reactivate or purchase a license "
+"key from your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+"%s的许可密钥已过期。 您可以从您的帐户<a href=\"%s\" target=\"_blank\">信息中"
+"心</a>重新激活或购买许可密钥。"
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:384
+#, php-format
+msgid ""
+"The subscription for %s is on-hold. You can reactivate the subscription from "
+"your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+"%s的订阅处于暂停状态。 您可以从您的帐户<a href=\"%s\" target=\"_blank\">信息"
+"中心</a>重新激活订阅。"
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:395
+#, php-format
+msgid ""
+"The subscription for %s has been cancelled. You can renew the subscription "
+"from your account <a href=\"%s\" target=\"_blank\">dashboard</a>. A new "
+"license key will be emailed to you after your order has been completed."
+msgstr ""
+"%s的订阅已被取消。 您可以从您的帐户<a href=\"%s\" target=\"_blank\">信息中心"
+"</a>续订订阅。 您的订单完成后，新的许可证密钥将通过电子邮件发送给您。"
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:406
+#, php-format
+msgid ""
+"The subscription for %s has expired. You can reactivate the subscription "
+"from your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+"%s的订阅已过期。 您可以从您的帐户<a href=\"%s\" target=\"_blank\">信息中心</"
+"a>重新激活订阅。"
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:417
+#, php-format
+msgid ""
+"The subscription for %s has been suspended. You can reactivate the "
+"subscription from your account <a href=\"%s\" target=\"_blank\">dashboard</"
+"a>."
+msgstr ""
+"%s的订阅已被暂停。 您可以从您的帐户<a href=\"%s\" target=\"_blank\">信息中心"
+"</a>重新激活订阅。"
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:428
+#, php-format
+msgid ""
+"The subscription for %s is still pending. You can check on the status of the "
+"subscription from your account <a href=\"%s\" target=\"_blank\">dashboard</"
+"a>."
+msgstr ""
+"%s的订阅已被暂停。 您可以从您的帐户<a href=\"%s\" target=\"_blank\">信息中心"
+"</a>重新激活订阅。..."
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:439
+#, php-format
+msgid ""
+"The subscription for %s has been placed in the trash and will be deleted "
+"soon. You can purchase a new subscription from your account <a href=\"%s\" "
+"target=\"_blank\">dashboard</a>."
+msgstr ""
+"%s的订阅已被放入垃圾箱，并将很快被删除。 您可以从您的帐户<a href=\"%s\" "
+"target=\"_blank\">信息中心</a>购买新的订阅。"
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:450
+#, php-format
+msgid ""
+"A subscription for %s could not be found. You can purchase a subscription "
+"from your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+"无法找到%s的订阅。 您可以从您的帐户<a href=\"%s\" target=\"_blank\">信息中心"
+"</a>购买订阅。"
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:461
+#, php-format
+msgid ""
+"A license key for %s could not be found. Maybe you forgot to enter a license "
+"key when setting up %s, or the key was deactivated in your account. You can "
+"reactivate license key at your plugin <a href=\"%s\" target=\"_blank"
+"\">settings page</a>."
+msgstr ""
+"找不到 %s 的许可证密钥。可能是您在设置 %s 时忘记输入许可证密钥，或者您的帐户"
+"中已停用该密钥。您可以在插件<a href=\"%s\" target=\"_blank\">设置页面</a>重新"
+"激活许可证密钥。"
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:472
+#, php-format
+msgid ""
+"Download permission for %s has been revoked possibly due to a license key or "
+"subscription expiring. You can reactivate or purchase a license key from "
+"your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+"%s的下载权限已被吊销，可能是由于许可密钥或订阅过期。 您可以从您的帐户<a href="
+"\"%s\" target=\"_blank\">信息中心</a>重新激活或购买许可密钥。"
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:483
+#, php-format
+msgid ""
+"%s has not been activated. Go to the plugin <a href=\"%s\" target=\"_blank"
+"\">settings page</a> and enter the license key and license email to activate "
+"%s."
+msgstr ""
+"%s 尚未激活。转到插件<a href=\"%s\" target=\"_blank\">设置页面</a>，然后输入"
+"许可证密钥和许可证电子邮件以激活 %s。"
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:494
+#, php-format
+msgid ""
+"You changed the subscription for %s, so you will need to enter your new API "
+"License Key in the settings page. The License Key should have arrived in "
+"your email inbox, if not you can get it by logging into your account <a href="
+"\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+"你改变了 %s 的订阅, 所以你将需要输入你的新API许可密钥设置页面. 许可证密钥应该"
+"到达你的收件箱,如果没有你可以通过登录到您的帐户 <a href=\"%s\" target="
+"\"_blank\">概览</a>."
+
+#. Plugin Name of the plugin/theme
+msgid "ELEX WooCommerce Role-based Pricing Plugin & WooCommerce Catalog Mode"
+msgstr "ELEX WooCommerce 基于角色的定价插件 + 伍商业目录模式"
+
+#. Plugin URI of the plugin/theme
+msgid ""
+"https://elextensions.com/plugin/woocommerce-catalog-mode-wholesale-role-"
+"based-pricing/"
+msgstr ""
+"https://elextensions.com/plugin/woocommerce-catalog-mode-wholesale-role-"
+"based-pricing/"
+
+#. Description of the plugin/theme
+msgid ""
+"Hide Price or Add to Cart option for guest and specific registered users for "
+"simple, variable and grouped products. Create user role specific product "
+"price. Enforce markup/discount on price for selected user roles. Also, turn "
+"your shop into catalog mode."
+msgstr ""
+"为简单、可变和分组产品的来宾和特定注册用户隐藏价格或添加到购物车选项。创建用"
+"户角色特定的产品价格。对所选用户角色的价格强制执行加价/折扣。此外，将您的商店"
+"转换为目录模式。"
+
+#. Author of the plugin/theme
+msgid "ELEXtensions"
+msgstr "ELEXss"
+
+#. Author URI of the plugin/theme
+msgid "https://elextensions.com"
+msgstr "https://elextensions.com"

@@ -1,0 +1,51 @@
+.faq-wrp .toggle-dropdown .elementor-toggle-item .elementor-tab-title {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.faq-wrp .toggle-dropdown .elementor-toggle-item .elementor-tab-title .elementor-toggle-icon svg {
+  width: 16px;
+}
+.faq-wrp .toggle-dropdown .elementor-toggle-item .elementor-tab-content {
+  margin-bottom: -2px;
+}
+.faq-wrp.payment .toggle-dropdown .elementor-tab-content ul {
+  margin-left: 13px;
+  margin-bottom: 0px;
+}
+.faq-wrp.payment table {
+  border: 1px solid #E2E2EA;
+  margin-top: 15px;
+  width: max-content;
+  border-collapse: collapse;
+}
+.faq-wrp.payment table tbody tr:not(:last-child) td {
+  border-bottom: 1px solid #E2E2EA;
+}
+.faq-wrp.payment table tbody tr td {
+  color: #2F2F39;
+  padding: 9px 11.6px 10px 8px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.faq-wrp.payment table tbody tr td:not(:last-child) {
+  border-right: 1px solid #E2E2EA;
+}
+.faq-wrp.payment table tbody tr td:not(:first-child) {
+  text-align: center;
+}
+.table-profile-company {
+  overflow: auto;
+}
+@media (max-width: 767.98px) {
+  .faq-wrp .toggle-dropdown .elementor-toggle-item .elementor-tab-title,
+  .faq-wrp .toggle-dropdown .elementor-toggle-item:first-child .elementor-tab-title {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 16px;
+  }
+  .faq-wrp.payment .toggle-dropdown .elementor-toggle-item .elementor-tab-title,
+  .faq-wrp.payment .toggle-dropdown .elementor-toggle-item:first-child .elementor-tab-title {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}

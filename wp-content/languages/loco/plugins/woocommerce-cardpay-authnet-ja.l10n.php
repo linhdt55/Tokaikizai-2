@@ -1,0 +1,3 @@
+<?php
+return ['project-id-version'=>'Authorize.Net CIM for WooCommerce 1.0.0','pot-creation-date'=>'2015-11-13 12:49-0800','po-revision-date'=>'2025-01-09 07:13+0000','last-translator'=>'','language-team'=>'日本語','language'=>'ja','mime-version'=>'1.0','content-type'=>'text/plain; charset=UTF-8','content-transfer-encoding'=>'8bit','x-generator'=>'Loco https://localise.biz/','x-poedit-basepath'=>'..','plural-forms'=>'nplurals=1; plural=0;','x-poedit-sourcecharset'=>'UTF-8','x-poedit-keywordslist'=>'__;_e;_x;_n','x-poedit-searchpath-0'=>'.
+','report-msgid-bugs-to'=>'','x-loco-version'=>'2.6.14; wp-6.7.1','messages'=>[]];

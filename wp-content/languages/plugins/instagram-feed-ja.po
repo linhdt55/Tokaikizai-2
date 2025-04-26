@@ -1,0 +1,4296 @@
+# Translation of Plugins - Smash Balloon Social Photo Feed – Easy Social Feeds Plugin - Stable (latest release) in Japanese
+# This file is distributed under the same license as the Plugins - Smash Balloon Social Photo Feed – Easy Social Feeds Plugin - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-12-06 13:27:52+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Plugins - Smash Balloon Social Photo Feed – Easy Social Feeds Plugin - Stable (latest release)\n"
+
+#: inc/Builder/SBI_Feed_Builder.php:896
+msgid "As of December 2024, the personal account connection type will no longer work. Reconnect as a business account to continue using the plugin."
+msgstr "2024年12月以降、個人アカウントの接続タイプは機能しなくなります。プラグインを引き続き使用するには、ビジネスアカウントとして再接続してください。"
+
+#: inc/Builder/SBI_Feed_Builder.php:895
+msgid "Action required. Reconnect as a business account. <strong><u>Why?</u></strong>"
+msgstr "アクションが必要です。ビジネスアカウントとして再接続してください。<strong><u>その理由は ?</u></strong>"
+
+#: admin/SBI_Admin_Notices.php:464
+msgid "Update Sources"
+msgstr "ソースを更新"
+
+#: admin/SBI_Admin_Notices.php:452
+msgid "Due to changes by Instagram, all “Personal” accounts will stop working as of December 2024. To continue to use the plugin, reconnect all personal accounts as a “Business” account."
+msgstr "Instagram の変更により、2024年12月以降、すべての「個人」アカウントは機能しなくなります。プラグインを引き続き使用するには、すべての個人アカウントを「ビジネス」アカウントとして再接続してください。"
+
+#: admin/SBI_Admin_Notices.php:451
+msgid "Deprecation notice"
+msgstr "廃止のお知らせ"
+
+#: admin/SBI_Global_Settings.php:1023
+msgid "JPG"
+msgstr "JPG"
+
+#: admin/SBI_Global_Settings.php:1022
+msgid "WebP"
+msgstr "WebP"
+
+#: admin/SBI_Global_Settings.php:1020
+msgid "Default Image Format"
+msgstr "デフォルトの画像形式"
+
+#: admin/SBI_Global_Settings.php:1019
+msgid "Use dynamic sizes"
+msgstr "動的サイズを使用"
+
+#: admin/SBI_Global_Settings.php:1018
+msgid "Reset Image Storage"
+msgstr "画像ストレージをリセット"
+
+#: admin/SBI_Global_Settings.php:1017
+msgid "Uses local Wordpress storage."
+msgstr "ローカルの WordPress ストレージを使用。"
+
+#: admin/SBI_Global_Settings.php:1017
+msgid "Creates multiple local copies of image in different sizes and uses smallest size based on where it is displayed. "
+msgstr "異なるサイズの画像の複数のローカル コピーを作成し、表示される場所に基づいて最小サイズを使用します。 "
+
+#: admin/SBI_Global_Settings.php:1016
+msgid "Image Optimization (Recommended)"
+msgstr "画像の最適化 (推奨)"
+
+#: inc/admin/SBI_Onboarding_wizard.php:471
+msgid "Enabling this feature will install Reviews Feed plugin. Reviews Feed by Smash Balloon helps users to display reviews from Google, TripAdvisor, TrustPilot and more."
+msgstr "この機能を有効化すると、Reviews Feed プラグインがインストールされます。Smash Balloon の Reviews Feed は、ユーザーが Google、TripAdvisor、TrustPilot などからのレビューを表示するのに役立ちます。"
+
+#: inc/admin/SBI_Onboarding_wizard.php:299
+msgid "Smash Balloon offers the best social media feed solutions for WordPress. Enabling this feature will install additional plugins to power all of the supported platforms"
+msgstr "Smash Balloon は WordPress に最適なソーシャルメディアフィードソリューションを提供します。この機能を有効化すると、サポートされているすべてのプラットフォームを強化するための追加のプラグインがインストールされます"
+
+#: inc/admin/SBI_Onboarding_wizard.php:203
+msgid "Instagram Feed users also install these plugins"
+msgstr "Instagram Feed ユーザーはこれらのプラグインもインストールします"
+
+#: admin/SBI_oEmbeds.php:391
+msgid "oEmbed account successfully connected. You are all set to continue creating oEmbeds."
+msgstr "oEmbed アカウントが正常に接続されました。oEmbed の作成を続行する準備がすべて整いました。"
+
+#: admin/SBI_Callout.php:327
+msgid "Skip this step"
+msgstr "このステップをスキップ"
+
+#: admin/SBI_Callout.php:324
+msgid "Plugin"
+msgstr "プラグイン"
+
+#: admin/SBI_Callout.php:324
+msgid "Go to"
+msgstr "移動"
+
+#: admin/SBI_Callout.php:313
+msgid "Go to Plugin"
+msgstr "プラグインへ移動"
+
+#: admin/SBI_Callout.php:309
+msgid "Create a"
+msgstr "作成"
+
+#: admin/SBI_Callout.php:309
+msgid "Create an"
+msgstr "作成"
+
+#: admin/SBI_Callout.php:301
+msgid "Complete your Smash Balloon feed setup and increase engagment"
+msgstr "Smash Balloon feed の設定を完了してエンゲージメントを高めましょう"
+
+#: admin/SBI_Callout.php:300
+msgid "Setup is almost complete"
+msgstr "設定はあと少しで完了です"
+
+#: admin/SBI_Callout.php:281 admin/SBI_Callout.php:433
+msgid "Smash Balloon Feeds"
+msgstr "Smash Balloon Feeds"
+
+#: admin/SBI_Callout.php:279
+msgid "Only Visible to you"
+msgstr "自分だけに表示"
+
+#: admin/builder/templates/onboarding/install-plugins.php:37
+msgid "Clicking Next will install "
+msgstr "次へをクリックするとインストールされます "
+
+#: admin/SBI_Global_Settings.php:1013
+msgid "This would revert your CSS file for the feed to the file used in version 6.2. Enable this setting if your customizations are not working properly. "
+msgstr "これにより、フィードの CSS ファイルがバージョン 6.2 で使用されていたファイルに戻ります。カスタマイズが正しく機能しない場合は、この設定を有効化してください。 "
+
+#: admin/SBI_Global_Settings.php:1012
+msgid "Use legacy CSS"
+msgstr "以前の CSS を使用する"
+
+#: admin/SBI_Admin_Notices.php:378
+msgid "Sounds good!"
+msgstr "いいですね !"
+
+#: admin/SBI_Admin_Notices.php:353
+msgid "You can use the CSS file from previous versions if needed. Enable the related setting on the Advanced tab of the settings page."
+msgstr "必要に応じて、以前のバージョンの CSS ファイルを使用できます。設定ページの [詳細設定] タブで関連する設定を有効化します。"
+
+#: admin/SBI_Admin_Notices.php:352
+msgid "Version 6.3 includes changes to the HTML and CSS files that make up your feeds. If you have customized your feed through custom theme templates, custom CSS, or custom JavaScript, your customizations may have been affected."
+msgstr "バージョン 6.3 には、フィードを構成する HTML ファイルと CSS ファイルへの変更が含まれています。カスタムテーマテンプレート、カスタム CSS、またはカスタム JavaScript を使用してフィードをカスタマイズした場合、カスタマイズが影響を受ける可能性があります。"
+
+#: admin/SBI_Admin_Notices.php:351
+msgid "Heads Up! Feed Item Files and CSS Have Changed"
+msgstr "注意 ! フィード項目ファイルと CSS が変更されました"
+
+#: inc/Builder/SBI_Feed_Builder.php:1218
+msgid "To display a TikTok feed, our TikTok plugin is required. It allows you to seamlessly integrate your TikTok account’s videos into your WordPress website."
+msgstr "TikTokフィードを表示するには、当社の TikTok プラグインが必要です。このプラグインを使用すると、TikTok アカウントの動画をシームレスに WordPress のサイトに統合できます。"
+
+#: inc/Builder/SBI_Feed_Builder.php:1216
+msgid "Feeds for TikTok"
+msgstr "Feeds for TikTok"
+
+#: inc/Builder/SBI_Feed_Builder.php:1215
+msgid "TikTok"
+msgstr "TikTok"
+
+#: inc/admin/actions.php:45 inc/admin/actions.php:46
+msgid "TikTok Feeds"
+msgstr "TikTok フィード"
+
+#: inc/Integrations/SBI_Integration.php:132
+msgid "Did you Know?"
+msgstr "ご存知ですか ?"
+
+#: inc/Integrations/SBI_Integration.php:127
+msgid "Create %s Feed"
+msgstr "%s フィードを作成"
+
+#: inc/Integrations/SBI_Integration.php:114
+msgid "Or create a Feed for"
+msgstr "または、次のフィードを作成する"
+
+#: inc/Integrations/SBI_Integration.php:107
+msgid "Create Instagram Feed"
+msgstr "Instagram フィードを作成"
+
+#: inc/Integrations/SBI_Integration.php:97
+msgid "Select %s Feed"
+msgstr "%s フィードを選択"
+
+#: inc/Integrations/SBI_Integration.php:43
+msgid "You can also add Facebook, Twitter, and YouTube posts into your feed using our Social Wall plugin"
+msgstr "当社の Social Wall プラグインを使用して、Facebook、Twitter、YouTube の投稿をフィードに追加することもできます。"
+
+#: inc/Integrations/SBI_Integration.php:42
+msgid "You can display feeds of Instagram photos, videos, albums, events and more using the Pro version"
+msgstr "プロ版を使用すると、Instagram の写真、動画、アルバム、イベントなどのフィードを表示できます。"
+
+#: inc/Integrations/SBI_Integration.php:41
+msgid "Select an Instagram feed to embed"
+msgstr "埋め込む Instagram のフィードを選択"
+
+#: inc/Integrations/SBI_Integration.php:40
+msgid "Get started with your first feed from Instagram"
+msgstr " Instagram から最初のフィードを始める"
+
+#: inc/Integrations/Elementor/SBY_Elementor_Widget.php:54
+msgid "Youtube Feed"
+msgstr "Youtube のフィード"
+
+#: inc/Integrations/Elementor/SBI_Feed_Elementor_Control.php:129
+msgid "Create New Feed"
+msgstr "新規フィードを作成"
+
+#: inc/Integrations/Elementor/SBI_Feed_Elementor_Control.php:126
+msgid "Edit this Feed"
+msgstr "このフィードを編集"
+
+#: inc/Integrations/Elementor/SBI_Elementor_Widget.php:153
+msgid "No feed selected to display."
+msgstr "表示するフィードが選択されていません。"
+
+#: inc/Integrations/Elementor/SBI_Elementor_Widget.php:131
+msgid "Select a feed to display. If you don't have any feeds yet then you can create one in the Instagram Feed settings page."
+msgstr "表示するフィードを選択してください。まだフィードがない場合は、Instagram フィードの設定ページで作成できます。"
+
+#: inc/Integrations/Elementor/SBI_Elementor_Widget.php:125
+msgid "Select a Feed"
+msgstr "フィードを選択"
+
+#: inc/Integrations/Elementor/SBI_Elementor_Widget.php:118
+msgid "Instagram Feed Settings"
+msgstr "Instagram Feed の設定"
+
+#: admin/SBI_Callout.php:309 inc/Integrations/Divi/SBInstagramFeed.php:67
+msgid "Feed"
+msgstr "フィード"
+
+#: inc/Builder/SBI_Feed_Builder.php:2090
+msgid "YouTube Feeds is a highly customizable way to display tweets from your YouTube account. Promote your latest content and update your site content automatically."
+msgstr "YouTube Feed は、Youtube アカウントからの投稿を表示するための高度にカスタマイズ可能な手段です。最新のコンテンツを宣伝しながら、サイトのコンテンツを自動的に更新します。"
+
+#: inc/Builder/SBI_Feed_Builder.php:2074
+msgid "Instagram Feeds is a highly customizable way to display tweets from your Instagram account. Promote your latest content and update your site content automatically."
+msgstr "Instagram Feed は、Instagram アカウントからの投稿を表示するための高度にカスタマイズ可能な手段です。最新のコンテンツを宣伝しながら、サイトのコンテンツを自動的に更新します。"
+
+#: inc/Builder/SBI_Feed_Builder.php:2066
+msgid "Custom Facebook Feeds is a highly customizable way to display tweets from your Facebook account. Promote your latest content and update your site content automatically."
+msgstr "Custom Facebook Feed は、Facebook アカウントからの投稿を表示するための高度にカスタマイズ可能な手段です。最新のコンテンツを宣伝しながら、サイトのコンテンツを自動的に更新します。"
+
+#: inc/Builder/SBI_Db.php:414
+msgid "Choose a Feed"
+msgstr "フィードを選択"
+
+#: admin/views/support/support-tools.php:167
+msgid "This information can be helpful when troubleshooting issues."
+msgstr "こちらの情報はトラブルシューティングに役立ちます。"
+
+#: admin/views/support/support-tools.php:139
+msgid "Connected User Account(s)"
+msgstr "接続されたユーザーアカウント"
+
+#: admin/views/support/support-tools.php:132
+msgid "Feed ID"
+msgstr "フィード ID"
+
+#: admin/views/support/support-tools.php:126
+msgid "Below is a list of all feeds."
+msgstr "以下はすべてのフィードのリストです。"
+
+#: admin/views/support/support-tools.php:123
+msgid "No feeds found."
+msgstr "フィードが見つかりません。"
+
+#: admin/views/support/support-tools.php:98
+msgid "Post Limit"
+msgstr "投稿制限"
+
+#: admin/views/support/support-tools.php:82
+msgid "Get Media (%s)"
+msgstr "メディアを取得 (%s)"
+
+#: admin/views/support/support-tools.php:80
+msgid "Get Account Info"
+msgstr "アカウント情報を取得"
+
+#: admin/views/support/support-tools.php:75
+#: admin/views/support/support-tools.php:152
+msgid "Account Type"
+msgstr "アカウントタイプを取得"
+
+#: admin/views/support/support-tools.php:57
+msgid "Below is a list of all connected accounts. Click the \"Get Account Info\" button to retrieve the account info. Click the \"Get Media\" button to retrieve the media for the account."
+msgstr "以下はすべての接続されたアカウントの一覧です。アカウント情報を取得するには、「アカウント情報を取得」ボタンをクリックしてください。アカウントのメディアを取得するには、「メディアを取得」ボタンをクリックしてください。"
+
+#: admin/views/support/support-tools.php:54
+msgid "No connected accounts found."
+msgstr "接続されたアカウントが見つかりませんでした。"
+
+#: admin/SBI_Support_Tool.php:605 admin/SBI_Support_Tool.php:637
+msgid "User ID and Access Token are required"
+msgstr "ユーザー ID とアクセストークンが必要です"
+
+#: admin/SBI_Support_Tool.php:563
+msgid "Invalid API action"
+msgstr "無効な API アクション"
+
+#: admin/SBI_Support_Tool.php:537
+msgid "Access Token is required"
+msgstr "アクセストークンが必要です"
+
+#: admin/SBI_Support_Tool.php:523
+msgid "User ID is required"
+msgstr "ユーザー ID が必要です"
+
+#: admin/SBI_Support_Tool.php:514
+msgid "You don't have enough permission to perform this API call."
+msgstr "この API を呼び出す十分な権限がありません。"
+
+#: inc/Builder/SBI_Tooltip_Wizard.php:129
+msgid "Click the plus button, search for Instagram Feed,<br/> and click the block to embed it."
+msgstr "プラスボタンをクリックして、Instagram Feed を検索し、<br/>そのブロックをクリックして埋め込みます。"
+
+#: inc/Builder/SBI_Feed_Builder.php:860
+msgid "auto-applied at checkout"
+msgstr "購入手続き時に自動適用されます"
+
+#: inc/Builder/SBI_Feed_Builder.php:859
+msgid "Lite Feed Users get a 50% OFF"
+msgstr "Lite Feed ユーザーは50% オフ"
+
+#: inc/Builder/SBI_Feed_Builder.php:858
+msgid "Lite Feed Users get a 50% OFF (auto-applied at checkout)"
+msgstr "Lite Feed ユーザーは50% OFF (自動的に自動適用)"
+
+#: inc/Builder/SBI_Feed_Builder.php:419
+msgid "Use powerful moderation tools to create feeds of only specific chosen posts, or exclude specific chosen posts. You can also automatically include or exclude posts based on a word or hashtag found in the caption."
+msgstr "強力なモデレーションツールを使用して、選択した特定の投稿のみのフィードを作成したり、選択した投稿を除外したりすることができます。また、キャプション内の単語やハッシュタグに基づいて、投稿を自動的に含めたり除外したりすることもできます。"
+
+#: inc/admin/SBI_Onboarding_wizard.php:116
+msgid "Features were set up"
+msgstr "機能はセットアップ済みです"
+
+#: admin/SBI_Support_Tool.php:443 admin/SBI_Support_Tool.php:444
+msgid "Support API tool"
+msgstr "サポート API ツール"
+
+#: admin/SBI_Support_Tool.php:297
+msgid "User Deleted"
+msgstr "ユーザーが削除されました"
+
+#: admin/SBI_Support_Tool.php:291
+msgid "Cannot delete this user"
+msgstr "こちらのユーザーは削除できません"
+
+#: admin/SBI_Support_Tool.php:285
+msgid "You don't have enough permission to delete users"
+msgstr "ユーザーを削除する権限が不足しています"
+
+#: admin/SBI_Support_Tool.php:263
+msgid "Temporary user created successfully"
+msgstr "一時的なユーザーが作成されました"
+
+#: admin/SBI_Support_Tool.php:249
+msgid "Cannot create user"
+msgstr "ユーザーを作成できません"
+
+#: admin/SBI_Support_Tool.php:220
+msgid "You don't have enough permission to create users"
+msgstr "ユーザーを作成するための権限がありません"
+
+#: admin/SBI_Support_Tool.php:187
+msgid "You cannot connect this user"
+msgstr "このユーザーは接続できません"
+
+#: admin/SBI_Support.php:194
+msgid "Temporary login link for support access created by you. This is auto-destructed 14 days after creation. To create a new link, please delete the old one."
+msgstr "サポートへのアクセス用に作成した一時的なログインのリンクです。こちらは作成から14日後に自動的に無効になります。新しいリンクを作成するには、古いリンクを削除してください。"
+
+#: admin/SBI_Support.php:192
+msgid "Create Temporary Login Link"
+msgstr "一時的なログインリンクを作成"
+
+#: admin/SBI_Support.php:191
+msgid "Our team might ask for a temporary login link with limited access to only our plugin to help troubleshoot account related issues."
+msgstr "当社のチームは、アカウント関連の問題のトラブルシューティングを支援するために、当社のプラグインにアクセスできる制限付きの一時的なログインのリンクをリクエストすることがあります。"
+
+#: admin/SBI_Support.php:190 admin/SBI_Support.php:193
+msgid "Temporary Login"
+msgstr "一時的なログイン"
+
+#: admin/SBI_Support.php:189
+msgid "Day"
+msgstr "日"
+
+#: admin/SBI_Support.php:172
+msgid "Expires in"
+msgstr "有効期限"
+
+#: admin/SBI_Support.php:170
+msgid "Copy Link"
+msgstr "リンクをコピー"
+
+#: admin/SBI_Support.php:169
+msgid "delete"
+msgstr "削除"
+
+#: admin/SBI_Global_Settings.php:1287
+msgid "plugin"
+msgstr "プラグイン"
+
+#: admin/SBI_Global_Settings.php:995
+msgid "Video posts will link to the post on Instagram.com for visitors to watch."
+msgstr "動画投稿は Instagram.com の投稿にリンクされ、訪問者が視聴することができます。"
+
+#: admin/SBI_Global_Settings.php:921
+msgid "upgrading to Pro."
+msgstr "プロ版にアップグレード."
+
+#: admin/SBI_Global_Settings.php:722
+msgid "%sLearn more about%s it or %supgrade your plan%s"
+msgstr "詳しい情報については%sこちらを%s、プランのアップグレードは%sこちらを%sクリックしてください"
+
+#: admin/SBI_About_Us.php:310
+msgid "Connect with your visitors after they leave your website with the leading web push notification software. Over 10,000+ businesses worldwide use PushEngage to send 15 billion notifications each month."
+msgstr "訪問者がサイトを離れた後でも、Web プッシュ通知ソフトウェアを使用して訪問者とつながりましょう。世界中の1万社以上の企業が、PushEngage を使用して毎月150億件の通知を送信しています。"
+
+#: admin/SBI_About_Us.php:309
+msgid "PushEngage Web Push Notifications"
+msgstr "PushEngage Web プッシュ通知"
+
+#: admin/SBI_About_Us.php:301
+msgid "The fastest drag & drop landing page builder for WordPress. Create custom landing pages without writing code, connect a CRM, collect subscribers, and grow an audience. Trusted by 1 million sites."
+msgstr "WordPress 用の最速のドラッグアンドドロップ型ランディングページビルダーです。コードを書かなくてもカスタムランディングページを作成し、CRM に接続して、購読者を集め、オーディエンスを増やすことができます。このプラグインは100万ものサイトで信頼されています｡"
+
+#: admin/SBI_About_Us.php:292
+msgid "Turn your website visitors into brand ambassadors! Easily grow your email list, website traffic, and social media followers with the most powerful giveaways & contests plugin for WordPress."
+msgstr "サイトの訪問者をブランドアンバサダーに変えましょう！ WordPress 用の最も強力な景品とコンテストのプラグインを使用して、メーリングリスト、サイトのトラフィック、ソーシャルメディアのフォロワーを簡単に増やすことができます。"
+
+#: admin/SBI_About_Us.php:283
+msgid "Improve your WordPress email deliverability and make sure that your website emails reach user’s inbox with the #1 SMTP plugin for WordPress. Over 3 million websites use it to fix WordPress email issues."
+msgstr "WordPress のナンバー1 SMTP プラグインが、WordPress のメール配信率を改善し、サイトのメールがユーザーの受信トレイに確実に届くようにします。WordPress のメールの問題を解決するために、300万以上のサイトがこのプラグインを使用しています。"
+
+#: admin/SBI_About_Us.php:274
+msgid "Instantly get more subscribers, leads, and sales with the #1 conversion optimization toolkit. Create high converting popups, announcement bars, spin a wheel, and more with smart targeting and personalization."
+msgstr "ナンバー1コンバージョン最適化ツールキットを使用すると、加入者、リード、売り上げを即座に獲得できます。スマートターゲティングとパーソナライズを使用して、高変換ポップアップ、アナウンスバー、ホイールのスピンなどを作成します。"
+
+#: admin/SBI_About_Us.php:265
+msgid "The leading WordPress analytics plugin that shows you how people find and use your website, so you can make data driven decisions to grow your business. Properly set up Google Analytics without writing code."
+msgstr "利用者がサイトをどのように見つけて使用するかを示す、WordPress 分析プラグインです。データに基づいて判断、決定し、ビジネスを成長させることができます。また、コードを書かなくても、Google Analytics を適切に設定します。"
+
+#: admin/SBI_About_Us.php:256
+msgid "The best drag & drop WordPress form builder. Easily create beautiful contact forms, surveys, payment forms, and more with our 900+ form templates. Trusted by over 6 million websites as the best forms plugin."
+msgstr "WordPress 用の最高のドラッグ & ドロップフォームビルダー。900件以上のフォームテンプレートを使用して、美しいお問い合わせフォーム、アンケート、支払いフォームなどを簡単に作成できます。最高のフォームプラグインとして、600万以上のサイトに信頼されています。"
+
+#: admin/SBI_About_Us.php:247
+msgid "The original WordPress SEO plugin and toolkit that improves your website’s search rankings. Comes with all the SEO features like Local SEO, WooCommerce SEO, sitemaps, SEO optimizer, schema, and more."
+msgstr "サイトの検索ランキングを改善する独自の WordPress SEO プラグインとツールキットです。ローカル SEO、WooCommerce SEO、サイトマップ、SEO オプティマイザー、スキーマなどのすべての SEO 機能を利用できます。"
+
+#: admin/builder/templates/sections/popup/temp-login-about.php:37
+msgid "The login link is auto-destroyed in 14 days. You can also manually delete it any time you want."
+msgstr "ログインのリンクは14日で自動的に無効になります。また、必要に応じて手動で削除することもできます。"
+
+#: admin/builder/templates/sections/popup/temp-login-about.php:36
+msgid "Can I disable or delete the temporary login link?"
+msgstr "一時的なログインのリンクを無効化または削除できますか ?"
+
+#: admin/builder/templates/sections/popup/temp-login-about.php:30
+msgid "A support team member can only access Smash Balloon plugin to make API requests. They can NOT access any other plugins, create posts or in any way modify your WordPress website."
+msgstr "サポートチームのメンバーは、Smash Balloon プラグインにアクセスし、APIリクエストを行うだけです。他のプラグインにアクセスしたり、投稿を作成したり、WordPress のサイトを変更することはできません。"
+
+#: admin/builder/templates/sections/popup/temp-login-about.php:29
+msgid "What can a support executive access?"
+msgstr "サポート担当者は何にアクセスできますか ?"
+
+#: admin/builder/templates/sections/popup/temp-login-about.php:23
+msgid "Solving an issue in your plugin might sometime require testing API access but with your setup. We do not want to expose your API keys over support messages and hence we use a temporary login link system to securely access it."
+msgstr "プラグインの問題を解決する際、API アクセスのテストが必要なことがありますが、その際にはセットアップされた状態でテストを行います。サポートメッセージで API キーを公開するのを避けるため、一時的なログインのリンクシステムを使用して、安全にアクセスします。"
+
+#: admin/builder/templates/sections/popup/temp-login-about.php:22
+msgid "What are they used for?"
+msgstr "それらは何に使われますか ?"
+
+#: admin/builder/templates/sections/popup/temp-login-about.php:9
+msgid "Temporary Login Links"
+msgstr "一時的なログインのリンク"
+
+#: inc/Builder/SBI_Feed_Builder.php:805
+msgid "Exit Setup"
+msgstr "設定を終了"
+
+#: inc/admin/SBI_Onboarding_wizard.php:569
+msgid "Create and send high-converting web push notifications to your website visitors."
+msgstr "コンバージョン率の高い Web プッシュ通知を作成し、サイト訪問者に送信します。"
+
+#: inc/admin/SBI_Onboarding_wizard.php:568
+msgid "PushEngage Notifications"
+msgstr "PushEngage 通知"
+
+#: inc/admin/SBI_Onboarding_wizard.php:566
+msgid "PushEngage"
+msgstr "PushEngage"
+
+#: inc/admin/SBI_Onboarding_wizard.php:555
+msgid "Make popups & opt-in forms to build your email newsletter subscribers, generate leads, and close sales"
+msgstr "ポップアップとオプトインフォームを作成し、メールマガジンの購読者を増やし、リードを生成し、セールスにつなげます"
+
+#: inc/admin/SBI_Onboarding_wizard.php:554
+msgid "OptinMonster Popup Builder"
+msgstr "OptinMonster ポップアップビルダー"
+
+#: inc/admin/SBI_Onboarding_wizard.php:541
+msgid "A simple and powerful theme builder, landing page builder, \"coming soon\" page builder, and maintenance mode notice builder"
+msgstr "シンプルでパワフルなテーマビルダー、ランディングページビルダー、「近日公開」ページビルダー、メンテナンスモード通知ビルダーです"
+
+#: admin/SBI_About_Us.php:300 inc/admin/SBI_Onboarding_wizard.php:540
+msgid "SeedProd Website Builder"
+msgstr "SeedProd サイトビルダー"
+
+#: inc/admin/SBI_Onboarding_wizard.php:538
+msgid "SeedProd"
+msgstr "SeedProd"
+
+#: inc/admin/SBI_Onboarding_wizard.php:527
+msgid "Create contact, subscription or payment forms with the most beginner friendly drag & drop WordPress forms plugin"
+msgstr "初心者でも使いやすいドラッグ & ドロップ式の WordPress フォームプラグインで、お問い合わせフォーム、購読フォーム、支払いフォームを作成できます"
+
+#: inc/admin/SBI_Onboarding_wizard.php:526
+msgid "Forms by WPForms"
+msgstr "Forms by WPForms"
+
+#: inc/admin/SBI_Onboarding_wizard.php:513
+msgid "Make it “effortless” to connect your WordPress site with Google Analytics, so you can start making data-driven decisions to grow your business."
+msgstr "WordPress サイトと Google アナリティクスを「簡単に」連携させることで、データに基づいて判断し、ビジネスを成長させることができます。"
+
+#: inc/admin/SBI_Onboarding_wizard.php:512
+msgid "Analytics by MonsterInsights"
+msgstr "Analytics by MonsterInsights"
+
+#: inc/admin/SBI_Onboarding_wizard.php:498
+msgid "All in One SEO Toolkit"
+msgstr "All In One SEO ツールキット"
+
+#: inc/admin/SBI_Onboarding_wizard.php:496
+msgid "All in One SEO"
+msgstr "All In One SEO"
+
+#: inc/admin/SBI_Onboarding_wizard.php:458
+msgid "Install Reviews Feed to display customer reviews from Google or Yelp and build trust"
+msgstr "Reviews Feed をインストールして Google や Yelp でのクチコミを表示し、信頼を築くことができます"
+
+#: inc/admin/SBI_Onboarding_wizard.php:457
+msgid "Customer Reviews Plugin"
+msgstr "カスタマーレビュープラグイン"
+
+#: inc/admin/SBI_Onboarding_wizard.php:294
+msgid "feed plugins for more fresh content"
+msgstr "フィードプラグインで、最新のコンテンツを表示"
+
+#: inc/admin/SBI_Onboarding_wizard.php:293
+msgid "Social Feed Collection"
+msgstr "ソーシャルフィードコレクション"
+
+#: inc/admin/SBI_Onboarding_wizard.php:236
+msgid "And many more"
+msgstr "その他多数の機能もご利用いただけます"
+
+#: inc/admin/SBI_Onboarding_wizard.php:216
+msgid "Upgrade to Instagram Feed Pro"
+msgstr "Instagram Feed Pro にアップグレード"
+
+#: inc/admin/SBI_Onboarding_wizard.php:214
+msgid "To unlock these features and much more, upgrade to Pro and enter your license key below."
+msgstr "これらの機能やその他多くの機能を利用するには、Pro にアップグレードして、ライセンスキーを以下に入力してください。"
+
+#: inc/admin/SBI_Onboarding_wizard.php:213
+msgid "Upgrade to unlock hashtag feeds, tagged feeds, a popup lightbox and more"
+msgstr "アップグレードして、ハッシュタグフィード、タグ付けされたフィード、ポップアップライトボックスなどをご利用ください"
+
+#: inc/admin/SBI_Onboarding_wizard.php:211
+msgid "Here's an overview of everything that is setup"
+msgstr "セットアップ済みの機能の概要をご確認ください"
+
+#: inc/admin/SBI_Onboarding_wizard.php:210
+msgid "Awesome. You are all set up!"
+msgstr "準備がすべて整いました !"
+
+#: inc/admin/SBI_Onboarding_wizard.php:202
+msgid "You might also be interested in..."
+msgstr "こちらもお勧めです"
+
+#: inc/admin/SBI_Onboarding_wizard.php:192
+msgid "View photos and videos in a popup lightbox directly on your site"
+msgstr "サイト上のポップアップライトボックスで写真や動画を直接表示します"
+
+#: inc/admin/SBI_Onboarding_wizard.php:185
+msgid "Show Instagram posts that you have been tagged in"
+msgstr "自分がタグ付けされた Instagram 投稿を表示します"
+
+#: inc/admin/SBI_Onboarding_wizard.php:184
+#: inc/admin/SBI_Onboarding_wizard.php:228
+msgid "Tagged Feeds"
+msgstr "タグ付けされたフィード"
+
+#: inc/admin/SBI_Onboarding_wizard.php:178
+msgid "Display Instagram posts that have a particular hashtag"
+msgstr "特定のハッシュタグが付いた Instagram の投稿を表示します"
+
+#: inc/admin/SBI_Onboarding_wizard.php:177
+#: inc/admin/SBI_Onboarding_wizard.php:224
+msgid "Hashtag Feeds"
+msgstr "ハッシュタグフィード"
+
+#: inc/admin/SBI_Onboarding_wizard.php:168
+msgid "Optimize and locally store feed images to improve search rankings and page speed"
+msgstr "フィード画像を最適化してローカルに保存し、検索順位とページ速度を向上します"
+
+#: inc/admin/SBI_Onboarding_wizard.php:167
+msgid "Image Optimization"
+msgstr "画像の最適化"
+
+#: inc/admin/SBI_Onboarding_wizard.php:156
+msgid "Prevent downtime in the event your feed is unable to update"
+msgstr "フィードを更新できない場合のダウンタイムを防ぐことができます"
+
+#: inc/admin/SBI_Onboarding_wizard.php:155
+msgid "Downtime Prevention"
+msgstr "ダウンタイムの防止"
+
+#: inc/admin/SBI_Onboarding_wizard.php:144
+msgid "Create and display Instagram feeds from connected accounts"
+msgstr "接続されたアカウントから Instagram フィードを作成して表示しましょう"
+
+#: inc/admin/SBI_Onboarding_wizard.php:143
+msgid "Instagram User Feed"
+msgstr "Instagram ユーザーフィード"
+
+#: inc/admin/SBI_Onboarding_wizard.php:140
+msgid "STEP 2"
+msgstr "ステップ2"
+
+#: inc/admin/SBI_Onboarding_wizard.php:139
+msgid "Configure features"
+msgstr "機能を設定"
+
+#: inc/admin/SBI_Onboarding_wizard.php:134
+msgid "STEP 1"
+msgstr "ステップ1"
+
+#: inc/admin/SBI_Onboarding_wizard.php:125
+msgid "Launch the Setup Wizard"
+msgstr "セットアップウィザードを起動"
+
+#: inc/admin/SBI_Onboarding_wizard.php:124
+msgid "Ready to add a dash of Instagram to your website? Setting up your first feed is quick and easy. We'll get you up and running in no time."
+msgstr "サイトに Instagram を取り入れる準備はできましたか ? 最初のフィードの設定はすばやく簡単。すぐにスタートできます。"
+
+#: inc/admin/SBI_Onboarding_wizard.php:123
+msgid "Let's set up your plugin!"
+msgstr "プラグインを設定しましょう !"
+
+#: inc/admin/SBI_Onboarding_wizard.php:117
+msgid "Feed plugins for # installed"
+msgstr "# フィードプラグインをインストール済みです"
+
+#: inc/admin/SBI_Onboarding_wizard.php:115
+msgid "Connected an Instagram account"
+msgstr "接続された Instagram アカウント"
+
+#: inc/admin/SBI_Onboarding_wizard.php:108
+msgid "Instagram Feed by"
+msgstr "Instagram Feed by"
+
+#: inc/admin/SBI_Onboarding_wizard.php:85
+#: inc/admin/SBI_Onboarding_wizard.php:86 inc/Builder/SBI_Feed_Builder.php:719
+msgid "Setup"
+msgstr "セットアップ"
+
+#: admin/SBI_Upgrader.php:369
+msgid "This license is NOT valid."
+msgstr "このライセンスは有効ではありません。"
+
+#: admin/builder/templates/onboarding/success-page.php:58
+msgid "Complete Setup Without Upgrading"
+msgstr "アップグレードせずにセットアップを完了"
+
+#: admin/builder/templates/onboarding/success-page.php:44
+msgid "Upgrade in a single click by adding your license key below"
+msgstr "以下にライセンス キーを追加することで、ワンクリックでアップグレードします"
+
+#: admin/builder/templates/onboarding/success-page.php:43
+msgid "Already have a license key?"
+msgstr "すでにライセンスキーをお持ちですか ?"
+
+#: admin/builder/templates/onboarding/configure-features.php:41
+msgid "Pro Features"
+msgstr "プロ版の機能"
+
+#: admin/SBI_Global_Settings.php:1125
+msgid "Connect Uncanny Automator to your Instagram account"
+msgstr "Uncanny Automator を Instagram アカウントに接続"
+
+#: admin/SBI_Global_Settings.php:1124
+msgid "Set up Uncanny Automator"
+msgstr "Uncanny Automator をセットアップ"
+
+#: admin/SBI_Global_Settings.php:1120
+msgid "The plugin is installed from the Wordpress.org repository"
+msgstr "プラグインは WordPress.org リポジトリからインストールされます"
+
+#: admin/SBI_Global_Settings.php:1119
+msgid "Install and activate Uncanny Automator"
+msgstr "Uncanny Automator をインストールして有効化"
+
+#: admin/SBI_Global_Settings.php:1116
+msgid "Uncanny Automator lets you easily automate your WordPress site.  Automatically push new blog posts to your Instagram Business account (and Facebook and Twitter too)."
+msgstr "Uncanny Automator を使うと、WordPress サイトを簡単に自動化できます。新しいブログ投稿を Instagram ビジネス アカウント (Facebook や Twitter も) に自動的にプッシュします。"
+
+#: admin/SBI_Global_Settings.php:1115
+msgid "Automatically post from WordPress to Instagram with the #1 automation plugin"
+msgstr "#1 自動化プラグインを使用して WordPress から Instagram に自動投稿"
+
+#: admin/SBI_Global_Settings.php:909
+msgid "Post to Instagram right from WordPress with Uncanny Automator"
+msgstr "Uncanny Automator で WordPress から直接 Instagram に投稿"
+
+#: inc/Builder/SBI_Feed_Builder.php:1170
+msgid "To display a Reviews feed, our Reviews plugin is required. </br> Increase conversions and build positive brand trust through Google and Yelp reviews from your customers. Provide social proof needed to turn visitors into customers."
+msgstr "レビューフィードを表示するには、レビュープラグインが必要です。</br> 顧客からの Google や Yelp のレビューを通じて、コンバージョンを増やし、ブランドへの信頼を築きましょう。訪問者を顧客に変えるために必要な社会的証拠を提供します。"
+
+#: inc/Builder/SBI_Feed_Builder.php:1167
+msgid "Reviews"
+msgstr "レビュー"
+
+#: inc/Builder/SBI_Feed_Builder.php:236
+msgid "Or use the built in WordPress block"
+msgstr "または、WordPress ブロックを使用します"
+
+#: inc/admin/actions.php:56 inc/admin/actions.php:57
+#: inc/Builder/SBI_Feed_Builder.php:1168
+msgid "Reviews Feed"
+msgstr "レビューフィード"
+
+#: inc/Builder/SBI_Feed_Builder.php:309
+msgid "A dash of Instagram, a sprinkle of Facebook, a spoonful of Twitter, and a dollop of YouTube, all in the same feed."
+msgstr "一瞬の Instagram、散りばめられた Facebook、スプーン一杯の Twitter、そして一滴の YouTube すべてが同じフィードに含まれています。"
+
+#: inc/Builder/SBI_Feed_Builder.php:308
+msgid "Combine all your social media channels into one"
+msgstr "すべてのソーシャルメディア チャネルを 1 つにまとめる"
+
+#: admin/views/settings/tab/general.php:329
+msgid "Select Feed"
+msgstr "フィードを選択"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:78
+msgid "Reels"
+msgstr "リール動画"
+
+#: inc/Builder/SBI_Feed_Builder.php:2048
+msgid "Upload Profile Picture"
+msgstr "プロフィール写真をアップロード"
+
+#: inc/Builder/SBI_Feed_Builder.php:2047
+msgid "No, maybe later"
+msgstr "いいえ、あとにします"
+
+#: inc/Builder/SBI_Feed_Builder.php:2046
+msgid "Yes, let's do it"
+msgstr "はい、そうします"
+
+#: inc/Builder/SBI_Feed_Builder.php:2045
+msgid "Add your profile bio here"
+msgstr "プロフィールを追加してください"
+
+#: inc/Builder/SBI_Feed_Builder.php:2044
+msgid "Bio (140 Characters)"
+msgstr "プロフィール (140文字)"
+
+#: inc/Builder/SBI_Feed_Builder.php:2043
+msgid "Instagram does not provide us access to your profile picture or bio for personal accounts. Would you like to set up a custom profile photo and bio?."
+msgstr "Instagram は、個人アカウントのプロフィール写真やプロフィールへのアクセスを提供していません。カスタムのプロフィール写真とプロフィールを設定しますか ?。"
+
+#: inc/Builder/SBI_Feed_Builder.php:2042
+msgid "Add Instagram Profile Picture and Bio"
+msgstr "Instagram のプロフィール写真とプロフィールを追加"
+
+#: inc/Builder/SBI_Feed_Builder.php:2041
+msgid "Update Personal Account"
+msgstr "個人アカウントを更新"
+
+#: inc/Builder/SBI_Feed_Builder.php:2040
+msgid "We’re almost there..."
+msgstr "あともう少しです…"
+
+#: inc/Builder/SBI_Feed_Builder.php:893
+msgid "Update Avatar and Bio"
+msgstr "アバターとプロフィールを更新"
+
+#: inc/Builder/SBI_Feed_Builder.php:892
+msgid "Add Avatar and Bio"
+msgstr "アバターとプロフィールを追加"
+
+#: inc/Builder/SBI_Feed_Builder.php:841 inc/Builder/SBI_Feed_Builder.php:894
+msgid "Personal account updated"
+msgstr "個人アカウントが更新されました"
+
+#: inc/Platform_Data.php:357
+msgid "The page was not reconnected within the 7 day limit and all Instagram data was automatically deleted on %s due to Facebook data privacy rules."
+msgstr "ページは7日間の制限内に再接続されませんでした。Facebook のデータプライバシールールにより、すべてのInstagram データは %s で自動的に削除されました。"
+
+#: inc/Platform_Data.php:354
+msgid "All Instagram Data has Been Removed"
+msgstr "すべての Instagram データが削除されました"
+
+#: inc/Platform_Data.php:341
+msgid "To avoid automated data deletion, simply view the Instagram feed on your website within the next 7 days."
+msgstr "自動データ削除を回避するには、7日以内にサイトで Instagram feed を表示してください。"
+
+#: inc/Platform_Data.php:340
+msgid "An Instagram feed on %s has been not viewed in the last 14 days. Due to Instagram data privacy rules, all data for this feed will be deleted in 7 days time."
+msgstr "%s の Instagram フィードは、過去14日間閲覧されていません。Instagram のデータプライバシールールにより、このフィードのすべてのデータは7日後に削除されます。"
+
+#: inc/Platform_Data.php:325
+msgid "To prevent the automated deletion of data for the account, please reconnect your source for the plugin %s within 7 days."
+msgstr "アカウントのデータが自動的に削除されないようにするには、プラグイン %s のソースを7日以内に再接続してください。"
+
+#: inc/Platform_Data.php:324 inc/Platform_Data.php:358
+msgid "Settings Page"
+msgstr "設定ページ"
+
+#: inc/Platform_Data.php:323
+msgid "An account admin has deauthorized the Smash Balloon app used to power the Instagram Feed plugin on %s. If the Instagram source is not reconnected within 7 days then all Instagram data will be automatically deleted on your website  due to Facebook data privacy rules."
+msgstr "アカウント管理者は、%s で Instagram Feed プラグインを強化するために使用される Smash Balloon アプリの認証を取り消しました。Instagram ソースが 7 日以内に再接続されない場合、Facebook のデータプライバシールールにより、すべての Instagram データがサイト  から自動的に削除されます。"
+
+#: inc/Platform_Data.php:322 inc/Platform_Data.php:339
+#: inc/Platform_Data.php:356
+msgid "your website"
+msgstr "サイト"
+
+#: inc/Platform_Data.php:296
+msgid "Success! Your Instagram Feeds will continue to work normally."
+msgstr "成功しました ! Instagram Feeds は引き続き正常に機能します。"
+
+#: inc/Platform_Data.php:257
+msgid "Your Instagram feed has been not viewed in the last 14 days. Due to Instagram data privacy rules, all data for this feed will be deleted in 7 days time. To avoid automated data deletion, simply view the Instagram feed on your website within the next 7 days."
+msgstr "Instagram フィードは過去14日間閲覧されていません。Instagram のデータプライバシールールにより、このフィードのすべてのデータは7日後に削除されます。自動的なデータ削除を回避するには、7日以内にサイトで Instagram フィードを表示してください。"
+
+#: inc/Platform_Data.php:153
+msgid "An account admin has deauthorized the Smash Balloon app used to power the Instagram Feed plugin. The page was not reconnected within the 7 day limit and all Instagram data was automatically deleted on your website due to Facebook data privacy rules."
+msgstr "アカウント管理者は、Instagram Feed プラグインを強化するために使用される Smash Balloon アプリの認証を取り消しました。 ページは7日間の制限内に再接続されず、Facebook のデータプライバシールールにより、サイト上のすべての Instagram データが自動的に削除されました。"
+
+#: inc/class-sb-instagram-posts-manager.php:1021
+msgid "<br><br>To prevent the automated data deletion for the source, please reconnect your source within 7 days."
+msgstr "<br><br>ソースの自動的なデータ削除を防ぐには、7日以内にソースを再接続してください。"
+
+#: inc/class-sb-instagram-posts-manager.php:1020
+msgid "If the Instagram source is not reconnected within 7 days then all Instagram data will be automatically deleted on your website for this account (ID: %s) due to Facebook data privacy rules."
+msgstr "Instagram ソースが7日以内に再接続されない場合、Facebook のデータプライバシールールにより、このアカウント (ID: %s) のすべての Instagram データがサイトから自動的に削除されます。"
+
+#: inc/class-sb-instagram-posts-manager.php:1019 inc/Platform_Data.php:355
+msgid "An account admin has deauthorized the Smash Balloon app used to power the Instagram Feed plugin."
+msgstr "アカウント管理者は、Instagram Feed プラグインを強化するために使用される Smash Balloon アプリの認証を取り消しました。"
+
+#: inc/class-sb-instagram-posts-manager.php:1018 inc/Platform_Data.php:321
+#: inc/Platform_Data.php:338
+msgid "Action Required Within 7 Days"
+msgstr "7 日以内に必要なアクション"
+
+#: inc/class-sb-instagram-posts-manager.php:1010
+msgid "Instagram Feed related data for the account(s) %s was removed due to permission for the Smash Balloon App on Facebook or Instagram being revoked. <br><br> To prevent the automated data deletion for the account, please reconnect your account within 7 days."
+msgstr "Facebook または Instagram の Smash Balloon アプリの許可が取り消されたため、アカウント %s の Instagram Feed に関するデータが削除されました。 <br><br>自動的なデータ削除を防ぐには、7日以内にアカウントを再接続してください。"
+
+#: inc/admin/actions.php:369 inc/Platform_Data.php:359
+msgid "To fix your feeds, reconnect all accounts that were in use on the Settings page."
+msgstr "フィードを修正するには、[設定] ページで使用されていたすべてのアカウントを再接続してください。"
+
+#: inc/admin/actions.php:367
+msgid "All Instagram Data has Been Removed:"
+msgstr "すべての Instagram データが削除されました:"
+
+#: inc/admin/actions.php:336
+msgid "Fix Usage"
+msgstr "使い方を修正"
+
+#: inc/admin/actions.php:333
+msgid "Or you can simply press the \"Fix Usage\" button to fix this issue."
+msgstr "または、「使い方を修正」ボタンを押すだけでこの問題を修正できます。"
+
+#: inc/admin/actions.php:331
+msgid "Action Required Within 7 Days:"
+msgstr "7日以内にアクションを取ってください"
+
+#: inc/class-sb-instagram-api-connect.php:210
+msgid "An unknown error occurred when trying to connect to Instagram's API."
+msgstr "Instagram の API に接続しようとしたときに不明なエラーが発生しました。"
+
+#: inc/admin/actions.php:287
+msgid "Try creating database tables again"
+msgstr "データベーステーブルをもう一度作成してみてください"
+
+#: inc/admin/actions.php:274
+msgid "Instagram Feed was unable to create new database tables."
+msgstr "Instagram Feed は新しいデータベーステーブルを作成できませんでした。"
+
+#: admin/SBI_Global_Settings.php:645
+msgid "Success! Try creating a feed and connecting a source."
+msgstr "成功しました! フィードを作成してソースを接続してみてください。"
+
+#: admin/SBI_Global_Settings.php:640
+msgid "Unsuccessful. Try visiting our website."
+msgstr "失敗しました。当社のWebサイトにアクセスしてみてください。"
+
+#: inc/if-functions.php:53
+msgid "Error: No feed found."
+msgstr "エラー: フィードが見つかりません。"
+
+#: inc/if-functions.php:51
+msgid "Error: No feed with the ID %s found."
+msgstr "エラー: ID %s のフィードが見つかりません。"
+
+#: inc/class-sb-instagram-settings.php:952
+msgid "It looks like your Instagram account is private. Instagram requires private accounts to be reauthenticated every 60 days. Refresh your account to allow it to continue updating, or %smake your Instagram account public%s."
+msgstr "Instagram アカウントは非公開のようです。Instagram では、非公開アカウントは60日ごとに再認証する必要があります。アカウントを更新して続行できるようにするか、%sInstagram アカウントを公開%s。"
+
+#: inc/class-sb-instagram-settings.php:796
+msgid "Error: Invalid Feed ID."
+msgstr "エラー: 不正なフィードID。"
+
+#: inc/class-sb-instagram-settings.php:790
+#: inc/class-sb-instagram-settings.php:797
+msgid "Visit the Instagram Feed settings page to see which feeds have been created and how to embed them."
+msgstr "Instagram Feed の設定ページにアクセスして、作成されたフィードとその埋め込み方法を確認してください。"
+
+#: inc/class-sb-instagram-settings.php:789
+msgid "Error: No Feed ID Set."
+msgstr "エラー: フィードIDが設定されていません。"
+
+#: inc/class-sb-instagram-feed.php:876
+msgid "Your access token could not be decrypted on this website. Reconnect this account or go to our website to learn how to prevent this."
+msgstr "このWebサイトでアクセストークンを復号化できませんでした。このアカウントを再接続するか、当社のWebサイトにアクセスして、これを防ぐ方法を確認してください。"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:350
+msgid "The default HTML for the feed can be replaced with custom templates added to your theme's folder. Enable this setting to use these templates. Custom templates are not used in the feed editor. %sLearn More%s"
+msgstr "フィードのデフォルトの HTML は、テーマのフォルダーに追加されたカスタムテンプレートに置き換えることができます。この設定を有効にすると、これらのテンプレートを使用できます。カスタムテンプレートはフィードエディターでは使用されません。%sさらに詳しく%s"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:349
+msgid "Custom Templates"
+msgstr "カスタムテンプレート"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:344
+msgid "Change the number of maximum concurrent API requests. Not recommended unless directed by the support team."
+msgstr "同時 API リクエストの最大数を変更します。この変更はサポートチームからの指示がない限りお勧めしません。"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:343
+msgid "Max Concurrent API Requests"
+msgstr "最大同時 API リクエスト"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:288
+msgid "Likes"
+msgstr "いいね"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:281
+msgid "Newest"
+msgstr "最新"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:275
+msgid "Sort Posts by"
+msgstr "並べ替え"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:253
+msgid "This will skip the specified number of posts from displaying in the feed"
+msgstr "これにより、指定された数の投稿がフィードに表示されなくなります"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:252
+msgid "Post Offset"
+msgstr "オフセット"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:221
+msgid "IGTV Videos"
+msgstr "IGTV 動画"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:205
+msgid "Feed Videos"
+msgstr "フィード動画"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:73
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:178
+msgid "Show specific types of posts"
+msgstr "特定の投稿を表示"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:166
+msgid "Remove any posts containing these text strings, separating multiple strings using commas."
+msgstr "これらの文字列を含む投稿を、すべて削除します。カンマ区切りで複数の文字列を指定します。"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:165
+msgid "Do not show posts containing"
+msgstr "以下を含む投稿を表示しない"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:145
+msgid "Add words here to only show posts containing these words"
+msgstr "ここに単語を追加すると、これらの単語を含む投稿のみを表示します"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:143
+msgid "Only show posts containing"
+msgstr "以下を含む投稿のみ表示する"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:134
+msgid "Filters"
+msgstr "フィルター"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:127
+msgid "Show all posts by default so you can select the ones you want to hide"
+msgstr "デフォルトですべての投稿を表示し、非表示にする投稿を選択できるようにします"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:126
+msgid "Block List"
+msgstr "ブロックリスト"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:123
+msgid "Hides post by default so you can select the ones you want to show"
+msgstr "デフォルトで投稿を非表示にし、表示する投稿を選択できるようにします"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:122
+msgid "Allow List"
+msgstr "許可リスト"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:43
+msgid "Shoppable Feed"
+msgstr "ショッピングフィード"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:38
+msgid "Sort"
+msgstr "ソート"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:98
+msgid "Visually moderate your feed or hide specific posts with Instagram Feed Pro."
+msgstr "Instagram Feed プロ版を使用して、フィードを視覚的に承認したり、特定の投稿を非表示にしたりできます。"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:33
+msgid "Filters and Moderation"
+msgstr "フィルタと承認"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1398
+msgid "Clearing cache will remove all the saved comments in the database"
+msgstr "キャッシュをクリアすると、データベースに保存されているコメントがすべて削除されます"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1397
+msgid "No. of Comments"
+msgstr "コメント数"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1382
+msgid "Display comments for your posts inside the lightbox. Comments are only available for User feeds from Business accounts."
+msgstr "ライトボックス内に投稿へのコメントを表示します。コメントは、ビジネスアカウントのユーザーフィードのみ使用できます。"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1381
+msgid "Comments"
+msgstr "コメント"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1369
+msgid "Link Color"
+msgstr "リンクの色"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1232
+msgid "Trigger Distance"
+msgstr "発動距離"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1211
+msgid "This will load more posts automatically when the users reach the end of the feed"
+msgstr "ユーザーがフィードの最後まで見たときに、次の投稿が自動的に読み込まれます"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1210
+msgid "Infinite Scroll"
+msgstr "無限スクロール"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1094
+msgid "Like/Comment Icons<br/>(Business account only)"
+msgstr "いいね/コメントアイコン<br/>( ビジネスアカウントのみ )"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1086
+msgid "Instagram Icon"
+msgstr "Instagram アイコン"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:942
+msgid "Caption will truncate after reaching the length"
+msgstr "キャプションは、長さを超えると切り捨てられます"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:898
+msgid "By default we auto-detect image width and fetch a optimal resolution."
+msgstr "デフォルトでは画像の幅を自動検出し、最適な解像度を取得します。"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:897
+msgid "Resolution"
+msgstr "解像度"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:850
+msgid "Like and Comment Summary"
+msgstr "いいねとコメントの概要"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:830
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1192
+msgid "These properties are available in the PRO version."
+msgstr "これらのプロパティは、プロ版で使用できます。"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:776
+msgid "Show number of followers"
+msgstr "フォロワー数を表示"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:760
+msgid "This is the time a story displays for, before displaying the next one. Videos always change when the video is finished."
+msgstr "次のストーリーズを表示する前に、ストーリーズが表示される時間です。 動画は、動画が終了すると常に変更されます。"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:759
+msgid "Change Interval"
+msgstr "更新頻度"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:737
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:144
+msgid "Show your active stories from Instagram when your header avatar is clicked. Displays a colored ring around your avatar when a story is available."
+msgstr "ヘッダーアバターがクリックされた際に、Instagram からアクティブなストーリーズを表示します。 ストーリーズが利用可能になると、アバターの周りに色付きの輪が表示されます。"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:736
+msgid "You can view active stories by clicking the profile picture in the header. Instagram Business accounts only.<br/><br/>"
+msgstr "ヘッダーのプロフィール写真をクリックすると、アクティブなストーリーズを表示できます。Instagram ビジネスアカウントでのみ使用できます。<br/><br/>"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:735
+msgid "Include Stories"
+msgstr "ストーリーズを含める"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:717
+msgid "Tweak the header styles and show your follower count with Instagram Feed Pro."
+msgstr "Instagram Feed プロ版を使用してヘッダースタイルを微調整し、フォロワー数を表示。"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:698
+msgid "Show outside scrollable area"
+msgstr "スクロール可能な領域の外側を表示"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:681
+msgid "Add custom bio"
+msgstr "カスタムプロフィールを追加"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:670
+msgid "Use your own custom bio text in the feed header. This is automatically retrieved from Instagram for Business accounts, but it not available for Personal accounts."
+msgstr "フィードのヘッダーでカスタムプロフィールのテキストを使用します。これは Instagram for Business アカウントから自動的に取得されます。個人アカウントでは使用できません。"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:600
+msgid "No Image Added"
+msgstr "画像が追加されていません"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:599
+msgid "Upload your own custom image to use for the avatar. This is automatically retrieved from Instagram for Business accounts, but is not available for Personal accounts."
+msgstr "アバターに使用する独自のカスタム画像をアップロードします。これは Instagram ビジネスアカウントから自動的に取得されますが、個人アカウントでは使用できません。"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:540
+msgid "Button 2"
+msgstr "ボタン2"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:529
+msgid "Button 1"
+msgstr "ボタン1"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:322
+msgid "Padding"
+msgstr "パディング"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:291
+msgid "Highlight posts with these hashtags"
+msgstr "このハッシュタグの投稿をハイライト表示"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:281
+msgid "Highlight posts with these IDs"
+msgstr "このIDの投稿をハイライト表示"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:265
+msgid "Offset"
+msgstr "オフセット"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:239
+msgid "HighLight Settings"
+msgstr "ハイライト設定"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:162
+msgid "Rows"
+msgstr "行"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:135
+msgid "Carousel Settings"
+msgstr "カルーセルの設定"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:78
+msgid "Upgrade to Pro to add a modal when user clicks on a post."
+msgstr "プロ版にアップグレードして、ユーザーが投稿をクリックしたときにモーダルを追加。"
+
+#: inc/admin/SBI_Onboarding_wizard.php:191
+#: inc/admin/SBI_Onboarding_wizard.php:232
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:77
+msgid "Lightbox"
+msgstr "Lightbox"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:70
+msgid "Follow Button"
+msgstr "フォローボタン"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:54
+msgid "Images and Videos"
+msgstr "画像と動画"
+
+#: inc/Builder/Tabs/SBI_Builder_Customizer_Tab.php:118
+msgid "2 days ago"
+msgstr "2日前"
+
+#: inc/Builder/Tabs/SBI_Builder_Customizer_Tab.php:51
+msgid "Inherit"
+msgstr "継承"
+
+#: inc/Builder/SBI_Tooltip_Wizard.php:127
+msgid "Add a Block"
+msgstr "ブロックを追加"
+
+#: inc/Builder/SBI_Source.php:544
+msgid "Uh oh. It looks like this Facebook account is not currently connected to an Instagram Business profile. Please check that you are logged into the %1$sFacebook account%2$s in this browser which is associated with your Instagram Business Profile. If you are, in fact, logged-in to the correct account please make sure you have Instagram accounts connected with your Facebook account by following %3$sthis FAQ%4$s"
+msgstr "この Facebook アカウントは現在 Instagram ビジネスプロフィールに接続されていないようです。Instagram ビジネスプロフィールに関連付けられているこのブラウザで %1$sFacebook アカウント%2$sにログインしていることを確認してください。 実際に正しいアカウントにログインしている場合は、%3$sこちらのよくある質問%4$sに従って、Instagram アカウントが Facebook アカウントに接続されていることを確認してください"
+
+#: inc/Builder/SBI_Source.php:469
+msgid "Uh oh. It looks like this Facebook account is not currently connected to an Instagram Business profile. Please check that you are logged into the %1$sFacebook account%2$s in this browser which is associated with your Instagram Business Profile."
+msgstr "この Facebook アカウントは現在 Instagram ビジネスプロフィールに接続されていないようです。Instagram ビジネスプロファイルに関連付けられているこのブラウザで %1$sFacebook アカウント%2$sにログインしていることを確認してください。"
+
+#: inc/Builder/SBI_Source.php:468 inc/Builder/SBI_Source.php:543
+msgid "Couldn't find Business Profile"
+msgstr "ビジネスプロフィールが見つかりませんでした"
+
+#: inc/Builder/SBI_Source.php:457
+msgid "Your server could not complete a remote request to Facebook's API. Your host may be blocking access or there may be a problem with your server."
+msgstr "サーバーは Facebook API へのリモートリクエストを完了できませんでした。ホストがアクセスをブロックしているか、サーバーに問題がある可能性があります。"
+
+#: inc/Builder/SBI_Source.php:142
+msgid "Connection Error: %s "
+msgstr "接続エラー: %s "
+
+#: inc/Builder/SBI_Source.php:90
+msgid "Something went wrong. Please make sure the ID and access token are correct."
+msgstr "何かがうまくいきませんでした。ID とアクセストークンが正しいことを確認してください。"
+
+#: inc/Builder/SBI_Feed_Saver_Manager.php:656
+msgid "Could not import feed. Please try again"
+msgstr "フィードをインポートできませんでした。もう一度やり直してください"
+
+#: inc/Builder/SBI_Feed_Saver_Manager.php:611
+msgid "No feed source is included. Cannot upload feed."
+msgstr "フィードソースは含まれていません。フィードをアップロードできません。"
+
+#: inc/Builder/SBI_Feed_Saver_Manager.php:306
+msgid "Invalid JSON. Must have brackets \"{}\""
+msgstr "無効なJSON。角かっこ「{}」が必要です"
+
+#: inc/Builder/SBI_Feed_Builder.php:1987 inc/Builder/SBI_Feed_Builder.php:2023
+msgid "Create a feed with sources from different social platforms"
+msgstr "さまざまなソーシャルプラットフォームから、ソースを利用してフィードを作成します"
+
+#: inc/Builder/SBI_Feed_Builder.php:1980 inc/Builder/SBI_Feed_Builder.php:2016
+msgid "Tagged posts feeds require a connected Instagram business account"
+msgstr "ハッシュタグフィードには、Instagram ビジネスアカウントが必要です"
+
+#: inc/Builder/SBI_Feed_Builder.php:1979 inc/Builder/SBI_Feed_Builder.php:2015
+msgid "Display posts your Instagram account has been tagged in"
+msgstr "Instagram アカウントにタグ付けされた投稿を表示します"
+
+#: inc/Builder/SBI_Feed_Builder.php:1978 inc/Builder/SBI_Feed_Builder.php:2014
+msgid "Tagged Posts"
+msgstr "タグ付けされた投稿"
+
+#: inc/Builder/SBI_Feed_Builder.php:1972 inc/Builder/SBI_Feed_Builder.php:2008
+msgid "Hashtag feeds require a connected Instagram business account"
+msgstr "ハッシュタグフィードには、Instagram ビジネスアカウントが必要です"
+
+#: inc/Builder/SBI_Feed_Builder.php:1971 inc/Builder/SBI_Feed_Builder.php:2007
+msgid "Fetch posts from a public Instagram hashtag"
+msgstr "Instagram 公開ハッシュタグから投稿を取得します"
+
+#: inc/Builder/SBI_Feed_Builder.php:1970 inc/Builder/SBI_Feed_Builder.php:2006
+msgid "Public Hashtag"
+msgstr "公開ハッシュタグ"
+
+#: inc/Builder/SBI_Feed_Builder.php:1965
+msgid "Fetch posts from your Instagram profile"
+msgstr "Instagram プロフィールから投稿を取得します"
+
+#: inc/Builder/SBI_Feed_Builder.php:1852 inc/Builder/SBI_Feed_Builder.php:1853
+msgid "(unknown location)"
+msgstr "(位置情報なし)"
+
+#: inc/Builder/SBI_Feed_Builder.php:1852 inc/Builder/SBI_Feed_Builder.php:1853
+msgid "Legacy Feed"
+msgstr "旧フィード"
+
+#: inc/Builder/SBI_Feed_Builder.php:1591
+msgid "Extensions"
+msgstr "拡張機能"
+
+#: inc/Builder/SBI_Feed_Builder.php:1479
+msgid "Tap “Add” or “Update” on an<br/>image to add/update it’s URL"
+msgstr "画像の「追加」または「更新」をクリックして<br/>画像のURLを追加/更新します"
+
+#: inc/Builder/SBI_Feed_Builder.php:1478
+msgid "This feature links the post to the one specified in your caption.<br/><br/>Don’t want to add links to the caption? You can add links manually to each post.<br/><br><br>"
+msgstr "この機能は、投稿をキャプションで指定されたものにリンクします。<br/> <br/>キャプションにリンクを追加しませんか？ 各投稿に手動でリンクを追加できます。<br/><br><br>"
+
+#: inc/Builder/SBI_Feed_Builder.php:1477
+msgid "Upgrade to Pro and make your Instagram Feed Shoppable"
+msgstr "プロ版にアップグレードして、Instagram Feed でショッピングを可能にしましょう"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1013
+msgid "Icon"
+msgstr "アイコン"
+
+#: inc/Builder/SBI_Feed_Builder.php:1473
+msgid "Reset Overrides."
+msgstr "上書きをリセット。"
+
+#: inc/Builder/SBI_Feed_Builder.php:1472
+msgid "Colors that have been overridden from individual post element settings will not change. To change them, you will have to reset overrides."
+msgstr "各投稿要素の設定から上書きされた色は変更されません。それらを変更するには、上書きをリセットする必要があります。"
+
+#: inc/Builder/SBI_Feed_Builder.php:1471
+msgid "Overrides"
+msgstr "上書き"
+
+#: admin/SBI_Support.php:171 inc/Builder/SBI_Feed_Builder.php:1469
+msgid "Link"
+msgstr "リンク"
+
+#: inc/Builder/SBI_Feed_Builder.php:1468
+msgid "Text 2"
+msgstr "テキスト2"
+
+#: inc/Builder/SBI_Feed_Builder.php:1467
+msgid "Background 2"
+msgstr "背景2"
+
+#: inc/Builder/SBI_Feed_Builder.php:1466
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:473
+msgid "Custom Palette"
+msgstr "カスタムパレット"
+
+#: inc/Builder/SBI_Feed_Builder.php:1465
+#: inc/Builder/Tabs/SBI_Builder_Customizer_Tab.php:138
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:463
+msgid "Custom"
+msgstr "カスタム"
+
+#: inc/Builder/SBI_Feed_Builder.php:1464
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:458
+msgid "Dark"
+msgstr "ダーク"
+
+#: inc/Builder/SBI_Feed_Builder.php:1463
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:453
+msgid "Light"
+msgstr "ライト"
+
+#: inc/Builder/SBI_Feed_Builder.php:1462
+msgid "Scheme"
+msgstr "スキーム"
+
+#: inc/Builder/SBI_Feed_Builder.php:1458
+msgid "Change post background, border radius, shadow etc."
+msgstr "投稿の背景、角丸の半径、影などを変更。"
+
+#: inc/Builder/SBI_Feed_Builder.php:1457
+msgid "Tweak Post Styles"
+msgstr "投稿スタイルを微調整"
+
+#: inc/Builder/SBI_Feed_Builder.php:1455
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:347
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:413
+msgid "Mobile"
+msgstr "モバイル"
+
+#: inc/Builder/SBI_Feed_Builder.php:1454
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:391
+msgid "Tablet"
+msgstr "タブレット"
+
+#: inc/Builder/SBI_Feed_Builder.php:1453
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:338
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:368
+msgid "Desktop"
+msgstr "デスクトップ"
+
+#: inc/Builder/SBI_Feed_Builder.php:1452
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:357
+msgid "Columns"
+msgstr "カラム"
+
+#: inc/Builder/SBI_Feed_Builder.php:1451
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:327
+msgid "Number of Posts"
+msgstr "投稿数"
+
+#: inc/Builder/SBI_Feed_Builder.php:1450
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:313
+msgid "Feed Height"
+msgstr "フィードの高さ"
+
+#: inc/Builder/SBI_Feed_Builder.php:1446
+msgid "List"
+msgstr "リスト"
+
+#: inc/Builder/SBI_Feed_Builder.php:1442
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:63
+msgid "Load More Button"
+msgstr "もっと読み込むボタン"
+
+#: inc/Builder/SBI_Feed_Builder.php:1441
+msgid "Like Box"
+msgstr "いいねボックス"
+
+#: inc/Builder/SBI_Feed_Builder.php:1440
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:49
+msgid "Posts"
+msgstr "投稿"
+
+#: inc/Builder/SBI_Feed_Builder.php:1438
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:34
+msgid "Color Scheme"
+msgstr "カラースキーム"
+
+#: inc/Builder/SBI_Feed_Builder.php:1437
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:29
+msgid "Feed Layout"
+msgstr "フィードレイアウト"
+
+#: inc/Builder/SBI_Feed_Builder.php:1429
+msgid "Combine sources from multiple platforms using our Social Wall plugin"
+msgstr "Social Wall プラグインで、さまざまなプラットフォームからのソースを統合できます"
+
+#: inc/Builder/SBI_Feed_Builder.php:1428
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:864
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1165
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1299
+msgid "Hover State"
+msgstr "マウスオーバー時の状態"
+
+#: inc/Builder/SBI_Feed_Builder.php:1427
+msgid "Enter Text"
+msgstr "テキストを入力"
+
+#: inc/Builder/SBI_Feed_Builder.php:1426
+msgid "Select"
+msgstr "選択"
+
+#: inc/Builder/SBI_Feed_Builder.php:1425
+msgid "Placeholder"
+msgstr "プレースホルダー"
+
+#: inc/Builder/SBI_Feed_Builder.php:1424
+msgid "Height"
+msgstr "高さ"
+
+#: inc/Builder/SBI_Feed_Builder.php:1423
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:629
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:976
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1034
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1144
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1278
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1335
+msgid "Color"
+msgstr "色"
+
+#: inc/Builder/SBI_Feed_Builder.php:1422
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:964
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1022
+msgid "Size"
+msgstr "サイズ"
+
+#: inc/Builder/SBI_Feed_Builder.php:1421
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:448
+msgid "Inherit from Theme"
+msgstr "テーマから継承"
+
+#: inc/Builder/SBI_Feed_Builder.php:1420
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:605
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:955
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1064
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1134
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1176
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1268
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1310
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1358
+msgid "Text"
+msgstr "テキスト"
+
+#: inc/Builder/SBI_Feed_Builder.php:1419
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:482
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1054
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1154
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1288
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1347
+msgid "Background"
+msgstr "背景"
+
+#: inc/Builder/SBI_Feed_Builder.php:1417
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:39
+msgid "Sections"
+msgstr "セクション"
+
+#: inc/Builder/SBI_Feed_Builder.php:1416
+msgid "Save"
+msgstr "保存"
+
+#: inc/Builder/SBI_Feed_Builder.php:1415
+msgid "Embed"
+msgstr "埋め込む"
+
+#: inc/Builder/SBI_Feed_Builder.php:1394
+msgid "Update your feed source, filter your posts, or change advanced settings here."
+msgstr "こちらでフィードソースを更新したり、投稿をフィルタリングしたり、詳細設定を変更したりできます。"
+
+#: inc/Builder/SBI_Feed_Builder.php:1388
+msgid "Change your feed layout, color scheme, or customize individual feed sections here."
+msgstr "こちらでフィードレイアウト、配色を変更するか、個々のフィードセクションをカスタマイズします。"
+
+#: inc/Builder/SBI_Feed_Builder.php:1387 inc/Builder/SBI_Feed_Builder.php:1433
+#: inc/Builder/Tabs/SBI_Builder_Customizer_Tab.php:28
+msgid "Customize"
+msgstr "カスタマイズ"
+
+#: inc/Builder/SBI_Feed_Builder.php:1382
+msgid "After you are done customizing the feed, click here to add it to a page or a widget."
+msgstr "フィードのカスタマイズが完了したら、ここをクリックしてページまたはウィジェットに追加。"
+
+#: inc/Builder/SBI_Feed_Builder.php:1381
+msgid "Embedding a Feed"
+msgstr "フィードを埋め込み"
+
+#: inc/Builder/SBI_Feed_Builder.php:1361
+msgid "This update only affects how new feeds are created and customized."
+msgstr "この更新は、新しいフィードの作成方法とカスタマイズ方法にのみ影響します。"
+
+#: inc/Builder/SBI_Feed_Builder.php:1361
+msgid "You don't need to update or change any of your existing feeds. They will continue to work as usual."
+msgstr "既存のフィードを更新または変更する必要はありません。これまでどおり動作します。"
+
+#: inc/Builder/SBI_Feed_Builder.php:1360
+msgid "Existing feeds work as normal"
+msgstr "既存のフィードは通常どおり機能します"
+
+#: inc/Builder/SBI_Feed_Builder.php:1356
+msgid "This works just like the old settings page and affects all legacy feeds on your site."
+msgstr "これは古い設定ページと同じように機能し、サイトのすべての旧フィードに影響します。"
+
+#: inc/Builder/SBI_Feed_Builder.php:1356
+msgid "You can edit the settings for any existing \"legacy\" feed (i.e. any feed created prior to this update) here."
+msgstr "こちらで既存の「旧」フィード（つまり、この更新の前に作成されたフィード）の設定を編集できます。"
+
+#: inc/Builder/SBI_Feed_Builder.php:1355
+msgid "Your existing feeds are under \"Legacy\" feeds"
+msgstr "既存のフィードは「旧」フィードにあります"
+
+#: inc/Builder/SBI_Feed_Builder.php:1341
+msgid "You can edit your existing feed from here, and all changes will only apply to this feed."
+msgstr "ここから既存のフィードを編集でき、すべての変更はこのフィードにのみ適用されます。"
+
+#: inc/Builder/SBI_Feed_Builder.php:1340
+msgid "Your existing feed is here"
+msgstr "設定済みのフィードはこちら"
+
+#: inc/Builder/SBI_Feed_Builder.php:1335 inc/Builder/SBI_Feed_Builder.php:1350
+msgid "Click \"Add New\" to get started."
+msgstr "「新規追加」をクリックして開始。"
+
+#: inc/Builder/SBI_Feed_Builder.php:1335 inc/Builder/SBI_Feed_Builder.php:1350
+msgid "You can now create and customize feeds individually without using shortcode options."
+msgstr "ショートコードオプションを使用せずに、フィードを個別に作成およびカスタマイズできます。"
+
+#: inc/Builder/SBI_Feed_Builder.php:1334 inc/Builder/SBI_Feed_Builder.php:1349
+msgid "How you create a feed has changed"
+msgstr "フィードの作成方法が変更されました"
+
+#: inc/Builder/SBI_Feed_Builder.php:1327
+msgid "You can now create and customize feeds individually. Click \"Add New\" to get started."
+msgstr "フィードを個別に作成、カスタマイズできます。「新規追加」をクリックして開始。"
+
+#: inc/Builder/SBI_Feed_Builder.php:1325
+msgid "These settings will impact %1$s legacy feeds on your site. You can learn more about what legacy feeds are and how they differ from new feeds %2$shere%3$s."
+msgstr "これらの設定は、サイトの %1$s 旧フィードに影響を与えます。 旧フィードとは何か、およびそれらが新しいフィードとどのように異なるかについて、%2$sこちら%3$sで詳しく知ることができます。"
+
+#: inc/Builder/SBI_Feed_Builder.php:1324
+msgid "Legacy Feed Settings"
+msgstr "旧フィードの設定"
+
+#: inc/Builder/SBI_Feed_Builder.php:1282
+msgid "Social Wall Plugin"
+msgstr "Social Wall プラグイン"
+
+#: inc/Builder/SBI_Feed_Builder.php:1206
+msgid "To display a YouTube feed, our YouTube plugin is required. It provides a simple yet powerful way to display videos from YouTube on your website, Increasing engagement with your channel while keeping visitors on your website."
+msgstr "Feeds for YouTube は、YouTube の動画をサイトに表示するためのシンプルで強力な手段です。訪問者をサイトにとどめながら、チャンネルのエンゲージメントを高めます。"
+
+#: inc/Builder/SBI_Feed_Builder.php:1203
+msgid "YouTube"
+msgstr "YouTube"
+
+#: inc/Builder/SBI_Feed_Builder.php:1191
+msgid "Twitter"
+msgstr "Twitter"
+
+#: inc/Builder/SBI_Feed_Builder.php:1182
+msgid "To display a Facebook feed, our Facebook plugin is required. </br> It provides a clean and beautiful way to add your Facebook posts to your website. Grab your visitors attention and keep them engaged with your site longer."
+msgstr "Facebook のフィードを表示するには、Facebook プラグインが必要です。</br> Facebook の投稿をサイトに追加するためのクリーンで美しい方法を提供します。訪問者の注意を引きながら、サイトにより長く滞在させ続けてください。"
+
+#: inc/Builder/SBI_Feed_Builder.php:1169 inc/Builder/SBI_Feed_Builder.php:1181
+#: inc/Builder/SBI_Feed_Builder.php:1193 inc/Builder/SBI_Feed_Builder.php:1205
+#: inc/Builder/SBI_Feed_Builder.php:1217
+msgid "By Smash Balloon"
+msgstr "Smash Balloon"
+
+#: inc/Builder/SBI_Feed_Builder.php:1098
+msgid "Plugin installed & activated"
+msgstr "プラグインがインストール・有効化されました"
+
+#: inc/Builder/SBI_Feed_Builder.php:1010
+msgid "I'm not sure"
+msgstr "わかりません"
+
+#: inc/Builder/SBI_Feed_Builder.php:1009
+msgid "Business"
+msgstr "仕事"
+
+#: inc/Builder/SBI_Feed_Builder.php:1008
+msgid "Personal"
+msgstr "個人的"
+
+#: inc/Builder/SBI_Feed_Builder.php:1006
+msgid "Add feeds for popular social platforms with <span>our other plugins</span>"
+msgstr "<span>当社のその他のプラグイン</span>で、人気のソーシャルプラットフォームのフィードを追加しましょう"
+
+#: inc/Builder/SBI_Feed_Builder.php:1003
+msgid "Select \"Personal\" if displaying a regular feed of posts, as this can display feeds from either a Personal or Business account. For displaying a Hashtag or Tagged feed, you must have an Instagram Business account. If needed, you can convert a Personal account into a Business account by following the directions {link}here{link}."
+msgstr "投稿の通常のフィードを表示する場合は、「個人」を選択します。これにより、個人アカウントまたはビジネスアカウントのいずれかからのフィードを表示できます。 ハッシュタグまたはタグ付きフィードを表示するには、Instagram ビジネスアカウントが必要です。 必要に応じて、{link}こちら{link}の指示に従って、個人アカウントをビジネスアカウントに変換できます。"
+
+#: inc/Builder/SBI_Feed_Builder.php:1002
+msgid "Due to Instagram’s limitations, you need to connect a business account to display a Hashtag feed"
+msgstr "Instagram の制限により、ハッシュタグフィードを表示するにはビジネスアカウントを接続する必要があります"
+
+#: inc/Builder/SBI_Feed_Builder.php:1001
+msgid "Due to Instagram’s limitations, you need to connect a business account to display a Mentions timeline"
+msgstr "Instagram の制限により、メンションのタイムラインを表示するにはビジネスアカウントを接続する必要があります"
+
+#: inc/Builder/SBI_Feed_Builder.php:1000
+msgid "For groups you are not an administrator of"
+msgstr "グループの場合、あなたは管理者ではありません"
+
+#: inc/Builder/SBI_Feed_Builder.php:999
+msgid "Replace with Personal"
+msgstr "個人アカウントに切り替え"
+
+#: inc/Builder/SBI_Feed_Builder.php:998
+msgid "The Instagram account you added is already connected as a “Business” account. Would you like to replace it with a “Personal“ account? (Note: Personal accounts cannot be used to display Tagged or Hashtag feeds.)"
+msgstr "追加した Instagram アカウントは、すでに「ビジネス」アカウントとして接続されています。「個人」アカウントに置き換えますか ? (注: 個人アカウントを使用して、タグ付けされたフィードやハッシュタグフィードを表示することはできません。)"
+
+#: inc/Builder/SBI_Feed_Builder.php:997
+msgid "Account already exists"
+msgstr "アカウントはすでに存在しています"
+
+#: inc/Builder/SBI_Feed_Builder.php:995
+msgid "Click \"Add\" and you are done."
+msgstr "「追加」をクリックして完了です。"
+
+#: inc/Builder/SBI_Feed_Builder.php:994
+msgid "Search for \"Smash Balloon\" and select our app %1$s(see screenshot)%2$s"
+msgstr "「SmashBalloon」を検索してアプリを選択 %1$s(スクリーンショットを参照) %2$s"
+
+#: inc/Builder/SBI_Feed_Builder.php:993
+msgid "Go to your group settings page by "
+msgstr "グループ設定ページに移動 "
+
+#: inc/Builder/SBI_Feed_Builder.php:991
+msgid "To get posts from your group, Instagram requires the \"Smash Balloon Plugin\" app to be added in your group settings. Just follow the directions here:"
+msgstr "グループから投稿を取得するには、Instagram で「Smash Balloon プラグイン」アプリをグループ設定に追加する必要があります。 こちらの指示に従ってください:"
+
+#: inc/Builder/SBI_Feed_Builder.php:990
+msgid "Add Instagram App to your group"
+msgstr "グループに Instagram アプリを追加"
+
+#: inc/Builder/SBI_Feed_Builder.php:989
+msgid "Enter Token"
+msgstr "トークンを入力"
+
+#: inc/Builder/SBI_Feed_Builder.php:988
+msgid "Instagram Access Token"
+msgstr "Instagram アクセストークン"
+
+#: inc/Builder/SBI_Feed_Builder.php:987
+msgid "Enter ID"
+msgstr "ID を入力"
+
+#: inc/Builder/SBI_Feed_Builder.php:986
+msgid "Event Access Token"
+msgstr "イベントアクセストークン"
+
+#: inc/Builder/SBI_Feed_Builder.php:984 inc/Builder/SBI_Feed_Builder.php:985
+msgid "Instagram Account ID"
+msgstr "Instagram アカウント"
+
+#: inc/Builder/SBI_Feed_Builder.php:983
+msgid "Source Type"
+msgstr "ソース形式"
+
+#: inc/Builder/SBI_Feed_Builder.php:981
+msgid "Add a Source Manually"
+msgstr "ソースを手動で追加"
+
+#: inc/Builder/SBI_Feed_Builder.php:980
+msgid "connected to"
+msgstr "に接続"
+
+#: inc/Builder/SBI_Feed_Builder.php:979
+msgid "Groups"
+msgstr "グループ"
+
+#: inc/Builder/SBI_Feed_Builder.php:978
+msgid "Businesses"
+msgstr "ビジネス・商業"
+
+#: inc/Builder/SBI_Feed_Builder.php:977 inc/Builder/SBI_Feed_Builder.php:1179
+msgid "Facebook"
+msgstr "Facebook"
+
+#: inc/Builder/SBI_Feed_Builder.php:976
+msgid "Showing"
+msgstr "表示中"
+
+#: inc/Builder/SBI_Feed_Builder.php:975
+msgid "Select an Instagram Account"
+msgstr "Instagram アカウントを選択"
+
+#: inc/Builder/SBI_Feed_Builder.php:974
+msgid "Add Account Manually"
+msgstr "アカウントを手動で追加"
+
+#: inc/Builder/SBI_Feed_Builder.php:973
+msgid "Already have a API Token and Access Key for your account?"
+msgstr "アカウントの API トークンとアクセスキーを既にお持ちですか ?"
+
+#: inc/Builder/SBI_Feed_Builder.php:972
+msgid "Connect"
+msgstr "連携"
+
+#: inc/Builder/SBI_Feed_Builder.php:971
+msgid "This does not give us permission to manage your Instagram account, it simply allows the plugin to see a list of them and retrieve their public content from the API."
+msgstr "これは、Instagram アカウントを管理する許可を与えるものではなく、プラグインがそれらのリストを表示し、API から公開コンテンツを取得できるようにするだけです。"
+
+#: inc/Builder/SBI_Feed_Builder.php:969
+msgid "Select Account Type"
+msgstr "アカウントタイプを選択"
+
+#: inc/admin/SBI_Onboarding_wizard.php:133 inc/Builder/SBI_Feed_Builder.php:968
+msgid "Connect your Instagram Account"
+msgstr "Instagram アカウントに接続"
+
+#: inc/Builder/SBI_Feed_Builder.php:961
+msgid "Connect an account to show tagged posts. This does not give us any permission to manage your Instagram account."
+msgstr "アカウントを接続して、タグ付けされた投稿を表示します。 Instagram アカウントの管理を許可するものではありません。"
+
+#: inc/Builder/SBI_Feed_Builder.php:959
+msgid "Tagged"
+msgstr "タグ"
+
+#: inc/Builder/SBI_Feed_Builder.php:954
+msgid "Add one or more hashtag separated by comma."
+msgstr "ハッシュタグをカンマで区切りで追加します。"
+
+#: inc/Builder/SBI_Feed_Builder.php:948
+msgid "Connect an account to show posts for it."
+msgstr "アカウントを接続して、投稿を表示します。"
+
+#: inc/Builder/SBI_Feed_Builder.php:946 inc/Builder/SBI_Feed_Builder.php:1964
+msgid "User Timeline"
+msgstr "ユーザータイムライン"
+
+#: inc/Builder/SBI_Feed_Builder.php:942
+msgid "Please add a source in order to display a feed. Go to the \"Settings\" tab -> \"Sources\" section -> Click \"Add New\" to connect a source."
+msgstr "フィードを表示するにはソースを追加してください。「設定」タブ -> 「ソース」セクションに移動し、「新規追加」をクリックしてソースを接続します。"
+
+#: inc/Builder/SBI_Feed_Builder.php:941
+msgid "Add multiple Facebook Pages or Groups to a feed with our Multifeed extension"
+msgstr "マルチフィード拡張機能で、複数のFacebookページまたはグループをフィードに追加できます"
+
+#: inc/Builder/SBI_Feed_Builder.php:940
+msgid "Select a source from your connected Facebook Pages and Groups. Or, use \"Add New\" to connect a new one."
+msgstr "接続されている Facebook ページとグループからソースを選択します。または「新規追加」で新しいソースを接続します。"
+
+#: inc/Builder/SBI_Feed_Builder.php:939
+msgid "Update Source"
+msgstr "ソースを更新"
+
+#: inc/Builder/SBI_Feed_Builder.php:937
+msgid "Due to Facebook limitations, it's not possible to display photo feeds from a Group, only a Page."
+msgstr "Facebook の制限により、グループからの写真フィードを表示することはできず、ページのみを表示することができます。"
+
+#: inc/Builder/SBI_Feed_Builder.php:928
+msgid ""
+"Due to changes in Instagram’s new API, we can no<br/>\n"
+"\t\t\t\t\tlonger get mentions for personal accounts. To<br/>\n"
+"\t\t\t\t\tenable this for your account, you will need to convert it to<br/>\n"
+"\t\t\t\t\ta Business account. Learn More"
+msgstr ""
+"Instagramの新しいAPIの変更により、<br/>\n"
+"\t\t\t\t\t個人アカウントのメンションを取得できなくなりました。<br/>\n"
+"\t\t\t\t\tこれを有効にするには、ビジネスアカウントに切り替える必要があります。<br/>\n"
+"\t\t\t\t\t もっと詳しく"
+
+#: inc/Builder/SBI_Feed_Builder.php:923
+msgid "Select or add an account you want to display the mentions for"
+msgstr "メンションを表示するアカウントを選択または追加します"
+
+#: inc/Builder/SBI_Feed_Builder.php:922
+msgid "Add a source for Mentions"
+msgstr "メンションのソースを追加"
+
+#: inc/Builder/SBI_Feed_Builder.php:919
+msgid "Select or add an account you want to display the timeline for"
+msgstr "タイムラインを表示するアカウントを選択または追加"
+
+#: inc/Builder/SBI_Feed_Builder.php:918
+msgid "Add a source for Timeline"
+msgstr "タイムラインのソースを追加"
+
+#: inc/Builder/SBI_Feed_Builder.php:914
+msgid "Fetch posts that are"
+msgstr "投稿を取得"
+
+#: inc/Builder/SBI_Feed_Builder.php:913
+msgid "Add one or more hashtag separated by comma"
+msgstr "ハッシュタグをカンマで区切りで追加"
+
+#: inc/Builder/SBI_Feed_Builder.php:912
+msgid "Enter Public Hashtags"
+msgstr "公開ハッシュタグを入力"
+
+#: inc/Builder/SBI_Feed_Builder.php:911
+msgid "Looks like you have not added any source.<br/>Use “Add Source” to add a new one."
+msgstr "ソースを追加していないようです。<br/>「ソースの追加」より新しいソースを追加します。"
+
+#: inc/Builder/SBI_Feed_Builder.php:910
+msgid "Sources are Instagram accounts your feed will display content from"
+msgstr "ソースとは、フィードにコンテンツを表示する Instagram アカウントです"
+
+#: inc/Builder/SBI_Feed_Builder.php:909
+msgid "Select one or more sources"
+msgstr "1つ以上のソースを選択"
+
+#: inc/Builder/SBI_Feed_Builder.php:890
+msgid "You will be redirected to our app so you can connect your account in 5 seconds"
+msgstr "アプリにリダイレクトされます。ご自分のアカウントにわずか5秒で接続できます。"
+
+#: inc/Builder/SBI_Feed_Builder.php:889
+msgid "Redirecting to connect.smashballoon.com"
+msgstr "connect.smashballoon.com へリダイレクト"
+
+#: inc/Builder/SBI_Feed_Builder.php:886
+msgid "Hide Features"
+msgstr "機能を非表示"
+
+#: inc/Builder/SBI_Feed_Builder.php:885
+msgid "Show Features"
+msgstr "機能を表示"
+
+#: inc/Builder/SBI_Feed_Builder.php:883
+msgid "Fast, friendly, and effective support"
+msgstr "速く、フレンドリーで、効果的なサポート"
+
+#: inc/Builder/SBI_Feed_Builder.php:881
+msgid "Display tagged posts"
+msgstr "タグ付けされた投稿を表示"
+
+#: inc/Builder/SBI_Feed_Builder.php:879
+msgid "Play videos in your feed"
+msgstr "フィードで動画を再生"
+
+#: inc/Builder/SBI_Feed_Builder.php:877
+msgid "Display likes, captions & comments"
+msgstr "いいね、キャプション、コメントを表示"
+
+#: inc/Builder/SBI_Feed_Builder.php:875
+msgid "Create shoppable feeds"
+msgstr "ショッピングフィードを作成"
+
+#: inc/Builder/SBI_Feed_Builder.php:873
+msgid "And Much More!"
+msgstr "それだけではありません !"
+
+#: inc/Builder/SBI_Feed_Builder.php:871
+msgid "Powerful post filtering and moderation"
+msgstr "強力な投稿フィルタと承認"
+
+#: inc/Builder/SBI_Feed_Builder.php:870
+msgid "View posts in a pop-up lightbox"
+msgstr "ポップアップライトボックスで投稿を表示"
+
+#: inc/Builder/SBI_Feed_Builder.php:869
+msgid "Carousel, Masonry, & Highlight layouts"
+msgstr "カルーセル、レンガ状、およびハイライト表示のレイアウト"
+
+#: inc/Builder/SBI_Feed_Builder.php:868
+msgid "Display Hashtag Feeds"
+msgstr "ハッシュタグフィードを表示"
+
+#: inc/Builder/SBI_Feed_Builder.php:866
+msgid "Ability to “Load More” posts"
+msgstr "投稿を「さらに読み込む」機能"
+
+#: inc/Builder/SBI_Feed_Builder.php:865
+msgid "All Feed Types: Photos, Albums, Events and more"
+msgstr "すべてのフィードタイプ: 写真、アルバム、イベントなど"
+
+#: inc/Builder/SBI_Feed_Builder.php:864
+msgid "View likes, shares and comments"
+msgstr "いいね、シェア、コメントを見る"
+
+#: inc/Builder/SBI_Feed_Builder.php:863
+msgid "Display images and videos in posts"
+msgstr "投稿に画像や動画を表示"
+
+#: inc/Builder/SBI_Feed_Builder.php:861
+msgid "Try Demo"
+msgstr "デモを試す"
+
+#: inc/Builder/SBI_Feed_Builder.php:857
+msgid "Lite users get 50% OFF"
+msgstr "ライトユーザーは50％オフ"
+
+#: inc/Builder/SBI_Feed_Builder.php:856
+msgid "Get more features with Instagram Feed Pro"
+msgstr "Instagram Feed プロ版でより多くの機能を入手"
+
+#: inc/Builder/SBI_Feed_Builder.php:854
+msgid "Carousel Layout updated"
+msgstr "カルーセルレイアウトを更新しました"
+
+#: inc/Builder/SBI_Feed_Builder.php:851
+msgid "License Deactivated"
+msgstr "ライセンス無効化"
+
+#: inc/Builder/SBI_Feed_Builder.php:850
+msgid "License activated"
+msgstr "ライセンス有効化"
+
+#: inc/Builder/SBI_Feed_Builder.php:849
+msgid "Invalid license key"
+msgstr "無効なライセンスキー"
+
+#: inc/Builder/SBI_Feed_Builder.php:847
+msgid "Installed & Activated"
+msgstr "インストール・有効化"
+
+#: inc/Builder/SBI_Feed_Builder.php:837
+msgid "Comment cache cleared"
+msgstr "フィードのキャッシュをクリアしました"
+
+#: inc/Builder/SBI_Feed_Builder.php:833
+msgid "Please select a source for your feed"
+msgstr "フィードのソースを選択してください"
+
+#: inc/Builder/SBI_Feed_Builder.php:829
+msgid "Feed cache cleared"
+msgstr "フィードのキャッシュをクリアしました"
+
+#: inc/Builder/SBI_Feed_Builder.php:825
+msgid "Unknown error occurred"
+msgstr "不明なエラーが発生"
+
+#: inc/Builder/SBI_Feed_Builder.php:821
+msgid "Carousel updated successfully"
+msgstr "カルーセルを更新しました"
+
+#: inc/Builder/SBI_Feed_Builder.php:817
+msgid "Preview updated successfully"
+msgstr "プレビューを更新しました"
+
+#: inc/Builder/SBI_Feed_Builder.php:813
+msgid "Error saving Feed"
+msgstr "フィードの保存でエラー"
+
+#: inc/Builder/SBI_Feed_Builder.php:809
+msgid "Feed saved successfully"
+msgstr "フィードを保存しました"
+
+#: inc/Builder/SBI_Feed_Builder.php:804
+msgid "Moderation Mode Preview"
+msgstr "承認モードプレビュー"
+
+#: inc/Builder/SBI_Feed_Builder.php:803
+msgid "Most recent"
+msgstr "最新"
+
+#: inc/Builder/SBI_Feed_Builder.php:802
+msgid "Top Rated"
+msgstr "高評価"
+
+#: inc/Builder/SBI_Feed_Builder.php:801
+msgid "Filters & Moderation"
+msgstr "フィルタと承認"
+
+#: inc/Builder/SBI_Feed_Builder.php:800
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:167
+msgid "Add words here to hide any posts containing these words"
+msgstr "ここに単語を追加すると、これらの単語を含む投稿を非表示にします"
+
+#: inc/Builder/SBI_Feed_Builder.php:799
+msgid "Or Enter Post IDs to hide manually"
+msgstr "または投稿ID を入力して手動で非表示にする"
+
+#: inc/Builder/SBI_Feed_Builder.php:798
+msgid "Moderation Mode"
+msgstr "承認モード"
+
+#: inc/Builder/SBI_Feed_Builder.php:796
+msgid "Moderate your feed"
+msgstr "フィードを承認"
+
+#: inc/Builder/SBI_Feed_Builder.php:795
+msgid "Edit Sources"
+msgstr "ソースを編集"
+
+#: inc/Builder/SBI_Feed_Builder.php:794
+msgid "Add your product URL here"
+msgstr "ここに商品のURLを追加"
+
+#: inc/Builder/SBI_Feed_Builder.php:793
+msgid "Product Link"
+msgstr "商品へのリンク"
+
+#: inc/Builder/SBI_Feed_Builder.php:792
+msgid "Selected Post"
+msgstr "選択した投稿"
+
+#: inc/Builder/SBI_Feed_Builder.php:791
+msgid "Business Account required"
+msgstr "ビジネスアカウントが必要です"
+
+#: inc/Builder/SBI_Feed_Builder.php:790
+msgid "Add Image"
+msgstr "画像を追加"
+
+#: inc/Builder/SBI_Feed_Builder.php:789
+msgid "Source is not used yet"
+msgstr "ソースはまだ使用されていません"
+
+#: inc/Builder/SBI_Feed_Builder.php:788
+msgid "feed"
+msgstr "フィード"
+
+#: inc/Builder/SBI_Feed_Builder.php:787
+msgid "Reconnect"
+msgstr "再接続"
+
+#: inc/Builder/SBI_Feed_Builder.php:786
+msgid "Invalid"
+msgstr "無効"
+
+#: inc/Builder/SBI_Feed_Builder.php:785
+msgid "Encryption Error"
+msgstr "暗号化エラー"
+
+#: inc/Builder/SBI_Feed_Builder.php:784
+msgid "Source Invalid"
+msgstr "ソースが無効"
+
+#: inc/Builder/SBI_Feed_Builder.php:782
+msgid "There was an error when trying to connect to Instagram."
+msgstr "Instagram に接続しようとしたときにエラーが発生。"
+
+#: inc/Builder/SBI_Feed_Builder.php:780
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:714
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:827
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1188
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:53
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:96
+msgid "Advanced"
+msgstr "高度"
+
+#: inc/Builder/SBI_Feed_Builder.php:779
+msgid "Translation"
+msgstr "翻訳"
+
+#: admin/views/support/support-tools.php:44
+#: inc/Builder/SBI_Feed_Builder.php:778
+msgid "Feeds"
+msgstr "フィード"
+
+#: inc/Builder/SBI_Feed_Builder.php:775
+msgid "Feed Name"
+msgstr "フィード名"
+
+#: inc/Builder/SBI_Feed_Builder.php:774
+msgid "Save Changes"
+msgstr "変更を保存"
+
+#: inc/Builder/SBI_Feed_Builder.php:773
+msgid "Clear Feed Cache"
+msgstr "フィードのキャッシュをクリア"
+
+#: inc/Builder/SBI_Feed_Builder.php:772
+msgid "Clear"
+msgstr "クリア"
+
+#: admin/views/support/support-tools.php:103
+#: inc/Builder/SBI_Feed_Builder.php:770
+msgid "Confirm"
+msgstr "確認"
+
+#: inc/Builder/SBI_Feed_Builder.php:769
+msgid "Token"
+msgstr "トークン"
+
+#: admin/views/support/support-tools.php:73
+#: admin/views/support/support-tools.php:146
+#: inc/Builder/SBI_Feed_Builder.php:768
+msgid "ID"
+msgstr "ID"
+
+#: inc/Builder/SBI_Feed_Builder.php:766 inc/Builder/SBI_Feed_Builder.php:1413
+msgid "Preview"
+msgstr "プレビュー"
+
+#: inc/Builder/SBI_Feed_Builder.php:764
+msgid "Member"
+msgstr "メンバー"
+
+#: inc/Builder/SBI_Feed_Builder.php:763
+msgid "Admin"
+msgstr "管理者"
+
+#: inc/Builder/SBI_Feed_Builder.php:761
+msgid "Timeline"
+msgstr "タイムライン"
+
+#: inc/Builder/SBI_Feed_Builder.php:760
+msgid "Failed to import feed"
+msgstr "フィードのインポートに失敗しました"
+
+#: inc/Builder/SBI_Feed_Builder.php:759
+msgid "Feed imported successfully"
+msgstr "フィードをインポートしました"
+
+#: inc/Builder/SBI_Feed_Builder.php:758
+msgid "Copied to Clipboard"
+msgstr "クリップボードにコピーしました"
+
+#: inc/Builder/SBI_Feed_Builder.php:757
+msgid "Page"
+msgstr "ページ"
+
+#: inc/Builder/SBI_Feed_Builder.php:754
+msgid "Items"
+msgstr "項目"
+
+#: inc/Builder/SBI_Feed_Builder.php:753
+msgid "Item"
+msgstr "項目"
+
+#: inc/Builder/SBI_Feed_Builder.php:752
+msgid "places"
+msgstr "か所"
+
+#: inc/Builder/SBI_Feed_Builder.php:751
+msgid "place"
+msgstr "か所"
+
+#: inc/Builder/SBI_Feed_Builder.php:750
+msgid "Used in"
+msgstr "利用中:"
+
+#: inc/Builder/SBI_Feed_Builder.php:749
+msgid "Click to view Instances"
+msgstr "クリックしてインスタンスを見る"
+
+#: inc/Builder/SBI_Feed_Builder.php:747
+msgid "Remove Source"
+msgstr "ソースを削除"
+
+#: inc/Builder/SBI_Feed_Builder.php:745
+msgid "Delete"
+msgstr "削除"
+
+#: inc/Builder/SBI_Feed_Builder.php:744
+msgid "Duplicate"
+msgstr "複製"
+
+#: inc/Builder/SBI_Feed_Builder.php:743
+msgid "Edit"
+msgstr "編集"
+
+#: inc/Builder/SBI_Feed_Builder.php:741
+msgid "Apply"
+msgstr "適用"
+
+#: inc/Builder/SBI_Feed_Builder.php:740
+msgid "Photo"
+msgstr "写真"
+
+#: inc/Builder/SBI_Feed_Builder.php:738
+msgid "Includes"
+msgstr "含む"
+
+#: inc/Builder/SBI_Feed_Builder.php:736
+msgid "Get Extension"
+msgstr "拡張機能を取得"
+
+#: inc/Builder/SBI_Feed_Builder.php:735
+msgid "Change"
+msgstr "変更"
+
+#: inc/Builder/SBI_Feed_Builder.php:733
+msgid "Create Feed"
+msgstr "フィードを作成"
+
+#: inc/Builder/SBI_Feed_Builder.php:732
+msgid "Back to all feeds"
+msgstr "すべてのフィードに戻る"
+
+#: inc/Builder/SBI_Feed_Builder.php:731
+msgid "Back"
+msgstr "戻る"
+
+#: inc/Builder/SBI_Feed_Builder.php:728
+msgid "Update"
+msgstr "更新"
+
+#: inc/Builder/SBI_Feed_Builder.php:727
+msgid "New"
+msgstr "新着"
+
+#: inc/Builder/SBI_Feed_Builder.php:726
+msgid "Finish"
+msgstr "終了"
+
+#: inc/Builder/SBI_Feed_Builder.php:725
+msgid "Next"
+msgstr "次ヘ"
+
+#: inc/Builder/SBI_Feed_Builder.php:724
+msgid "Previous"
+msgstr "前へ"
+
+#: inc/Builder/SBI_Feed_Builder.php:722
+msgid "Add another Source"
+msgstr "別のソースを追加"
+
+#: inc/Builder/SBI_Feed_Builder.php:721 inc/Builder/SBI_Feed_Builder.php:982
+msgid "Add Source"
+msgstr "ソースを追加"
+
+#: inc/Builder/SBI_Feed_Builder.php:720
+msgid "Add New"
+msgstr "新規追加"
+
+#: inc/Builder/SBI_Feed_Builder.php:718
+msgid "Dashboard"
+msgstr "ダッシュボード"
+
+#: inc/Builder/SBI_Feed_Builder.php:716 inc/Builder/SBI_Tooltip_Wizard.php:132
+msgid "Done"
+msgstr "完了"
+
+#: inc/Builder/SBI_Feed_Builder.php:442
+msgid "Automatically link Instagram posts to custom URLs of your choosing by adding the URL in the caption, or manually add links to specific pages or products on your site (or other sites) in a quick and easy way."
+msgstr "キャプションにURLを追加して、Instagram の投稿を選択したカスタムURL に自動的にリンクするか、サイト（または他のサイト）の特定のページや製品へのリンクをすばやく簡単に手動で追加します。"
+
+#: inc/Builder/SBI_Feed_Builder.php:441
+msgid "Upgrade to Pro to Get Shoppable Feeds"
+msgstr "プロ版にアップグレードして、ショッピングフィードを取得"
+
+#: inc/Builder/SBI_Feed_Builder.php:418
+msgid "Get Advanced Moderation and Filters with Pro"
+msgstr "プロ版で高度な承認とフィルターを取得"
+
+#: inc/Builder/SBI_Feed_Builder.php:396
+msgid "Allow visitors to view your photos and videos in a beautiful full size lightbox, keeping them on your site for longer to discover more of your content."
+msgstr "訪問者が美しいフルサイズの写真や動画をライトボックスで表示できるようにし、サイトに長く滞在しながらより多くのコンテンツを見つけられるようにします。"
+
+#: inc/Builder/SBI_Feed_Builder.php:395
+msgid "Upgrade to Pro to enable the popup Lightbox"
+msgstr "プロ版にアップグレードし、ポップアップライトボックスを有効化"
+
+#: inc/Builder/SBI_Feed_Builder.php:373
+msgid "Upgrade to Pro to display post captions below each post and in the lightbox, which can be crawled by search engines to help boost SEO."
+msgstr "プロ版にアップグレードして、投稿の下とライトボックスにキャプションを表示します。検索エンジンによってクロールされ、SEOを促進するのに役立ちます。"
+
+#: inc/Builder/SBI_Feed_Builder.php:372
+msgid "Display Captions, Likes, and Comments"
+msgstr "キャプション、いいね、コメントを表示"
+
+#: inc/Builder/SBI_Feed_Builder.php:350
+msgid "Got stories to tell? We want to help you share them. Display Instagram stories right on your website in a pop-up lightbox to keep your users engaged and on your website for longer."
+msgstr "お伝えしたいことはありますか ? 私たちはあなたが共有するのを手伝いたいです。 Instagram ストーリーズをサイト上でポップアップライトボックスで表示し、訪問者のエンゲージメントを維持します。"
+
+#: inc/Builder/SBI_Feed_Builder.php:349
+msgid "Get Stories, Followers and Advanced Header Options"
+msgstr "ストーリーズ、フォロワー、拡張ヘッダーオプションを取得"
+
+#: inc/Builder/SBI_Feed_Builder.php:328
+msgid "Choose from one of our built-in layout options; grid, carousel, masonry, and highlight to allow you to showcase your content in any way you want."
+msgstr "用意されているレイアウトオプション; グリッド、カルーセル、レンガ状、ハイライトより選択することでコンテンツを好きなように見せることができます。"
+
+#: inc/Builder/SBI_Feed_Builder.php:327
+msgid "Upgrade to Pro to get Feed Layouts"
+msgstr "プロ版にアップグレードし、フィードレイアウトを有効化"
+
+#: inc/Builder/SBI_Feed_Builder.php:320
+msgid "Social Wall Pro"
+msgstr "Social Wall Pro"
+
+#: inc/Builder/SBI_Feed_Builder.php:319
+msgid "All Pro Facebook Extensions"
+msgstr "すべての Facebook Pro 拡張機能"
+
+#: inc/Builder/SBI_Feed_Builder.php:317
+msgid "YouTube Feeds Pro"
+msgstr "YouTube Feeds Pro"
+
+#: inc/Builder/SBI_Feed_Builder.php:313
+msgid "Upgrade to the All Access Bundle and get:"
+msgstr "All Access Bundle にアップグレードすると、以下をご利用いただけます"
+
+#: inc/Builder/SBI_Feed_Builder.php:286
+msgid "Display posts that you've been tagged in by other users allowing you to increase your audience's engagement with your Instagram account."
+msgstr "他のユーザーによってタグ付けされた投稿を表示し、Instagram アカウントに対する視聴者のエンゲージメントを高めることができます。"
+
+#: inc/Builder/SBI_Feed_Builder.php:285
+msgid "Upgrade to Pro to get Tagged Posts Feed"
+msgstr "タグ付けされた投稿フィードを取得するには、プロ版にアップグレードしてください"
+
+#: inc/Builder/SBI_Feed_Builder.php:279 inc/Builder/SBI_Feed_Builder.php:301
+#: inc/Builder/SBI_Feed_Builder.php:343 inc/Builder/SBI_Feed_Builder.php:365
+#: inc/Builder/SBI_Feed_Builder.php:388 inc/Builder/SBI_Feed_Builder.php:411
+#: inc/Builder/SBI_Feed_Builder.php:434 inc/Builder/SBI_Feed_Builder.php:457
+#: inc/Builder/SBI_Feed_Builder.php:882
+msgid "30 day money back guarantee"
+msgstr "30日間の返金保証"
+
+#: inc/Builder/SBI_Feed_Builder.php:278 inc/Builder/SBI_Feed_Builder.php:300
+#: inc/Builder/SBI_Feed_Builder.php:342 inc/Builder/SBI_Feed_Builder.php:364
+#: inc/Builder/SBI_Feed_Builder.php:387 inc/Builder/SBI_Feed_Builder.php:410
+#: inc/Builder/SBI_Feed_Builder.php:433 inc/Builder/SBI_Feed_Builder.php:456
+#: inc/Builder/SBI_Feed_Builder.php:876
+msgid "Combine multiple feed types"
+msgstr "複数のフィードタイプを組み合わせる"
+
+#: inc/Builder/SBI_Feed_Builder.php:277 inc/Builder/SBI_Feed_Builder.php:299
+#: inc/Builder/SBI_Feed_Builder.php:341 inc/Builder/SBI_Feed_Builder.php:363
+#: inc/Builder/SBI_Feed_Builder.php:386 inc/Builder/SBI_Feed_Builder.php:409
+#: inc/Builder/SBI_Feed_Builder.php:432 inc/Builder/SBI_Feed_Builder.php:455
+msgid "Post captions"
+msgstr "投稿キャプション"
+
+#: inc/Builder/SBI_Feed_Builder.php:276 inc/Builder/SBI_Feed_Builder.php:298
+#: inc/Builder/SBI_Feed_Builder.php:340 inc/Builder/SBI_Feed_Builder.php:362
+#: inc/Builder/SBI_Feed_Builder.php:385 inc/Builder/SBI_Feed_Builder.php:408
+#: inc/Builder/SBI_Feed_Builder.php:431 inc/Builder/SBI_Feed_Builder.php:454
+msgid "Pro support"
+msgstr "プロ版サポート"
+
+#: inc/Builder/SBI_Feed_Builder.php:275 inc/Builder/SBI_Feed_Builder.php:297
+#: inc/Builder/SBI_Feed_Builder.php:339 inc/Builder/SBI_Feed_Builder.php:361
+#: inc/Builder/SBI_Feed_Builder.php:384 inc/Builder/SBI_Feed_Builder.php:407
+#: inc/Builder/SBI_Feed_Builder.php:430 inc/Builder/SBI_Feed_Builder.php:453
+msgid "Shoppable feeds"
+msgstr "ショッピングフィード"
+
+#: inc/Builder/SBI_Feed_Builder.php:273 inc/Builder/SBI_Feed_Builder.php:295
+#: inc/Builder/SBI_Feed_Builder.php:337 inc/Builder/SBI_Feed_Builder.php:359
+#: inc/Builder/SBI_Feed_Builder.php:382 inc/Builder/SBI_Feed_Builder.php:405
+#: inc/Builder/SBI_Feed_Builder.php:428 inc/Builder/SBI_Feed_Builder.php:451
+msgid "Popup photo/video lightbox"
+msgstr "写真 / 動画をライトボックスでポップアップ表示"
+
+#: inc/Builder/SBI_Feed_Builder.php:272 inc/Builder/SBI_Feed_Builder.php:294
+#: inc/Builder/SBI_Feed_Builder.php:336 inc/Builder/SBI_Feed_Builder.php:358
+#: inc/Builder/SBI_Feed_Builder.php:381 inc/Builder/SBI_Feed_Builder.php:404
+#: inc/Builder/SBI_Feed_Builder.php:427 inc/Builder/SBI_Feed_Builder.php:450
+msgid "Multiple layout options"
+msgstr "複数のレイアウトオプション"
+
+#: inc/Builder/SBI_Feed_Builder.php:271 inc/Builder/SBI_Feed_Builder.php:293
+#: inc/Builder/SBI_Feed_Builder.php:335 inc/Builder/SBI_Feed_Builder.php:357
+#: inc/Builder/SBI_Feed_Builder.php:380 inc/Builder/SBI_Feed_Builder.php:403
+#: inc/Builder/SBI_Feed_Builder.php:426 inc/Builder/SBI_Feed_Builder.php:449
+#: inc/Builder/SBI_Feed_Builder.php:880
+msgid "Highlight specific posts"
+msgstr "特定の投稿を強調表示"
+
+#: inc/Builder/SBI_Feed_Builder.php:270 inc/Builder/SBI_Feed_Builder.php:292
+#: inc/Builder/SBI_Feed_Builder.php:334 inc/Builder/SBI_Feed_Builder.php:356
+#: inc/Builder/SBI_Feed_Builder.php:379 inc/Builder/SBI_Feed_Builder.php:402
+#: inc/Builder/SBI_Feed_Builder.php:425 inc/Builder/SBI_Feed_Builder.php:448
+msgid "Comments and Likes"
+msgstr "コメントといいね"
+
+#: inc/Builder/SBI_Feed_Builder.php:269 inc/Builder/SBI_Feed_Builder.php:291
+#: inc/Builder/SBI_Feed_Builder.php:333 inc/Builder/SBI_Feed_Builder.php:355
+#: inc/Builder/SBI_Feed_Builder.php:378 inc/Builder/SBI_Feed_Builder.php:401
+#: inc/Builder/SBI_Feed_Builder.php:424 inc/Builder/SBI_Feed_Builder.php:447
+msgid "Powerful visual moderation"
+msgstr "強力なビジュアル承認"
+
+#: inc/Builder/SBI_Feed_Builder.php:268 inc/Builder/SBI_Feed_Builder.php:290
+#: inc/Builder/SBI_Feed_Builder.php:332 inc/Builder/SBI_Feed_Builder.php:354
+#: inc/Builder/SBI_Feed_Builder.php:377 inc/Builder/SBI_Feed_Builder.php:400
+#: inc/Builder/SBI_Feed_Builder.php:423 inc/Builder/SBI_Feed_Builder.php:446
+msgid "Display Hashtag & Tagged feeds"
+msgstr "ハッシュタグとタグ付けされたフィードを表示"
+
+#: inc/Builder/SBI_Feed_Builder.php:266 inc/Builder/SBI_Feed_Builder.php:288
+#: inc/Builder/SBI_Feed_Builder.php:330 inc/Builder/SBI_Feed_Builder.php:352
+#: inc/Builder/SBI_Feed_Builder.php:375 inc/Builder/SBI_Feed_Builder.php:398
+#: inc/Builder/SBI_Feed_Builder.php:421 inc/Builder/SBI_Feed_Builder.php:444
+msgid "And get much more!"
+msgstr "他にもさまざまな機能があります !"
+
+#: inc/Builder/SBI_Feed_Builder.php:264
+msgid "Display posts from any public hashtag with an Instagram hashtag feed. Great for pulling in user-generated content associated with your brand, running promotional hashtag campaigns, engaging audiences at events, and more."
+msgstr "Instagram ハッシュタグフィードを利用し、公開ハッシュタグから投稿を表示します。ブランドに関連するユーザー生成コンテンツの取り込み、プロモーションハッシュタグキャンペーンの実行、イベントでの視聴者の獲得などに最適です。"
+
+#: inc/Builder/SBI_Feed_Builder.php:263
+msgid "Upgrade to Pro to get Hashtag Feeds"
+msgstr "プロ版にアップグレードして、ハッシュタグフィードを取得"
+
+#: inc/Builder/SBI_Feed_Builder.php:239
+msgid "Select Page"
+msgstr "ページを選択"
+
+#: inc/Builder/SBI_Feed_Builder.php:238
+msgid "Add to a Widget"
+msgstr "ウィジェットに追加"
+
+#: inc/Builder/SBI_Feed_Builder.php:237
+msgid "Add to a Page"
+msgstr "ページに追加"
+
+#: inc/Builder/SBI_Feed_Builder.php:236
+msgid "Or use the built in WordPress block or widget"
+msgstr "または、WordPress ブロックかウィジェットを使用します"
+
+#: inc/Builder/SBI_Feed_Builder.php:235
+msgid "Add the unique shortcode to any page, post, or widget:"
+msgstr "任意のページ、投稿、またはウィジェットにショートコードを追加します"
+
+#: inc/Builder/SBI_Feed_Builder.php:234
+msgid "Embed Feed"
+msgstr "埋め込みフィード"
+
+#: inc/Builder/SBI_Feed_Builder.php:231
+msgid "%1$sBonus%2$s Lite users get %3$s50&#37; Off%4$s automatically applied at checkout"
+msgstr "%1$sボーナス%2$s ライトユーザーは %3$s50&#37; オフ%4$s チェックアウト時に自動的に適用されます"
+
+#: inc/Builder/SBI_Feed_Builder.php:230
+msgid "Includes all Smash Balloon plugins for one low price: Instagram, Facebook, Twitter, YouTube, and Social Wall"
+msgstr "お手頃な価格で、すべての SmashBalloon プラグイン (Instagram、Facebook、Twitter、YouTube、Social Wall) が含まれています。"
+
+#: inc/Builder/SBI_Feed_Builder.php:229
+msgid "Upgrade to the %1$sAll Access Bundle%2$s to get all of our Pro Plugins"
+msgstr "%1$sAll Access Bundle%2$s にアップグレードして、Pro 版プラグインを最大限に活用しましょう"
+
+#: inc/Builder/SBI_Feed_Builder.php:226 inc/Builder/SBI_Feed_Builder.php:723
+msgid "Add Another Source Type"
+msgstr "別のソース形式を追加"
+
+#: inc/Builder/SBI_Feed_Builder.php:225
+msgid "Advanced Feeds"
+msgstr "拡張フィード"
+
+#: inc/Builder/SBI_Feed_Builder.php:224
+msgid "Update Feed Type"
+msgstr "フィード形式を更新"
+
+#: inc/Builder/SBI_Feed_Builder.php:223
+msgid "Select one or more feed types. You can add or remove them later."
+msgstr "1つ以上のフィード形式を選択してください。フィードは、後で追加または削除できます。"
+
+#: inc/Builder/SBI_Feed_Builder.php:222
+msgid "Select Feed Type"
+msgstr "フィード形式を選択"
+
+#: inc/Builder/SBI_Feed_Builder.php:221
+msgid "Create an Instagram Feed"
+msgstr "Instagram フィードを作成"
+
+#: inc/Builder/SBI_Feed_Builder.php:207
+msgid "If you exit without saving, all the changes you made will be reverted."
+msgstr "保存せずに終了すると、行ったすべての変更が元に戻ります。"
+
+#: inc/Builder/SBI_Feed_Builder.php:206
+msgid "You have unsaved changes"
+msgstr "保存されていない変更があります"
+
+#: inc/Builder/SBI_Feed_Builder.php:200 inc/Builder/SBI_Feed_Builder.php:214
+msgid "Exit without Saving"
+msgstr "保存せずに終了"
+
+#: inc/Builder/SBI_Feed_Builder.php:196 inc/Builder/SBI_Feed_Builder.php:210
+#: inc/Builder/SBI_Feed_Builder.php:797
+msgid "Save and Exit"
+msgstr "保存して終了"
+
+#: inc/Builder/SBI_Feed_Builder.php:193
+msgid "Are you sure you want to leave this page, all unsaved settings will be lost, please make sure to save before leaving."
+msgstr "このページを終了すると、未保存の設定はすべて失われます。終了する前に必ず保存してください。"
+
+#: inc/Builder/SBI_Feed_Builder.php:192
+msgid "Are you Sure?"
+msgstr "よろしいですか?"
+
+#: inc/Builder/SBI_Feed_Builder.php:189
+msgid "You are going to delete these feeds. You will lose all the settings. Are you sure you want to continue?"
+msgstr "これらのフィードを削除しようとしています。削除すると、すべての設定が失われます。続行してもよろしいですか ?"
+
+#: inc/Builder/SBI_Feed_Builder.php:188
+msgid "Delete Feeds?"
+msgstr "フィードを削除しますか ?"
+
+#: inc/Builder/SBI_Feed_Builder.php:185
+msgid "You are going to delete this feed. You will lose all the settings. Are you sure you want to continue?"
+msgstr "このフィードを削除しようとしています。削除すると、すべての設定が失われます。続行してもよろしいですか ?"
+
+#: inc/Builder/SBI_Feed_Builder.php:181
+msgid "You are going to delete this source. To retrieve it, you will need to add it again. Are you sure you want to continue?"
+msgstr "このソースを削除します。取得するには、再度追加する必要があります。 続行してもよろしいですか ?"
+
+#: inc/Builder/SBI_Feed_Builder.php:169
+msgid "Hide Legacy Feeds"
+msgstr "旧フィードを非表示"
+
+#: inc/Builder/SBI_Feed_Builder.php:168
+msgid "Show Legacy Feeds"
+msgstr "旧フィードを表示"
+
+#: inc/Builder/SBI_Feed_Builder.php:166
+msgid "To edit Legacy feed settings, you will need to use the \"Settings\" button above <br/>or edit their shortcode settings directly. To delete a legacy feed, simply remove the <br/>shortcode wherever it is being used on your site."
+msgstr "レガシーフィード設定を編集するには、上の「設定」ボタンを使用するか、<br/>ショートコード設定を直接編集する必要があります。レガシーフィード設定を削除する場合は、サイトで使用されている<br/>ショートコードを削除するだけです。"
+
+#: inc/Builder/SBI_Feed_Builder.php:165
+msgid "Legacy feeds represent shortcodes of old feeds found on your website before <br/>the version 6 update."
+msgstr "旧フィードは、バージョン6 の更新前にサイトで見つかった<br/>古いフィードのショートコードを示します。"
+
+#: inc/Builder/SBI_Feed_Builder.php:162
+msgid "You can also create a new feed, which will now have it's own individual settings. Modifying settings for new feeds will not affect other feeds."
+msgstr "新しいフィードを作成することもできます。これにより、独自の個別設定が可能になります。 新しいフィードの設定を変更しても、他のフィードには影響しません。"
+
+#: inc/Builder/SBI_Feed_Builder.php:161
+msgid "Legacy feeds are older feeds from before the version 6 update. You can edit settings for these feeds by using the \"Settings\" button to the right. These settings will apply to all legacy feeds, just like the settings before version 6, and work in the same way that they used to."
+msgstr "旧フィードは、バージョン6 の更新前の古いフィードです。 右側の「設定」ボタンより旧フィードの設定を編集できます。 これらの設定は、バージョン6 より前の設定と同様にすべての旧フィードに適用され、これまでどおり動作します。"
+
+#: inc/Builder/SBI_Feed_Builder.php:159
+msgid "What are Legacy Feeds?"
+msgstr "レガシーフィードとは ?"
+
+#: inc/Builder/SBI_Feed_Builder.php:158 inc/Builder/SBI_Feed_Saver.php:309
+#: inc/Builder/SBI_Feed_Saver.php:310
+msgid "Legacy Feeds"
+msgstr "レガシーフィード"
+
+#: inc/Builder/SBI_Feed_Builder.php:156
+msgid "Bulk Actions"
+msgstr "一括操作"
+
+#: inc/Builder/SBI_Feed_Builder.php:154
+msgid "Actions"
+msgstr "操作"
+
+#: inc/Builder/SBI_Feed_Builder.php:153
+msgid "Instances"
+msgstr "インスタンス"
+
+#: inc/Builder/SBI_Feed_Builder.php:151 inc/Builder/SBI_Feed_Builder.php:767
+msgid "Name"
+msgstr "名前"
+
+#: inc/Builder/SBI_Feed_Builder.php:137
+msgid "Easily add the feed anywhere on your website"
+msgstr "Webサイトのどこにでも簡単にフィードを追加できます。"
+
+#: inc/Builder/SBI_Feed_Builder.php:136
+msgid "Embed your feed"
+msgstr "フィードを埋め込み"
+
+#: inc/Builder/SBI_Feed_Builder.php:135
+msgid "Choose layouts, color schemes, styles and more"
+msgstr "レイアウト、配色、スタイルなどを選択"
+
+#: inc/Builder/SBI_Feed_Builder.php:134
+msgid "Customize your feed type"
+msgstr "フィード形式をカスタマイズ"
+
+#: inc/Builder/SBI_Feed_Builder.php:133
+msgid "Connect your Instagram account and choose a feed type"
+msgstr "Instagram アカウントに接続し、フィード形式を選択"
+
+#: inc/Builder/SBI_Feed_Builder.php:132
+msgid "Create your Feed"
+msgstr "フィードを作成"
+
+#: inc/Builder/SBI_Feed_Builder.php:73 inc/Builder/SBI_Feed_Builder.php:74
+#: inc/Builder/SBI_Feed_Builder.php:131 inc/Builder/SBI_Feed_Builder.php:149
+#: inc/Builder/SBI_Feed_Builder.php:1588
+msgid "All Feeds"
+msgstr "すべてのフィード"
+
+#: inc/admin/class-sbi-new-user.php:515
+msgid "We don’t run promotions very often, but for a limited time we’re offering 60% Off our Pro version to all users of our free Instagram Feed."
+msgstr "期間限定で Instagram Feed 無料版のユーザーに、プロ版を60％オフで提供しています。なお、プロモーションを頻繁に実施することはありません。"
+
+#: inc/admin/class-sbi-new-user.php:513
+#: inc/admin/class-sbi-notifications.php:683
+msgid "It really helps to support the plugin and help others to discover it too!"
+msgstr "プラグインをサポートし、他の人がプラグインを発見するのに役立ちます !"
+
+#: inc/admin/class-sbi-new-user.php:489
+msgid "Exclusive offer - 60% off!"
+msgstr "限定オファー - 60％オフ !"
+
+#: inc/admin/class-sbi-new-user.php:487
+#: inc/admin/class-sbi-notifications.php:680
+msgid "Glad to hear you are enjoying it. Would you consider leaving a positive review?"
+msgstr "楽しんでいただけてなによりです。良いレビューを残してくださいますか ?"
+
+#: inc/admin/class-sbi-new-user.php:363
+#: inc/admin/class-sbi-notifications.php:635
+msgid "Are you enjoying the Instagram Feed Plugin?"
+msgstr "Instagram Feed プラグインにご満足いただいていますか ?"
+
+#: inc/admin/class-sbi-account-connector.php:88
+#: inc/admin/class-sbi-account-connector.php:98
+#: inc/admin/class-sbi-account-connector.php:164
+msgid "Error connecting to Instagram"
+msgstr "Instagram の接続でエラー"
+
+#: inc/admin/actions.php:445
+msgid "Click here to go to the new page."
+msgstr "新しいページに移動するには、ここをクリック。"
+
+#: inc/admin/actions.php:444
+msgid "The Instagram Feed Settings page has moved!"
+msgstr "Instagram Feed 設定ページは移動しました !"
+
+#: admin/SBI_Upgrader.php:379
+msgid "We encountered a problem unlocking the PRO features. Please install the PRO version manually."
+msgstr "プロ版機能のロックを解除する際に問題が発生しました。 プロ版を手動でインストールしてください。"
+
+#: admin/SBI_Upgrader.php:376
+msgid "This license is expired."
+msgstr "ライセンスの有効期限が切れています。"
+
+#: admin/SBI_Upgrader.php:298
+msgid "Pro version installed but needs to be activated from the Plugins page inside your WordPress admin."
+msgstr "Pro バージョンはインストールされていますが、WordPress 管理画面の「プラグイン」ページから有効化する必要があります。"
+
+#: admin/SBI_Upgrader.php:200
+msgid "Could not install upgrade. Please download from smashballoon.com and install manually."
+msgstr "アップグレードをインストールできませんでした。smashballoon.com からダウンロードして手動でインストールしてください。"
+
+#: admin/SBI_Upgrader.php:191
+msgid "Could not connect."
+msgstr "接続できませんでした。"
+
+#: admin/SBI_Upgrader.php:106 admin/SBI_Upgrader.php:252
+#: admin/SBI_Upgrader.php:275
+msgid "You are not licensed."
+msgstr "ライセンスがありません"
+
+#: admin/SBI_Upgrader.php:96
+msgid "You are not allowed to install plugins."
+msgstr "プラグインのインストールは許可されていません。"
+
+#: admin/SBI_Support.php:265
+msgid "Reauthorizing our Instagram/Facebook App"
+msgstr "Instagram / Facebook アプリを再承認"
+
+#: admin/SBI_Support.php:261
+msgid "Display Posts With a Specific Hashtag From a Specific User Account"
+msgstr "特定のユーザーアカウントからの特定のハッシュタグを使用して投稿を表示"
+
+#: admin/SBI_Support.php:257
+msgid "Differences Between an Instagram Personal and Business Account"
+msgstr "Instagram 個人アカウントとビジネスアカウントの違い"
+
+#: admin/SBI_Support.php:251
+msgid "My Feed Stopped Working or is Empty"
+msgstr "フィードが機能しなくなったか、空です"
+
+#: admin/SBI_Support.php:247
+msgid "How to Resolve Error Messages"
+msgstr "エラーメッセージを解決する方法"
+
+#: admin/SBI_Support.php:243
+msgid "Displaying Instagram Hashtag Feeds"
+msgstr "Instagram ハッシュタグフィードを表示"
+
+#: admin/SBI_Support.php:237
+msgid "Multiple User Accounts in One Feed"
+msgstr "1つのフィードに複数のユーザーアカウント"
+
+#: admin/SBI_Support.php:233
+msgid "Instagram Business Profiles (required for Hashtag and Tagged feeds)"
+msgstr "Instagram のビジネスプロフィール (ハッシュタグとタグ付けされたフィードに必要)"
+
+#: admin/SBI_Support.php:229
+msgid "Creating your first Instagram feed"
+msgstr "最初の Instagram フィードを作成"
+
+#: admin/SBI_Support.php:206
+msgid "Collapse"
+msgstr "閉じる"
+
+#: admin/SBI_Support.php:205
+msgid "Expand"
+msgstr "展開"
+
+#: admin/SBI_Support.php:203 inc/Builder/SBI_Feed_Builder.php:742
+msgid "Copy"
+msgstr "コピー"
+
+#: admin/SBI_Support.php:202
+msgid "Copied"
+msgstr "コピーしました"
+
+#: admin/SBI_Support.php:201
+msgid "Submit a Support Ticket"
+msgstr "サポートチケットを送信"
+
+#: admin/SBI_Support.php:200
+msgid "View Blog"
+msgstr "ブログを見る"
+
+#: admin/SBI_Support.php:199
+msgid "View Documentation"
+msgstr "ドキュメンテーションを表示"
+
+#: admin/SBI_Support.php:198
+msgid "More Help Getting Started"
+msgstr "スタートガイドをもっと見る"
+
+#: admin/SBI_Support.php:197
+msgid "Search Documentation"
+msgstr "ドキュメントを検索"
+
+#: admin/SBI_Support.php:187
+msgid "Copied to clipboard"
+msgstr "クリップボードにコピーしました"
+
+#: admin/SBI_Support.php:186
+msgid "Share your plugin settings easily with Support"
+msgstr "プラグイン設定をサポートチームと簡単に共有します"
+
+#: admin/SBI_Support.php:185
+msgid "Export Settings"
+msgstr "設定のエクスポート"
+
+#: admin/SBI_Support.php:184 admin/views/support/support-tools.php:47
+msgid "System Info"
+msgstr "システム情報"
+
+#: admin/SBI_Support.php:183
+msgid "Our fast and friendly support team is always happy to help!"
+msgstr "フレンドリーかつ迅速なサポートチームがいつでも喜んでお手伝いします !"
+
+#: admin/SBI_Support.php:182
+msgid "Need more support? We’re here to help."
+msgstr "さらにサポートが必要な場合、お手伝いします。"
+
+#: admin/SBI_Support.php:181
+msgid "To help you get the most out of the plugin"
+msgstr "プラグインを最大限に活用するための追加リソースをご覧ください。"
+
+#: admin/SBI_Support.php:180
+msgid "Additional Resources"
+msgstr "追加リソース"
+
+#: admin/SBI_Support.php:179
+msgid "Run into an issue? Check out our help docs."
+msgstr "問題が発生しましたか？ ヘルプドキュメントをご覧ください。"
+
+#: admin/SBI_Support.php:178
+msgid "Docs & Troubleshooting"
+msgstr "ヘルプ文書とトラブルシューティング"
+
+#: admin/SBI_Support.php:177
+msgid "Some helpful resources to get you started"
+msgstr "始めるのに役立つ情報をご覧ください。"
+
+#: admin/SBI_oEmbeds.php:214
+msgid "Activate Plugin"
+msgstr "プラグインを有効化"
+
+#: admin/SBI_oEmbeds.php:212
+msgid "To enable Facebook oEmbeds our Custom Facebook Feed plugin is required. Click the button below to Install it and enable Facebook oEmbeds."
+msgstr "Facebook oEmbeds を有効化するには、Custom Facebok Feed プラグインが必要です。下のボタンをクリックしてインストールし、Instagram oEmbeds を有効化してください。"
+
+#: admin/SBI_oEmbeds.php:211
+msgid "Enable Facebook oEmbeds"
+msgstr "Facebook oEmbeds を有効化"
+
+#: admin/SBI_oEmbeds.php:200
+msgid "Create a custom styled feed of your Instagram posts which integrates seamlessly with your WordPress theme."
+msgstr "WordPress のテーマとシームレスに統合する Instagram 投稿のカスタム形式のフィードを作成します。"
+
+#: admin/SBI_oEmbeds.php:199
+msgid "Display a completely customizable Instagram Feed with tons of features"
+msgstr "たくさんの機能を備えた完全にカスタマイズ可能な Instagram Feedを表示"
+
+#: admin/SBI_oEmbeds.php:198
+msgid "Just enable it above, and all your existing and new embeds should work automatically, no other input required."
+msgstr "このページの上部で有効化するだけで、既存と新規のすべての埋め込みが自動的に行われます。他の操作は必要ありません。"
+
+#: admin/SBI_oEmbeds.php:197
+msgid "However, we have added this feature to Smash Balloon to make sure your oEmbeds keep working."
+msgstr "そのため、この機能を Smash Balloon に追加して、oEmbed が引き続き機能するようにしました。"
+
+#: admin/SBI_oEmbeds.php:196
+msgid "Due to recent API changes from Instagram, WordPress cannot automatically embed your posts."
+msgstr "Instagram の最近の API の変更により、WordPress は投稿を自動的に埋め込むことができません。"
+
+#: admin/SBI_oEmbeds.php:195
+msgid "When you paste a link to a Instagram or Facebook post in WordPress, it automatically displays the post instead of the URL. That is called an oEmbed."
+msgstr "WordPress で Instagram または Facebook の投稿へのリンクを貼り付けると、URL の代わりに投稿が自動的に表示されます。 これは oEmbed と呼ばれます。"
+
+#: admin/SBI_oEmbeds.php:194
+msgid "What else can the Instagram Feed plugin do?"
+msgstr "Instagram Feed は他に何ができますか ?"
+
+#: admin/SBI_oEmbeds.php:191 inc/Builder/SBI_Feed_Builder.php:1418
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:562
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:919
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:994
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1114
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1248
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:111
+msgid "Enable"
+msgstr "有効化"
+
+#: admin/SBI_oEmbeds.php:190
+msgid "Facebook oEmbeds are turned on"
+msgstr "Facebook oEmbed が有効"
+
+#: admin/SBI_oEmbeds.php:189
+msgid "Facebook oEmbeds are currently not being handled by Smash Balloon"
+msgstr "Facebook oEmbed は現在 SmashBalloon で管理されていません"
+
+#: admin/SBI_oEmbeds.php:188
+msgid "Instagram oEmbeds are turned on"
+msgstr "Instagram oEmbed が有効"
+
+#: admin/SBI_oEmbeds.php:187
+msgid "Instagram oEmbeds are currently not being handled by Smash Balloon"
+msgstr "Instagram oEmbed は現在 SmashBalloon で管理されていません"
+
+#: admin/SBI_oEmbeds.php:186
+msgid "Use Smash Balloon to power any Instagram or Facebook oEmbeds across your site. Just click the button below and we'll do the rest.                "
+msgstr "Smash Balloon を使用すると、サイト全体で Instagram または Facebook の oEmbed を活用できます。下のボタンをクリックするだけです。あとは私たちにお任せください。                "
+
+#: admin/SBI_Global_Settings.php:1312
+msgid "Note: Clicking \"Clear All Caches\" will reset this schedule."
+msgstr "注: 「すべてのキャッシュをクリア」をクリックすると、このスケジュールがリセットされます。"
+
+#: admin/SBI_Global_Settings.php:1109 inc/Builder/SBI_Feed_Builder.php:177
+msgid "This source is being used in a feed on your site. If you delete this source then new posts can no longer be retrieved for these feeds."
+msgstr "このソースは、サイトのフィードで使用されています。 このソースを削除すると、このフィードの新しい投稿を取得できなくなります。"
+
+#: admin/SBI_Global_Settings.php:1108 inc/Builder/SBI_Feed_Builder.php:176
+#: inc/Builder/SBI_Feed_Builder.php:180 inc/Builder/SBI_Feed_Builder.php:184
+msgid "Delete \"#\"?"
+msgstr "「#」を削除しますか ?"
+
+#: admin/SBI_Global_Settings.php:1068
+msgid "Enter one or more email address separated by comma"
+msgstr "メールアドレスをカンマで区切りで入力"
+
+#: admin/SBI_Global_Settings.php:1067
+msgid "to"
+msgstr "に、次のアドレスに送信"
+
+#: admin/SBI_Global_Settings.php:1066
+msgid "Send a report every"
+msgstr "レポートを毎週"
+
+#: admin/SBI_Global_Settings.php:1065
+msgid "If the feed is down due to a critical issue, we will switch to a cached version and notify you based on these settings. <a href=\""
+msgstr "重大な問題が原因でフィードがダウンした場合は、キャッシュ済みのバージョンに切り替えて、この設定に基づいて通知します。 <a href=\""
+
+#: admin/SBI_Global_Settings.php:1064
+msgid "Feed Issue Email Reports"
+msgstr "フィードの問題をメールで送信"
+
+#: admin/SBI_Global_Settings.php:1061
+msgid "This will disable or enable the feed error notice that displays in the bottom right corner of your site for logged-in admins."
+msgstr "ログインしている管理者のサイトの右下隅に表示されるフィードエラー通知が無効または有効になります。"
+
+#: admin/SBI_Global_Settings.php:1060
+msgid "Admin Error Notice"
+msgstr "管理者エラー通知"
+
+#: admin/SBI_Global_Settings.php:1056
+msgid "Fix a text shortening issue caused by some themes"
+msgstr "一部のテーマが引き起こすテキスト短縮の問題を修正"
+
+#: admin/SBI_Global_Settings.php:1053
+msgid "Load images on the client side with JS, instead of server side."
+msgstr "サーバー側ではなく、JavaScript を使用してクライアント側で画像を読み込みます。"
+
+#: admin/SBI_Global_Settings.php:1052
+msgid "JavaScript Image Loading"
+msgstr "JavaScript で画像を読み込み"
+
+#: admin/SBI_Global_Settings.php:1048
+msgid "Enqueue CSS only on pages with the Feed"
+msgstr "フィードのあるページのみ CSS をエンキュー"
+
+#: admin/SBI_Global_Settings.php:1045
+msgid "Add the JavaScript file for the plugin in the HTML \"head\" instead of the footer."
+msgstr "プラグインの JavaScript ファイルを HTML の footer でなく「head」に追加します。"
+
+#: admin/SBI_Global_Settings.php:1044
+msgid "Enqueue JavaScript in head"
+msgstr "JavaScript ファイルを head にエンキュー"
+
+#: admin/SBI_Global_Settings.php:1040
+msgid "Load Initial Posts with AJAX"
+msgstr "AJAX で最初の投稿を読み込む"
+
+#: admin/SBI_Global_Settings.php:1037
+msgid "Fixes issues caused by Ajax loading themes. It can also be used to workaround JavaScript errors on the page."
+msgstr "Ajax のテーマの読み込みによって引き起こされる問題を修正します。また、ページの JavaScript エラーを回避するために使用することもできます。"
+
+#: admin/SBI_Global_Settings.php:1036
+msgid "AJAX theme loading fix"
+msgstr "AJAX テーマの読み込みの修正"
+
+#: admin/SBI_Global_Settings.php:1032
+msgid "Clear all errors stored in the error log."
+msgstr "エラーログに保存されているすべてのエラーをクリアします。"
+
+#: admin/SBI_Global_Settings.php:1028
+msgid "This helps to prevent plugin and theme conflicts by sending a report in the background once per week about your settings and relevant site stats. It does not send sensitive information like access tokens, email addresses, or user info. This will also not affect your site performance. %s"
+msgstr "設定と関連するサイトの統計情報について週に1回バックグラウンドでレポートを送信することにより、プラグインとテーマの競合を防ぐのに役立ちます。アクセストークン、Eメールアドレス、ユーザー情報などの機密情報は送信されません。サイトのパフォーマンスにも影響しません。%s"
+
+#: admin/SBI_Global_Settings.php:1027
+msgid "Usage Tracking"
+msgstr "使用状況の追跡"
+
+#: admin/SBI_Global_Settings.php:1033 inc/Builder/SBI_Feed_Builder.php:765
+msgid "Reset"
+msgstr "リセット"
+
+#: admin/SBI_Global_Settings.php:1007
+msgid "Enter any custom JS here"
+msgstr "カスタム JS を入力"
+
+#: admin/SBI_Global_Settings.php:1006
+msgid "Custom JS"
+msgstr "カスタム JS"
+
+#: admin/SBI_Global_Settings.php:1003
+msgid "Enter any custom CSS here"
+msgstr "カスタムCSSを入力"
+
+#: admin/SBI_Global_Settings.php:997
+msgid "The maximum image resolution will be 640 pixels wide in the lightbox."
+msgstr "ライトボックスの最大画像解像度は幅640ピクセルになります。"
+
+#: admin/SBI_Global_Settings.php:996
+msgid "Carousel posts will only show the first image in the lightbox."
+msgstr "カルーセルの投稿には、ライトボックスの最初の画像のみ表示されます。"
+
+#: admin/SBI_Global_Settings.php:991
+msgid "Features that would be disabled or limited include: "
+msgstr "無効または制限される機能は次のとおりです: "
+
+#: admin/SBI_Global_Settings.php:984
+msgid "Some Instagram Feed features will be limited for visitors to ensure GDPR compliance, until they give consent."
+msgstr "一部の Instagram Feed 機能は、GDPR(一般データ保護規則)に順守していることを訪問者が同意するまで制限されます。"
+
+#: admin/SBI_Global_Settings.php:983
+msgid "The plugin will function as normal and load images and videos directly from Instagram"
+msgstr "プラグインは通常どおり動作し、Instagram から直接画像を読み込みます"
+
+#: admin/SBI_Global_Settings.php:982
+msgid "No requests will be made to third-party websites. To accommodate this, some features of the plugin will be limited."
+msgstr "サードパーティのサイトへのリクエストは行われません。これに対応するために、プラグインの一部の機能が制限されます。"
+
+#: admin/SBI_Global_Settings.php:974
+msgid "Clear All Caches"
+msgstr "すべてのキャッシュをクリア"
+
+#: admin/SBI_Global_Settings.php:973
+msgid "PM"
+msgstr "PM"
+
+#: admin/SBI_Global_Settings.php:972
+msgid "AM"
+msgstr "AM"
+
+#: admin/SBI_Global_Settings.php:965
+msgid "In the Background"
+msgstr "バックグラウンドで行う"
+
+#: admin/SBI_Global_Settings.php:964
+msgid "When the Page loads"
+msgstr "ページの読み込み時"
+
+#: admin/SBI_Global_Settings.php:963
+msgid "Caching"
+msgstr "キャッシュ"
+
+#: admin/SBI_Global_Settings.php:960
+msgid "Timezone"
+msgstr "タイムゾーン"
+
+#: admin/SBI_Global_Settings.php:956
+msgid "Localization"
+msgstr "ローカライズ設定"
+
+#: admin/SBI_Global_Settings.php:951 admin/SBI_Support.php:204
+msgid "Export"
+msgstr "エクスポート"
+
+#: admin/SBI_Global_Settings.php:950
+msgid "Export settings for one or more of your feeds"
+msgstr "1つ以上のフィードの設定をエクスポートします"
+
+#: admin/SBI_Global_Settings.php:949
+msgid "Export Feed Settings"
+msgstr "フィード設定をエクスポート"
+
+#: admin/SBI_Global_Settings.php:946
+msgid "Import"
+msgstr "インポート"
+
+#: admin/SBI_Global_Settings.php:945
+msgid "You will need a JSON file previously exported from the Instagram Feed Plugin"
+msgstr "Instagram Feed プラグインから以前にエクスポートされた JSON ファイルが必要です"
+
+#: admin/SBI_Global_Settings.php:944
+msgid "Import Feed Settings"
+msgstr "フィード設定をインポート"
+
+#: admin/SBI_Global_Settings.php:941
+msgid "This will make sure that all of your feeds and settings are still saved even if the plugin is uninstalled"
+msgstr "プラグインがアンインストールされた場合でも、すべてのフィードと設定が保存されます"
+
+#: admin/SBI_Global_Settings.php:940
+msgid "Preserve settings if plugin is removed"
+msgstr "プラグインが削除された場合も設定を保持"
+
+#: admin/SBI_Global_Settings.php:937
+msgid "Add or remove connected Instagram accounts"
+msgstr "接続された Instagram アカウントを追加または削除します"
+
+#: admin/SBI_Global_Settings.php:936
+msgid "Manage Sources"
+msgstr "ソースを管理"
+
+#: admin/SBI_Global_Settings.php:930
+msgid "View error"
+msgstr "エラーを表示"
+
+#: admin/SBI_Global_Settings.php:929
+msgid "Connection failed"
+msgstr "接続に失敗"
+
+#: admin/SBI_Global_Settings.php:928
+msgid "Connection successful"
+msgstr "接続に成功"
+
+#: admin/SBI_Global_Settings.php:927
+msgid "License expired"
+msgstr "ライセンスが期限切れ"
+
+#: admin/SBI_Global_Settings.php:926
+msgid "License valid"
+msgstr "有効なライセンス"
+
+#: admin/SBI_Global_Settings.php:925
+msgid "Recheck license"
+msgstr "ライセンスを再確認"
+
+#: admin/SBI_Global_Settings.php:924
+msgid "Test Connection"
+msgstr "テスト接続"
+
+#: admin/SBI_Global_Settings.php:923
+msgid "Manage License"
+msgstr "ライセンスを管理"
+
+#: admin/SBI_Global_Settings.php:922
+msgid "As a valued user of our Lite plugin, you receive 50% OFF - automatically applied at checkout!"
+msgstr "ライト版プラグインの大切なユーザーとして、50％オフになります-チェックアウト時に自動的に適用されます !"
+
+#: admin/SBI_Global_Settings.php:921
+msgid "You are using the Lite version of the plugin–no license needed. Enjoy! 🙂 To unlock more features, consider %s."
+msgstr "プラグインの Lite バージョンを使用しています。ライセンスは必要ありません。どうぞご活用ください ! 🙂 より多くの機能をご利用いただくには、%sをご検討ください"
+
+#: admin/builder/templates/onboarding/success-page.php:46
+#: admin/SBI_Global_Settings.php:920
+msgid "Paste license key here"
+msgstr "ここにライセンスキーを貼り付けます"
+
+#: admin/SBI_Global_Settings.php:919
+msgid "Already purchased? Simply enter your license key below to activate Instagram Feed Pro."
+msgstr "既に購入済みですか ? 以下にライセンスキーを入力するだけで、Instagram Feed プロ版を有効化できます。"
+
+#: admin/SBI_Global_Settings.php:918
+msgid "Your <b>Instagram Feed Pro</b> license is Inactive!"
+msgstr "<b>Instagram Feed Pro</b> ライセンスは無効です。"
+
+#: admin/SBI_Global_Settings.php:917
+msgid "Your <b>Instagram Feed Pro</b> license is Active!"
+msgstr "<b>Instagram Feed Pro</b> ライセンスが有効化されました。"
+
+#: admin/SBI_Global_Settings.php:916
+msgid "Your license key provides access to updates and support"
+msgstr "ライセンスキーを入力すると、更新やサポートにアクセスできます"
+
+#: admin/SBI_Global_Settings.php:915
+msgid "License Key"
+msgstr "ライセンスキー"
+
+#: admin/SBI_Global_Settings.php:776
+msgid "Settings "
+msgstr "設定 "
+
+#: admin/SBI_Global_Settings.php:738
+msgid "Renew"
+msgstr "更新"
+
+#: admin/SBI_Global_Settings.php:736
+msgid "Please renew it and try again."
+msgstr "更新して、もう一度お試しください。"
+
+#: admin/SBI_Global_Settings.php:734
+msgid "The license expired on "
+msgstr "ライセンスの有効期限切れ "
+
+#: admin/SBI_Global_Settings.php:931
+msgid "Upgrade"
+msgstr "アップグレードする"
+
+#: admin/SBI_Global_Settings.php:721
+msgid "You have reached the maximum number of sites available in your plan %s"
+msgstr "プランで利用可能なサイトの最大数に達しました %s"
+
+#: admin/SBI_Global_Settings.php:196
+msgid "License key required!"
+msgstr "ライセンスキーが必要です !"
+
+#: admin/SBI_Admin_Notices.php:63
+msgid "upgrading to Pro"
+msgstr "プロ版にアップグレード"
+
+#: admin/SBI_Admin_Notices.php:61
+msgid "You're using Instagram Feed Lite. To unlock more features consider"
+msgstr "Instagram Feed Liteを使用しています。 より多くの機能のロックを解除するには、検討してください"
+
+#: admin/SBI_About_Us.php:323
+msgid "Open"
+msgstr "開く"
+
+#: admin/SBI_About_Us.php:320 inc/Builder/SBI_Feed_Builder.php:845
+msgid "Installed"
+msgstr "インストール済み"
+
+#: admin/SBI_About_Us.php:319 inc/admin/SBI_Onboarding_wizard.php:294
+#: inc/Builder/SBI_Feed_Builder.php:844 inc/Builder/SBI_Feed_Builder.php:1083
+msgid "Install"
+msgstr "インストール"
+
+#: admin/SBI_About_Us.php:318 inc/Builder/SBI_Feed_Builder.php:737
+msgid "View Demo"
+msgstr "デモを表示"
+
+#: admin/SBI_About_Us.php:317 inc/Builder/SBI_Feed_Builder.php:734
+msgid "Add"
+msgstr "追加"
+
+#: inc/admin/SBI_Onboarding_wizard.php:499
+msgid "Out-of-the-box SEO for WordPress. Features like XML Sitemaps, SEO for custom post types, SEO for blogs, business sites, or ecommerce sites, and much more."
+msgstr "WordPress ですぐに使える SEO 対策です。XMLサイトマップ、カスタム投稿タイプの SEO、ブログやビジネスサイトの SEO、eコマースサイトの SEO など。2007年以来 5000万以上ダウンロードされています。"
+
+#: admin/SBI_About_Us.php:246
+msgid "All in One SEO Pack"
+msgstr "All in One SEO Pack"
+
+#: admin/SBI_About_Us.php:236
+msgid "Combine feeds from all of our plugins into a single wall"
+msgstr "すべてのプラグインからのフィードを1つのウォールに結合します。"
+
+#: admin/SBI_About_Us.php:227
+msgid "A simple yet powerful way to display videos from YouTube. "
+msgstr "シンプルかつパワフルな方法で、YouTube の動画を表示します。 "
+
+#: admin/SBI_About_Us.php:218
+msgid "A customizable way to display tweets from your Twitter account. "
+msgstr "カスタマイズ可能な方法で、Twitter アカウントからツイートを表示します。 "
+
+#: admin/SBI_About_Us.php:209
+msgid "Add Facebook posts from your timeline, albums and much more."
+msgstr "タイムラインやアルバムなどから、Facebook 投稿を追加します。"
+
+#: admin/SBI_About_Us.php:201
+msgid "A quick and elegant way to add your Instagram posts to your website. "
+msgstr "すばやくエレガントな方法で、Instagram の投稿をサイトに追加できます。 "
+
+#: admin/SBI_About_Us.php:194
+msgid "Smash Balloon Team"
+msgstr "Smash Balloon チーム"
+
+#: admin/SBI_About_Us.php:192
+msgid "Our plugins aren't just easy to use, but completely customizable, reliable, and fast! Which is why over 1.6 million awesome users, just like you, choose to use them on their site."
+msgstr "当社のプラグインは使いやすいだけでなく、完全にカスタマイズ可能で、信頼性も高く、高速です。160万人以上のすばらしいユーザーが、あなたと同じように自分のサイトで当社のプラグインを利用しています。"
+
+#: admin/SBI_About_Us.php:191
+msgid "We're on a mission to make it super simple to add social media feeds in WordPress. No more complicated setup steps, ugly iframe widgets, or negative page speed scores."
+msgstr "私たちの使命は、WordPress にソーシャルメディアフィードをごく簡単に追加できるようにすることです。複雑なセットアップ手順、使いづらい iframe ウィジェット、ネガティブなページスピードスコアとは、お別れしましょう。"
+
+#: admin/SBI_About_Us.php:190
+msgid "At Smash Balloon, we build software that helps you create beautiful responsive social media feeds for your website in minutes."
+msgstr "Smash Balloon は、サイト用の美しいレスポンシブソーシャルメディアフィードを数分で作成できるソフトウェアを開発しています。"
+
+#: admin/SBI_About_Us.php:187
+msgid "We’re more than just an Instagram plugin! Check out our other plugins and add more content to your site."
+msgstr "当社が提供しているのは、Instagram プラグインだけではありません ! 当社のその他のプラグインをチェックして、サイトにコンテンツを追加しましょう。"
+
+#: admin/SBI_About_Us.php:186
+msgid "Plugins we recommend"
+msgstr "おすすめのプラグイン"
+
+#: admin/SBI_About_Us.php:185
+msgid "Our Other Social Media Feed Plugins"
+msgstr "その他のソーシャルメディアフィードプラグイン"
+
+#: admin/SBI_About_Us.php:183 admin/SBI_oEmbeds.php:184
+#: admin/SBI_Support.php:173 inc/Builder/SBI_Feed_Builder.php:762
+#: inc/Builder/SBI_Feed_Builder.php:1414
+msgid "Help"
+msgstr "ヘルプ"
+
+#: admin/builder/templates/sections/footer.php:56
+#: admin/views/sections/sticky_widget.php:33
+msgid "Follow Us"
+msgstr "フォローしてください"
+
+#: admin/builder/templates/sections/footer.php:40
+#: admin/views/sections/sticky_widget.php:17
+msgid "Our Feeds for other platforms"
+msgstr "他のプラットフォームのフィード"
+
+#: admin/builder/templates/sections/footer.php:31
+#: admin/views/sections/sticky_widget.php:8
+msgid "Get All Access Bundle"
+msgstr "All Access Bundle を入手しましょう"
+
+#: inc/admin/actions.php:280 inc/admin/actions.php:297
+msgid "Visit our FAQ page for help"
+msgstr "ヘルプが必要な場合は、FAQページにアクセスしてください"
+
+#: admin/SBI_Global_Settings.php:1102
+msgid "Warning: Clicking this button will permanently delete all Instagram data, including all connected accounts, cached posts, and stored images."
+msgstr "警告: このボタンをクリックすると、接続されているすべてのアカウント、キャッシュされた投稿、保存されている画像など、すべての Instagram データが完全に削除されます。"
+
+#: admin/SBI_Global_Settings.php:1103
+msgid "Delete all Platform Data"
+msgstr "すべてのプラットフォームデータを削除"
+
+#: admin/SBI_Global_Settings.php:1101
+msgid "Manage Data"
+msgstr "データを管理"
+
+#: admin/builder/templates/sections/popup/temp-login-about.php:45
+msgid "Dismiss"
+msgstr "閉じる"
+
+#: inc/Builder/SBI_Feed_Builder.php:729
+msgid "Try the Pro Demo"
+msgstr "プロ版のデモを見る"
+
+#: admin/views/support/support-tools.php:41
+msgid "Connected Accounts"
+msgstr "接続されたアカウント"
+
+#: inc/Builder/SBI_Feed_Builder.php:1642 inc/Builder/SBI_Feed_Builder.php:1756
+#: inc/class-sb-instagram-feed-locator.php:656
+msgid "Footer"
+msgstr "フッター"
+
+#: inc/Builder/SBI_Feed_Builder.php:1644 inc/Builder/SBI_Feed_Builder.php:1758
+#: inc/class-sb-instagram-feed-locator.php:651
+msgid "Sidebar"
+msgstr "サイドバー"
+
+#: inc/Builder/SBI_Feed_Builder.php:1646 inc/Builder/SBI_Feed_Builder.php:1760
+#: inc/class-sb-instagram-feed-locator.php:642
+msgid "Content"
+msgstr "内容"
+
+#: inc/class-sb-instagram-feed-locator.php:575
+msgid "There was an error when trying to create the database tables used to locate feeds."
+msgstr "フィードの検索に使用されるデータベーステーブルを作成しようとしたときにエラーが発生しました。"
+
+#: inc/Builder/SBI_Feed_Builder.php:152 inc/Builder/SBI_Feed_Builder.php:748
+#: inc/Builder/SBI_Feed_Builder.php:776
+msgid "Shortcode"
+msgstr "ショートコード"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:28
+msgid "Sources"
+msgstr "ソース"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:250
+msgid "Type"
+msgstr "タイプ"
+
+#: inc/admin/class-sbi-account-connector.php:99
+msgid "Invalid access token"
+msgstr "無効なアクセストークン"
+
+#: inc/admin/class-sbi-account-connector.php:89
+msgid "Invalid account ID"
+msgstr "無効なアカウント"
+
+#: inc/class-sb-instagram-posts-manager.php:402
+msgid "An unknown error has occurred."
+msgstr "不明なエラーが発生しました。"
+
+#: inc/class-sb-instagram-posts-manager.php:397 inc/Platform_Data.php:320
+#: inc/Platform_Data.php:337
+msgid "There has been a problem with your Instagram Feed."
+msgstr "Instagram フィードに問題があります。 "
+
+#: inc/class-sb-instagram-posts-manager.php:386
+msgid "If you need to display more than 30 hashtag feeds on your site, consider connecting an additional business account from a separate Instagram Identity and Facebook page. Connecting an additional Instagram business account from the same Facebook page will not raise the limit."
+msgstr "サイトに30以上のハッシュタグフィードを表示したい場合は、別の Instagram アカウントおよび Facebook ページから追加したビジネスアカウントを接続することを検討してください。 同じ Facebook ページから追加した Instagram ビジネスアカウントを接続しても、制限は変わりません。"
+
+#: inc/class-sb-instagram-posts-manager.php:357
+msgid "HTTP Error. Unable to connect to the Instagram API."
+msgstr "HTTPエラー。Instagram API に接続できません。"
+
+#: inc/class-sb-instagram-settings.php:938
+msgid "Please visit the plugin's settings page to select a user account or add one to the shortcode - user=\"username\"."
+msgstr "プラグインの設定ページにアクセスしてユーザーアカウントを選択するか、ショートコードに user=\"username\" を追加してください。"
+
+#: inc/class-sb-instagram-settings.php:937
+msgid "Error: No users set."
+msgstr "エラー: ユーザーが設定されていません。"
+
+#: inc/class-sb-instagram-settings.php:877
+msgid "A connected account related to the user is required to display user feeds. Please connect an account for this user on the %s."
+msgstr "ユーザーフィードを表示するには、ユーザーに関連する接続アカウントが必要です。%s でこのユーザーのアカウントを接続してください。"
+
+#: inc/class-sb-instagram-gdpr-integrations.php:211
+msgid "Retest"
+msgstr "再テスト"
+
+#: inc/class-sb-instagram-gdpr-integrations.php:206
+msgid "An image editor is not available on your server. Instagram Feed is unable to create local resized images. See %1$sthis FAQ%2$s for more information"
+msgstr "サーバー側で画像編集が動作しません。Instagram Feed はローカルでサイズ変更された画像を作成できません。 詳細は、%1$sこちらのよくある質問%2$s を参照してください"
+
+#: inc/class-sb-instagram-gdpr-integrations.php:203
+msgid "Tables used for storing information about resized images were not successfully created."
+msgstr "サイズ変更された画像に関する情報を保存するためのテーブルが正常に作成できませんでした。 "
+
+#: inc/class-sb-instagram-gdpr-integrations.php:200
+msgid "A folder for storing resized images was not successfully created."
+msgstr "サイズ変更された画像を保存するためのフォルダが正常に作成できませんでした。"
+
+#: admin/SBI_Global_Settings.php:1287
+msgid "No GDPR consent plugin detected. Install a compatible GDPR consent %s, or manually enable the setting to display a GDPR compliant version of the feed to all visitors."
+msgstr "GDPR 同意プラグインが検出されませんでした。互換性のある GDPR 同意 %s をインストールするか、設定を手動で有効化して、GDPR 準拠バージョンのフィードをすべての訪問者に表示してください。"
+
+#: inc/Builder/SBI_Feed_Builder.php:781
+msgid "Error:"
+msgstr "エラー:"
+
+#: admin/SBI_Global_Settings.php:985
+msgid "What will be limited?"
+msgstr "制限される機能"
+
+#: admin/SBI_Global_Settings.php:994
+msgid "Placeholder blank images will be displayed until images are available."
+msgstr "画像が利用可能になるまで、プレースホルダーの空白の画像が表示されます。"
+
+#: admin/SBI_Global_Settings.php:993
+msgid "Only local images (not from Instagram's CDN) will be displayed in the feed."
+msgstr "ローカル画像のみ (Instagram の CDN からではなく) がフィードに表示されます。 "
+
+#: admin/SBI_Global_Settings.php:978
+msgid "Automatic"
+msgstr "自動"
+
+#: admin/SBI_Global_Settings.php:977
+msgid "GDPR"
+msgstr "GDPR"
+
+#: inc/admin/class-sbi-notifications.php:549
+msgid "Next message"
+msgstr "次のメッセージ"
+
+#: inc/admin/class-sbi-notifications.php:542
+msgid "Previous message"
+msgstr "前のメッセージ"
+
+#: admin/SBI_Admin_Notices.php:68 inc/admin/class-sbi-notifications.php:530
+msgid "Dismiss this message"
+msgstr "このメッセージを非表示にする"
+
+#: inc/admin/actions.php:34 inc/admin/actions.php:35 inc/admin/actions.php:136
+#: inc/Builder/SBI_Feed_Builder.php:887 inc/Builder/SBI_Feed_Builder.php:1261
+msgid "Upgrade to Pro"
+msgstr "Pro にアップグレード"
+
+#: inc/Builder/SBI_Feed_Builder.php:848
+msgid "Free"
+msgstr "無料"
+
+#: admin/SBI_oEmbeds.php:192
+msgid "Disable"
+msgstr "無効化"
+
+#: admin/SBI_oEmbeds.php:193
+msgid "What are oEmbeds?"
+msgstr "oEmbed とは ?"
+
+#: admin/SBI_About_Us.php:235 inc/Builder/SBI_Feed_Builder.php:308
+#: inc/Builder/SBI_Feed_Builder.php:1986 inc/Builder/SBI_Feed_Builder.php:2022
+msgid "Social Wall"
+msgstr "ソーシャルウォール"
+
+#: inc/admin/actions.php:92 inc/admin/actions.php:93
+#: inc/Builder/SBI_Feed_Builder.php:1277
+msgid "YouTube Feed"
+msgstr "YouTube フィード"
+
+#: inc/admin/actions.php:80 inc/admin/actions.php:81
+#: inc/Builder/SBI_Feed_Builder.php:1192 inc/Builder/SBI_Feed_Builder.php:1272
+#: inc/Integrations/Elementor/CTF_Elementor_Widget.php:54
+msgid "Twitter Feed"
+msgstr "Twitter フィード"
+
+#: inc/admin/actions.php:68 inc/admin/actions.php:69
+#: inc/Builder/SBI_Feed_Builder.php:1180 inc/Builder/SBI_Feed_Builder.php:1267
+#: inc/Integrations/Elementor/CFF_Elementor_Widget.php:54
+msgid "Facebook Feed"
+msgstr "Facebook フィード"
+
+#: admin/SBI_oEmbeds.php:61 admin/SBI_oEmbeds.php:62 admin/SBI_oEmbeds.php:185
+#: inc/Builder/SBI_Feed_Builder.php:1590
+msgid "oEmbeds"
+msgstr "oEmbed"
+
+#: inc/if-functions.php:1617
+msgid "To prevent your account expiring every 60 days %sswitch your account to be public%s. For more information and to refresh your account, click here to visit the %sInstagram Feed settings page%s on your website."
+msgstr "アカウントが60日ごとに期限切れになるのを防ぐには、%sアカウントを公開%sに切り替えます。 詳細およびアカウントの更新については、こちらをクリックして、サイトの %sInstagram フィード設定ページ%s にアクセスしてください。"
+
+#: inc/if-functions.php:1616
+msgid "As your Instagram account is set to be \"Private\", Instagram requires that you reauthenticate your account every 60 days. This a courtesy email to let you know that you need to take action to allow the Instagram feed on your website to continue updating. If you don't refresh your account, then a backup cache will be displayed instead."
+msgstr "Instagram アカウントは「非公開」に設定されているため、60日ごとにアカウントを再認証する必要があります。これは、サイトの Instagram フィードを更新し続ける操作が必要であることを通知するためのメールです。 アカウントを更新しない場合は、代わりにバックアップキャッシュより表示されます。"
+
+#: inc/if-functions.php:1615
+msgid "Access Token Refresh Needed"
+msgstr "アクセストークンの更新が必要です"
+
+#: inc/if-functions.php:1614
+msgid "Your Private Instagram Feed Account Needs to be Reauthenticated"
+msgstr "個人用 Instagram Feed アカウントの再認証が必要です"
+
+#: inc/class-sb-instagram-posts-manager.php:1049
+#: inc/class-sb-instagram-settings.php:951
+msgid "Error: Private Instagram Account."
+msgstr "エラー: Instagram 個人アカウント。"
+
+#: inc/class-sb-instagram-posts-manager.php:1050
+msgid "It looks like your Instagram account is private. Instagram requires private accounts to be reauthenticated every 60 days. Refresh your account to allow it to continue updating, or %1$smake your Instagram account public%2$s."
+msgstr "Instagram アカウントは非公開のようです。Instagram では、非公開アカウントは60日ごとに再認証する必要があります。アカウントを更新して続行できるようにするか、%1$s Instagram アカウントを公開 にする %2$s。"
+
+#: inc/class-sb-instagram-settings.php:1049
+msgid "Load More"
+msgstr "さらに読み込む"
+
+#: inc/Helpers/SB_Instagram_Tracking.php:340
+msgid "Once Weekly"
+msgstr "週1回"
+
+#: inc/class-sb-instagram-posts-manager.php:1022 inc/Platform_Data.php:326
+msgid "More Information"
+msgstr "詳しく見る"
+
+#: inc/email.php:93
+msgid "%sLog in and disable these emails%s"
+msgstr "%sログインしてこれらのメールを無効化%s"
+
+#: inc/email.php:89
+msgid "Sent from %s"
+msgstr "%s から送信"
+
+#. translators: %s - link to a site.
+#: inc/email.php:82
+msgid "This is a courtesy email sent from the Smash Balloon Instagram Feed plugin on your website to alert you when there is an issue with one of your Instagram feeds."
+msgstr "こちらは、Instagram フィードに問題が発生した際に警告のため、サイトの Smash Balloon Instagram Feed プラグインから送信される確認のメールです。"
+
+#: admin/SBI_Admin_Notices.php:391 admin/SBI_Admin_Notices.php:475
+#: admin/SBI_Global_Settings.php:910 admin/SBI_Global_Settings.php:1013
+#: admin/SBI_Global_Settings.php:1028 admin/SBI_Support.php:176
+#: inc/Builder/SBI_Feed_Builder.php:755 inc/Builder/SBI_Tooltip_Wizard.php:130
+#: inc/email.php:63
+msgid "Learn More"
+msgstr "さらに詳しく"
+
+#: inc/class-sb-instagram-education.php:79
+msgid "Twitter testimonials are one of the best ways to add verifiable social proof to your website. They add credibility to your brand, product, or service by displaying reviews from real people to your site, helping to convert more visitors into customers. Our free Custom Twitter Feeds plugin makes displaying Tweets on your website a breeze."
+msgstr "Twitter の推薦文は、検証可能な社会的証明をサイトに追加するための最良の方法の1つです。実在の人物からのレビューをサイトに表示することで、ブランド、製品、またはサービスの信頼性を高め、より多くの訪問者を顧客に変えるのに役立ちます。無料の Custom Twitter Feeds プラグインを使うと、サイトにツイートを簡単に表示できます。"
+
+#: inc/class-sb-instagram-education.php:78
+msgid "Adding Social Proof with Twitter Feeds"
+msgstr "Twitter フィードでソーシャルプルーフ (社会的証明) を追加"
+
+#: inc/class-sb-instagram-education.php:73
+msgid "Have a Facebook Page or Group? Easily embed a feed of posts into your website, delivering fresh content automatically to your site from Facebook. Posts, Photos, Events, Videos, Albums, Reviews, and more!"
+msgstr "Facebook ページまたはグループをお持ちですか? 投稿のフィードをサイトに簡単に埋め込み、Facebook からサイトに最新コンテンツを自動的に配信します。投稿、写真、イベント、ビデオ、アルバム、レビューなど!"
+
+#: inc/class-sb-instagram-education.php:72
+msgid "Display Facebook Pages and Groups"
+msgstr "Facebook ページとグループを表示する"
+
+#: inc/class-sb-instagram-education.php:67
+msgid "You can automatically feed live YouTube videos to your website using our Feeds For YouTube Pro plugin. It takes all the hassle out of publishing live videos to your site by automating the process."
+msgstr "Feeds For YouTube Proプラグインを使用することで、自動的にYouTube動画をサイトにライブ表示することができます。自動化することで、動画をサイトに公開する手順をすべて省く。"
+
+#: inc/class-sb-instagram-education.php:66
+msgid "Automated YouTube Live Streaming"
+msgstr "YouTube のライブ配信を自動化"
+
+#: inc/class-sb-instagram-education.php:58
+msgid "Control exactly which posts show up in your feed by using the Visual Moderation Mode feature to pick and choose what to display. Remove specific posts or create a whitelist of approved content using Instagram Feed Pro."
+msgstr "ビジュアル承認モード機能を使用して表示するものを選択することにより、フィードに表示する投稿を正確に制御します。 Instagram Feed プロ版を使用して、特定の投稿を削除するか、承認されたコンテンツのホワイトリストを作成します。"
+
+#: inc/class-sb-instagram-education.php:57
+msgid "Moderate your Feed Content"
+msgstr "フィードを管理する"
+
+#: inc/class-sb-instagram-education.php:52
+msgid "Feature specific Instagram posts in your feeds by using the Highlight layout to feature specific posts, either by using their ID or a hashtag in their caption. Also create rotating carousels of your photos and videos to best utilize the space on your site. These layouts and more are available in our Pro version."
+msgstr "ハイライトレイアウトを使用してフィードに特定の Instagram投 稿を掲載し、ID またはキャプションにハッシュタグを使用して特定の投稿を掲載します。 また、写真や動画のカルーセルを作成して、サイトのスペースを最大限に活用します。 これらのレイアウトなどはプロ版で利用できます。"
+
+#: inc/class-sb-instagram-education.php:51
+msgid "Highlight Your Posts and Create Carousels"
+msgstr "投稿を強調表示してカルーセルを作成"
+
+#: inc/class-sb-instagram-education.php:46
+msgid "You've done the hard work of getting a visitor onto your site, now keep them there by displaying your Instagram content inside a pop-up lightbox, rather than sending your visitors away to Instagram.  Learn more about the Instagram Feed Pro lightbox feature."
+msgstr "あなたは訪問者をサイトに誘導するという大変な仕事をしました、今あなたの訪問者を Instagram に誘導するのではなく、ポップアップのライトボックスの中に Instagram コンテンツを表示することで彼らを滞在させます。 Instagram Feed プロ版 ライトボックス機能の詳細をご覧ください。"
+
+#: inc/class-sb-instagram-education.php:45
+msgid "Keep Visitors on Your Site"
+msgstr "訪問者をサイトに維持する"
+
+#: inc/class-sb-instagram-education.php:40
+msgid "You can use hashtags on Instagram for so many things; targeted promotions, engaging with your audience, running contests, or just for categorizing posts. Learn more about how you can display Instagram hashtag feeds on your website using the Instagram Feed Pro plugin."
+msgstr "Instagram でハッシュタグを使用すると、さまざまなことができます。ターゲットを絞ったプロモーション、訪問者との交流、コンテストの実施、または投稿の分類。Instagram Feed Pro プラグインを使用して、サイトに Instagram ハッシュタグフィードを表示する方法はこちらを参照ください。"
+
+#: inc/class-sb-instagram-education.php:39
+msgid "Get the Most out of Hashtags"
+msgstr "ハッシュタグを活用する"
+
+#: inc/admin/actions.php:217 inc/admin/actions.php:227
+#: inc/Builder/SBI_Source.php:136 inc/class-sb-instagram-posts-manager.php:360
+#: inc/class-sb-instagram-posts-manager.php:383
+#: inc/class-sb-instagram-posts-manager.php:387
+#: inc/class-sb-instagram-posts-manager.php:391
+#: inc/class-sb-instagram-posts-manager.php:395
+#: inc/class-sb-instagram-posts-manager.php:399
+#: inc/class-sb-instagram-posts-manager.php:1038
+#: inc/class-sb-instagram-posts-manager.php:1073
+msgid "Directions on how to resolve this issue"
+msgstr "この問題を解決する方法"
+
+#: inc/if-functions.php:1612
+msgid "This is caused by an issue with your Instagram account connecting to the Instagram API. For information on the exact issue and directions on how to resolve it, please visit the %sInstagram Feed settings page%s on your website."
+msgstr "こちらは Instagram API に接続している Instagram アカウントの問題が原因で発生します。正確な問題とその解決方法については、Webサイトの %sInstagram Feed 設定ページ%s にアクセスしてください。"
+
+#: inc/if-functions.php:1611
+msgid "An Instagram feed on your website is currently unable to connect to Instagram to retrieve new posts. Don't worry, your feed is still being displayed using a cached version, but is no longer able to display new posts."
+msgstr "現在、サイトの Instagram Feed は Instagram に接続して新しい投稿を取得することができません。心配ありません。フィードはキャッシュされたバージョンを使用して引き続き表示されますが、新しい投稿を表示することはできなくなります。"
+
+#: inc/if-functions.php:1610
+msgid "There's an Issue with an Instagram Feed on Your Website"
+msgstr "あなたのサイトの Instagram フィードに問題があります "
+
+#: inc/if-functions.php:1609
+msgid "Instagram Feed Report for %s"
+msgstr "Instagram Feed %sのレポート"
+
+#. Translators: %s is the link to the article where more details about critical
+#. are listed.
+#: inc/if-functions.php:1413
+msgid "An issue is preventing your Instagram Feeds from updating. %1$sResolve this issue%2$s."
+msgstr "Instagramフィードが更新されない問題があります。%1$sこの問題を解決%2$s。"
+
+#: inc/if-functions.php:1408
+msgid "Instagram Feed Critical Issue"
+msgstr "Instagram フィードで重大な問題"
+
+#: inc/admin/blocks/class-sbi-blocks.php:96
+msgid "Apply Changes"
+msgstr "変更を適用"
+
+#: inc/admin/blocks/class-sbi-blocks.php:94
+msgid "Shortcode Settings"
+msgstr "ショートコード設定"
+
+#: inc/admin/blocks/class-sbi-blocks.php:93
+msgid "Add Settings"
+msgstr "設定を追加"
+
+#: inc/admin/class-sbi-sitehealth.php:76
+msgid "A critical issue has been detected with your Instagram Feed. Visit the %sInstagram Feed settings page%s to fix the issue."
+msgstr "Instagram フィードで重大な問題が検出されました。 %sInstagram フィード設定ページ%sにアクセスして、問題を修正してください。"
+
+#: inc/admin/class-sbi-sitehealth.php:75
+msgid "Your Instagram Feed is experiencing an error."
+msgstr "Instagram フィードでエラーが発生しています。"
+
+#: inc/admin/class-sbi-sitehealth.php:65
+msgid "No critical errors have been detected."
+msgstr "重大なエラーは検出されていません。"
+
+#: inc/admin/class-sbi-sitehealth.php:59
+msgid "Instagram Feed has no critical errors"
+msgstr "Instagram フィードで重大な問題なし"
+
+#: inc/admin/class-sbi-sitehealth.php:47
+msgid "Instagram Feed Errors"
+msgstr "Instagram フィードでエラー"
+
+#: inc/admin/addon-functions.php:176
+msgid "Addon installed."
+msgstr "アドオンがインストールされました。"
+
+#: inc/admin/addon-functions.php:176
+msgid "Plugin installed."
+msgstr "プラグインをインストールしました。"
+
+#: inc/admin/addon-functions.php:168
+msgid "Addon installed & activated."
+msgstr "アドオンはインストール済みで有効化されています。"
+
+#: admin/SBI_Upgrader.php:237 admin/SBI_Upgrader.php:294
+#: inc/admin/addon-functions.php:168
+msgid "Plugin installed & activated."
+msgstr "プラグインをインストールして有効化しました。"
+
+#: inc/admin/addon-functions.php:70
+msgid "Could not activate addon. Please activate from the Plugins page."
+msgstr "アドオンを有効化できませんでした。「プラグイン」ページから有効化してください。"
+
+#: inc/admin/addon-functions.php:65
+msgid "Addon activated."
+msgstr "アドオンを有効化しました。"
+
+#: inc/admin/addon-functions.php:63
+msgid "Plugin activated."
+msgstr "プラグインを有効化しました。"
+
+#: inc/admin/addon-functions.php:34
+msgid "Could not deactivate the addon. Please deactivate from the Plugins page."
+msgstr "アドオンを無効にできませんでした。「プラグイン」ページから無効にしてください。"
+
+#: inc/admin/addon-functions.php:30
+msgid "Addon deactivated."
+msgstr "アドオンを無効化しました。"
+
+#: inc/admin/addon-functions.php:28
+msgid "Plugin deactivated."
+msgstr "プラグインを無効化しました。"
+
+#: inc/class-sb-instagram-posts-manager.php:1035
+#: inc/class-sb-instagram-posts-manager.php:1071
+msgid "View Feed and Retry"
+msgstr "フィードを表示して再試行"
+
+#: inc/admin/actions.php:394
+msgid "Instagram Feed is encountering an error and your feeds may not be updating due to the following reasons:"
+msgstr "Instagram Feed でエラーが発生し、次の理由でフィードが更新されない可能性があります:"
+
+#: inc/admin/actions.php:180
+msgid "needs to be installed and activated to import its forms. Would you like us to install and activate it for you?"
+msgstr "フォームをインポートするには、インストールして有効化する必要があります。インストールして有効化してもよろしいですか ?"
+
+#: inc/admin/actions.php:179
+msgid "Install and Activate"
+msgstr "インストールして有効化"
+
+#: inc/admin/actions.php:178
+msgid "OK"
+msgstr "OK"
+
+#: inc/admin/actions.php:177
+msgid "Oops!"
+msgstr "エラーが発生しました。"
+
+#: inc/admin/actions.php:176
+msgid "Almost Done"
+msgstr "ほぼ完了しました"
+
+#: inc/admin/actions.php:174
+msgid "Close"
+msgstr "閉じる"
+
+#: admin/SBI_oEmbeds.php:215 admin/views/support/support-tools.php:105
+#: inc/admin/actions.php:173 inc/Builder/SBI_Feed_Builder.php:771
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: inc/admin/actions.php:171
+msgid "Searching Addons"
+msgstr "アドオンを検索"
+
+#: inc/admin/actions.php:170
+msgid "Could not install a plugin. Please download from WordPress.org and install manually."
+msgstr "プラグインをインストールできませんでした。 WordPress.org からダウンロードして手動でインストールしてください。"
+
+#: inc/admin/actions.php:169 inc/admin/addon-functions.php:88
+msgid "Could not install addon. Please download from wpforms.com and install manually."
+msgstr "アドオンをインストールできませんでした。wpforms.com からダウンロードして、手動でインストールしてください。"
+
+#: inc/admin/actions.php:168
+msgid "Install Addon"
+msgstr "アドオンをインストールする"
+
+#: admin/SBI_About_Us.php:322 admin/SBI_Global_Settings.php:932
+#: inc/admin/actions.php:166
+msgid "Deactivate"
+msgstr "無効化"
+
+#: admin/SBI_About_Us.php:291
+msgid "RafflePress"
+msgstr "RafflePress"
+
+#: admin/SBI_About_Us.php:282
+msgid "WP Mail SMTP"
+msgstr "WP Mail SMTP"
+
+#: admin/SBI_About_Us.php:273 inc/admin/SBI_Onboarding_wizard.php:552
+msgid "OptinMonster"
+msgstr "OptinMonster"
+
+#: admin/SBI_About_Us.php:264 inc/admin/SBI_Onboarding_wizard.php:510
+msgid "MonsterInsights"
+msgstr "MonsterInsights"
+
+#: admin/SBI_About_Us.php:255 inc/admin/SBI_Onboarding_wizard.php:524
+msgid "WPForms"
+msgstr "WPForms"
+
+#: admin/SBI_About_Us.php:226 inc/Builder/SBI_Feed_Builder.php:1204
+msgid "Feeds for YouTube"
+msgstr "Feeds for YouTube"
+
+#: inc/Builder/SBI_Feed_Builder.php:316
+msgid "Custom Twitter Feeds Pro"
+msgstr "Custom Twitter Feed Pro"
+
+#: inc/Builder/SBI_Feed_Builder.php:1194 inc/Builder/SBI_Feed_Builder.php:2082
+msgid "Custom Twitter Feeds is a highly customizable way to display tweets from your Twitter account. Promote your latest content and update your site content automatically."
+msgstr "Custom Twitter Feeds は、Twitter アカウントからのツイートを表示するための高度にカスタマイズ可能な手段です。最新のコンテンツを宣伝しながら、サイトのコンテンツを自動的に更新します。"
+
+#: admin/SBI_About_Us.php:217
+msgid "Custom Twitter Feeds"
+msgstr "Custom Twitter Feeds"
+
+#: inc/Builder/SBI_Feed_Builder.php:318
+msgid "Custom Facebook Feed Pro"
+msgstr "Custom Facebook Feed Pro"
+
+#: admin/SBI_About_Us.php:208
+msgid "Custom Facebook Feed"
+msgstr "Custom Facebook Feed"
+
+#: admin/SBI_oEmbeds.php:213
+msgid "Install Plugin"
+msgstr "プラグインをインストール"
+
+#: admin/builder/templates/onboarding/success-page.php:50
+#: admin/SBI_About_Us.php:321 admin/SBI_Global_Settings.php:933
+#: inc/admin/actions.php:163 inc/admin/actions.php:181
+#: inc/Builder/SBI_Feed_Builder.php:846 inc/Builder/SBI_Feed_Builder.php:1092
+msgid "Activate"
+msgstr "有効化"
+
+#: inc/admin/actions.php:167
+msgid "Inactive"
+msgstr "未アクティブ"
+
+#: inc/admin/actions.php:164
+msgid "Activated"
+msgstr "有効化"
+
+#: inc/admin/actions.php:165
+msgid "Active"
+msgstr "有効"
+
+#: admin/SBI_Support.php:175
+msgid "Getting Started"
+msgstr "はじめましょう"
+
+#: inc/Builder/SBI_Feed_Builder.php:274 inc/Builder/SBI_Feed_Builder.php:296
+#: inc/Builder/SBI_Feed_Builder.php:338 inc/Builder/SBI_Feed_Builder.php:360
+#: inc/Builder/SBI_Feed_Builder.php:383 inc/Builder/SBI_Feed_Builder.php:406
+#: inc/Builder/SBI_Feed_Builder.php:429 inc/Builder/SBI_Feed_Builder.php:452
+#: inc/Builder/SBI_Feed_Builder.php:878
+msgid "Instagram Stories"
+msgstr "Instagram ストーリーズ"
+
+#: admin/views/support/support-tools.php:135
+msgid "Feed Type"
+msgstr "フィード形式"
+
+#: admin/SBI_Global_Settings.php:1096
+msgid "Sunday"
+msgstr "日曜日"
+
+#: admin/SBI_Global_Settings.php:1092
+msgid "Saturday"
+msgstr "土曜日"
+
+#: admin/SBI_Global_Settings.php:1088
+msgid "Friday"
+msgstr "金曜日"
+
+#: admin/SBI_Global_Settings.php:1084
+msgid "Thursday"
+msgstr "木曜日"
+
+#: admin/SBI_Global_Settings.php:1080
+msgid "Wednesday"
+msgstr "水曜日"
+
+#: admin/SBI_Global_Settings.php:1076
+msgid "Tuesday"
+msgstr "火曜日"
+
+#: admin/SBI_Global_Settings.php:1072
+msgid "Monday"
+msgstr "月曜日"
+
+#: admin/SBI_About_Us.php:58 admin/SBI_About_Us.php:59
+#: admin/SBI_About_Us.php:184 inc/Builder/SBI_Feed_Builder.php:1592
+msgid "About Us"
+msgstr "私たちについて"
+
+#: inc/Builder/SBI_Feed_Builder.php:783
+msgid "Directions on How to Resolve This Issue"
+msgstr "この問題を解決するには"
+
+#: widget.php:42
+msgid "Title:"
+msgstr "タイトル:"
+
+#: widget.php:16
+msgid "Display your Instagram feed"
+msgstr "Instagram フィードを表示"
+
+#: instagram-feed.php:254
+msgid "Weekly"
+msgstr "週ごと"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:598
+msgid "Use Custom Avatar"
+msgstr "カスタムアバターを使う"
+
+#: inc/Builder/SBI_Source.php:392
+msgid "The Instagram account you are logged into is already connected as a \"business\" account. Remove the business account if you'd like to connect as a basic account instead (not recommended)."
+msgstr "ログインしている Instagram アカウントは、すでに「ビジネス」アカウントとして接続されています。 代わりに基本アカウントとして接続する場合は、ビジネスアカウントを削除してください（お勧めしません）。"
+
+#: inc/class-sb-instagram-posts-manager.php:393
+msgid "Error: Cannot retrieve posts for this hashtag."
+msgstr "エラー: このハッシュタグの投稿を取得できません。"
+
+#: inc/class-sb-instagram-settings.php:908
+msgid "Due to recent Instagram platform changes, it's no longer possible to create a feed by adding the access token to the shortcode. Remove the access token from the shortcode and connect an account on the %s instead."
+msgstr "最近の Instagram プラットフォームの変更により、ショートコードにアクセストークンを追加してフィードを作成することはできなくなりました。 ショートコードからアクセストークンを削除し、代わりに%sのアカウントに接続します。"
+
+#: inc/class-sb-instagram-settings.php:907
+msgid "Error: Cannot add access token directly to the shortcode."
+msgstr "エラー: アクセストークンをショートコードに直接追加できません。"
+
+#: inc/class-sb-instagram-settings.php:873
+#: inc/class-sb-instagram-settings.php:904
+msgid "plugin Settings page"
+msgstr "プラグイン設定ページ"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:902
+msgid "Medium (320x320)"
+msgstr "中 (320x320)"
+
+#: inc/class-sb-instagram-settings.php:876
+msgid "Error: There is no connected account for the user %s."
+msgstr "エラー: ユーザー %s のアカウントに接続できません。"
+
+#: inc/class-sb-instagram-post.php:538
+msgid "No database ID."
+msgstr "データベース ID がありません。"
+
+#: inc/class-sb-instagram-post.php:192 inc/class-sb-instagram-post.php:538
+#: inc/class-sb-instagram-post.php:548
+msgid "Error inserting post."
+msgstr "投稿の作成エラー。"
+
+#: inc/class-sb-instagram-post.php:463
+msgid "Error updating post."
+msgstr "投稿の更新エラー。"
+
+#: inc/admin/actions.php:221 inc/Builder/SBI_Source.php:128
+#: inc/class-sb-instagram-posts-manager.php:358
+msgid "Error connecting to %s."
+msgstr "%s への接続エラー。"
+
+#: inc/class-sb-instagram-posts-manager.php:390
+msgid "Try using the big blue button on the \"Configure\" tab to reconnect the account and update its permissions."
+msgstr "「設定」タブの大きな青いボタンよりアカウントを再接続し、更新してみてください。"
+
+#: inc/class-sb-instagram-posts-manager.php:389
+msgid "Error: Connected account for the user %s does not have permission to use this feed type."
+msgstr "エラー: ユーザー%s の接続されたアカウントには、このフィード形式を使う権限がありません。"
+
+#: inc/class-sb-instagram-posts-manager.php:385
+msgid "Error: Hashtag limit of 30 unique hashtags per week has been reached."
+msgstr "エラー: 1週間あたり30個のハッシュタグ制限に達しました。"
+
+#: inc/admin/actions.php:216 inc/class-sb-instagram-posts-manager.php:382
+#: inc/class-sb-instagram-posts-manager.php:398
+#: inc/class-sb-instagram-single.php:182
+msgid "API error %s:"
+msgstr "API エラー %s:"
+
+#: admin/SBI_Global_Settings.php:1031
+msgid "Reset Error Log"
+msgstr "エラーログをリセット"
+
+#: admin/SBI_Global_Settings.php:1041 admin/SBI_Global_Settings.php:1057
+msgid "Initial posts will be loaded using AJAX instead of added to the page directly. If you use page caching, this will allow the feed to update according to the \"Check for new posts every\" setting on the \"Configure\" tab."
+msgstr "最初の投稿は、ページに直接追加されるのではなく、AJAX を使用して読み込まれます。 ページキャッシュを使用する場合、これにより「設定」タブの「毎回新しい投稿を確認する」に従ってフィードを更新できます。"
+
+#: admin/SBI_Global_Settings.php:1314
+msgid "Nothing currently scheduled"
+msgstr "予定はありません"
+
+#: admin/SBI_Global_Settings.php:1312 admin/SBI_Support.php:411
+msgid "Next check"
+msgstr "次回の確認"
+
+#: admin/SBI_Global_Settings.php:1310 admin/SBI_Support.php:408
+msgid "every 12 hours"
+msgstr "12時間ごと"
+
+#: admin/SBI_Global_Settings.php:1309 admin/SBI_Support.php:405
+msgid "every 30 minutes"
+msgstr "30分ごと"
+
+#: admin/SBI_Global_Settings.php:970
+msgid "Every 24 hours"
+msgstr "24時間ごと"
+
+#: admin/SBI_Global_Settings.php:969
+msgid "Every 12 hours"
+msgstr "12時間ごと"
+
+#: admin/SBI_Global_Settings.php:968
+msgid "Every hour"
+msgstr "1時間ごと"
+
+#: inc/class-sb-instagram-connected-account.php:203
+#: inc/class-sb-instagram-post.php:303
+msgid "Error editing image."
+msgstr "画像の編集でエラーが発生しました。"
+
+#: inc/class-sb-instagram-connected-account.php:155
+#: inc/class-sb-instagram-connected-account.php:196
+#: inc/class-sb-instagram-post.php:295
+msgid "Error saving edited image."
+msgstr "画像の保存でエラーが発生しました。"
+
+#: inc/if-functions.php:59
+msgid "Please go to the Instagram Feed settings page to create a feed."
+msgstr "アカウントを接続するには、Instagram Feed の設定ページに移動してください。"
+
+#: inc/class-sb-instagram-feed.php:1475
+msgid "Make sure this account has posts available on instagram.com."
+msgstr "このアカウントで instagram.com で利用可能な投稿があることを確認してください。"
+
+#: inc/class-sb-instagram-feed.php:1474
+msgid "Error: No posts found."
+msgstr "エラー: 投稿が見つかりません。"
+
+#: inc/class-sb-instagram-feed.php:1285
+msgid "No posts found."
+msgstr "投稿が見つかりません。"
+
+#: inc/class-sb-instagram-feed.php:1476 inc/class-sb-instagram-feed.php:1477
+#: inc/class-sb-instagram-posts-manager.php:1051
+#: inc/class-sb-instagram-settings.php:953
+msgid "Click here to troubleshoot"
+msgstr "トラブルシューティングはこちらをクリック"
+
+#: instagram-feed.php:459 instagram-feed.php:486
+msgid "There was an error when trying to create the database tables used for resizing images."
+msgstr "画像のサイズ変更に使用されるデータベーステーブルを作成しようとしたときにエラーが発生しました。"
+
+#: inc/class-sb-instagram-posts-manager.php:634 instagram-feed.php:311
+#: instagram-feed.php:333
+msgid "There was an error creating the folder for storing resized images."
+msgstr "サイズ変更された画像を保存するためのフォルダの作成中にエラー。"
+
+#: admin/SBI_Global_Settings.php:967 instagram-feed.php:250
+msgid "Every 30 minutes"
+msgstr "30分ごと"
+
+#: templates/item.php:33 templates/item.php:44
+msgid "Instagram post %s"
+msgstr "Instagram 投稿 %s"
+
+#. Plugin Name of the plugin
+#: instagram-feed.php
+msgid "Smash Balloon Instagram Feed"
+msgstr "Smash Balloon Instagram Feed"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:275
+msgid "Highlight every"
+msgstr "ハイライトごと"
+
+#: inc/Builder/SBI_Feed_Builder.php:952
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:255
+msgid "Hashtag"
+msgstr "ハッシュタグ"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:254
+msgid "Post ID"
+msgstr "投稿 ID"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:253
+msgid "Pattern"
+msgstr "柄"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:180
+msgid "Infinity"
+msgstr "無限"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:179
+msgid "Rewind"
+msgstr "巻き戻す"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:176
+msgid "Loop Type"
+msgstr "ループタイプ"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:809
+msgid "Centered"
+msgstr "中央揃え"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:798
+msgid "Standard"
+msgstr "標準"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:587
+msgid "Large"
+msgstr "L"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:586
+msgid "Medium"
+msgstr "M"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:585
+msgid "Small"
+msgstr "S"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:583
+msgid "Header Size"
+msgstr "ヘッダーサイズ"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:127
+msgid "Highlight"
+msgstr "ハイライト"
+
+#: inc/Builder/SBI_Feed_Builder.php:1448
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:121
+msgid "Masonry"
+msgstr "レンガ状"
+
+#: inc/Builder/SBI_Feed_Builder.php:1447
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:109
+msgid "Grid"
+msgstr "グリッド"
+
+#: inc/Builder/SBI_Feed_Builder.php:746
+msgid "Remove"
+msgstr "削除"
+
+#: inc/Builder/SBI_Feed_Builder.php:970
+msgid "Connect an Instagram Account"
+msgstr "Instagram アカウントを接続する"
+
+#: inc/if-functions.php:57 inc/if-functions.php:549
+msgid "This error message is only visible to WordPress admins"
+msgstr "このエラーメッセージは WordPress の管理者にだけ表示されます "
+
+#: inc/class-sb-instagram-posts-manager.php:357
+#: inc/class-sb-instagram-posts-manager.php:381
+msgid "Feed will not update."
+msgstr "フィードは更新されません。"
+
+#: inc/class-sb-instagram-posts-manager.php:381
+msgid "Error: Access Token is not valid or has expired."
+msgstr "エラー: アクセストークンが無効か、有効期限が切れています。"
+
+#: admin/SBI_Global_Settings.php:980 inc/admin/class-sbi-new-user.php:372
+#: inc/admin/class-sbi-notifications.php:651
+msgid "No"
+msgstr "いいえ"
+
+#: admin/SBI_Support.php:188
+msgid "Days"
+msgstr "日"
+
+#. Author URI of the plugin
+#: instagram-feed.php
+msgid "https://smashballoon.com/"
+msgstr "https://smashballoon.com/"
+
+#. Author of the plugin
+#: instagram-feed.php inc/admin/SBI_Onboarding_wizard.php:107
+#: inc/Integrations/Elementor/SBI_Elementor_Base.php:160
+msgid "Smash Balloon"
+msgstr "Smash Balloon"
+
+#. Description of the plugin
+#: instagram-feed.php
+msgid "Display beautifully clean, customizable, and responsive Instagram feeds."
+msgstr "美しく安全で、カスタマイズ性のあるレスポンシブな Instagram フィードを表示します。"
+
+#. Plugin URI of the plugin
+#: instagram-feed.php
+msgid "https://smashballoon.com/instagram-feed"
+msgstr "https://smashballoon.com/instagram-feed"
+
+#: inc/Builder/SBI_Feed_Builder.php:315
+msgid "Instagram Feed Pro"
+msgstr "Instagram Feed Pro"
+
+#: inc/admin/blocks/class-sbi-blocks.php:95
+msgid "Example"
+msgstr "例"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:941
+msgid "Maximum Text Length"
+msgstr "最大文字数"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:654
+msgid "Secondary Color"
+msgstr "サブカラー"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:640
+msgid "Primary Color"
+msgstr "メインの色"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:803
+msgid "Boxed"
+msgstr "ボックス"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:794
+msgid "Header Style"
+msgstr "ヘッダーのスタイル"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:669
+msgid "Show Bio Text"
+msgstr "プロフィールを表示"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:191
+msgid "Interval Time"
+msgstr "間隔"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:226
+msgid "Enable Autoplay"
+msgstr "自動再生を有効化"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:212
+msgid "Show Pagination"
+msgstr "ページネーションを表示"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:198
+msgid "Show Navigation Arrows"
+msgstr "ナビゲーション矢印を表示"
+
+#: inc/Builder/SBI_Feed_Builder.php:1449
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:115
+msgid "Carousel"
+msgstr "カルーセル"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:836
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1090
+msgid "Caption"
+msgstr "キャプション"
+
+#: inc/Builder/SBI_Feed_Builder.php:756
+msgid "Location"
+msgstr "位置"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1082
+msgid "Date"
+msgstr "日付"
+
+#: admin/views/support/support-tools.php:149
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1078
+msgid "Username"
+msgstr "ユーザー名"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:1070
+msgid "Information to display"
+msgstr "表示情報"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:903
+msgid "Full size (640x640)"
+msgstr "フルサイズ (640x640)"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:901
+msgid "Thumbnail (150x150)"
+msgstr "サムネイル (150x150)"
+
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:900
+msgid "Auto-detect (recommended)"
+msgstr "自動検出 (推奨)"
+
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:292
+msgid "Random"
+msgstr "ランダム"
+
+#: admin/SBI_Global_Settings.php:1002
+msgid "Custom CSS"
+msgstr "カスタム CSS"
+
+#: inc/Builder/SBI_Feed_Builder.php:1439 inc/Builder/SBI_Feed_Builder.php:1640
+#: inc/Builder/SBI_Feed_Builder.php:1754
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:43
+#: inc/class-sb-instagram-feed-locator.php:646
+msgid "Header"
+msgstr "ヘッダー"
+
+#: inc/Builder/SBI_Feed_Builder.php:739
+#: inc/Builder/Tabs/SBI_Settings_Tab.php:188
+msgid "Photos"
+msgstr "写真"
+
+#: inc/Builder/SBI_Feed_Builder.php:1445
+#: inc/Builder/Tabs/SBI_Customize_Tab.php:103
+msgid "Layout"
+msgstr "レイアウト"
+
+#: inc/Builder/SBI_Feed_Builder.php:777
+msgid "General"
+msgstr "一般"
+
+#: admin/SBI_Global_Settings.php:979 inc/admin/class-sbi-new-user.php:366
+#: inc/admin/class-sbi-notifications.php:645
+msgid "Yes"
+msgstr "はい"
+
+#: admin/SBI_Support.php:61 admin/SBI_Support.php:62 admin/SBI_Support.php:174
+#: inc/Builder/SBI_Feed_Builder.php:1593
+msgid "Support"
+msgstr "サポート"
+
+#: inc/class-sb-instagram-settings.php:1094 inc/if-functions.php:1705
+msgid "Follow on Instagram"
+msgstr "Instagram でフォロー"
+
+#: inc/if-functions.php:1689
+msgid "Load More..."
+msgstr "さらに読み込む..."
+
+#: admin/SBI_Global_Settings.php:775 inc/admin/actions.php:138
+#: inc/Builder/SBI_Feed_Builder.php:717 inc/Builder/SBI_Feed_Builder.php:730
+#: inc/Builder/SBI_Feed_Builder.php:1393 inc/Builder/SBI_Feed_Builder.php:1434
+#: inc/Builder/SBI_Feed_Builder.php:1589
+#: inc/Builder/Tabs/SBI_Builder_Customizer_Tab.php:33
+msgid "Settings"
+msgstr "設定"
+
+#: admin/SBI_About_Us.php:200 inc/admin/actions.php:25 inc/admin/actions.php:26
+#: inc/admin/class-sbi-sitehealth.php:62
+#: inc/Integrations/Divi/SBInstagramFeed.php:51
+#: inc/Integrations/Elementor/SBI_Elementor_Widget.php:57 widget.php:15
+msgid "Instagram Feed"
+msgstr "Instagram Feed"

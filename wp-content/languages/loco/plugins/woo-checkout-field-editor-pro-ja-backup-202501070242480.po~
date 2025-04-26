@@ -1,0 +1,766 @@
+# Copyright (C) 2021 ThemeHigh
+# This file is distributed under the same license as the Checkout Field Editor for WooCommerce plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Checkout Field Editor for WooCommerce 1.5.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woo-checkout-"
+"field-editor-pro\n"
+"Last-Translator: \n"
+"Language-Team: 日本語\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-12-17T19:23:44+05:30\n"
+"PO-Revision-Date: 2024-10-10 05:18+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: woo-checkout-field-editor-pro\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Loco-Version: 2.6.11; wp-6.6.2"
+
+#: admin/class-thwcfd-admin-form-field.php:105
+msgid " Checked by default"
+msgstr ""
+"デフォルトでチェック済み\n"
+
+#: public/class-thwcfd-public-checkout.php:426
+msgid "<strong>%s</strong> is not a valid number."
+msgstr ""
+"%s は有効な数値ではありません。\n"
+
+#: public/class-thwcfd-public-checkout.php:430
+msgid "<strong>%s</strong> is not a valid url."
+msgstr ""
+"%s は有効な URL ではありません。\n"
+
+#: includes/class-thwcfd.php:499
+msgid "A specific feature is missing"
+msgstr ""
+"特定の機能が欠けている\n"
+
+#: admin/class-thwcfd-admin-settings-themehigh-plugins.php:246
+msgid "Activate"
+msgstr ""
+"有効化\n"
+"\n"
+
+#: admin/class-thwcfd-admin-settings-themehigh-plugins.php:233
+msgid "Activated"
+msgstr ""
+"有効化\n"
+
+#: admin/class-thwcfd-admin-settings-general.php:102
+msgid "Add field"
+msgstr ""
+"フィールドを追加\n"
+
+#: admin/class-thwcfd-admin-form-field.php:686
+#: admin/assets/js/inc/thwcfd-admin-field.js:412
+#: admin/assets/js/thwcfd-admin.js:927
+msgid "Add new option"
+msgstr ""
+"新しいオプションを追加\n"
+
+#: admin/class-thwcfd-admin-settings-general.php:39
+msgid "Additional Fields"
+msgstr ""
+"追加フィールド\n"
+
+#: admin/class-thwcfd-admin-settings-general.php:32
+#: admin/class-thwcfd-admin-settings.php:25
+msgid "Advanced Settings"
+msgstr ""
+"詳細設定\n"
+
+#: admin/class-thwcfd-admin.php:310
+msgid "Already, Did"
+msgstr ""
+"すでに、しました\n"
+
+#: admin/class-thwcfd-admin-settings-general.php:110
+msgid ""
+"Are you sure you want to reset to default fields? all your changes will be "
+"deleted."
+msgstr "デフォルトのフィールドにリセットしてもよろしいですか? すべての変更が削除されます。"
+
+#: admin/class-thwcfd-admin-settings-advanced.php:170
+msgid ""
+"Are you sure you want to reset to default settings? all your changes will be "
+"deleted."
+msgstr ""
+"本当にデフォルト設定にリセットしますか? すべての変更が削除されます。\n"
+
+#: admin/class-thwcfd-admin-form-field.php:192
+msgid "Back"
+msgstr "戻る"
+
+#: admin/class-thwcfd-admin-settings-advanced.php:219
+msgid "Backup and Import Settings"
+msgstr ""
+"バックアップとインポートの設定\n"
+
+#: admin/class-thwcfd-admin-form-field.php:206
+msgid "Basic Details"
+msgstr ""
+"基本情報\n"
+
+#: admin/class-thwcfd-admin-form-field.php:154
+msgid "Basic Info"
+msgstr ""
+"基本情報\n"
+
+#: admin/class-thwcfd-admin-settings-general.php:37
+msgid "Billing Fields"
+msgstr ""
+"請求フィールド\n"
+
+#: includes/class-thwcfd.php:195
+msgid "Cancel"
+msgstr ""
+"キャンセル\n"
+
+#: admin/class-thwcfd-admin-form-field.php:50
+msgid "Checkbox"
+msgstr ""
+"チェックボックス\n"
+
+#: admin/class-thwcfd-admin-form-field.php:51
+msgid "Checkbox Group"
+msgstr ""
+"チェックボックスグループ\n"
+
+#. Plugin Name of the plugin
+msgid "Checkout Field Editor for WooCommerce"
+msgstr ""
+"WooCommerce のチェックアウト フィールド エディター\n"
+
+#: admin/class-thwcfd-admin-settings-general.php:31
+#: admin/class-thwcfd-admin-settings.php:24
+msgid "Checkout Fields"
+msgstr ""
+"チェックアウトフィールド\n"
+
+#: admin/class-thwcfd-admin-settings-general.php:75
+msgid "Checkout fields successfully reset"
+msgstr ""
+"チェックアウトフィールドが正常にリセットされました\n"
+
+#: admin/class-thwcfd-admin.php:55
+msgid "Checkout Form"
+msgstr ""
+"チェックアウトフォーム\n"
+
+#: admin/class-thwcfd-admin-form-field.php:98
+msgid "Class"
+msgstr ""
+"クラス\n"
+
+#: admin/class-thwcfd-admin-settings-themehigh-plugins.php:146
+msgid "Compatible Plugins"
+msgstr ""
+"互換性のあるプラグイン\n"
+
+#: includes/class-thwcfd.php:522 includes/class-thwcfd.php:536
+msgid "Could you please mention the plugin?"
+msgstr ""
+"プラグインについて教えていただけますか?\n"
+
+#. Description of the plugin
+msgid ""
+"Customize WooCommerce checkout fields(Add, Edit, Delete and re-arrange "
+"fields)."
+msgstr ""
+"WooCommerce チェックアウト フィールドをカスタマイズします (フィールドの追加、編集、削除、再配置)。\n"
+
+#: admin/class-thwcfd-admin-form-field.php:54
+msgid "Date"
+msgstr ""
+"日付\n"
+
+#: admin/class-thwcfd-admin-form-field.php:53
+msgid "Datetime local"
+msgstr "Datetime local"
+
+#: includes/class-thwcfd.php:416
+msgid "Deactivate and "
+msgstr ""
+"無効化して\n"
+
+#: admin/class-thwcfd-admin-form-field.php:95
+msgid "Default Value"
+msgstr ""
+"デフォルト値\n"
+
+#: admin/assets/js/inc/thwcfd-admin-field.js:329
+#: admin/assets/js/thwcfd-admin.js:844
+msgid "Default value must be a number."
+msgstr ""
+"デフォルト値は数値である必要があります。\n"
+
+#: admin/class-thwcfd-admin-settings-general.php:105
+msgid "Disable"
+msgstr ""
+"無効にする\n"
+
+#: admin/class-thwcfd-admin-form-field.php:109
+msgid "Display in Emails"
+msgstr ""
+"メールに表示\n"
+
+#: admin/class-thwcfd-admin-form-field.php:110
+msgid "Display in Order Detail Pages"
+msgstr ""
+"注文詳細ページに表示\n"
+
+#: admin/class-thwcfd-admin-form-field.php:220
+msgid "Display Settings"
+msgstr ""
+"表示設定\n"
+
+#: admin/class-thwcfd-admin-settings-general.php:95
+#: admin/class-thwcfd-admin-settings-general.php:191
+msgid "Edit"
+msgstr ""
+"編集\n"
+
+#: admin/assets/js/inc/thwcfd-admin-field.js:63
+#: admin/assets/js/thwcfd-admin.js:578
+msgid "Edit Field"
+msgstr ""
+"編集フィールド\n"
+
+#: admin/class-thwcfd-admin-form-field.php:44
+#: admin/class-thwcfd-admin-form-field.php:67
+msgid "Email"
+msgstr ""
+"メール\n"
+
+#: admin/class-thwcfd-admin-settings-general.php:104
+msgid "Enable"
+msgstr ""
+"有効にする\n"
+
+#: admin/class-thwcfd-admin-settings-advanced.php:70
+msgid "Enable class override for address fields."
+msgstr ""
+"アドレス フィールドのクラス オーバーライドを有効にします。\n"
+
+#: admin/class-thwcfd-admin-settings-advanced.php:64
+msgid "Enable label override for address fields."
+msgstr ""
+"アドレス フィールドのラベルのオーバーライドを有効にします。\n"
+
+#: admin/class-thwcfd-admin-settings-advanced.php:67
+msgid "Enable placeholder override for address fields."
+msgstr ""
+"アドレス フィールドのプレースホルダーのオーバーライドを有効にします。\n"
+
+#: admin/class-thwcfd-admin-settings-advanced.php:73
+msgid "Enable priority override for address fields."
+msgstr ""
+"アドレス フィールドの優先度オーバーライドを有効にします。\n"
+
+#: admin/class-thwcfd-admin-settings-advanced.php:76
+msgid "Enable required validation override for address fields."
+msgstr ""
+"アドレス フィールドの必須検証オーバーライドを有効にします。\n"
+
+#: admin/class-thwcfd-admin-form-field.php:107
+#: admin/class-thwcfd-admin-settings-general.php:94
+msgid "Enabled"
+msgstr ""
+"有効\n"
+
+#: admin/assets/js/inc/thwcfd-admin-field.js:315
+#: admin/assets/js/thwcfd-admin.js:830
+msgid "Enter default value given in the options."
+msgstr ""
+"オプションに指定されたデフォルト値を入力します。\n"
+
+#: admin/assets/js/inc/thwcfd-admin-field.js:322
+#: admin/assets/js/thwcfd-admin.js:837
+msgid "Enter default values given in the options."
+msgstr ""
+"オプションに指定されたデフォルト値を入力します。\n"
+
+#: includes/class-thwcfd.php:506
+msgid "Found an error in the plugin/ Plugin was not working"
+msgstr ""
+"プラグインにエラーが見つかりました/プラグインが動作していませんでした\n"
+
+#: admin/class-thwcfd-admin-form-field.php:76
+msgid "Full width"
+msgstr ""
+"全幅\n"
+
+#: admin/class-thwcfd-admin.php:68
+msgid "Get Pro"
+msgstr ""
+"プロになる\n"
+
+#: includes/class-thwcfd.php:161 includes/class-thwcfd.php:192
+msgid "Get Support"
+msgstr ""
+"サポートを受ける\n"
+
+#: admin/class-thwcfd-admin-form-field.php:77
+msgid "Half width left"
+msgstr ""
+"左半分の幅\n"
+
+#: admin/class-thwcfd-admin-form-field.php:78
+msgid "Half width right"
+msgstr ""
+"半角右\n"
+
+#: admin/class-thwcfd-admin-form-field.php:52
+msgid "Heading"
+msgstr ""
+"見出し\n"
+
+#: admin/class-thwcfd-admin-form-field.php:42
+msgid "Hidden"
+msgstr ""
+"隠れた\n"
+
+#: includes/class-thwcfd.php:515
+msgid "How can we improve your experience?"
+msgstr ""
+"どうすればお客様の体験を改善できるでしょうか?\n"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://www.themehigh.com"
+msgstr ""
+
+#: includes/class-thwcfd.php:520
+msgid "I found a better Plugin"
+msgstr ""
+"より良いプラグインを見つけました\n"
+
+#: includes/class-thwcfd.php:165
+msgid ""
+"If you have a moment, please let us know why you want to deactivate this "
+"plugin"
+msgstr ""
+"お時間があれば、このプラグインを無効にしたい理由をお知らせください。\n"
+
+#: admin/class-thwcfd-admin-settings-advanced.php:239
+msgid "Import Settings"
+msgstr ""
+"インポート設定\n"
+
+#: admin/class-thwcfd-admin-settings-themehigh-plugins.php:267
+msgid "Install now"
+msgstr ""
+"今すぐインストール\n"
+
+#: includes/class-thwcfd.php:513
+msgid "It was hard to use"
+msgstr ""
+"使いにくかった\n"
+
+#: includes/class-thwcfd.php:534
+msgid "It’s a temporary deactivation - I’m troubleshooting an issue"
+msgstr ""
+"一時的な無効化です - 問題のトラブルシューティング中です\n"
+
+#: includes/class-thwcfd.php:543
+msgid "Kindly tell us your reason, so that we can improve"
+msgstr ""
+"改善できるよう、理由をお知らせください。\n"
+
+#: admin/class-thwcfd-admin-form-field.php:94
+#: admin/class-thwcfd-admin-settings-general.php:90
+msgid "Label"
+msgstr ""
+"ラベル\n"
+
+#: includes/class-thwcfd.php:418
+msgid "leave a review"
+msgstr ""
+"レビューを残す\n"
+
+#: admin/class-thwcfd-admin.php:314
+msgid "Maybe later"
+msgstr ""
+"後でかもしれない\n"
+
+#: admin/class-thwcfd-admin-form-field.php:56
+msgid "Month"
+msgstr ""
+"月\n"
+
+#: admin/class-thwcfd-admin-form-field.php:49
+msgid "Multiselect"
+msgstr ""
+"複数選択\n"
+
+#: admin/class-thwcfd-admin.php:318
+msgid "Nah, Never"
+msgstr ""
+"いや、絶対ない\n"
+
+#: admin/class-thwcfd-admin-form-field.php:93
+#: admin/class-thwcfd-admin-settings-general.php:88
+msgid "Name"
+msgstr ""
+"名前\n"
+
+#: admin/assets/js/inc/thwcfd-admin-field.js:10
+#: admin/assets/js/thwcfd-admin.js:525
+msgid ""
+"NAME/ID must begin with a lowercase letter ([a-z]) or underscores (\"_\") "
+"and may be followed by any number of lowercase letters, digits ([0-9]) and "
+"underscores (\"_\")"
+msgstr ""
+"NAME/ID は小文字 ([az]) またはアンダースコア (\"_\") で始まる必要があり、その後に任意の数の小文字、数字 ([0-9])"
+"、アンダースコア (\"_\") を続けることができます。\n"
+
+#: admin/assets/js/inc/thwcfd-admin-field.js:63
+#: admin/assets/js/thwcfd-admin.js:578
+msgid "New Field"
+msgstr ""
+"新しい分野\n"
+
+#: admin/class-thwcfd-admin-form-field.php:189
+msgid "Next"
+msgstr ""
+"次\n"
+
+#: includes/class-thwcfd.php:541
+msgid "Not mentioned here"
+msgstr ""
+"ここでは言及されていない\n"
+
+#: admin/class-thwcfd-admin-form-field.php:41
+#: admin/class-thwcfd-admin-form-field.php:71
+msgid "Number"
+msgstr ""
+"番号\n"
+
+#: admin/class-thwcfd-admin-form-field.php:684
+#: admin/assets/js/inc/thwcfd-admin-field.js:410
+#: admin/assets/js/thwcfd-admin.js:925
+msgid "Option Text"
+msgstr ""
+"オプションテキスト\n"
+
+#: admin/class-thwcfd-admin-form-field.php:683
+#: admin/assets/js/inc/thwcfd-admin-field.js:409
+#: admin/assets/js/thwcfd-admin.js:924
+msgid "Option Value"
+msgstr ""
+"オプション値\n"
+
+#: admin/class-thwcfd-admin-form-field.php:675
+msgid "Options"
+msgstr ""
+"オプション\n"
+
+#: includes/utils/class-thwcfd-utils.php:154
+msgid "Order Notes"
+msgstr ""
+"注文メモ\n"
+
+#: admin/class-thwcfd-admin-settings-general.php:34
+#: admin/class-thwcfd-admin-settings.php:27
+msgid "Other Free Plugins"
+msgstr ""
+"その他の無料プラグイン\n"
+
+#: admin/class-thwcfd-admin-settings-themehigh-plugins.php:184
+msgid "Other Plugins"
+msgstr ""
+"その他のプラグイン\n"
+
+#: admin/class-thwcfd-admin-form-field.php:59
+msgid "Paragraph"
+msgstr ""
+"段落\n"
+
+#: admin/class-thwcfd-admin-form-field.php:43
+msgid "Password"
+msgstr ""
+"パスワード\n"
+
+#: admin/class-thwcfd-admin-form-field.php:45
+#: admin/class-thwcfd-admin-form-field.php:68
+msgid "Phone"
+msgstr ""
+"電話\n"
+
+#: admin/class-thwcfd-admin-form-field.php:96
+#: admin/class-thwcfd-admin-settings-general.php:91
+msgid "Placeholder"
+msgstr ""
+"プレースホルダー\n"
+
+#: includes/utils/class-thwcfd-utils.php:155
+msgctxt "placeholder"
+msgid "Notes about your order, e.g. special notes for delivery."
+msgstr "ご注文に関する注意事項（配送に関する特記事項など）"
+
+#: admin/class-thwcfd-admin-settings-advanced.php:221
+msgid "Plugin Settings Data"
+msgstr "プラグイン設定データ"
+
+#: admin/class-thwcfd-admin-form-field.php:69
+msgid "Postcode"
+msgstr ""
+"郵便番号\n"
+
+#: admin/class-thwcfd-admin-settings-general.php:33
+#: admin/class-thwcfd-admin-settings.php:26
+msgid "Premium Features"
+msgstr ""
+"プレミアム機能\n"
+
+#: includes/class-thwcfd.php:184
+msgid "Privacy Policy"
+msgstr ""
+"プライバシーポリシー\n"
+
+#: includes/class-thwcfd.php:156
+msgid "Quick Feedback"
+msgstr ""
+"クイックフィードバック\n"
+
+#: admin/class-thwcfd-admin-form-field.php:47
+msgid "Radio"
+msgstr ""
+
+#: admin/class-thwcfd-admin-settings-general.php:103
+msgid "Remove"
+msgstr "削除"
+
+#: admin/class-thwcfd-admin-form-field.php:686
+#: admin/assets/js/inc/thwcfd-admin-field.js:413
+#: admin/assets/js/thwcfd-admin.js:928
+msgid "Remove option"
+msgstr ""
+"オプションを削除\n"
+
+#: admin/class-thwcfd-admin-form-field.php:104
+#: admin/class-thwcfd-admin-settings-general.php:93
+msgid "Required"
+msgstr ""
+"必須\n"
+
+#: admin/class-thwcfd-admin-settings-general.php:109
+msgid "Reset to default fields"
+msgstr ""
+"デフォルトのフィールドにリセット\n"
+
+#: admin/class-thwcfd-admin-form-field.php:186
+msgid "Save & Close"
+msgstr ""
+"保存して閉じる\n"
+
+#: admin/class-thwcfd-admin-settings-general.php:108
+msgid "Save changes"
+msgstr ""
+"変更を保存\n"
+
+#: admin/class-thwcfd-admin-form-field.php:151
+msgid "Save Field"
+msgstr ""
+"フィールドを保存\n"
+
+#: admin/class-thwcfd-admin-form-field.php:48
+msgid "Select"
+msgstr ""
+"選択\n"
+
+#: admin/class-thwcfd-admin-form-field.php:99
+msgid "Select validations"
+msgstr ""
+"検証を選択\n"
+
+#: admin/class-thwcfd-admin-form-field.php:98
+msgid "Separate classes with comma"
+msgstr ""
+"クラスをカンマで区切る\n"
+
+#: admin/class-thwcfd-admin.php:66
+msgid "Settings"
+msgstr ""
+"設定\n"
+
+#: admin/class-thwcfd-admin-settings-advanced.php:99
+msgid "Settings successfully reset."
+msgstr ""
+"設定が正常にリセットされました。\n"
+
+#: admin/class-thwcfd-admin-settings-general.php:38
+msgid "Shipping Fields"
+msgstr "配送フィールド"
+
+#: includes/class-thwcfd.php:188
+msgid "Skip & Deactivate"
+msgstr ""
+"スキップして無効にする\n"
+
+#: includes/class-thwcfd.php:508
+msgid "Specify the issue"
+msgstr ""
+"問題を指定してください\n"
+
+#: admin/class-thwcfd-admin-form-field.php:70
+msgid "State"
+msgstr "都道府県"
+
+#: includes/class-thwcfd.php:194
+msgid "Submit and Deactivate"
+msgstr ""
+"送信して無効化\n"
+
+#: admin/class-thwcfd-admin-form-field.php:40
+msgid "Text"
+msgstr ""
+"文章\n"
+
+#: admin/class-thwcfd-admin-form-field.php:46
+msgid "Textarea"
+msgstr ""
+"テキストエリア\n"
+
+#: admin/class-thwcfd-admin-settings-advanced.php:264
+msgid ""
+"The entered import settings data is invalid. Please try again with valid "
+"data."
+msgstr ""
+"入力されたインポート設定データが無効です。有効なデータでもう一度お試しください。\n"
+
+#: admin/class-thwcfd-admin.php:303
+msgid ""
+"The free version of the WooCommerce Checkout Field Editor plugin is now "
+"loaded with more field types. We would love to know how you feel about the "
+"improvements we made just for you. Help us to serve you and others best by "
+"simply leaving a genuine review."
+msgstr ""
+"WooCommerce Checkout Field Editor プラグインの無料版には、より多くのフィールド "
+"タイプが読み込まれるようになりました。私たちがあなたのために行った改善についてどう思われるか、ぜひお聞かせください。本物のレビューを残すだけで、あなたや他の人に最高のサービスを提供できるようご協力ください。"
+
+#. Author of the plugin
+msgid "ThemeHigh"
+msgstr ""
+
+#: includes/class-thwcfd.php:184
+msgid ""
+"This form is only for getting your valuable feedback. We do not collect your "
+"personal data. To know more read our "
+msgstr ""
+"このフォームは、貴重なご意見をお伺いするためのみに使用されます。当社はあなたの個人データを収集しません。さらに詳しく知りたい場合は、こちらをお読みください。"
+
+#: admin/class-thwcfd-admin-form-field.php:55
+msgid "Time"
+msgstr ""
+"時間\n"
+
+#: admin/class-thwcfd-admin-form-field.php:91
+#: admin/class-thwcfd-admin-settings-general.php:89
+msgid "Type"
+msgstr ""
+"タイプ\n"
+
+#: includes/class-thwcfd.php:501
+msgid "Type in the feature"
+msgstr ""
+"特徴を入力\n"
+
+#: includes/class-thwcfd.php:422
+msgid "Upgraded"
+msgstr ""
+"アップグレード\n"
+
+#: includes/class-thwcfd.php:492
+msgid "Upgraded to premium."
+msgstr ""
+"プレミアムにアップグレードしました。\n"
+
+#: admin/class-thwcfd-admin-form-field.php:58
+#: admin/class-thwcfd-admin-form-field.php:72
+msgid "URL"
+msgstr ""
+"メールアドレス\n"
+
+#: admin/class-thwcfd-admin-form-field.php:99
+msgid "Validation"
+msgstr ""
+"検証\n"
+
+#: admin/class-thwcfd-admin-settings-general.php:92
+msgid "Validations"
+msgstr ""
+"検証\n"
+
+#: admin/class-thwcfd-admin.php:302
+msgid "We heard you!"
+msgstr ""
+"聞きましたよ！\n"
+
+#: admin/class-thwcfd-admin-form-field.php:57
+msgid "Week"
+msgstr "Week"
+
+#: admin/class-thwcfd-admin.php:60
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: admin/class-thwcfd-admin.php:55
+msgid "WooCommerce Checkout Field Editor"
+msgstr ""
+"WooCommerce チェックアウトフィールドエディター\n"
+
+#: admin/assets/js/inc/thwcfd-admin.js:63 admin/assets/js/thwcfd-admin.js:1059
+msgid "Yes"
+msgstr ""
+"はい\n"
+
+#: admin/class-thwcfd-admin.php:306
+msgid "Yes, today"
+msgstr ""
+"はい、今日\n"
+
+#: admin/class-thwcfd-admin-settings-advanced.php:222
+msgid ""
+"You can transfer the saved settings data between different installs by "
+"copying the text inside the text box. To import data from another install, "
+"replace the data in the text box with the one from another install and click "
+"\"Import Settings\"."
+msgstr ""
+"テキスト "
+"ボックス内のテキストをコピーすることで、保存された設定データを異なるインストール間で転送できます。別のインストールからデータをインポートするには、テキスト"
+" ボックス内のデータを別のインストールのデータに置き換えて、[設定のインポート] をクリックします。"
+
+#: admin/class-thwcfd-admin-settings-advanced.php:137
+#: admin/class-thwcfd-admin-settings-advanced.php:292
+#: admin/class-thwcfd-admin-settings-general.php:257
+#: admin/class-thwcfd-admin-settings-general.php:317
+msgid "Your changes were not saved due to an error (or you made none!)."
+msgstr ""
+"エラーのため変更は保存されませんでした (または変更がまったく行われませんでした)。\n"
+
+#: admin/class-thwcfd-admin-settings-general.php:260
+#: admin/class-thwcfd-admin-settings-general.php:320
+msgid "Your changes were not saved due to an error."
+msgstr ""
+"エラーのため変更は保存されませんでした。\n"
+
+#: admin/class-thwcfd-admin-settings-general.php:275
+msgid "Your changes were not saved due to no fields found."
+msgstr ""
+"フィールドが見つからないため、変更は保存されませんでした。\n"
+
+#: admin/class-thwcfd-admin-settings-advanced.php:135
+#: admin/class-thwcfd-admin-settings-general.php:255
+#: admin/class-thwcfd-admin-settings-general.php:315
+msgid "Your changes were saved."
+msgstr ""
+"変更が保存されました。\n"
+
+#: admin/class-thwcfd-admin-settings-advanced.php:289
+msgid "Your Settings Updated."
+msgstr ""
+"設定が更新されました。\n"

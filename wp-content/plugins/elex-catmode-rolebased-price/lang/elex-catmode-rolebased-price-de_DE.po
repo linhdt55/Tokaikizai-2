@@ -1,0 +1,942 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ELEX WooCommerce Role-based Pricing Plugin & WooCommerce "
+"Catalog Mode\n"
+"POT-Creation-Date: 2019-06-27 15:56+0530\n"
+"PO-Revision-Date: 2019-06-27 15:59+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: elex-catmode-rolebased-price.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: elex-catmode-rolebased-price.php:35
+msgid ""
+"<b>WooCommerce</b> plugin must be active for <b>WooCommerce Catalog Mode, "
+"Wholesale & Role Based Pricing</b> to work. "
+msgstr ""
+"<b>WooCommerce</b> Plugin muss aktiv sein, damit <b>WooCommerce Catalog "
+"Mode, Wholesale & Role Based Pricing</b> arbeiten."
+
+#: elex-catmode-rolebased-price.php:50
+msgid ""
+"Oops! You tried installing the premium version without deactivating and "
+"deleting the basic version. Kindly deactivate and delete WooCommerce Catalog "
+"Mode, Wholesale & Role Based Pricing (BASIC) and then try again. For any "
+"issues, kindly contact our <a target='_blank' href='https://elextensions.com/"
+"support/'>support</a>."
+msgstr ""
+"Oops! Sie haben versucht, die Premium-Version zu installieren, ohne die "
+"Basisversion zu deaktivieren und zu löschen. Bitte deaktivieren und löschen "
+"WooCommerce Katalogmodus, Großhandel & Rollenbasierte Preise (BASIC) und "
+"versuchen Sie es dann erneut. Bei Problemen wenden Sie sich bitte an unsere "
+"Unterstützung </a> von target='_blank'https://elextensions.com/"
+"support/'>support."
+
+#: elex-catmode-rolebased-price.php:81
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: elex-catmode-rolebased-price.php:82
+msgid "Documentation"
+msgstr "Dokumentation"
+
+#: elex-catmode-rolebased-price.php:83
+msgid "Support"
+msgstr "Support"
+
+#: elex-catmode-rolebased-price.php:99
+#: includes/elex-price-discount-settings.php:78
+msgid "Role-based Pricing"
+msgstr "Rollenbasierte Preise"
+
+#: elex-includes/elex-functions.php:138
+#, php-format
+msgctxt "Price range: from-to"
+msgid "%1$s &ndash; %2$s"
+msgstr "%1$s &ndash; %2$s"
+
+#: includes/elex-html-price-adjustment-manage-user-role.php:14
+msgid "Add Custom User Role"
+msgstr "Hinzufügen einer benutzerdefinierten Benutzerrolle"
+
+#: includes/elex-html-price-adjustment-manage-user-role.php:20
+#: includes/elex-html-price-adjustment-table.php:15
+#: includes/elex-html-price-suffix.php:15
+#: includes/elex-html-product-price-adjustment.php:258
+#: includes/elex-html-product-role-based-price.php:19
+#: includes/elex-html-tax-options.php:17
+#: includes/elex-html-variation-product-role-based-price.php:18
+msgid "User Role"
+msgstr "Benutzerrolle"
+
+#: includes/elex-html-price-adjustment-manage-user-role.php:25
+msgid ""
+"Enter the name of the user role you want to create and click the Save "
+"Changes button."
+msgstr ""
+"Geben Sie den Namen der Benutzerrolle ein, die Sie erstellen möchten, und "
+"klicken Sie auf die Schaltfläche Änderungen speichern."
+
+#: includes/elex-html-price-adjustment-manage-user-role.php:32
+msgid "Remove User Role"
+msgstr "Benutzerrolle entfernen"
+
+#: includes/elex-html-price-adjustment-manage-user-role.php:49
+msgid ""
+"Select the user role you want to delete and click the Save Changes button."
+msgstr ""
+"Wählen Sie die Benutzerrolle aus, die Sie löschen möchten, und klicken Sie "
+"auf die Schaltfläche Änderungen speichern."
+
+#: includes/elex-html-price-adjustment-table.php:16
+msgid "Categories"
+msgstr "Artikel in Kategorien müssen gekauft werden"
+
+#: includes/elex-html-price-adjustment-table.php:17
+#: includes/elex-html-product-price-adjustment.php:259
+#, php-format
+msgid "Price Adjustment (%s)"
+msgstr "Preisanpassung(%s)"
+
+#: includes/elex-html-price-adjustment-table.php:18
+#: includes/elex-html-product-price-adjustment.php:260
+msgid "Price Adjustment (%)"
+msgstr "Preisanpassung(%)"
+
+#: includes/elex-html-price-adjustment-table.php:19
+#: includes/elex-html-product-price-adjustment.php:33
+#: includes/elex-html-product-price-adjustment.php:57
+#: includes/elex-html-product-price-adjustment.php:85
+#: includes/elex-html-product-price-adjustment.php:101
+#: includes/elex-html-product-price-adjustment.php:261
+#: includes/elex-html-product-price-adjustment_catalog.php:14
+#: includes/elex-html-product-price-adjustment_catalog.php:39
+#: includes/elex-html-product-price-adjustment_catalog.php:67
+#: includes/elex-html-product-price-adjustment_catalog.php:81
+#: includes/elex-price-discount-settings.php:222
+#: includes/elex-price-discount-settings.php:275
+#: includes/elex-price-discount-settings.php:308
+#: includes/elex-price-discount-settings.php:341
+#: includes/elex-price-discount-settings.php:357
+#: includes/elex-price-discount-settings.php:365
+#: includes/elex-price-discount-settings.php:389
+#: includes/elex-price-discount-settings.php:421
+#: includes/elex-price-discount-settings.php:453
+#: includes/elex-price-discount-settings.php:461
+#: includes/elex-price-discount-settings.php:477
+msgid "Enable"
+msgstr "Aktivieren"
+
+#: includes/elex-html-price-suffix.php:11
+msgid "Price Suffix Table"
+msgstr "Preis-Suffix-Tabelle"
+
+#: includes/elex-html-price-suffix.php:16
+#: includes/elex-price-discount-settings.php:242
+msgid "Suffix Text"
+msgstr "Suffix Text"
+
+#: includes/elex-html-product-price-adjustment.php:30
+#: includes/elex-html-product-price-adjustment_catalog.php:11
+#: includes/elex-price-discount-settings.php:273
+#: includes/elex-price-discount-settings.php:387
+#: includes/elex-price-discount-settings.php:505
+msgid "Remove Add to Cart"
+msgstr "Entfernen In den Warenkorb legen"
+
+#: includes/elex-html-product-price-adjustment.php:35
+#: includes/elex-html-product-price-adjustment_catalog.php:16
+msgid "Check to remove Add to Cart."
+msgstr "Aktivieren Sie diese Option, um Add to Cart zu entfernen."
+
+#: includes/elex-html-product-price-adjustment.php:41
+#: includes/elex-html-product-price-adjustment.php:129
+#: includes/elex-html-product-price-adjustment_catalog.php:23
+#: includes/elex-price-discount-settings.php:281
+#: includes/elex-price-discount-settings.php:395
+#: includes/elex-price-discount-settings.php:514
+msgid "Shop Page"
+msgstr "Shop-Seite"
+
+#: includes/elex-html-product-price-adjustment.php:43
+#: includes/elex-html-product-price-adjustment.php:131
+#: includes/elex-html-product-price-adjustment_catalog.php:25
+#: includes/elex-price-discount-settings.php:289
+#: includes/elex-price-discount-settings.php:403
+#: includes/elex-price-discount-settings.php:522
+msgid "Product Page"
+msgstr "Produktseite"
+
+#: includes/elex-html-product-price-adjustment.php:46
+#: includes/elex-html-product-price-adjustment.php:90
+#: includes/elex-html-product-price-adjustment.php:134
+#: includes/elex-html-product-price-adjustment.php:196
+#: includes/elex-html-product-price-adjustment_catalog.php:28
+#: includes/elex-html-product-price-adjustment_catalog.php:72
+msgid "Placeholder text"
+msgstr "Platzhaltertext"
+
+#: includes/elex-html-product-price-adjustment.php:49
+#: includes/elex-html-product-price-adjustment.php:137
+#: includes/elex-price-discount-settings.php:299
+#: includes/elex-price-discount-settings.php:413
+#: includes/elex-price-discount-settings.php:532
+msgid ""
+"Enter a text or html content to display when Add to Cart button is removed. "
+"Leave it empty if you don't want to show any content."
+msgstr ""
+"Geben Sie einen Text oder HTML-Inhalt ein, der angezeigt werden soll, wenn "
+"die Schaltfläche Zum Warenkorb hinzufügen entfernt wird. Lassen Sie es leer, "
+"wenn Sie keine Inhalte anzeigen möchten."
+
+#: includes/elex-html-product-price-adjustment.php:54
+#: includes/elex-html-product-price-adjustment_catalog.php:36
+#: includes/elex-price-discount-settings.php:306
+#: includes/elex-price-discount-settings.php:419
+#: includes/elex-price-discount-settings.php:538
+msgid "Customize Add to Cart"
+msgstr "Anpassen des Hinzufügens zum Warenkorb"
+
+#: includes/elex-html-product-price-adjustment.php:59
+#: includes/elex-html-product-price-adjustment_catalog.php:41
+#: includes/elex-price-discount-settings.php:311
+msgid "Check to customize Add to Cart."
+msgstr "Aktivieren Sie diese Option, um Add to Cart anzupassen."
+
+#: includes/elex-html-product-price-adjustment.php:62
+#: includes/elex-html-product-price-adjustment.php:159
+#: includes/elex-html-product-price-adjustment_catalog.php:44
+#: includes/elex-price-discount-settings.php:314
+#: includes/elex-price-discount-settings.php:427
+#: includes/elex-price-discount-settings.php:547
+msgid "Change Button Text (Product Page)"
+msgstr "Schaltflächentext ändern (Produktseite)"
+
+#: includes/elex-html-product-price-adjustment.php:65
+#: includes/elex-html-product-price-adjustment.php:162
+#: includes/elex-html-product-price-adjustment_catalog.php:47
+#: includes/elex-price-discount-settings.php:316
+#: includes/elex-price-discount-settings.php:429
+#: includes/elex-price-discount-settings.php:549
+msgid ""
+"Enter a text to replace the existing Add to Cart button text on the product "
+"page."
+msgstr ""
+"Geben Sie einen Text ein, um den vorhandenen Text zum Warenkorb hinzufügen "
+"auf der Produktseite zu ersetzen."
+
+#: includes/elex-html-product-price-adjustment.php:68
+#: includes/elex-html-product-price-adjustment.php:165
+#: includes/elex-html-product-price-adjustment_catalog.php:50
+#: includes/elex-price-discount-settings.php:322
+#: includes/elex-price-discount-settings.php:435
+#: includes/elex-price-discount-settings.php:555
+msgid "Change Button Text (Shop Page)"
+msgstr "Schaltflächentext ändern (Shop-Seite)"
+
+#: includes/elex-html-product-price-adjustment.php:71
+#: includes/elex-html-product-price-adjustment.php:168
+#: includes/elex-html-product-price-adjustment_catalog.php:53
+#: includes/elex-price-discount-settings.php:324
+#: includes/elex-price-discount-settings.php:437
+#: includes/elex-price-discount-settings.php:557
+msgid ""
+"Enter a text to replace the existing Add to Cart button text on the shop "
+"page."
+msgstr ""
+"Geben Sie einen Text ein, um den vorhandenen Text zum Warenkorb hinzufügen "
+"auf der Shopseite zu ersetzen."
+
+#: includes/elex-html-product-price-adjustment.php:74
+#: includes/elex-html-product-price-adjustment.php:171
+#: includes/elex-html-product-price-adjustment_catalog.php:56
+#: includes/elex-price-discount-settings.php:330
+#: includes/elex-price-discount-settings.php:443
+#: includes/elex-price-discount-settings.php:563
+msgid "Change Button URL"
+msgstr "URL ändern"
+
+#: includes/elex-html-product-price-adjustment.php:77
+#: includes/elex-html-product-price-adjustment.php:174
+#: includes/elex-html-product-price-adjustment_catalog.php:59
+#: includes/elex-price-discount-settings.php:332
+#: includes/elex-price-discount-settings.php:445
+#: includes/elex-price-discount-settings.php:565
+msgid ""
+"Enter a url to redirect customers from Add to Cart button. Leave this field "
+"empty to not change the button functionality. Make sure to enter a text in "
+"the above fields to apply these changes."
+msgstr ""
+"Geben Sie eine URL ein, um Kunden von der Schaltfläche Zum Warenkorb "
+"hinzufügen umzuleiten. Lassen Sie dieses Feld leer, um die "
+"Schaltflächenfunktionalität nicht zu ändern. Stellen Sie sicher, dass Sie "
+"einen Text in den obigen Feldern eingeben, um diese Änderungen anzuwenden."
+
+#: includes/elex-html-product-price-adjustment.php:82
+#: includes/elex-html-product-price-adjustment_catalog.php:64
+#: includes/elex-price-discount-settings.php:339
+#: includes/elex-price-discount-settings.php:459
+#: includes/elex-price-discount-settings.php:580
+msgid "Hide Price"
+msgstr "Preis ausblenden"
+
+#: includes/elex-html-product-price-adjustment.php:87
+#: includes/elex-html-product-price-adjustment_catalog.php:69
+msgid "Check to hide price."
+msgstr "Überprüfen Sie, um den Preis auszublenden."
+
+#: includes/elex-html-product-price-adjustment.php:93
+#: includes/elex-html-product-price-adjustment.php:199
+#: includes/elex-price-discount-settings.php:349
+#: includes/elex-price-discount-settings.php:469
+msgid ""
+"Enter the text you want to display when price is removed. Leave it empty if "
+"you don't want to show any placeholder text."
+msgstr ""
+"Geben Sie den Text ein, den Sie anzeigen möchten, wenn der Preis entfernt "
+"wird. Lassen Sie es leer, wenn Sie keinen Platzhaltertext anzeigen möchten."
+
+#: includes/elex-html-product-price-adjustment.php:98
+msgid "Hide Product"
+msgstr "Ausblenden des Produkts"
+
+#: includes/elex-html-product-price-adjustment.php:103
+msgid "Check to hide product."
+msgstr "Überprüfen Sie, ob das Produkt ausgeblendet werden soll."
+
+#: includes/elex-html-product-price-adjustment.php:109
+msgid " Remove Add to Cart"
+msgstr "Entfernen Zum Warenkorb hinzufügen"
+
+#: includes/elex-html-product-price-adjustment.php:123
+msgid " Select the user role(s) for which you want to remove Add to Cart."
+msgstr ""
+"Wählen Sie die Benutzerrolle(n) aus, für die Sie Zum Warenkorb hinzufügen "
+"entfernen möchten."
+
+#: includes/elex-html-product-price-adjustment.php:142
+msgid " Customize Add to Cart"
+msgstr "Anpassen des Hinzufügens zum Warenkorb"
+
+#: includes/elex-html-product-price-adjustment.php:156
+msgid " Select the user role(s) for which you want to customize Add to Cart."
+msgstr ""
+"Wählen Sie die Benutzerrolle(n) aus, für die Sie Hinzufügen zum Warenkorb "
+"anpassen möchten."
+
+#: includes/elex-html-product-price-adjustment.php:179
+msgid " Hide Price"
+msgstr "Hide Price"
+
+#: includes/elex-html-product-price-adjustment.php:193
+msgid " Select the user role(s) for which you want to hide price."
+msgstr ""
+"Wählen Sie die Benutzerrolle(n) aus, für die Sie den Preis ausblenden "
+"möchten."
+
+#: includes/elex-html-product-price-adjustment.php:204
+msgid " Hide Product"
+msgstr "Ausblenden des Produkts"
+
+#: includes/elex-html-product-price-adjustment.php:218
+msgid " Select the user role(s) for which you want to hide product."
+msgstr ""
+"Wählen Sie die Benutzerrolle(n) aus, für die Sie das Produkt ausblenden "
+"möchten."
+
+#: includes/elex-html-product-price-adjustment.php:244
+msgid " Individual Product Price Adjustment"
+msgstr "Individuelle Produktpreisanpassung"
+
+#: includes/elex-html-product-price-adjustment.php:247
+msgid " Enable"
+msgstr "ermöglichen"
+
+#: includes/elex-html-product-price-adjustment.php:253
+msgid ""
+" Drag and drop user roles to set priority. If a single user has multiple "
+"user roles assigned, the user role with the highest priority will be chosen. "
+"Choose 'D' for DISCOUNT and 'M' for MARKUP."
+msgstr ""
+"Ziehen Und Ablegen von Benutzerrollen zum Festlegen der Priorität. Wenn "
+"einem einzelnen Benutzer mehrere Benutzerrollen zugewiesen sind, wird die "
+"Benutzerrolle mit der höchsten Priorität ausgewählt. Wählen Sie 'D' für "
+"DISCOUNT und 'M' für MARKUP."
+
+#: includes/elex-html-product-price-adjustment_catalog.php:8
+msgid "Catalog mode options:"
+msgstr "Katalogmodusoptionen:"
+
+#: includes/elex-html-product-price-adjustment_catalog.php:9
+msgid ""
+"The changes you make here will be applicable across user roles. You can "
+"exclude Administrator role from these settings. Catalog Mode Settings will "
+"override Role Based & Unregistered User Settings."
+msgstr ""
+"Die hier vorgenommenen Änderungen gelten für alle Benutzerrollen. Sie können "
+"die Administratorrolle von diesen Einstellungen ausschließen. Die "
+"Einstellungen für den Katalogmodus überschreiben rollenbasierte und nicht "
+"registrierte Benutzereinstellungen."
+
+#: includes/elex-html-product-price-adjustment_catalog.php:31
+msgid ""
+"Enter a text or html content to show as placeholder when Add to Cart button "
+"is removed. Leave it empty if you don't want to show any content."
+msgstr ""
+"Geben Sie einen Text oder HTML-Inhalt ein, der als Platzhalter angezeigt "
+"werden soll, wenn die Schaltfläche Zum Warenkorb hinzufügen entfernt wird. "
+"Lassen Sie es leer, wenn Sie keine Inhalte anzeigen möchten."
+
+#: includes/elex-html-product-price-adjustment_catalog.php:75
+msgid ""
+"Enter the text you want to show when price is removed. Leave it empty if you "
+"don't want to show any placeholder text."
+msgstr ""
+"Geben Sie den Text ein, den Sie anzeigen möchten, wenn der Preis entfernt "
+"wird. Lassen Sie es leer, wenn Sie keinen Platzhaltertext anzeigen möchten."
+
+#: includes/elex-html-product-price-adjustment_catalog.php:78
+#: includes/elex-price-discount-settings.php:363
+msgid "Exclude Administrator"
+msgstr "Administrator ausschließen"
+
+#: includes/elex-html-product-price-adjustment_catalog.php:83
+msgid ""
+"Check to exclude Administrator role from the above catalog mode settings."
+msgstr ""
+"Aktivieren Sie diese Option, um die Administratorrolle von den oben "
+"genannten Katalogmoduseinstellungen auszuschließen."
+
+#: includes/elex-html-product-role-based-price.php:11
+#: includes/elex-html-variation-product-role-based-price.php:11
+msgid "Role Based Price"
+msgstr "Rollen Basierter Preis"
+
+#: includes/elex-html-product-role-based-price.php:20
+#: includes/elex-html-variation-product-role-based-price.php:19
+#, php-format
+msgid "Price (%s)"
+msgstr "Preis (%s)"
+
+#: includes/elex-html-product-role-based-price.php:58
+#: includes/elex-html-variation-product-role-based-price.php:57
+msgid "Role Based Price "
+msgstr "Rollenbasierter Preis"
+
+#: includes/elex-html-product-role-based-price.php:61
+#: includes/elex-html-variation-product-role-based-price.php:60
+msgid ""
+"For setting up user roles eligible for individual price adjustment, go to "
+"Role Based Pricing settings -> Add roles for the field \"Individual Price "
+"Adjustment\"."
+msgstr ""
+"Zum Einrichten von Benutzerrollen, die für die individuelle Preisanpassung "
+"in Frage kommen, gehen Sie zu Rollenbasierte Preiseinstellungen -> Rollen "
+"für das Feld \"Individuelle Preisanpassung\" hinzufügen."
+
+#: includes/elex-html-tax-options.php:10
+msgid "Tax Options Table"
+msgstr "Tabelle \"Steueroptionen\""
+
+#: includes/elex-html-tax-options.php:11
+msgid "This table handles only tax display option. To modify tax rate go to "
+msgstr ""
+"Diese Tabelle behandelt nur die Steueranzeigeoption. Um den Steuersatz zu "
+"ändern, gehen Sie zu"
+
+#: includes/elex-html-tax-options.php:13
+msgid "of Woocommerce."
+msgstr "von Woocommerce."
+
+#: includes/elex-html-tax-options.php:19
+msgid "Tax Type"
+msgstr "Steuer Typ"
+
+#: includes/elex-html-tax-options.php:26 includes/elex-html-tax-options.php:80
+msgid "Default"
+msgstr "Standard"
+
+#: includes/elex-html-tax-options.php:27
+msgid "Show Price Including Tax"
+msgstr "Preis inklusive Steuern anzeigen"
+
+#: includes/elex-html-tax-options.php:28
+msgid "Show Price Excluding Tax"
+msgstr "Preis ohne Steuern anzeigen"
+
+#: includes/elex-html-tax-options.php:29
+msgid "Show Price Including Tax in Shop"
+msgstr "Preis inklusive Steuer im Shop anzeigen"
+
+#: includes/elex-html-tax-options.php:30
+msgid "Show Price Including Tax in Cart and Checkout"
+msgstr "Preis inklusive Steuer im Warenkorb und kasse anzeigen"
+
+#: includes/elex-html-tax-options.php:31
+msgid "Show Price Excluding Tax in Shop"
+msgstr "Preis ohne Steuern im Shop anzeigen"
+
+#: includes/elex-html-tax-options.php:32
+msgid "Show Price Excluding Tax in Cart and Checkout"
+msgstr "Preis ohne Steuern im Warenkorb und an der Kasse anzeigen"
+
+#: includes/elex-price-discount-admin.php:1440
+#, php-format
+msgctxt "Price range: from-to"
+msgid "%1$s&ndash;%2$s"
+msgstr "%1$s&ndash;%2$s"
+
+#: includes/elex-price-discount-admin.php:1444
+msgid "String(Free!)"
+msgstr "String (kostenlos!)"
+
+#: includes/elex-price-discount-settings.php:59
+#: includes/elex-price-discount-settings.php:665
+msgid "Role-based Settings"
+msgstr "Rollenbasierte Einstellungen"
+
+#: includes/elex-price-discount-settings.php:60
+msgid "Unregistered User"
+msgstr "Unregistrierter Benutzer"
+
+#: includes/elex-price-discount-settings.php:61
+#: includes/elex-price-discount-settings.php:670
+msgid "Catalog Mode"
+msgstr "Katalog-Modus"
+
+#: includes/elex-price-discount-settings.php:62
+msgid "Tax Option"
+msgstr "Steueroption"
+
+#: includes/elex-price-discount-settings.php:63
+msgid "Manage User Role"
+msgstr "Verwalten der Benutzerrolle"
+
+#: includes/elex-price-discount-settings.php:163
+msgid "Please select atleast one role to delete"
+msgstr "Bitte wählen Sie mindestens eine zu löschende Rolle aus."
+
+#: includes/elex-price-discount-settings.php:178
+msgid "User Role created successfully"
+msgstr "Benutzerrolle erfolgreich erstellt"
+
+#: includes/elex-price-discount-settings.php:181
+msgid "User Role creation failed"
+msgstr "Fehler bei der Erstellung der Benutzerrolle"
+
+#: includes/elex-price-discount-settings.php:194
+msgid "User Role deleted successfully"
+msgstr "Benutzerrolle erfolgreich gelöscht"
+
+#: includes/elex-price-discount-settings.php:214
+msgid "General and Tax Options:"
+msgstr "Allgemeine und steuerliche Optionen:"
+
+#: includes/elex-price-discount-settings.php:220
+msgid "Enable Tax Options"
+msgstr "Steueroptionen aktivieren"
+
+#: includes/elex-price-discount-settings.php:225
+msgid "Check to enable Role specific tax options."
+msgstr "Überprüfen Sie, um Rollenspezifische Steueroptionen zu aktivieren."
+
+#: includes/elex-price-discount-settings.php:232
+msgid "Price Suffix"
+msgstr "Währung (nach dem Preis)"
+
+#: includes/elex-price-discount-settings.php:235
+msgid ""
+"Select the price suffix option you want to have. Choose General to apply "
+"globally. Choose Role specific to set different suffixes to different Roles."
+msgstr ""
+"Wählen Sie die gewünschte Preissuffixoption aus. Wählen Sie Allgemein aus, "
+"um sich global anzuwenden. Wählen Sie Rollenspezifisch aus, um verschiedene "
+"Suffixe auf verschiedene Rollen festzulegen."
+
+#: includes/elex-price-discount-settings.php:244
+msgid "Enter the text you want to add as suffix to the price."
+msgstr ""
+"Geben Sie den Text ein, den Sie dem Preis als Suffix hinzufügen möchten."
+
+#: includes/elex-price-discount-settings.php:267
+msgid "Catalog Mode Option:"
+msgstr "Katalogmodus-Option:"
+
+#: includes/elex-price-discount-settings.php:269
+msgid ""
+"The changes you make here will be applicable across the site. You can "
+"exclude Administrator role from these changes.<br>Catalog Mode Settings will "
+"override Role Based, Unregistered User & Individual Product Settings."
+msgstr ""
+"Die Änderungen, die Sie hier vornehmen, gelten auf der gesamten Website. Sie "
+"können die Administratorrolle von diesen Änderungen ausschließen. "
+"<br>Catalog-Modus-Einstellungen überschreiben rollenbasierte, nicht "
+"registrierte Benutzer- und individuelle Produkteinstellungen."
+
+#: includes/elex-price-discount-settings.php:278
+#: includes/elex-price-discount-settings.php:392
+msgid "Check to remove Add to Cart option."
+msgstr "Überprüfen Sie, um den Warenkorb zu entfernen."
+
+#: includes/elex-price-discount-settings.php:297
+#: includes/elex-price-discount-settings.php:347
+#: includes/elex-price-discount-settings.php:411
+#: includes/elex-price-discount-settings.php:467
+#: includes/elex-price-discount-settings.php:589
+msgid "Placeholder Text"
+msgstr "Platzhalter Text"
+
+#: includes/elex-price-discount-settings.php:344
+msgid "Check to hide product price. This will also remove Add to Cart button."
+msgstr ""
+"Überprüfen Sie, ob der Produktpreis ausgeblendet werden soll. Dadurch wird "
+"auch die Schaltfläche Zum Warenkorb hinzufügen entfernt."
+
+#: includes/elex-price-discount-settings.php:355
+#: includes/elex-price-discount-settings.php:475
+#: includes/elex-price-discount-settings.php:597
+msgid "Hide Cart and Checkout Page"
+msgstr "Ausblenden von Cart und Checkout-Seite"
+
+#: includes/elex-price-discount-settings.php:360
+#: includes/elex-price-discount-settings.php:480
+msgid "Check to disable access to Cart and Checkout pages."
+msgstr ""
+"Aktivieren Sie diese Option, um den Zugriff auf die Cart- und Checkout-"
+"Seiten zu deaktivieren."
+
+#: includes/elex-price-discount-settings.php:368
+msgid ""
+"Check to exclude Administrator role from the above catalog mode settings"
+msgstr ""
+"Überprüfen Sie diese Option, um die Administratorrolle von den oben "
+"genannten Katalogmoduseinstellungen auszuschließen."
+
+#: includes/elex-price-discount-settings.php:381
+msgid "Unregistered User Options:"
+msgstr "Nicht registrierte Benutzeroptionen:"
+
+#: includes/elex-price-discount-settings.php:424
+msgid "Check to customize Add to Cart option."
+msgstr ""
+"Aktivieren Sie diese Option zum Anpassen der Option Zum Warenkorb hinzufügen."
+
+#: includes/elex-price-discount-settings.php:451
+#: includes/elex-price-discount-settings.php:571
+#: includes/elex-price-discount-settings.php:680
+msgid "Hide Regular Price"
+msgstr "Regulärer Preis ausblenden"
+
+#: includes/elex-price-discount-settings.php:456
+msgid "Check to hide regular price when sale price is provided."
+msgstr ""
+"Überprüfen Sie, um den regulären Preis zu verbergen, wenn der Verkaufspreis "
+"angegeben wird."
+
+#: includes/elex-price-discount-settings.php:464
+msgid "Check to hide product price. This will also remove Add to Cart option."
+msgstr ""
+"Überprüfen Sie, ob der Produktpreis ausgeblendet werden soll. Dadurch wird "
+"auch die Option Zum Warenkorb hinzufügen entfernt."
+
+#: includes/elex-price-discount-settings.php:493
+msgid "Sale Price"
+msgstr "Angebotspreis"
+
+#: includes/elex-price-discount-settings.php:494
+msgid "Regular & Sale Price"
+msgstr "Regulärer & Verkaufspreis"
+
+#: includes/elex-price-discount-settings.php:499
+msgid "User Role Specific Options:"
+msgstr "Spezifische Optionen für Benutzerrollen:"
+
+#: includes/elex-price-discount-settings.php:507
+msgid "Select the user role(s) for which you want to hide Add to Cart option."
+msgstr ""
+"Wählen Sie die Benutzerrolle(n) aus, für die Sie die Option Zum Warenkorb "
+"hinzufügen ausblenden möchten."
+
+#: includes/elex-price-discount-settings.php:530
+msgid "Placeholder Content"
+msgstr "Platzhalterinhalt"
+
+#: includes/elex-price-discount-settings.php:540
+msgid ""
+"Select the user role(s) for which you want to customize Add to Cart option."
+msgstr ""
+"Wählen Sie die Benutzerrolle(n) aus, für die Sie die Option Zum Warenkorb "
+"hinzufügen anpassen möchten."
+
+#: includes/elex-price-discount-settings.php:573
+msgid ""
+"Select the user role(s) for which you want to hide regular price of all the "
+"simple products which have sale prices."
+msgstr ""
+"Wählen Sie die Benutzerrolle(n) aus, für die Sie den regulären Preis aller "
+"einfachen Produkte mit Verkaufspreisen ausblenden möchten."
+
+#: includes/elex-price-discount-settings.php:582
+msgid ""
+"Select the user role(s) for which you want to hide product price. This will "
+"also remove Add to Cart option."
+msgstr ""
+"Wählen Sie die Benutzerrolle(n) aus, für die Sie den Produktpreis ausblenden "
+"möchten. Dadurch wird auch die Option Zum Warenkorb hinzufügen entfernt."
+
+#: includes/elex-price-discount-settings.php:591
+msgid ""
+"Enter a text you want to display when price is removed. Leave it empty if "
+"you don't want to show any text."
+msgstr ""
+"Geben Sie einen Text ein, den Sie anzeigen möchten, wenn der Preis entfernt "
+"wird. Lassen Sie es leer, wenn Sie keinen Text anzeigen möchten."
+
+#: includes/elex-price-discount-settings.php:599
+msgid ""
+"Select the user role(s) for which you do not want to provide access to Cart "
+"and Checkout page"
+msgstr ""
+"Wählen Sie die Benutzerrolle(n) aus, für die Sie keinen Zugriff auf die "
+"Seite Warenkorb und Auschecken gewähren möchten."
+
+#: includes/elex-price-discount-settings.php:606
+msgid "Individual Product Adjustment"
+msgstr "Individuelle Produktanpassung"
+
+#: includes/elex-price-discount-settings.php:608
+msgid ""
+"Select the user role(s) for product level price adjustments. The price "
+"adjustments can be made in the individual product edit page."
+msgstr ""
+"Wählen Sie die Benutzerrolle(n) für Preisanpassungen auf Produktebene aus. "
+"Die Preisanpassungen können auf der einzelnen Produktbearbeitungsseite "
+"vorgenommen werden."
+
+#: includes/elex-price-discount-settings.php:619
+msgid "Price Adjustment: (Discount/Markup)"
+msgstr "Preisanpassung: (Rabatt/Markup)"
+
+#: includes/elex-price-discount-settings.php:621
+msgid ""
+"Drag and drop User Roles to set priority. If a single User has multiple User "
+"Roles assigned, the User Role with the highest priority will be chosen. "
+"Select a category to apply price adjustment to the products which belong to "
+"that category. If no particular category is selected, the price adjustment "
+"will be applied to all the products.<br><p><strong>Price Adjustment - Choose "
+"'D' for DISCOUNT and 'M' for MARKUP.</strong></p>"
+msgstr ""
+"Ziehen Sie Benutzerrollen, um die Priorität festzulegen. Wenn einem "
+"einzelnen Benutzer mehrere Benutzerrollen zugewiesen sind, wird die "
+"Benutzerrolle mit der höchsten Priorität ausgewählt. Wählen Sie eine "
+"Kategorie aus, um die Preisanpassung auf die Produkte anzuwenden, die zu "
+"dieser Kategorie gehören. Wenn keine bestimmte Kategorie ausgewählt ist, "
+"wird die Preisanpassung auf alle Produkte angewendet. "
+"<br><p><strong>Preisanpassung - Wählen Sie 'D' für DISCOUNT und 'M' für "
+"MARKUP.</strong></p>"
+
+#: includes/elex-price-discount-settings.php:625
+msgid " Price Adjustment applied to "
+msgstr "Preisanpassung angewendet auf"
+
+#: includes/elex-price-discount-settings.php:628
+msgid ""
+"Select where you want to apply the discount/markup. This is applicable to "
+"individual product level price adjustment also. If a product does not have "
+"sale price, adjustment will be applied only to the regular price."
+msgstr ""
+"Wählen Sie aus, wo Sie den Rabatt/das Markup anwenden möchten. Dies gilt "
+"auch für die individuelle Preisanpassung auf Produktebene. Wenn ein Produkt "
+"keinen Verkaufspreis hat, wird die Anpassung nur auf den regulären Preis "
+"angewendet."
+
+#: includes/elex-price-discount-settings.php:682
+msgid "Check to hide product regular price"
+msgstr "Überprüfen Sie, um Produkt regulären Preis auszublenden"
+
+#: includes/elex-price-discount-settings.php:891
+msgid "Category Name Background Color"
+msgstr "Kategoriename Hintergrundfarbe"
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:373
+#, php-format
+msgid ""
+"The license key for %s has expired. You can reactivate or purchase a license "
+"key from your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+"Der Lizenzschlüssel für %s ist abgelaufen. Sie können ihn reaktivieren oder "
+"einen neuen Lizenzschlüssel über Ihr Konto <a href=\"%s\" target=\"_blank\"> "
+"Dashboard</a> kaufen."
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:384
+#, php-format
+msgid ""
+"The subscription for %s is on-hold. You can reactivate the subscription from "
+"your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+"Das Abonnement für %s ist ausgesetzt. Sie können es über Ihren Account "
+"reaktivieren. <a href=\"%s\" target=\"_blank\">Dashboard</a>."
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:395
+#, php-format
+msgid ""
+"The subscription for %s has been cancelled. You can renew the subscription "
+"from your account <a href=\"%s\" target=\"_blank\">dashboard</a>. A new "
+"license key will be emailed to you after your order has been completed."
+msgstr ""
+"Das Abonnement für %s wurde beendet. Sie können es von Ihrem <a href=\"%s\" "
+"target=\"_blank\">Account-Dashboard</a> aus erneuern. Ein neuer "
+"Lizenzschlüssel wird an Ihre E-Mail-Adresse geschickt, sobald die Bestellung "
+"abgeschlossen ist."
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:406
+#, php-format
+msgid ""
+"The subscription for %s has expired. You can reactivate the subscription "
+"from your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+"Das Abo für %s ist ausgelaufen. Du kannst es über dein <a href=\"%s\" target="
+"\"_blank\">Account-Dashboard</a> erneuern."
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:417
+#, php-format
+msgid ""
+"The subscription for %s has been suspended. You can reactivate the "
+"subscription from your account <a href=\"%s\" target=\"_blank\">dashboard</"
+"a>."
+msgstr ""
+"Das Abonnement für %s wurde unterbrochen. Sie können das Abonnement über Ihr "
+"Konto-<a href=„%s“ target=„_blank“>Dashboard</a> reaktivieren."
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:428
+#, php-format
+msgid ""
+"The subscription for %s is still pending. You can check on the status of the "
+"subscription from your account <a href=\"%s\" target=\"_blank\">dashboard</"
+"a>."
+msgstr ""
+"Das Abonnement für %s ist noch schwebend. Du kannst den Status des "
+"Abonnements von deines Accounts überprüfen <a href=\"%s\" target=\"_blank"
+"\">Dashboard</a>."
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:439
+#, php-format
+msgid ""
+"The subscription for %s has been placed in the trash and will be deleted "
+"soon. You can purchase a new subscription from your account <a href=\"%s\" "
+"target=\"_blank\">dashboard</a>."
+msgstr ""
+"Das Abonnement für %s wurde in den Papierkorb verschoben und wird bald "
+"gelöscht. Sie können ein neues Abonnement über Ihr Account erwerben. <a href="
+"\"%s\" target=\"_blank\">Dashboard</a>."
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:450
+#, php-format
+msgid ""
+"A subscription for %s could not be found. You can purchase a subscription "
+"from your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+"Das Abonnement für %s konnte nicht gefunden werden. Sie können ein "
+"Abonnement von Ihrem Konto aus erwerben <a href=\"%s\" target=\"_blank"
+"\">Dashboard</a>."
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:461
+#, php-format
+msgid ""
+"A license key for %s could not be found. Maybe you forgot to enter a license "
+"key when setting up %s, or the key was deactivated in your account. You can "
+"reactivate license key at your plugin <a href=\"%s\" target=\"_blank"
+"\">settings page</a>."
+msgstr ""
+"Ein Lizenzschlüssel für %s konnte nicht gefunden werden. Vielleicht hast du "
+"vergessen, beim Einrichten von %s einen Lizenzschlüssel einzugeben oder der "
+"Schlüssel in deinem Konto wurde deaktiviert. Einen Lizenzschlüssel kannst du "
+"über dein Konto-<a href=\"%s“ target=\"_blank“>Dashboard</a> reaktivieren "
+"oder kaufen."
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:472
+#, php-format
+msgid ""
+"Download permission for %s has been revoked possibly due to a license key or "
+"subscription expiring. You can reactivate or purchase a license key from "
+"your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+"Die Download-Berechtigung für %s wurde aufgrund eines abgelaufenen "
+"Lizenzschlüssels oder abgelaufenem Abos widerrufen. Reaktivieren Sie diesen "
+"oder bestellen Sie einen neuen Lizenzschlüssel von Ihrem <a href=\"%s\" "
+"target=\"_blank\">Dashboard</a>."
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:483
+#, php-format
+msgid ""
+"%s has not been activated. Go to the plugin <a href=\"%s\" target=\"_blank"
+"\">settings page</a> and enter the license key and license email to activate "
+"%s."
+msgstr ""
+"%s wurde nicht aktiviert. Gehe zum Plugin <a href=\"%s\" target=\"_blank"
+"\">Einstellungsseite</a> und geben Sie den Lizenzschlüssel und die Lizenz-E-"
+"Mail ein, um sie zu aktivieren %s."
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:494
+#, php-format
+msgid ""
+"You changed the subscription for %s, so you will need to enter your new API "
+"License Key in the settings page. The License Key should have arrived in "
+"your email inbox, if not you can get it by logging into your account <a href="
+"\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+"Sie veränderten das Abonnement für %s und müssen den neuen API-"
+"Lizenzschlüssel auf der Lizenz-Seite eingeben. Der Lizenzschlüssel sollte in "
+"Ihrem E-Mail-Posteingang angekommen sein, falls nicht schauen Sie in Ihrem "
+"Konto nach im <a href=\"%s\" target=\"_blank\">Dashboard</a>."
+
+#. Plugin Name of the plugin/theme
+#, fuzzy
+msgid "ELEX WooCommerce Role-based Pricing Plugin & WooCommerce Catalog Mode"
+msgstr ""
+"ELEX WooCommerce Rollenbasiertes Preis-Plugin & WooCommerce-Katalogmodus"
+
+#. Plugin URI of the plugin/theme
+#, fuzzy
+msgid ""
+"https://elextensions.com/plugin/woocommerce-catalog-mode-wholesale-role-"
+"based-pricing/"
+msgstr ""
+"https://elextensions.com/plugin/woocommerce-catalog-mode-wholesale-role-"
+"based-pricing/"
+
+#. Description of the plugin/theme
+msgid ""
+"Hide Price or Add to Cart option for guest and specific registered users for "
+"simple, variable and grouped products. Create user role specific product "
+"price. Enforce markup/discount on price for selected user roles. Also, turn "
+"your shop into catalog mode."
+msgstr ""
+"Option Preis ausblenden oder zum Warenkorb hinzufügen für Gast- und "
+"bestimmte registrierte Benutzer für einfache, variable und gruppierte "
+"Produkte. Erstellen Sie einen benutzerrollenspezifischen Produktpreis. "
+"Erzwingen Sie Markup/Rabatt auf den Preis für ausgewählte Benutzerrollen. "
+"Verwandeln Sie Ihren Shop auch in den Katalogmodus."
+
+#. Author of the plugin/theme
+#, fuzzy
+msgid "ELEXtensions"
+msgstr "ELEXtensions"
+
+#. Author URI of the plugin/theme
+#, fuzzy
+msgid "https://elextensions.com"
+msgstr "https://elextensions.com"

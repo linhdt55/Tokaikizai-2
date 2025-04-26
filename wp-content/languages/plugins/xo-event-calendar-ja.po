@@ -1,0 +1,533 @@
+# Translation of Plugins - XO Event Calendar - Stable (latest release) in Japanese
+# This file is distributed under the same license as the Plugins - XO Event Calendar - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-12-13 14:35:32+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.0-rc.1\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Plugins - XO Event Calendar - Stable (latest release)\n"
+
+#: inc/admin.php:911 inc/admin.php:912
+msgid "Delete plugin data"
+msgstr "プラグインデータを削除する"
+
+#: inc/admin.php:884
+msgid "Processing when deleting plugin"
+msgstr "プラグイン削除時の処理"
+
+#: inc/main.php:325
+msgctxt "Saturday initial"
+msgid "S"
+msgstr "土"
+
+#: inc/main.php:324
+msgctxt "Friday initial"
+msgid "F"
+msgstr "金"
+
+#: inc/main.php:323
+msgctxt "Thursday initial"
+msgid "T"
+msgstr "木"
+
+#: inc/main.php:322
+msgctxt "Wednesday initial"
+msgid "W"
+msgstr "水"
+
+#: inc/main.php:321
+msgctxt "Tuesday initial"
+msgid "T"
+msgstr "火"
+
+#: inc/main.php:320
+msgctxt "Monday initial"
+msgid "M"
+msgstr "月"
+
+#: inc/main.php:319
+msgctxt "Sunday initial"
+msgid "S"
+msgstr "日"
+
+#: build/simple-calendar/block.json src/simple-calendar/block.json
+msgctxt "block style label"
+msgid "Frame"
+msgstr "フレーム"
+
+#: build/simple-calendar/block.json src/simple-calendar/block.json
+msgctxt "block title"
+msgid "Simple Calendar"
+msgstr "シンプルカレンダー"
+
+#: build/event-calendar/block.json src/event-calendar/block.json
+msgctxt "block style label"
+msgid "Legacy"
+msgstr "レガシー"
+
+#: build/event-calendar/block.json build/simple-calendar/block.json
+#: src/event-calendar/block.json src/simple-calendar/block.json
+msgctxt "block style label"
+msgid "Default"
+msgstr "デフォルト"
+
+#: inc/admin.php:883
+msgid "Event calendar"
+msgstr "イベントカレンダー"
+
+#: inc/admin.php:499 inc/admin.php:854
+msgid "Settings"
+msgstr "設定"
+
+#: build/event-calendar/block.json src/event-calendar/block.json
+msgctxt "block title"
+msgid "Event Calendar"
+msgstr "イベントカレンダー"
+
+#: inc/event-calendar-widget.php:18 build/event-calendar/index.js:1
+#: src/event-calendar/index.js:10
+msgid "Event Calendar"
+msgstr "イベントカレンダー"
+
+#. Author of the plugin
+#: xo-event-calendar.php
+msgid "Xakuro"
+msgstr "Xakuro"
+
+#: inc/admin.php:859
+msgid "Settings saved."
+msgstr "設定を保存しました。"
+
+#: inc/admin.php:899
+msgid "Disable event link"
+msgstr "イベントのリンクを無効にする"
+
+#: inc/admin.php:897
+msgid "Do not use Dashicons font"
+msgstr "Dashicons フォントを使用しない"
+
+#: inc/admin.php:534
+msgid "This screen is used to set options."
+msgstr "この画面でオプションを設定できます。"
+
+#: inc/event-calendar-widget.php:197
+msgid "Months to display:"
+msgstr "表示する月数:"
+
+#: inc/admin.php:425
+msgid "Short Title"
+msgstr "ショートタイトル"
+
+#: inc/event-calendar-widget.php:217 build/event-calendar/index.js:1
+#: build/simple-calendar/index.js:1 src/event-calendar/edit.js:84
+#: src/simple-calendar/edit.js:79
+msgid "General Settings"
+msgstr "一般設定"
+
+#: inc/event-calendar-widget.php:215
+msgid "Week Starts On:"
+msgstr "週の始まり:"
+
+#. Plugin URI of the plugin
+#: xo-event-calendar.php
+msgid "https://xakuro.com/wordpress/xo-event-calendar/"
+msgstr "https://xakuro.com/wordpress/xo-event-calendar/"
+
+#: inc/admin.php:518
+msgid "This screen is used to manage the holiday."
+msgstr "この画面で休日を管理できます。"
+
+#: inc/admin.php:517 inc/admin.php:533
+msgid "Overview"
+msgstr "概要"
+
+#. Author URI of the plugin
+#: xo-event-calendar.php
+msgid "https://xakuro.com/"
+msgstr "https://xakuro.com/"
+
+#. Description of the plugin
+#: xo-event-calendar.php
+msgid "XO Event Calendar is a simple event calendar plugin."
+msgstr "XO Event Calendar は、シンプルで簡単なイベント カレンダー プラグインです。"
+
+#. Plugin Name of the plugin
+#: xo-event-calendar.php
+msgid "XO Event Calendar"
+msgstr "XO Event Calendar"
+
+#: inc/main.php:1294
+msgid "Event date:"
+msgstr "開催日: "
+
+#. translators: 1: Month, 2: Year.
+#: inc/main.php:936 inc/main.php:1554
+msgctxt "calendar caption"
+msgid "%1$s %2$s"
+msgstr "%2$s年 %1$s"
+
+#: inc/main.php:536
+msgid "New Category Name"
+msgstr "新しいカテゴリー名"
+
+#: inc/main.php:535
+msgid "Add New Category"
+msgstr "新しいカテゴリーを追加"
+
+#: inc/main.php:534
+msgid "Update Category"
+msgstr "カテゴリーを更新"
+
+#: inc/main.php:533
+msgid "Edit Category"
+msgstr "カテゴリーの編集"
+
+#: inc/main.php:532
+msgid "Parent Category:"
+msgstr "親カテゴリー:"
+
+#: inc/main.php:531
+msgid "Parent Category"
+msgstr "親カテゴリー"
+
+#: inc/main.php:530
+msgid "All Categories"
+msgstr "すべてのカテゴリー"
+
+#: inc/main.php:529
+msgid "Search Categories"
+msgstr "カテゴリーを検索"
+
+#: inc/main.php:528
+msgctxt "taxonomy singular name"
+msgid "Category"
+msgstr "カテゴリー"
+
+#: inc/main.php:527
+msgctxt "taxonomy general name"
+msgid "Categories"
+msgstr "カテゴリー"
+
+#: inc/main.php:509
+msgid "No Events found in Trash."
+msgstr "ゴミ箱にイベントが見つかりませんでした。"
+
+#: inc/main.php:508
+msgid "No Events found."
+msgstr "イベントが見つかりませんでした。"
+
+#: inc/main.php:507
+msgid "Parent Events:"
+msgstr "親イベント: "
+
+#: inc/main.php:506
+msgid "Search Events"
+msgstr "イベントを検索"
+
+#: inc/main.php:505
+msgid "All Events"
+msgstr "すべてのイベント"
+
+#: inc/main.php:504
+msgid "View Event"
+msgstr "イベントを表示"
+
+#: inc/main.php:503
+msgid "Edit Event"
+msgstr "編集"
+
+#: inc/main.php:502
+msgid "New Event"
+msgstr "新規イベント"
+
+#: inc/main.php:500 inc/main.php:501
+msgid "Add New Event"
+msgstr "新規イベントを追加"
+
+#: inc/main.php:499
+msgctxt "add new on admin bar"
+msgid "Event"
+msgstr "イベント"
+
+#: inc/main.php:498
+msgctxt "admin menu"
+msgid "Events"
+msgstr "イベント"
+
+#: inc/main.php:497
+msgctxt "post type singular name"
+msgid "Event"
+msgstr "イベント"
+
+#: inc/main.php:496
+msgctxt "post type general name"
+msgid "Events"
+msgstr "イベント"
+
+#: inc/main.php:183
+msgid "Afternoon Off"
+msgstr "午後休"
+
+#: inc/main.php:168
+msgid "Morning Off"
+msgstr "午前休"
+
+#: inc/event-calendar-widget.php:177
+msgid "Next month:"
+msgstr "次の月:"
+
+#: inc/event-calendar-widget.php:175 inc/event-calendar-widget.php:193
+#: inc/event-calendar-widget.php:211
+msgid "(month(s))"
+msgstr "(ヶ月)"
+
+#: inc/event-calendar-widget.php:161 inc/event-calendar-widget.php:179
+#: build/event-calendar/index.js:1 build/simple-calendar/index.js:1
+#: src/event-calendar/edit.js:145 src/event-calendar/edit.js:188
+#: src/simple-calendar/edit.js:140 src/simple-calendar/edit.js:183
+msgid "No limit"
+msgstr "無制限"
+
+#: inc/event-calendar-widget.php:159
+msgid "Previous month:"
+msgstr "前の月:"
+
+#: inc/event-calendar-widget.php:158
+msgid "Feed month:"
+msgstr "月送り:"
+
+#: inc/event-calendar-widget.php:143
+msgid "Holiday:"
+msgstr "休日: "
+
+#: inc/event-calendar-widget.php:120 inc/main.php:1296
+msgid "Categories:"
+msgstr "カテゴリー: "
+
+#: inc/event-calendar-widget.php:110
+msgid "Title:"
+msgstr "タイトル: "
+
+#: inc/event-calendar-widget.php:21
+msgid "Display Event Calendar"
+msgstr "イベントカレンダーを表示"
+
+#: inc/admin.php:833
+msgid "Delete Holiday"
+msgstr "休日を削除"
+
+#: inc/admin.php:833
+msgid "You are about to permanently delete this holiday.\\n \\'Cancel\\' to stop, \\'OK\\' to delete."
+msgstr "この休日を完全に削除しようとしています。\\n中止するには「キャンセル」を、削除するには「OK」をクリックしてください。"
+
+#: inc/admin.php:802
+msgid "Cancel dates"
+msgstr "取消日"
+
+#: inc/admin.php:798 inc/admin.php:805
+msgid "One date on one line."
+msgstr "1行にひとつの日付。"
+
+#: inc/admin.php:795
+msgid "Extraordinary dates"
+msgstr "臨時日"
+
+#: inc/admin.php:791 inc/event-calendar-widget.php:224
+#: build/event-calendar/index.js:1 build/simple-calendar/index.js:1
+#: src/event-calendar/edit.js:115 src/simple-calendar/edit.js:110
+msgid "Saturday"
+msgstr "土曜"
+
+#: inc/admin.php:790 inc/event-calendar-widget.php:223
+#: build/event-calendar/index.js:1 build/simple-calendar/index.js:1
+#: src/event-calendar/edit.js:111 src/simple-calendar/edit.js:106
+msgid "Friday"
+msgstr "金曜"
+
+#: inc/admin.php:789 inc/event-calendar-widget.php:222
+#: build/event-calendar/index.js:1 build/simple-calendar/index.js:1
+#: src/event-calendar/edit.js:107 src/simple-calendar/edit.js:102
+msgid "Thursday"
+msgstr "木曜"
+
+#: inc/admin.php:788 inc/event-calendar-widget.php:221
+#: build/event-calendar/index.js:1 build/simple-calendar/index.js:1
+#: src/event-calendar/edit.js:103 src/simple-calendar/edit.js:98
+msgid "Wednesday"
+msgstr "水曜"
+
+#: inc/admin.php:787 inc/event-calendar-widget.php:220
+#: build/event-calendar/index.js:1 build/simple-calendar/index.js:1
+#: src/event-calendar/edit.js:99 src/simple-calendar/edit.js:94
+msgid "Tuesday"
+msgstr "火曜"
+
+#: inc/admin.php:786 inc/event-calendar-widget.php:219
+#: build/event-calendar/index.js:1 build/simple-calendar/index.js:1
+#: src/event-calendar/edit.js:95 src/simple-calendar/edit.js:90
+msgid "Monday"
+msgstr "月曜"
+
+#: inc/admin.php:785 inc/event-calendar-widget.php:218
+#: build/event-calendar/index.js:1 build/simple-calendar/index.js:1
+#: src/event-calendar/edit.js:91 src/simple-calendar/edit.js:86
+msgid "Sunday"
+msgstr "日曜"
+
+#: inc/admin.php:783
+msgid "Regular weekly"
+msgstr "週定期"
+
+#: inc/admin.php:777
+msgid "Title"
+msgstr "タイトル"
+
+#: inc/admin.php:775
+msgid "Holiday item"
+msgstr "休日項目"
+
+#: inc/admin.php:773
+msgid "Give your holiday a name above, then click Create Holiday."
+msgstr "休日に名前をつけ、「休日を作成」ボタンをクリックしてください。"
+
+#: inc/admin.php:767 inc/admin.php:837
+msgid "Create Holiday"
+msgstr "休日を作成"
+
+#: inc/admin.php:765
+msgid "&#8251; Lower case letters, digits, and hyphens only"
+msgstr "&#8251; 20文字以内、英小文字、数字およびハイフンのみ"
+
+#: inc/admin.php:763
+msgid "Enter holiday name here"
+msgstr "休日の名前を入力してください。"
+
+#: inc/admin.php:762
+msgid "Holiday Name"
+msgstr "休日の名前"
+
+#. translators: %s: URL.
+#: inc/admin.php:737
+msgid "or <a href=\"%s\">create a new holiday</a>."
+msgstr "または<a href=\"%s\">休日を作成</a>してください。"
+
+#: inc/admin.php:730
+msgid "Select"
+msgstr "選択"
+
+#: inc/admin.php:722
+msgid "&mdash; Select &mdash;"
+msgstr "&mdash; 選択 &mdash;"
+
+#: inc/admin.php:719
+msgid "Select a holiday to edit:"
+msgstr "編集する休日を選択:"
+
+#. translators: %s: URL.
+#: inc/admin.php:701
+msgid "Edit your holiday below, or <a href=\"%s\">create a new holiday</a>."
+msgstr "以下の休日を編集するか<a href=\"%s\">新規の休日を作成</a>してください。"
+
+#: inc/admin.php:666 inc/admin.php:767 inc/admin.php:837
+msgid "Save Holiday"
+msgstr "休日を保存"
+
+#: inc/admin.php:613 inc/main.php:153
+msgid "Regular holiday"
+msgstr "定休日"
+
+#: inc/admin.php:610 inc/admin.php:643
+msgid "Please enter a valid holiday name."
+msgstr "休日の名前を入力してください。"
+
+#: inc/admin.php:599
+msgid "The holiday item has been successfully deleted."
+msgstr "休日項目の削除に成功しました。"
+
+#: inc/admin.php:489 inc/admin.php:681
+msgid "Holiday Settings"
+msgstr "休日設定"
+
+#: inc/admin.php:405
+msgid "End Date/Time"
+msgstr "終了日時"
+
+#: inc/admin.php:401
+msgid "All Day"
+msgstr "終日"
+
+#: inc/admin.php:384
+msgid "Start Date/Time"
+msgstr "開始日時"
+
+#: inc/admin.php:348
+msgid "Event Details"
+msgstr "イベント詳細"
+
+#: inc/admin.php:238
+msgid "Author"
+msgstr "登録者"
+
+#: inc/admin.php:241 inc/main.php:537
+msgid "Category"
+msgstr "カテゴリー"
+
+#: inc/admin.php:240
+msgid "End Date"
+msgstr "終了日"
+
+#: inc/admin.php:239
+msgid "Start Date"
+msgstr "開始日"
+
+#: inc/admin.php:124 inc/admin.php:165 inc/admin.php:185 inc/admin.php:809
+#: build/simple-calendar/index.js:1 src/simple-calendar/edit.js:385
+msgid "Color"
+msgstr "色"
+
+#: inc/admin.php:106
+msgid "Event draft updated."
+msgstr "イベントの下書きを更新しました。"
+
+#. translators: 1: Publishing time.
+#: inc/admin.php:105
+msgid "M j, Y @ G:i"
+msgstr "Y年n月j日 @ G:i"
+
+#. translators: 1: Publishing time.
+#: inc/admin.php:105
+msgid "Event scheduled for: <strong>%1$s</strong>."
+msgstr "イベントの公開を <strong>%1$s</strong> に予約しました。"
+
+#: inc/admin.php:103
+msgid "Event submitted."
+msgstr "イベントを送信しました。"
+
+#: inc/admin.php:102
+msgid "Event saved."
+msgstr "イベントを保存しました。"
+
+#: inc/admin.php:101
+msgid "Event published."
+msgstr "イベントを公開しました。"
+
+#. translators: %s: Retrieves formatted date timestamp.
+#: inc/admin.php:100
+msgid "Event restored to revision from %s."
+msgstr "リビジョン %s からイベントを復元しました。"
+
+#: inc/admin.php:97
+msgid "Custom field deleted."
+msgstr "カスタムフィールドの削除"
+
+#: inc/admin.php:96
+msgid "Custom field updated."
+msgstr "カスタムフィールド更新しました。"
+
+#: inc/admin.php:95 inc/admin.php:98
+msgid "Event updated."
+msgstr "イベントを更新しました。"

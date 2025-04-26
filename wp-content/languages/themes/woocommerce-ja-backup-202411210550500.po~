@@ -1,0 +1,409 @@
+# Copyright (C) 2022 Automattic
+# This file is distributed under the same license as the WooCommerce plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce 6.9.4\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woocommerce\n"
+"Last-Translator: \n"
+"Language-Team: 日本語\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-09-23T15:00:00+00:00\n"
+"PO-Revision-Date: 2023-12-23 02:16+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: woocommerce\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Loco-Version: 2.6.6; wp-6.4.2"
+
+#. 1: formatted order total 2: total order items
+#: woocommerce/myaccount/orders.php:62
+msgid "%1$s for %2$s item"
+msgid_plural "%1$s for %2$s items"
+msgstr[0] "%2$s アイテムの %1$s"
+
+#: woocommerce/cart/cart.php:25
+msgid "%d product"
+msgid_plural "%d products"
+msgstr[0] "%d 商品"
+
+#. %s: Quantity.
+#: woocommerce/global/quantity-input.php:28
+msgid "%s quantity"
+msgstr "%s 数量"
+
+#. %s location.
+#: woocommerce/cart/cart-totals.php:77
+msgid "(estimated for %s)"
+msgstr "(の推定  %s)"
+
+#: woocommerce/myaccount/form-login.php:105
+msgid "A link to set a new password will be sent to your email address."
+msgstr "新しいパスワードを設定するためのリンクがメール アドレスに送信されます。"
+
+#: woocommerce/myaccount/my-address.php:65
+msgid "Add"
+msgstr "追加"
+
+#: woocommerce/checkout/form-shipping.php:52
+msgid "Additional information"
+msgstr "追加情報"
+
+#: woocommerce/myaccount/form-login.php:117
+msgid "Already have an account?"
+msgstr "すでにアカウントをお持ちですか？"
+
+#: woocommerce/cart/cart.php:179 woocommerce/checkout/form-coupon.php:38
+#: woocommerce/checkout/form-coupon.php:38
+msgid "Apply"
+msgstr "申し込み"
+
+#: woocommerce/cart/cart.php:89
+msgid "Available on backorder"
+msgstr "バックオーダーで入手可能"
+
+#: woocommerce/checkout/form-billing.php:25
+msgid "Billing &amp; Shipping"
+msgstr "請求と請求 運送"
+
+#: woocommerce/checkout/form-billing.php:29
+msgid "Billing Address"
+msgstr "請求先住所"
+
+#: woocommerce/myaccount/form-edit-address.php:20
+#: woocommerce/myaccount/my-address.php:36
+msgid "Billing address"
+msgstr "請求先住所"
+
+#: woocommerce/myaccount/my-address.php:27
+msgid "Billing addresses"
+msgstr "請求先住所"
+
+#: woocommerce/myaccount/orders.php:101
+msgid "Browse products"
+msgstr "商品を閲覧する"
+
+#: woocommerce/single-product/add-to-cart/grouped.php:88
+msgid "Buy one of this item"
+msgstr "このアイテムの 1 つを購入します。"
+
+#: woocommerce/checkout/form-coupon.php:27
+msgid "Click here to enter your code"
+msgstr "ここをクリックしてコードを入力してください"
+
+#: woocommerce/cart/cart.php:179 woocommerce/checkout/form-coupon.php:33
+msgid "Coupon:"
+msgstr "クーポン："
+
+#: woocommerce/myaccount/form-login.php:74
+#: woocommerce/myaccount/form-login.php:76
+msgid "Create An Account"
+msgstr "アカウントを作成する"
+
+#: woocommerce/checkout/form-billing.php:55
+#: woocommerce/myaccount/form-login.php:113
+msgid "Create an account?"
+msgstr "アカウントを作成する？"
+
+#: inc/widget.php:62
+msgid ""
+"Display a list of a customer's recently viewed products custom by Tokaikiza."
+msgstr "トカイキザがカスタムしたお客様の最近見た商品の一覧を表示します。"
+
+#: woocommerce/myaccount/my-address.php:65
+msgid "Edit"
+msgstr "編集"
+
+#: woocommerce/myaccount/form-login.php:41
+#: woocommerce/myaccount/form-login.php:91
+msgid "Email"
+msgstr "Eメール"
+
+#: woocommerce/myaccount/form-lost-password.php:28
+msgid "Email address"
+msgstr "電子メールアドレス"
+
+#: woocommerce/myaccount/form-reset-password.php:25
+msgid "Enter a new password below."
+msgstr "以下に新しいパスワードを入力してください。"
+
+#: woocommerce/myaccount/form-login.php:42
+#: woocommerce/myaccount/form-login.php:92
+msgid "Enter your email"
+msgstr "メールアドレスを入力"
+
+#: inc/custom_woo.php:372
+msgid "Enter your first name"
+msgstr "名を入力してください"
+
+#: inc/custom_woo.php:377
+msgid "Enter your last name"
+msgstr "姓を入力してください"
+
+#: woocommerce/cart/cart-totals.php:46 woocommerce/cart/cart-totals.php:47
+msgid "Estimated Shipping"
+msgstr "配送予定日"
+
+#: inc/custom_woo.php:371
+msgid "First name"
+msgstr "ファーストネーム"
+
+#: inc/custom_woo.php:394
+msgid "First name is required!"
+msgstr "お名前必須！"
+
+#: woocommerce/myaccount/form-login.php:52
+msgid "Forgot password"
+msgstr "パスワードをお忘れですか"
+
+#: woocommerce/myaccount/orders.php:50
+msgctxt "hash before order number"
+msgid "#"
+msgstr ""
+
+#: inc/custom_woo.php:46
+msgid "Home"
+msgstr "Home"
+
+#: woocommerce/checkout/form-coupon.php:27
+msgid "If you have a coupon code, please apply it below."
+msgstr "クーポンコードをお持ちの方は下記よりご適用ください。"
+
+#: inc/custom_woo.php:376
+msgid "Last name"
+msgstr "苗字"
+
+#: inc/custom_woo.php:397
+msgid "Last name is required!."
+msgstr "姓が必要です!."
+
+#: woocommerce/global/form-login.php:51
+msgid "Login"
+msgstr "ログイン"
+
+#: woocommerce/global/form-login.php:54
+msgid "Lost your password?"
+msgstr "パスワードを忘れましたか？"
+
+#: woocommerce/myaccount/form-lost-password.php:25
+msgid ""
+"Lost your password? Please enter your email address. You will receive a link "
+"to create a new password via email."
+msgstr "パスワードを忘れましたか？ メールアドレスを入力してください。 新しいパスワードを作成するためのリンクが電子メールで送信されます。"
+
+#: woocommerce/myaccount/form-reset-password.php:28
+msgid "New password"
+msgstr "新しいパスワード"
+
+#: woocommerce/myaccount/orders.php:94
+msgid "Next"
+msgstr "次"
+
+#: woocommerce/myaccount/orders.php:102
+msgid "No order has been made yet."
+msgstr "まだ注文はありません。"
+
+#: inc/widget.php:77
+msgid "Number of products to show"
+msgstr "表示する商品の数"
+
+#: woocommerce/cart/cart-totals.php:26
+#: woocommerce/checkout/form-checkout.php:53
+msgid "Order summary"
+msgstr "注文の概要"
+
+#: woocommerce/cart/cart-totals.php:108 woocommerce/cart/cart-totals.php:109
+#: woocommerce/checkout/review-order.php:107
+msgid "Order Total"
+msgstr "注文合計"
+
+#: woocommerce/global/form-login.php:38 woocommerce/myaccount/form-login.php:46
+#: woocommerce/myaccount/form-login.php:99
+msgid "Password"
+msgstr "パスワード"
+
+#: woocommerce/single-product/up-sells.php:27
+msgid "People Who Bought This Item Also Bought"
+msgstr "この商品を買った人はこんな商品も買っています"
+
+#: woocommerce/myaccount/form-login.php:47
+#: woocommerce/myaccount/form-login.php:100
+msgid "Please enter your password."
+msgstr "パスワードを入力してください。"
+
+#: woocommerce/checkout/payment.php:35
+msgid "Please fill in your details above to see available payment methods."
+msgstr "利用可能な支払い方法を確認するには、上記に詳細を入力してください。"
+
+#: woocommerce/myaccount/orders.php:90
+msgid "Previous"
+msgstr "前"
+
+#: woocommerce/cart/cart.php:41 woocommerce/cart/cart.php:119
+msgid "Price"
+msgstr "価格"
+
+#: woocommerce/cart/cart.php:40 woocommerce/cart/cart.php:60
+msgid "Product"
+msgstr "商品"
+
+#: woocommerce/ti-wishlist-user.php:23 woocommerce/ti-wishlist.php:24
+msgid "product"
+msgstr "商品"
+
+#: inc/functions-shipping-woo.php:106
+msgid "Product count"
+msgstr "商品数"
+
+#: woocommerce/single-product/tabs/description.php:23
+#| msgid "Product description"
+msgid "Product Description"
+msgstr "商品説明"
+
+#: woocommerce/global/quantity-input.php:42
+msgctxt "Product quantity input tooltip"
+msgid "Qty"
+msgstr "数量"
+
+#: woocommerce/loop/result-count.php:28
+msgid "Products"
+msgstr "商品"
+
+#: woocommerce/ti-wishlist-user.php:22 woocommerce/ti-wishlist.php:23
+msgid "products"
+msgstr "商品"
+
+#: woocommerce/cart/cart.php:177
+msgid "Promotion Code"
+msgstr "販売促進コード"
+
+#: woocommerce/cart/cart.php:42 woocommerce/cart/cart.php:127
+#: woocommerce/global/quantity-input.php:28
+msgid "Quantity"
+msgstr "数量"
+
+#: woocommerce/single-product/related.php:28
+msgid "Ranking Of The Same Genre Of The Product"
+msgstr "同ジャンル商品ランキング"
+
+#: woocommerce/myaccount/form-reset-password.php:32
+msgid "Re-enter new password"
+msgstr "新しいパスワードを再入力してください"
+
+#: inc/widget.php:68
+msgid "Recently Viewed Products"
+msgstr "最近見た商品"
+
+#: inc/widget.php:64
+msgid "Recently Viewed Products list custom by Tokaikiza"
+msgstr "最近見た商品一覧 custom by 東海騎座"
+
+#: woocommerce/myaccount/form-login.php:113
+msgid "Register"
+msgstr "登録"
+
+#: woocommerce/global/form-login.php:47 woocommerce/myaccount/form-login.php:60
+msgid "Remember me"
+msgstr "私を覚えてますか"
+
+#: woocommerce/cart/cart.php:110 woocommerce/cart/cart.php:157
+msgid "Remove"
+msgstr "削除する"
+
+#: woocommerce/cart/cart.php:107 woocommerce/cart/cart.php:154
+msgid "Remove this item"
+msgstr "このアイテムを削除"
+
+#: woocommerce/myaccount/form-lost-password.php:38
+msgid "Reset password"
+msgstr "パスワードを再設定する"
+
+#: woocommerce/myaccount/form-edit-address.php:47
+#: woocommerce/myaccount/form-reset-password.php:45
+#: woocommerce/myaccount/form-reset-password.php:45
+msgid "Save"
+msgstr "保存"
+
+#: woocommerce/myaccount/form-edit-address.php:47
+msgid "Save address"
+msgstr "アドレスを保存"
+
+#: woocommerce/myaccount/dashboard.php:59
+#| msgid "Save changes"
+msgid "Save change"
+msgstr "変更内容を保存"
+
+#: woocommerce/checkout/form-shipping.php:26
+msgid "Ship to a different address"
+msgstr "別の住所に発送する"
+
+#: woocommerce/myaccount/form-edit-address.php:20
+msgid "Shipping address"
+msgstr "お届け先の住所"
+
+#: woocommerce/myaccount/my-address.php:28
+msgid "Shipping addresses"
+msgstr "配送先住所"
+
+#: woocommerce/loop/orderby.php:27
+msgid "Shop order"
+msgstr "製造指図"
+
+#: woocommerce/myaccount/form-login.php:33
+#: woocommerce/myaccount/form-login.php:34
+#: woocommerce/myaccount/form-login.php:63
+#: woocommerce/myaccount/form-login.php:63
+msgid "Sign In"
+msgstr "サインイン"
+
+#. $1 and $2 opening and closing emphasis tags respectively
+#: woocommerce/checkout/payment.php:45
+msgid ""
+"Since your browser does not support JavaScript, or it is disabled, please "
+"ensure you click the %1$sUpdate Totals%2$s button before placing your order. "
+"You may be charged more than the amount stated above if you fail to do so."
+msgstr ""
+"お使いのブラウザは JavaScript をサポートしていないか無効になっているため、注文する前に %1$s合計を更新%2$s "
+"ボタンをクリックしてください。 ご連絡いただけない場合、上記金額以上の料金をいただく場合がございます。"
+
+#: woocommerce/checkout/payment.php:35
+msgid ""
+"Sorry, it seems that there are no available payment methods for your state. "
+"Please contact us if you require assistance or wish to make alternate "
+"arrangements."
+msgstr ""
+"申し訳ありませんが、あなたの州では利用可能な支払い方法がないようです。 サポートが必要な場合、または別の手配をご希望の場合は、お問い合わせください。"
+
+#: woocommerce/cart/cart-totals.php:31 woocommerce/cart/cart-totals.php:32
+#: woocommerce/checkout/review-order.php:59
+msgid "Subtotal"
+msgstr "小計"
+
+#: woocommerce/myaccount/my-address.php:47
+msgid "The following addresses will be used on the checkout page by default."
+msgstr "次のアドレスは、デフォルトでチェックアウト ページで使用されます。"
+
+#: inc/widget.php:69
+msgid "Title"
+msgstr "題名"
+
+#: woocommerce/cart/cart.php:184
+msgid "Update cart"
+msgstr "カートの更新"
+
+#: woocommerce/checkout/payment.php:47
+msgid "Update totals"
+msgstr "合計を更新"
+
+#: woocommerce/myaccount/form-login.php:83
+msgid "Username"
+msgstr "ユーザー名"
+
+#: woocommerce/global/form-login.php:34
+msgid "Username or email"
+msgstr "ユーザー名または電子メール"
+
+#: woocommerce/myaccount/my-address.php:69
+msgid "You have not set up this type of address yet."
+msgstr "このタイプのアドレスはまだ設定されていません。"

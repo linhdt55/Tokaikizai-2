@@ -1,0 +1,766 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ELEX WooCommerce Role-based Pricing Plugin & WooCommerce "
+"Catalog Mode\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-07 08:28+0000\n"
+"PO-Revision-Date: 2025-01-07 09:03+0000\n"
+"Last-Translator: \n"
+"Language-Team: 日本語\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.14; wp-6.7.1\n"
+"X-Domain: elex-catmode-rolebased-price"
+
+#: includes/elex-html-product-price-adjustment.php:150
+msgid " Customize Add to Cart"
+msgstr "カスタマイズ カートに追加"
+
+#: includes/elex-html-product-price-adjustment.php:279
+msgid ""
+" Drag and drop user roles to set priority. If a single user has multiple "
+"user roles assigned, the user role with the highest priority will be chosen. "
+"Choose 'D' for DISCOUNT and 'M' for MARKUP."
+msgstr ""
+"ユーザーの役割をドラッグ アンド ドロップして優先順位を設定します。 1 人のユーザーに複数のユーザー "
+"ロールが割り当てられている場合は、最も優先度の高いユーザー ロールが選択されます。割引には「D」を選択し、マークアップには「M」を選択します。"
+
+#: includes/elex-html-product-price-adjustment.php:273
+msgid " Enable"
+msgstr "有効にする"
+
+#: includes/elex-html-product-price-adjustment.php:204
+msgid " Hide Price"
+msgstr "価格を非表示"
+
+#: includes/elex-html-product-price-adjustment.php:229
+msgid " Hide Product"
+msgstr "商品を非表示"
+
+#: includes/elex-html-product-price-adjustment.php:187
+msgid " Hide Regular Price"
+msgstr "通常価格を非表示"
+
+#: includes/elex-html-product-price-adjustment.php:270
+msgid " Individual Product Price Adjustment"
+msgstr "個別商品価格調整"
+
+#: includes/elex-price-discount-settings.php:791
+msgid " Price Adjustment applied to "
+msgstr "価格調整が適用されました"
+
+#: includes/elex-html-product-price-adjustment.php:117
+msgid " Remove Add to Cart"
+msgstr "削除 カートに追加"
+
+#: includes/elex-html-product-price-adjustment.php:164
+msgid " Select the user role(s) for which you want to customize Add to Cart."
+msgstr "カートに追加をカスタマイズするユーザー ロールを選択します。"
+
+#: includes/elex-html-product-price-adjustment.php:218
+msgid " Select the user role(s) for which you want to hide price."
+msgstr "価格を非表示にするユーザー ロールを選択します。"
+
+#: includes/elex-html-product-price-adjustment.php:243
+msgid " Select the user role(s) for which you want to hide product."
+msgstr "製品を非表示にするユーザー ロールを選択します。"
+
+#: includes/elex-html-product-price-adjustment.php:201
+msgid ""
+" Select the user role(s) for which you want to hide the Regular Price. This "
+"will be applicable if the product has either discounted or sales price."
+msgstr "通常価格を非表示にするユーザー ロールを選択します。これは、製品に割引価格またはセール価格がある場合に適用されます。"
+
+#: includes/elex-html-product-price-adjustment.php:131
+msgid " Select the user role(s) for which you want to remove Add to Cart."
+msgstr "カートに追加を削除するユーザー ロールを選択します。"
+
+#: includes/elex-html-price-adjustment-manage-user-role.php:43
+msgid "<b>Save Role</b>"
+msgstr "役割を保存"
+
+#: elex-catmode-rolebased-price.php:35
+msgid ""
+"<b>WooCommerce</b> plugin must be active for <b>WooCommerce Catalog Mode, "
+"Wholesale & Role Based Pricing</b> to work. "
+msgstr ""
+"WooCommerce カタログ モード、卸売、およびロールベースの価格設定を機能させるには、WooCommerce "
+"プラグインをアクティブにする必要があります。"
+
+#: includes/elex-html-price-adjustment-manage-user-role.php:14
+msgid "Add Custom User Role"
+msgstr "カスタムユーザーロールの追加"
+
+#: includes/elex-html-price-adjustment-table.php:154
+msgid "Add Rule"
+msgstr "ルールを追加"
+
+#: includes/elex-price-discount-settings.php:230
+#: includes/elex-price-discount-settings.php:859
+msgid "Catalog Mode"
+msgstr "カタログモード"
+
+#: includes/elex-price-discount-settings.php:386
+msgid "Catalog Mode Option:"
+msgstr "カタログモードオプション:"
+
+#: includes/elex-html-product-price-adjustment_catalog.php:8
+msgid "Catalog mode options:"
+msgstr "カタログ モード オプション:"
+
+#: includes/elex-html-price-adjustment-table.php:17
+msgid "Categories"
+msgstr "カテゴリー"
+
+#: includes/elex-html-product-price-adjustment.php:62
+#: includes/elex-html-product-price-adjustment.php:167
+#: includes/elex-html-product-price-adjustment_catalog.php:44
+#: includes/elex-price-discount-settings.php:433
+#: includes/elex-price-discount-settings.php:546
+#: includes/elex-price-discount-settings.php:671
+msgid "Change Button Text (Product Page)"
+msgstr "ボタンのテキストを変更する（製品ページ）"
+
+#: includes/elex-html-product-price-adjustment.php:68
+#: includes/elex-html-product-price-adjustment.php:173
+#: includes/elex-html-product-price-adjustment_catalog.php:50
+#: includes/elex-price-discount-settings.php:441
+#: includes/elex-price-discount-settings.php:554
+#: includes/elex-price-discount-settings.php:679
+msgid "Change Button Text (Shop Page)"
+msgstr "ボタンテキストの変更（ショップページ）"
+
+#: includes/elex-html-product-price-adjustment.php:74
+#: includes/elex-html-product-price-adjustment.php:179
+#: includes/elex-html-product-price-adjustment_catalog.php:56
+#: includes/elex-price-discount-settings.php:449
+#: includes/elex-price-discount-settings.php:562
+#: includes/elex-price-discount-settings.php:687
+msgid "Change Button URL"
+msgstr "ボタンの URL を変更する"
+
+#: includes/elex-price-discount-settings.php:543
+msgid "Check to customize Add to Cart option."
+msgstr "カートに追加オプションをカスタマイズするにはチェックしてください。"
+
+#: includes/elex-html-product-price-adjustment.php:59
+#: includes/elex-html-product-price-adjustment_catalog.php:41
+#: includes/elex-price-discount-settings.php:430
+msgid "Check to customize Add to Cart."
+msgstr "カートに追加をカスタマイズするにはチェックしてください。"
+
+#: includes/elex-price-discount-settings.php:479
+#: includes/elex-price-discount-settings.php:599
+msgid "Check to disable access to Cart and Checkout pages."
+msgstr "チェックすると、カート ページとチェックアウト ページへのアクセスが無効になります。"
+
+#: includes/elex-price-discount-settings.php:342
+msgid "Check to enable Role specific tax options."
+msgstr "ロール固有の税金オプションを有効にするにはチェックを入れます。"
+
+#: includes/elex-price-discount-settings.php:487
+msgid ""
+"Check to exclude Administrator role from the above catalog mode settings"
+msgstr "上記のカタログモード設定から管理者ロールを除外するにはチェックを入れます"
+
+#: includes/elex-html-product-price-adjustment_catalog.php:83
+msgid ""
+"Check to exclude Administrator role from the above catalog mode settings."
+msgstr "上記のカタログ モード設定から管理者ロールを除外するにはチェックします。"
+
+#: includes/elex-html-product-price-adjustment.php:95
+#: includes/elex-html-product-price-adjustment_catalog.php:69
+msgid "Check to hide price."
+msgstr "価格を非表示にするにはチェックしてください。"
+
+#: includes/elex-price-discount-settings.php:463
+msgid "Check to hide product price. This will also remove Add to Cart button."
+msgstr "チェックすると、商品価格が非表示になります。これにより、「カートに追加」ボタンも削除されます。"
+
+#: includes/elex-price-discount-settings.php:583
+msgid "Check to hide product price. This will also remove Add to Cart option."
+msgstr "チェックすると、製品価格が非表示になります。これにより、「カートに追加」オプションも削除されます。"
+
+#: includes/elex-price-discount-settings.php:871
+msgid "Check to hide product regular price"
+msgstr "チェックすると商品の通常価格が非表示になります"
+
+#: includes/elex-html-product-price-adjustment.php:111
+msgid "Check to hide product."
+msgstr "チェックすると商品が非表示になります。"
+
+#: includes/elex-price-discount-settings.php:575
+msgid "Check to hide regular price when sale price is provided."
+msgstr "セール価格が提供されている場合に通常価格を非表示にするにはチェックします。"
+
+#: includes/elex-html-product-price-adjustment.php:87
+msgid "Check to hide regular price."
+msgstr "通常価格を非表示にするにはチェックしてください。"
+
+#: includes/elex-price-discount-settings.php:397
+#: includes/elex-price-discount-settings.php:511
+msgid "Check to remove Add to Cart option."
+msgstr "カートに追加オプションを削除するにはチェックを入れます。"
+
+#: includes/elex-html-product-price-adjustment.php:35
+#: includes/elex-html-product-price-adjustment_catalog.php:16
+msgid "Check to remove Add to Cart."
+msgstr "カートに追加を削除するにはチェックを入れます。"
+
+#: includes/elex-price-discount-settings.php:745
+msgid ""
+"Choose the specific user roles for which you want to enable custom price "
+"option in the individual product settings. Go to each individual products "
+"admin page (edit product) and navigate to the General and Role-based "
+"Settings tab to update the price and price adjustments."
+msgstr ""
+"個々の製品設定でカスタム価格オプションを有効にする特定のユーザー ロールを選択します。個々の製品の管理ページ (製品の編集) に移動し、[全般] および "
+"[役割ベースの設定] タブに移動して、価格と価格調整を更新します。"
+
+#: includes/elex-price-discount-settings.php:824
+msgid ""
+"Choose the specific users for which you want to enable custom price in the  "
+"individual product settings. Go to each individual products admin page (edit "
+"product) and navigate to the General and Role-based Settings tabs to update "
+"the price and price adjustments."
+msgstr ""
+"個別の製品設定でカスタム価格を有効にする特定のユーザーを選択します。個々の製品の管理ページ (製品の編集) に移動し、[一般] タブと "
+"[役割ベースの設定] タブに移動して、価格と価格調整を更新します。"
+
+#: includes/elex-html-product-price-adjustment.php:54
+#: includes/elex-html-product-price-adjustment_catalog.php:36
+#: includes/elex-price-discount-settings.php:425
+#: includes/elex-price-discount-settings.php:538
+#: includes/elex-price-discount-settings.php:661
+msgid "Customize Add to Cart"
+msgstr "カスタマイズ カートに追加"
+
+#: includes/elex-html-tax-options.php:26 includes/elex-html-tax-options.php:80
+msgid "Default"
+msgstr "デフォルト"
+
+#: includes/elex-html-price-adjustment-manage-user-role.php:32
+msgid "Description"
+msgstr "説明"
+
+#: elex-catmode-rolebased-price.php:97
+msgid "Documentation"
+msgstr "ドキュメント"
+
+#: includes/elex-price-discount-settings.php:787
+msgid ""
+"Drag and drop User Roles to set priority. If a single User has multiple User "
+"Roles assigned, the User Role with the highest priority will be chosen. "
+"Select a category to apply price adjustment to the products which belong to "
+"that category. If no particular category is selected, the price adjustment "
+"will be applied to all the products.<br><p><strong>Price Adjustment - Choose "
+"'D' for DISCOUNT and 'M' for MARKUP.</strong></p>"
+msgstr ""
+"ユーザー ロールをドラッグ アンド ドロップして優先順位を設定します。 1 人のユーザーに複数のユーザー "
+"ロールが割り当てられている場合は、最も優先度の高いユーザー "
+"ロールが選択されます。カテゴリを選択して、そのカテゴリに属する​​製品に価格調整を適用します。特定のカテゴリが選択されていない場合、価格調整はすべての商品に適用されます。<br"
+"><p><strong>価格調整 - 割引には「D」を、マークアップには「M」を選択します。</strong></p >"
+
+#. Name of the plugin
+msgid "ELEX WooCommerce Role-based Pricing Plugin & WooCommerce Catalog Mode"
+msgstr "ELEX WooCommerce ロールベースの価格設定プラグインと WooCommerce カタログモード"
+
+#. Author of the plugin
+msgid "ELEXtensions"
+msgstr ""
+
+#: includes/elex-html-price-adjustment-table.php:20
+#: includes/elex-html-product-price-adjustment.php:33
+#: includes/elex-html-product-price-adjustment.php:57
+#: includes/elex-html-product-price-adjustment.php:85
+#: includes/elex-html-product-price-adjustment.php:93
+#: includes/elex-html-product-price-adjustment.php:109
+#: includes/elex-html-product-price-adjustment.php:287
+#: includes/elex-html-product-price-adjustment.php:404
+#: includes/elex-html-product-price-adjustment_catalog.php:14
+#: includes/elex-html-product-price-adjustment_catalog.php:39
+#: includes/elex-html-product-price-adjustment_catalog.php:67
+#: includes/elex-html-product-price-adjustment_catalog.php:81
+#: includes/elex-price-discount-settings.php:339
+#: includes/elex-price-discount-settings.php:394
+#: includes/elex-price-discount-settings.php:427
+#: includes/elex-price-discount-settings.php:460
+#: includes/elex-price-discount-settings.php:476
+#: includes/elex-price-discount-settings.php:484
+#: includes/elex-price-discount-settings.php:508
+#: includes/elex-price-discount-settings.php:540
+#: includes/elex-price-discount-settings.php:572
+#: includes/elex-price-discount-settings.php:580
+#: includes/elex-price-discount-settings.php:596
+msgid "Enable"
+msgstr "有効にする"
+
+#: includes/elex-price-discount-settings.php:337
+msgid "Enable Tax Options"
+msgstr "税金オプションを有効にする"
+
+#: includes/elex-html-product-price-adjustment.php:49
+#: includes/elex-html-product-price-adjustment.php:145
+#: includes/elex-price-discount-settings.php:418
+#: includes/elex-price-discount-settings.php:532
+#: includes/elex-price-discount-settings.php:655
+msgid ""
+"Enter a text or html content to display when Add to Cart button is removed. "
+"Leave it empty if you don't want to show any content."
+msgstr ""
+"カートに追加」ボタンが削除されたときに表示するテキストまたは HTML コンテンツを入力します。コンテンツを表示したくない場合は、空のままにしてください。"
+
+#: includes/elex-html-product-price-adjustment_catalog.php:31
+msgid ""
+"Enter a text or html content to show as placeholder when Add to Cart button "
+"is removed. Leave it empty if you don't want to show any content."
+msgstr ""
+"[カートに追加] ボタンが削除されたときにプレースホルダーとして表示するテキストまたは HTML "
+"コンテンツを入力します。コンテンツを表示したくない場合は、空のままにしてください。"
+
+#: includes/elex-html-product-price-adjustment.php:65
+#: includes/elex-html-product-price-adjustment.php:170
+#: includes/elex-html-product-price-adjustment_catalog.php:47
+#: includes/elex-price-discount-settings.php:435
+#: includes/elex-price-discount-settings.php:548
+#: includes/elex-price-discount-settings.php:673
+msgid ""
+"Enter a text to replace the existing Add to Cart button text on the product "
+"page."
+msgstr "製品ページの既存の「カートに追加」ボタンのテキストを置き換えるテキストを入力します。"
+
+#: includes/elex-html-product-price-adjustment.php:71
+#: includes/elex-html-product-price-adjustment.php:176
+#: includes/elex-html-product-price-adjustment_catalog.php:53
+#: includes/elex-price-discount-settings.php:443
+#: includes/elex-price-discount-settings.php:556
+#: includes/elex-price-discount-settings.php:681
+msgid ""
+"Enter a text to replace the existing Add to Cart button text on the shop "
+"page."
+msgstr "ショップ ページの既存の「カートに追加」ボタンのテキストを置き換えるテキストを入力します。"
+
+#: includes/elex-price-discount-settings.php:717
+msgid ""
+"Enter a text you want to display when price is removed. Leave it empty if "
+"you don't want to show any text."
+msgstr "価格が削除されたときに表示するテキストを入力します。テキストを表示しない場合は空白のままにしておきます。"
+
+#: includes/elex-html-product-price-adjustment.php:77
+#: includes/elex-html-product-price-adjustment.php:182
+#: includes/elex-html-product-price-adjustment_catalog.php:59
+#: includes/elex-price-discount-settings.php:451
+#: includes/elex-price-discount-settings.php:564
+#: includes/elex-price-discount-settings.php:689
+msgid ""
+"Enter a url to redirect customers from Add to Cart button. Leave this field "
+"empty to not change the button functionality. Make sure to enter a text in "
+"the above fields to apply these changes."
+msgstr ""
+"「カートに追加」ボタンから顧客をリダイレクトする URL "
+"を入力します。ボタンの機能を変更しない場合は、このフィールドを空のままにしておきます。これらの変更を適用するには、上記のフィールドに必ずテキストを入力してください。"
+
+#: includes/elex-html-price-adjustment-manage-user-role.php:37
+msgid ""
+"Enter the description to the user role you want to create and click the Save "
+"Role button."
+msgstr "作成するユーザー ロールの説明を入力し、[ロールの保存] ボタンをクリックします。"
+
+#: includes/elex-html-price-adjustment-manage-user-role.php:25
+msgid ""
+"Enter the name of the user role you want to create and click the Save Role "
+"button."
+msgstr "作成するユーザー ロールの名前を入力し、[ロールの保存] ボタンをクリックします。"
+
+#: includes/elex-price-discount-settings.php:362
+msgid "Enter the text you want to add as suffix to the price."
+msgstr "価格の末尾に追加するテキストを入力します。"
+
+#: includes/elex-html-product-price-adjustment.php:101
+#: includes/elex-html-product-price-adjustment.php:224
+#: includes/elex-price-discount-settings.php:468
+#: includes/elex-price-discount-settings.php:588
+msgid ""
+"Enter the text you want to display when price is removed. Leave it empty if "
+"you don't want to show any placeholder text."
+msgstr "価格を削除するときに表示するテキストを入力します。プレースホルダー テキストを表示したくない場合は、空のままにしてください。"
+
+#: includes/elex-html-product-price-adjustment_catalog.php:75
+msgid ""
+"Enter the text you want to show when price is removed. Leave it empty if you "
+"don't want to show any placeholder text."
+msgstr "価格を削除するときに表示するテキストを入力します。プレースホルダー テキストを表示したくない場合は、空のままにしてください。"
+
+#: includes/elex-html-product-price-adjustment_catalog.php:78
+#: includes/elex-price-discount-settings.php:482
+msgid "Exclude Administrator"
+msgstr "管理者を除外"
+
+#: includes/elex-html-product-role-based-price.php:123
+#: includes/elex-html-variation-product-role-based-price.php:117
+msgid ""
+"For setting up user roles eligible for individual price adjustment, go to "
+"Role Based Pricing settings -> Add roles for the field \"Individual Price "
+"Adjustment\"."
+msgstr ""
+"個別の価格調整の対象となるユーザー ロールを設定するには、[ロールベースの価格設定] -> [個別の価格調整] フィールドのロールの追加に移動します。"
+
+#: includes/elex-price-discount-settings.php:331
+msgid "General and Tax Options:"
+msgstr "一般および税金オプション:"
+
+#: includes/elex-price-discount-settings.php:474
+#: includes/elex-price-discount-settings.php:594
+#: includes/elex-price-discount-settings.php:723
+msgid "Hide Cart and Checkout Page"
+msgstr "カートとチェックアウトページを非表示にする"
+
+#: includes/elex-html-product-price-adjustment.php:90
+#: includes/elex-html-product-price-adjustment_catalog.php:64
+#: includes/elex-price-discount-settings.php:458
+#: includes/elex-price-discount-settings.php:578
+#: includes/elex-price-discount-settings.php:705
+msgid "Hide Price"
+msgstr "価格を非表示"
+
+#. Description of the plugin
+msgid ""
+"Hide Price or Add to Cart option for guest and specific registered users for "
+"simple, variable and grouped products. Create user role specific product "
+"price. Enforce markup/discount on price for selected user roles. Also, turn "
+"your shop into catalog mode."
+msgstr ""
+"シンプル、可変、グループ化された製品のゲストおよび特定の登録ユーザーに対して、価格を非表示にするか、カートに追加するオプションを選択します。ユーザー役割固有の製品価格を作成します。選択したユーザー役割の価格にマークアップ/割引を適用します。また、ショップをカタログモードに変えてください。"
+
+#: includes/elex-html-product-price-adjustment.php:106
+msgid "Hide Product"
+msgstr "商品を非表示"
+
+#: includes/elex-html-product-price-adjustment.php:82
+#: includes/elex-price-discount-settings.php:570
+#: includes/elex-price-discount-settings.php:695
+#: includes/elex-price-discount-settings.php:869
+msgid "Hide Regular Price"
+msgstr "通常価格を非表示"
+
+#. Author URI of the plugin
+msgid "https://elextensions.com"
+msgstr ""
+
+#. URI of the plugin
+msgid ""
+"https://elextensions.com/plugin/woocommerce-catalog-mode-wholesale-role-"
+"based-pricing/"
+msgstr ""
+
+#: includes/elex-price-discount-settings.php:737
+msgid "Individual Product Pricing Specific Options:"
+msgstr ""
+
+#: includes/elex-price-discount-settings.php:88
+msgid "License"
+msgstr "ライセンス"
+
+#: includes/elex-price-discount-settings.php:87
+msgid "Manage User Role"
+msgstr "ユーザーロールの管理"
+
+#: includes/elex-html-price-adjustment-manage-user-role.php:49
+msgid "Modify User Role"
+msgstr "ユーザーロールの変更"
+
+#: includes/elex-html-tax-options.php:13
+msgid "of Woocommerce."
+msgstr ""
+
+#: elex-catmode-rolebased-price.php:65
+msgid ""
+"Oops! You tried installing the premium version without deactivating and "
+"deleting the basic version. Kindly deactivate and delete WooCommerce Catalog "
+"Mode, Wholesale & Role Based Pricing (BASIC) and then try again. For any "
+"issues, kindly contact our <a target='_blank' href='https://elextensions."
+"com/support/'>support</a>."
+msgstr ""
+
+#: includes/elex-price-discount-settings.php:653
+msgid "Placeholder Content"
+msgstr "プレースホルダーコンテンツ"
+
+#: includes/elex-price-discount-settings.php:416
+#: includes/elex-price-discount-settings.php:466
+#: includes/elex-price-discount-settings.php:530
+#: includes/elex-price-discount-settings.php:586
+#: includes/elex-price-discount-settings.php:715
+msgid "Placeholder Text"
+msgstr "プレースホルダーテキスト"
+
+#: includes/elex-html-product-price-adjustment.php:46
+#: includes/elex-html-product-price-adjustment.php:98
+#: includes/elex-html-product-price-adjustment.php:142
+#: includes/elex-html-product-price-adjustment.php:221
+#: includes/elex-html-product-price-adjustment_catalog.php:28
+#: includes/elex-html-product-price-adjustment_catalog.php:72
+msgid "Placeholder text"
+msgstr "プレースホルダーテキスト"
+
+#: includes/elex-html-product-role-based-price.php:21
+#: includes/elex-html-product-role-based-price.php:74
+#: includes/elex-html-variation-product-role-based-price.php:20
+#: includes/elex-html-variation-product-role-based-price.php:69
+#, php-format
+msgid "Price (%s)"
+msgstr "価格 (%s)"
+
+#: includes/elex-html-price-adjustment-table.php:19
+#: includes/elex-html-product-price-adjustment.php:286
+#: includes/elex-html-product-price-adjustment.php:403
+msgid "Price Adjustment (%)"
+msgstr "価格調整（％）"
+
+#: includes/elex-html-price-adjustment-table.php:18
+#: includes/elex-html-product-price-adjustment.php:285
+#: includes/elex-html-product-price-adjustment.php:402
+#, php-format
+msgid "Price Adjustment (%s)"
+msgstr "価格調整 (%s)"
+
+#: includes/elex-price-discount-settings.php:785
+msgid "Price Adjustment: (Discount/Markup)"
+msgstr "価格調整: (割引/値上げ)"
+
+#: includes/elex-price-discount-settings.php:350
+msgid "Price Suffix"
+msgstr "価格サフィックス"
+
+#: includes/elex-html-price-suffix.php:11
+msgid "Price Suffix Table"
+msgstr ""
+
+#: includes/elex-html-product-price-adjustment.php:43
+#: includes/elex-html-product-price-adjustment.php:139
+#: includes/elex-html-product-price-adjustment_catalog.php:25
+#: includes/elex-price-discount-settings.php:408
+#: includes/elex-price-discount-settings.php:522
+#: includes/elex-price-discount-settings.php:645
+msgid "Product Page"
+msgstr "製品ページ"
+
+#: includes/elex-price-discount-settings.php:614
+msgid "Regular & Sale Price"
+msgstr "通常価格とセール価格"
+
+#: includes/elex-price-discount-settings.php:612
+msgid "Regular Price"
+msgstr "通常価格"
+
+#: includes/elex-html-price-adjustment-table.php:21
+msgid "Remove"
+msgstr "取り除く"
+
+#: includes/elex-html-product-price-adjustment.php:30
+#: includes/elex-html-product-price-adjustment_catalog.php:11
+#: includes/elex-price-discount-settings.php:392
+#: includes/elex-price-discount-settings.php:506
+#: includes/elex-price-discount-settings.php:627
+msgid "Remove Add to Cart"
+msgstr "削除 カートに追加"
+
+#: includes/elex-html-product-role-based-price.php:12
+#: includes/elex-html-variation-product-role-based-price.php:12
+msgid "Role Based Price"
+msgstr "役割ベースの価格"
+
+#: includes/elex-html-product-role-based-price.php:120
+#: includes/elex-html-variation-product-role-based-price.php:114
+msgid "Role Based Price "
+msgstr "役割ベースの価格"
+
+#: includes/elex-html-price-adjustment-manage-user-role.php:20
+msgid "Role Name"
+msgstr "役割名"
+
+#: elex-catmode-rolebased-price.php:114
+#: includes/elex-price-discount-settings.php:229
+msgid "Role-based Pricing"
+msgstr "役割ベースの価格設定"
+
+#: includes/elex-price-discount-settings.php:84
+#: includes/elex-price-discount-settings.php:854
+msgid "Role-based Settings"
+msgstr "役割ベースの設定"
+
+#: includes/elex-price-discount-settings.php:613
+msgid "Sale Price"
+msgstr "販売価格"
+
+#: includes/elex-price-discount-settings.php:768
+msgid ""
+"Select how you want to apply the price adjustment when multiple user roles "
+"are enabled for the same user. "
+msgstr "同じユーザーに対して複数のユーザー ロールが有効になっている場合に価格調整を適用する方法を選択します。"
+
+#: includes/elex-price-discount-settings.php:353
+msgid ""
+"Select the price suffix option you want to have. Choose General to apply "
+"globally. Choose Role specific to set different suffixes to different Roles."
+msgstr ""
+
+#: includes/elex-price-discount-settings.php:725
+msgid ""
+"Select the user role(s) for which you do not want to provide access to Cart "
+"and Checkout page"
+msgstr "カートとチェックアウトページへのアクセスを許可しないユーザーロールを選択します"
+
+#: includes/elex-price-discount-settings.php:663
+msgid ""
+"Select the user role(s) for which you want to customize Add to Cart option."
+msgstr "カートに追加オプションをカスタマイズするユーザー ロールを選択します。"
+
+#: includes/elex-price-discount-settings.php:629
+msgid "Select the user role(s) for which you want to hide Add to Cart option."
+msgstr "カートに追加オプションを非表示にするユーザー ロールを選択します。"
+
+#: includes/elex-price-discount-settings.php:707
+msgid ""
+"Select the user role(s) for which you want to hide product price. This will "
+"also remove Add to Cart option."
+msgstr "製品価格を非表示にするユーザー ロールを選択します。これにより、「カートに追加」オプションも削除されます。"
+
+#: includes/elex-price-discount-settings.php:697
+msgid ""
+"Select the user role(s) for which you want to hide the Regular Price. This "
+"will be applicable for all products that have either discounted or sales "
+"price."
+msgstr ""
+
+#: includes/elex-price-discount-settings.php:743
+msgid "Select User Roles"
+msgstr "ユーザーロールを選択"
+
+#: includes/elex-price-discount-settings.php:823
+msgid "Select Users"
+msgstr "ユーザーを選択"
+
+#: includes/elex-price-discount-settings.php:794
+msgid ""
+"Select where you want to apply the discount/markup. This is applicable to "
+"individual product level price adjustment also. If a product does not have "
+"sale price, adjustment will be applied only to the regular price."
+msgstr ""
+"割引/マークアップを適用する場所を選択します。これは、個々の製品レベルの価格調整にも適用されます。セール価格がない商品の場合、通常価格のみの調整となります。"
+
+#: elex-catmode-rolebased-price.php:96
+msgid "Settings"
+msgstr "設定"
+
+#: includes/elex-html-product-price-adjustment.php:41
+#: includes/elex-html-product-price-adjustment.php:137
+#: includes/elex-html-product-price-adjustment_catalog.php:23
+#: includes/elex-price-discount-settings.php:400
+#: includes/elex-price-discount-settings.php:514
+#: includes/elex-price-discount-settings.php:637
+msgid "Shop Page"
+msgstr "ショップページ"
+
+#: includes/elex-html-tax-options.php:28
+msgid "Show Price Excluding Tax"
+msgstr "税抜き価格を表示"
+
+#: includes/elex-html-tax-options.php:32
+msgid "Show Price Excluding Tax in Cart and Checkout"
+msgstr "カートとチェックアウトで税抜き価格を表示する"
+
+#: includes/elex-html-tax-options.php:31
+msgid "Show Price Excluding Tax in Shop & Product page"
+msgstr "ショップ＆商品ページで税抜き価格を表示する"
+
+#: includes/elex-html-tax-options.php:27
+msgid "Show Price Including Tax"
+msgstr "税込価格を表示"
+
+#: includes/elex-html-tax-options.php:30
+msgid "Show Price Including Tax in Cart and Checkout"
+msgstr "カートとチェックアウトで税込み価格を表示する"
+
+#: includes/elex-html-tax-options.php:29
+msgid "Show Price Including Tax in Shop & Product page"
+msgstr "ショップと商品ページで税込価格を表示する"
+
+#: includes/elex-html-price-suffix.php:16
+#: includes/elex-price-discount-settings.php:360
+msgid "Suffix Text"
+msgstr "接尾辞テキスト"
+
+#: elex-catmode-rolebased-price.php:98
+msgid "Support"
+msgstr "サポート"
+
+#: includes/elex-price-discount-settings.php:86
+msgid "Tax Option"
+msgstr "税金オプション"
+
+#: includes/elex-html-tax-options.php:10
+msgid "Tax Options Table"
+msgstr "税金オプション表"
+
+#: includes/elex-html-tax-options.php:19
+msgid "Tax Type"
+msgstr "税金の種類"
+
+#: includes/elex-price-discount-settings.php:388
+msgid ""
+"The changes you make here will be applicable across the site. You can "
+"exclude Administrator role from these changes.<br>Catalog Mode Settings will "
+"override Role Based, Unregistered User & Individual Product Settings."
+msgstr ""
+"ここで加えた変更はサイト全体に適用されます。これらの変更から管理者の役割を除外できます。<br>カタログ "
+"モードの設定は、役割ベースの未登録ユーザーおよび個々の製品の設定をオーバーライドします。"
+
+#: includes/elex-html-product-price-adjustment_catalog.php:9
+msgid ""
+"The changes you make here will be applicable across user roles. You can "
+"exclude Administrator role from these settings. Catalog Mode Settings will "
+"override Role Based & Unregistered User Settings."
+msgstr ""
+"ここで行う変更は、ユーザーの役割全体に適用されます。これらの設定から管理者の役割を除外できます。カタログ モード設定は、ロール "
+"ベースおよび未登録ユーザーの設定をオーバーライドします。"
+
+#: includes/elex-html-tax-options.php:11
+msgid "This table handles only tax display option. To modify tax rate go to "
+msgstr "このテーブルは税の表示オプションのみを扱います。税率を変更するには、"
+
+#: includes/elex-price-discount-settings.php:85
+msgid "Unregistered User"
+msgstr "未登録ユーザー"
+
+#: includes/elex-price-discount-settings.php:500
+msgid "Unregistered User Options:"
+msgstr "未登録ユーザーのオプション:"
+
+#: includes/elex-html-price-adjustment-table.php:15
+#: includes/elex-html-price-suffix.php:15
+#: includes/elex-html-product-price-adjustment.php:284
+#: includes/elex-html-product-role-based-price.php:20
+#: includes/elex-html-tax-options.php:17
+#: includes/elex-html-variation-product-role-based-price.php:19
+msgid "User Role"
+msgstr "ユーザーロール"
+
+#: includes/elex-price-discount-settings.php:621
+msgid "User Role Specific Options:"
+msgstr "ユーザーロール固有のオプション:"
+
+#: includes/elex-html-price-adjustment-table.php:16
+#: includes/elex-html-product-price-adjustment.php:401
+#: includes/elex-html-product-role-based-price.php:73
+#: includes/elex-html-variation-product-role-based-price.php:68
+msgid "Users"
+msgstr "ユーザー"
+
+#: includes/elex-price-discount-settings.php:765
+msgid "Users With Multiple Roles Assigned"
+msgstr "複数の役割が割り当てられたユーザー"

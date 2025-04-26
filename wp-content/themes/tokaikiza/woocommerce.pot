@@ -1,0 +1,406 @@
+# Copyright (C) 2022 Automattic
+# This file is distributed under the same license as the WooCommerce plugin.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce 6.9.4\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woocommerce\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-12-22 07:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: woocommerce\n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;"
+
+#. 1: formatted order total 2: total order items
+#: woocommerce/myaccount/orders.php:62
+msgid "%1$s for %2$s item"
+msgid_plural "%1$s for %2$s items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/cart/cart.php:25
+msgid "%d product"
+msgid_plural "%d products"
+msgstr[0] ""
+msgstr[1] ""
+
+#. %s: Quantity.
+#: woocommerce/global/quantity-input.php:28
+msgid "%s quantity"
+msgstr ""
+
+#. %s location.
+#: woocommerce/cart/cart-totals.php:77
+msgid "(estimated for %s)"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:105
+msgid "A link to set a new password will be sent to your email address."
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:65
+msgid "Add"
+msgstr ""
+
+#: woocommerce/checkout/form-shipping.php:52
+msgid "Additional information"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:117
+msgid "Already have an account?"
+msgstr ""
+
+#: woocommerce/cart/cart.php:179 woocommerce/checkout/form-coupon.php:38
+#: woocommerce/checkout/form-coupon.php:38
+msgid "Apply"
+msgstr ""
+
+#: woocommerce/cart/cart.php:89
+msgid "Available on backorder"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:25
+msgid "Billing &amp; Shipping"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:29
+msgid "Billing Address"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-address.php:20
+#: woocommerce/myaccount/my-address.php:36
+msgid "Billing address"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:27
+msgid "Billing addresses"
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:101
+msgid "Browse products"
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/grouped.php:88
+msgid "Buy one of this item"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:27
+msgid "Click here to enter your code"
+msgstr ""
+
+#: woocommerce/cart/cart.php:179 woocommerce/checkout/form-coupon.php:33
+msgid "Coupon:"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:74
+#: woocommerce/myaccount/form-login.php:76
+msgid "Create An Account"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:55
+#: woocommerce/myaccount/form-login.php:113
+msgid "Create an account?"
+msgstr ""
+
+#: inc/widget.php:62
+msgid ""
+"Display a list of a customer's recently viewed products custom by Tokaikiza."
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:65
+msgid "Edit"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:41
+#: woocommerce/myaccount/form-login.php:91
+msgid "Email"
+msgstr ""
+
+#: woocommerce/myaccount/form-lost-password.php:28
+msgid "Email address"
+msgstr ""
+
+#: woocommerce/myaccount/form-reset-password.php:25
+msgid "Enter a new password below."
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:42
+#: woocommerce/myaccount/form-login.php:92
+msgid "Enter your email"
+msgstr ""
+
+#: inc/custom_woo.php:372
+msgid "Enter your first name"
+msgstr ""
+
+#: inc/custom_woo.php:377
+msgid "Enter your last name"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:46 woocommerce/cart/cart-totals.php:47
+msgid "Estimated Shipping"
+msgstr ""
+
+#: inc/custom_woo.php:371
+msgid "First name"
+msgstr ""
+
+#: inc/custom_woo.php:394
+msgid "First name is required!"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:52
+msgid "Forgot password"
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:50
+msgctxt "hash before order number"
+msgid "#"
+msgstr ""
+
+#: inc/custom_woo.php:46
+msgid "Home"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:27
+msgid "If you have a coupon code, please apply it below."
+msgstr ""
+
+#: inc/custom_woo.php:376
+msgid "Last name"
+msgstr ""
+
+#: inc/custom_woo.php:397
+msgid "Last name is required!."
+msgstr ""
+
+#: woocommerce/global/form-login.php:51
+msgid "Login"
+msgstr ""
+
+#: woocommerce/global/form-login.php:54
+msgid "Lost your password?"
+msgstr ""
+
+#: woocommerce/myaccount/form-lost-password.php:25
+msgid ""
+"Lost your password? Please enter your email address. You will receive a link "
+"to create a new password via email."
+msgstr ""
+
+#: woocommerce/myaccount/form-reset-password.php:28
+msgid "New password"
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:94
+msgid "Next"
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:102
+msgid "No order has been made yet."
+msgstr ""
+
+#: inc/widget.php:77
+msgid "Number of products to show"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:26
+#: woocommerce/checkout/form-checkout.php:53
+msgid "Order summary"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:108 woocommerce/cart/cart-totals.php:109
+#: woocommerce/checkout/review-order.php:107
+msgid "Order Total"
+msgstr ""
+
+#: woocommerce/global/form-login.php:38 woocommerce/myaccount/form-login.php:46
+#: woocommerce/myaccount/form-login.php:99
+msgid "Password"
+msgstr ""
+
+#: woocommerce/single-product/up-sells.php:27
+msgid "People Who Bought This Item Also Bought"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:47
+#: woocommerce/myaccount/form-login.php:100
+msgid "Please enter your password."
+msgstr ""
+
+#: woocommerce/checkout/payment.php:35
+msgid "Please fill in your details above to see available payment methods."
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:90
+msgid "Previous"
+msgstr ""
+
+#: woocommerce/cart/cart.php:41 woocommerce/cart/cart.php:119
+msgid "Price"
+msgstr ""
+
+#: woocommerce/cart/cart.php:40 woocommerce/cart/cart.php:60
+msgid "Product"
+msgstr ""
+
+#: woocommerce/ti-wishlist-user.php:23 woocommerce/ti-wishlist.php:24
+msgid "product"
+msgstr ""
+
+#: inc/functions-shipping-woo.php:106
+msgid "Product count"
+msgstr ""
+
+#: woocommerce/single-product/tabs/description.php:23
+msgid "Product Description"
+msgstr ""
+
+#: woocommerce/global/quantity-input.php:42
+msgctxt "Product quantity input tooltip"
+msgid "Qty"
+msgstr ""
+
+#: woocommerce/loop/result-count.php:28
+msgid "Products"
+msgstr ""
+
+#: woocommerce/ti-wishlist-user.php:22 woocommerce/ti-wishlist.php:23
+msgid "products"
+msgstr ""
+
+#: woocommerce/cart/cart.php:177
+msgid "Promotion Code"
+msgstr ""
+
+#: woocommerce/cart/cart.php:42 woocommerce/cart/cart.php:127
+#: woocommerce/global/quantity-input.php:28
+msgid "Quantity"
+msgstr ""
+
+#: woocommerce/single-product/related.php:28
+msgid "Ranking Of The Same Genre Of The Product"
+msgstr ""
+
+#: woocommerce/myaccount/form-reset-password.php:32
+msgid "Re-enter new password"
+msgstr ""
+
+#: inc/widget.php:68
+msgid "Recently Viewed Products"
+msgstr ""
+
+#: inc/widget.php:64
+msgid "Recently Viewed Products list custom by Tokaikiza"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:113
+msgid "Register"
+msgstr ""
+
+#: woocommerce/global/form-login.php:47 woocommerce/myaccount/form-login.php:60
+msgid "Remember me"
+msgstr ""
+
+#: woocommerce/cart/cart.php:110 woocommerce/cart/cart.php:157
+msgid "Remove"
+msgstr ""
+
+#: woocommerce/cart/cart.php:107 woocommerce/cart/cart.php:154
+msgid "Remove this item"
+msgstr ""
+
+#: woocommerce/myaccount/form-lost-password.php:38
+msgid "Reset password"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-address.php:47
+#: woocommerce/myaccount/form-reset-password.php:45
+#: woocommerce/myaccount/form-reset-password.php:45
+msgid "Save"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-address.php:47
+msgid "Save address"
+msgstr ""
+
+#: woocommerce/myaccount/dashboard.php:59
+msgid "Save change"
+msgstr ""
+
+#: woocommerce/checkout/form-shipping.php:26
+msgid "Ship to a different address"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-address.php:20
+msgid "Shipping address"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:28
+msgid "Shipping addresses"
+msgstr ""
+
+#: woocommerce/loop/orderby.php:27
+msgid "Shop order"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:33
+#: woocommerce/myaccount/form-login.php:34
+#: woocommerce/myaccount/form-login.php:63
+#: woocommerce/myaccount/form-login.php:63
+msgid "Sign In"
+msgstr ""
+
+#. $1 and $2 opening and closing emphasis tags respectively
+#: woocommerce/checkout/payment.php:45
+msgid ""
+"Since your browser does not support JavaScript, or it is disabled, please "
+"ensure you click the %1$sUpdate Totals%2$s button before placing your order. "
+"You may be charged more than the amount stated above if you fail to do so."
+msgstr ""
+
+#: woocommerce/checkout/payment.php:35
+msgid ""
+"Sorry, it seems that there are no available payment methods for your state. "
+"Please contact us if you require assistance or wish to make alternate "
+"arrangements."
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:31 woocommerce/cart/cart-totals.php:32
+#: woocommerce/checkout/review-order.php:59
+msgid "Subtotal"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:47
+msgid "The following addresses will be used on the checkout page by default."
+msgstr ""
+
+#: inc/widget.php:69
+msgid "Title"
+msgstr ""
+
+#: woocommerce/cart/cart.php:184
+msgid "Update cart"
+msgstr ""
+
+#: woocommerce/checkout/payment.php:47
+msgid "Update totals"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:83
+msgid "Username"
+msgstr ""
+
+#: woocommerce/global/form-login.php:34
+msgid "Username or email"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:69
+msgid "You have not set up this type of address yet."
+msgstr ""

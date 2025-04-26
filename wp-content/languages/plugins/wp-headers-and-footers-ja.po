@@ -1,0 +1,242 @@
+# Translation of Plugins - Insert Headers And Footers - Stable (latest release) in Japanese
+# This file is distributed under the same license as the Plugins - Insert Headers And Footers - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-11-24 15:35:28+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Plugins - Insert Headers And Footers - Stable (latest release)\n"
+
+#: classes/class-setup.php:243
+msgid "Support"
+msgstr "サポート"
+
+#: classes/class-setup.php:97
+msgid "Scripts"
+msgstr "スクリプト"
+
+#: classes/class-setup.php:169
+msgid "Footer's Priority:"
+msgstr "フッターの優先順位:"
+
+#: classes/class-setup.php:159
+msgid "Body's Priority:"
+msgstr "ボディの優先順位:"
+
+#: classes/class-setup.php:149
+msgid "Header's Priority:"
+msgstr "ヘッダーの優先順位:"
+
+#: classes/class-notifications.php:140
+msgid "Never show again"
+msgstr "今後表示しない"
+
+#: classes/class-notifications.php:139
+msgid "Maybe Later"
+msgstr "後で"
+
+#: classes/class-notifications.php:138
+msgid "I've already left a review"
+msgstr "レビュー済み"
+
+#: classes/class-notifications.php:137
+msgid "Sure! I'd love to!"
+msgstr "はい"
+
+#: classes/class-notifications.php:134
+msgid "Leave A Review?"
+msgstr "レビューをお願いします。"
+
+#: classes/class-setup.php:102
+msgid "Set your priorities for each script tag."
+msgstr "各タグの出力優先順位を設定します。"
+
+#. Translators: The body textarea description
+#. Translators: The footer textarea description
+#: classes/class-setup.php:161 classes/class-setup.php:171
+msgid "The priority for %1$s tag. %2$sDefault is 10%3$s"
+msgstr "%1$s タグの優先順位。%2$sデフォルトは10%3$s"
+
+#. Translators: The header textarea description
+#: classes/class-setup.php:151
+msgid "The priority for %1$s section. %2$sDefault is 10%3$s"
+msgstr "%1$s セクションの優先順位。%2$sデフォルトは10%3$s"
+
+#: classes/class-notifications.php:135
+msgid "We hope you've enjoyed using Inline Headers And Footers! Would you consider leaving us a review on WordPress.org?"
+msgstr "プラグインをご活用いただけてましたら幸いです。WordPress.org にレビューを残していただけませんか ?"
+
+#: lib/wpb-sdk/views/wpb-sdk-deactivate-form.php:182
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: lib/wpb-sdk/views/wpb-sdk-deactivate-form.php:175
+msgid "Anonymous feedback"
+msgstr "匿名のフィードバック"
+
+#: lib/wpb-sdk/views/wpb-sdk-deactivate-form.php:162
+msgid "Other"
+msgstr "その他"
+
+#: lib/wpb-sdk/views/wpb-sdk-deactivate-form.php:148
+msgid "I no longer need the plugin"
+msgstr "プラグインが必要がなくなった"
+
+#: lib/wpb-sdk/views/wpb-sdk-deactivate-form.php:155
+msgid "It's a temporary deactivation. I'm just debugging an issue."
+msgstr "一時的な無効化。問題のデバッグをするため。"
+
+#: lib/wpb-sdk/views/wpb-sdk-deactivate-form.php:141
+msgid "The plugin suddenly stopped working"
+msgstr "プラグインが突然動作を停止した"
+
+#: lib/wpb-sdk/views/wpb-sdk-deactivate-form.php:134
+msgid "The plugin broke my site"
+msgstr "プラグインがサイトを壊した"
+
+#: lib/wpb-sdk/views/wpb-sdk-deactivate-form.php:128
+msgid "What's the plugin's name?"
+msgstr "そのプラグインの名前は ?"
+
+#: lib/wpb-sdk/views/wpb-sdk-deactivate-form.php:123
+msgid "I found a better plugin"
+msgstr "もっと良いプラグインを見つけた"
+
+#: lib/wpb-sdk/views/wpb-sdk-deactivate-form.php:116
+msgid "I only needed the plugin for a short period"
+msgstr "短期間だけプラグインが必要だった"
+
+#: lib/wpb-sdk/views/wpb-sdk-deactivate-form.php:108
+msgid "Quick feedback about "
+msgstr "簡単なフィードバック: "
+
+#: lib/wpb-sdk/views/wpb-sdk-deactivate-form.php:111
+msgid "If you have a moment, please let us know why you are deactivating:"
+msgstr "少しお時間が有りましたら、プラグインを停止する理由をお聞かせください: "
+
+#: lib/wpb-sdk/views/wpb-sdk-deactivate-form.php:127
+msgid "Kindly tell us the name of plugin"
+msgstr "プラグイン名をお聞かせください"
+
+#: lib/wpb-sdk/views/wpb-sdk-deactivate-form.php:166
+msgid "Kindly tell us the reason so we can improve."
+msgstr "今後の改善に活かしますので、理由をお聞かせください。"
+
+#: lib/wpb-sdk/views/wpb-sdk-deactivate-form.php:167
+msgid "Would you like to share what's other reason?"
+msgstr "他に理由があれば教えて下さい。"
+
+#: classes/class-setup.php:133
+msgid "Scripts in Body"
+msgstr "ボディ内スクリプト"
+
+#. Translators: The body textarea description
+#. Translators: The footer textarea description
+#: classes/class-setup.php:135 classes/class-setup.php:142
+msgid "These scripts will be printed below the %1$s tag."
+msgstr "これらのスクリプトは %1$s セクション内に出力されます。"
+
+#. Plugin Name of the plugin
+#: wp-headers-and-footers.php
+msgid "WP Headers And Footers"
+msgstr "WP Headers And Footers"
+
+#: classes/class-settings-api.php:579
+msgid "Simple Social Buttons"
+msgstr "Simple Social Buttons"
+
+#: classes/class-settings-api.php:584
+msgid "Under Construction & Maintenance mode"
+msgstr "Under Construction & Maintenance mode"
+
+#: classes/plugin-meta.php:60
+msgid "Rate"
+msgstr "評価"
+
+#: classes/plugin-meta.php:57
+msgid "Vote!"
+msgstr "レビューを残す"
+
+#. Translators: Settings tab
+#: classes/plugin-meta.php:84
+msgid "%1$s Settings %2$s"
+msgstr "%1$s設定%2$s"
+
+#: classes/class-setup.php:81
+msgid "WP Headers and Footers"
+msgstr "WP Headers and Footers"
+
+#. Author of the plugin
+#: wp-headers-and-footers.php
+msgid "WPBrigade"
+msgstr "WPBrigade"
+
+#: classes/class-settings-api.php:373
+msgid "Choose File"
+msgstr "ファイルを選択"
+
+#: classes/class-settings-api.php:555
+msgid "Rate on WordPress.org"
+msgstr "WordPress.org でレビュー"
+
+#: classes/class-settings-api.php:549
+msgid "Share on Facebook"
+msgstr "Facebook でシェア"
+
+#: classes/class-settings-api.php:539
+msgid "Spread the Word"
+msgstr "プラグインを広める"
+
+#: classes/class-settings-api.php:542
+msgid "Post to Twitter Now"
+msgstr "Twitter へ投稿してください"
+
+#: classes/class-setup.php:101
+msgid "Settings"
+msgstr "設定"
+
+#: classes/class-setup.php:126
+msgid "Scripts in Header"
+msgstr "ヘッダー内スクリプト"
+
+#: classes/class-setup.php:140
+msgid "Scripts in Footer"
+msgstr "フッター内スクリプト"
+
+#. Description of the plugin
+#: wp-headers-and-footers.php
+msgid "Allows you to insert code or text in the header or footer of your WordPress site."
+msgstr "WordPress サイトのヘッダーまたはフッターにコードやテキストを挿入できるようにします。"
+
+#: classes/class-settings-api.php:562
+msgid "Recommended Plugins"
+msgstr "おすすめプラグイン"
+
+#: classes/class-settings-api.php:566
+msgid "Customize your login screen"
+msgstr "ログイン画面をカスタマイズ"
+
+#: classes/class-settings-api.php:578 classes/class-settings-api.php:583
+msgid "Socialize your Website"
+msgstr "サイトをソーシャライズ"
+
+#. Translators: The header textarea description
+#: classes/class-setup.php:128
+msgid "These scripts will be printed in the %1$s section."
+msgstr "これらのスクリプトは %1$s セクション内に出力されます。"
+
+#: classes/class-settings-api.php:572
+msgid "Share with your facebook friends about this awesome plugin."
+msgstr "Facebook の友人に、プラグインをシェアしてください。"
+
+#: classes/class-settings-api.php:548
+msgid "Share with your facebook friends about this awesome plugin"
+msgstr "Facebook の友人に、プラグインをシェアしてください。"
+
+#: classes/class-settings-api.php:543
+msgid "Share on X/Twitter"
+msgstr "‌‌X/Twitter でシェア"

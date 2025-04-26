@@ -1,0 +1,912 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ELEX WooCommerce Role-based Pricing Plugin & WooCommerce "
+"Catalog Mode\n"
+"POT-Creation-Date: 2020-02-18 13:16+0530\n"
+"PO-Revision-Date: 2020-02-18 13:20+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: elex-catmode-rolebased-price.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: elex-catmode-rolebased-price.php:35
+msgid ""
+"<b>WooCommerce</b> plugin must be active for <b>WooCommerce Catalog Mode, "
+"Wholesale & Role Based Pricing</b> to work. "
+msgstr ""
+"<b>WooCommerce</b> plugin måste vara aktiv för <b>WooCommerce Catalog Mode, "
+"Partihandel & Rollbaserad prissättning</b> för att fungera."
+
+#: elex-catmode-rolebased-price.php:50
+msgid ""
+"Oops! You tried installing the premium version without deactivating and "
+"deleting the basic version. Kindly deactivate and delete WooCommerce Catalog "
+"Mode, Wholesale & Role Based Pricing (BASIC) and then try again. For any "
+"issues, kindly contact our <a target='_blank' href='https://elextensions.com/"
+"support/'>support</a>."
+msgstr ""
+"Oj! Du försökte installera premiumversionen utan att inaktivera och ta bort "
+"den grundläggande versionen. Vänligen inaktivera och ta bort WooCommerce "
+"Catalog Mode, Partihandel & Rollbaserad prissättning (BASIC) och försök "
+"sedan igen. För eventuella problem, vänligen kontakta vår <a target='_blank' "
+"href='https://elextensions.com/support/'>support</a>."
+
+#: elex-catmode-rolebased-price.php:81
+msgid "Settings"
+msgstr "Inställningar"
+
+#: elex-catmode-rolebased-price.php:82
+msgid "Documentation"
+msgstr "Dokumentation"
+
+#: elex-catmode-rolebased-price.php:83
+msgid "Support"
+msgstr "Support"
+
+#: elex-catmode-rolebased-price.php:99
+#: includes/elex-price-discount-settings.php:80
+msgid "Role-based Pricing"
+msgstr "Rollbaserad prissättning"
+
+#: elex-includes/elex-functions.php:138
+#, php-format
+msgctxt "Price range: from-to"
+msgid "%1$s &ndash; %2$s"
+msgstr "%1$s &ndash; %2$s"
+
+#: includes/elex-html-price-adjustment-manage-user-role.php:14
+msgid "Add Custom User Role"
+msgstr "Lägga till anpassad användarroll"
+
+#: includes/elex-html-price-adjustment-manage-user-role.php:20
+#: includes/elex-html-price-adjustment-table.php:15
+#: includes/elex-html-price-suffix.php:15
+#: includes/elex-html-product-price-adjustment.php:258
+#: includes/elex-html-product-role-based-price.php:19
+#: includes/elex-html-tax-options.php:17
+#: includes/elex-html-variation-product-role-based-price.php:18
+msgid "User Role"
+msgstr "Användarroll"
+
+#: includes/elex-html-price-adjustment-manage-user-role.php:25
+msgid ""
+"Enter the name of the user role you want to create and click the Save "
+"Changes button."
+msgstr ""
+"Ange namnet på den användarroll som du vill skapa och klicka på knappen "
+"Spara ändringar."
+
+#: includes/elex-html-price-adjustment-manage-user-role.php:32
+msgid "Remove User Role"
+msgstr "Ta bort användarroll"
+
+#: includes/elex-html-price-adjustment-manage-user-role.php:49
+msgid ""
+"Select the user role you want to delete and click the Save Changes button."
+msgstr ""
+"Markera den användarroll som du vill ta bort och klicka på knappen Spara "
+"ändringar."
+
+#: includes/elex-html-price-adjustment-table.php:16
+msgid "Categories"
+msgstr "Kategorier"
+
+#: includes/elex-html-price-adjustment-table.php:17
+#: includes/elex-html-product-price-adjustment.php:259
+#, php-format
+msgid "Price Adjustment (%s)"
+msgstr "Prisjustering (%s)"
+
+#: includes/elex-html-price-adjustment-table.php:18
+#: includes/elex-html-product-price-adjustment.php:260
+msgid "Price Adjustment (%)"
+msgstr "Prisjustering (%)"
+
+#: includes/elex-html-price-adjustment-table.php:19
+#: includes/elex-html-product-price-adjustment.php:33
+#: includes/elex-html-product-price-adjustment.php:57
+#: includes/elex-html-product-price-adjustment.php:85
+#: includes/elex-html-product-price-adjustment.php:101
+#: includes/elex-html-product-price-adjustment.php:261
+#: includes/elex-html-product-price-adjustment_catalog.php:14
+#: includes/elex-html-product-price-adjustment_catalog.php:39
+#: includes/elex-html-product-price-adjustment_catalog.php:67
+#: includes/elex-html-product-price-adjustment_catalog.php:81
+#: includes/elex-price-discount-settings.php:228
+#: includes/elex-price-discount-settings.php:283
+#: includes/elex-price-discount-settings.php:316
+#: includes/elex-price-discount-settings.php:349
+#: includes/elex-price-discount-settings.php:365
+#: includes/elex-price-discount-settings.php:373
+#: includes/elex-price-discount-settings.php:397
+#: includes/elex-price-discount-settings.php:429
+#: includes/elex-price-discount-settings.php:461
+#: includes/elex-price-discount-settings.php:469
+#: includes/elex-price-discount-settings.php:485
+msgid "Enable"
+msgstr "Aktivera"
+
+#: includes/elex-html-price-suffix.php:11
+msgid "Price Suffix Table"
+msgstr "Prissuffixtabell"
+
+#: includes/elex-html-price-suffix.php:16
+#: includes/elex-price-discount-settings.php:249
+msgid "Suffix Text"
+msgstr "Suffixtext"
+
+#: includes/elex-html-product-price-adjustment.php:30
+#: includes/elex-html-product-price-adjustment_catalog.php:11
+#: includes/elex-price-discount-settings.php:281
+#: includes/elex-price-discount-settings.php:395
+#: includes/elex-price-discount-settings.php:513
+msgid "Remove Add to Cart"
+msgstr "Ta bort Lägg i varukorg"
+
+#: includes/elex-html-product-price-adjustment.php:35
+#: includes/elex-html-product-price-adjustment_catalog.php:16
+msgid "Check to remove Add to Cart."
+msgstr "Kontrollera att ta bort Lägg i kundvagnen."
+
+#: includes/elex-html-product-price-adjustment.php:41
+#: includes/elex-html-product-price-adjustment.php:129
+#: includes/elex-html-product-price-adjustment_catalog.php:23
+#: includes/elex-price-discount-settings.php:289
+#: includes/elex-price-discount-settings.php:403
+#: includes/elex-price-discount-settings.php:522
+msgid "Shop Page"
+msgstr "Butiksida"
+
+#: includes/elex-html-product-price-adjustment.php:43
+#: includes/elex-html-product-price-adjustment.php:131
+#: includes/elex-html-product-price-adjustment_catalog.php:25
+#: includes/elex-price-discount-settings.php:297
+#: includes/elex-price-discount-settings.php:411
+#: includes/elex-price-discount-settings.php:530
+msgid "Product Page"
+msgstr "Produktsida"
+
+#: includes/elex-html-product-price-adjustment.php:46
+#: includes/elex-html-product-price-adjustment.php:90
+#: includes/elex-html-product-price-adjustment.php:134
+#: includes/elex-html-product-price-adjustment.php:196
+#: includes/elex-html-product-price-adjustment_catalog.php:28
+#: includes/elex-html-product-price-adjustment_catalog.php:72
+msgid "Placeholder text"
+msgstr "Platshållare"
+
+#: includes/elex-html-product-price-adjustment.php:49
+#: includes/elex-html-product-price-adjustment.php:137
+#: includes/elex-price-discount-settings.php:307
+#: includes/elex-price-discount-settings.php:421
+#: includes/elex-price-discount-settings.php:540
+msgid ""
+"Enter a text or html content to display when Add to Cart button is removed. "
+"Leave it empty if you don't want to show any content."
+msgstr ""
+"Ange ett text- eller html-innehåll som ska visas när knappen Lägg till i "
+"kundvagnen tas bort. Lämna det tomt om du inte vill visa något innehåll."
+
+#: includes/elex-html-product-price-adjustment.php:54
+#: includes/elex-html-product-price-adjustment_catalog.php:36
+#: includes/elex-price-discount-settings.php:314
+#: includes/elex-price-discount-settings.php:427
+#: includes/elex-price-discount-settings.php:546
+msgid "Customize Add to Cart"
+msgstr "Anpassa Lägg i varukorg"
+
+#: includes/elex-html-product-price-adjustment.php:59
+#: includes/elex-html-product-price-adjustment_catalog.php:41
+#: includes/elex-price-discount-settings.php:319
+msgid "Check to customize Add to Cart."
+msgstr "Kontrollera att anpassa Lägg i kundvagnen."
+
+#: includes/elex-html-product-price-adjustment.php:62
+#: includes/elex-html-product-price-adjustment.php:159
+#: includes/elex-html-product-price-adjustment_catalog.php:44
+#: includes/elex-price-discount-settings.php:322
+#: includes/elex-price-discount-settings.php:435
+#: includes/elex-price-discount-settings.php:555
+msgid "Change Button Text (Product Page)"
+msgstr "Ändra knapptext (produktsida)"
+
+#: includes/elex-html-product-price-adjustment.php:65
+#: includes/elex-html-product-price-adjustment.php:162
+#: includes/elex-html-product-price-adjustment_catalog.php:47
+#: includes/elex-price-discount-settings.php:324
+#: includes/elex-price-discount-settings.php:437
+#: includes/elex-price-discount-settings.php:557
+msgid ""
+"Enter a text to replace the existing Add to Cart button text on the product "
+"page."
+msgstr ""
+"Ange en text för att ersätta den befintliga knappen Lägg till i kundvagnen "
+"på produktsidan."
+
+#: includes/elex-html-product-price-adjustment.php:68
+#: includes/elex-html-product-price-adjustment.php:165
+#: includes/elex-html-product-price-adjustment_catalog.php:50
+#: includes/elex-price-discount-settings.php:330
+#: includes/elex-price-discount-settings.php:443
+#: includes/elex-price-discount-settings.php:563
+msgid "Change Button Text (Shop Page)"
+msgstr "Ändra knapptext (butikssida)"
+
+#: includes/elex-html-product-price-adjustment.php:71
+#: includes/elex-html-product-price-adjustment.php:168
+#: includes/elex-html-product-price-adjustment_catalog.php:53
+#: includes/elex-price-discount-settings.php:332
+#: includes/elex-price-discount-settings.php:445
+#: includes/elex-price-discount-settings.php:565
+msgid ""
+"Enter a text to replace the existing Add to Cart button text on the shop "
+"page."
+msgstr ""
+"Ange en text för att ersätta den befintliga knappen Lägg till i "
+"kundvagnsknappen på butikssidan."
+
+#: includes/elex-html-product-price-adjustment.php:74
+#: includes/elex-html-product-price-adjustment.php:171
+#: includes/elex-html-product-price-adjustment_catalog.php:56
+#: includes/elex-price-discount-settings.php:338
+#: includes/elex-price-discount-settings.php:451
+#: includes/elex-price-discount-settings.php:571
+msgid "Change Button URL"
+msgstr "Ändra knapp-URL"
+
+#: includes/elex-html-product-price-adjustment.php:77
+#: includes/elex-html-product-price-adjustment.php:174
+#: includes/elex-html-product-price-adjustment_catalog.php:59
+#: includes/elex-price-discount-settings.php:340
+#: includes/elex-price-discount-settings.php:453
+#: includes/elex-price-discount-settings.php:573
+msgid ""
+"Enter a url to redirect customers from Add to Cart button. Leave this field "
+"empty to not change the button functionality. Make sure to enter a text in "
+"the above fields to apply these changes."
+msgstr ""
+"Ange en url om du vill omdirigera kunder från knappen Lägg till i kundvagn. "
+"Lämna det här fältet tomt om du inte vill ändra knappfunktionen. Se till att "
+"ange en text i ovanstående fält för att tillämpa dessa ändringar."
+
+#: includes/elex-html-product-price-adjustment.php:82
+#: includes/elex-html-product-price-adjustment_catalog.php:64
+#: includes/elex-price-discount-settings.php:347
+#: includes/elex-price-discount-settings.php:467
+#: includes/elex-price-discount-settings.php:588
+msgid "Hide Price"
+msgstr "Dölj pris"
+
+#: includes/elex-html-product-price-adjustment.php:87
+#: includes/elex-html-product-price-adjustment_catalog.php:69
+msgid "Check to hide price."
+msgstr "Kontrollera att dölja pris."
+
+#: includes/elex-html-product-price-adjustment.php:93
+#: includes/elex-html-product-price-adjustment.php:199
+#: includes/elex-price-discount-settings.php:357
+#: includes/elex-price-discount-settings.php:477
+msgid ""
+"Enter the text you want to display when price is removed. Leave it empty if "
+"you don't want to show any placeholder text."
+msgstr ""
+"Ange den text som du vill visa när priset tas bort. Lämna den tom om du inte "
+"vill visa någon platshållartext."
+
+#: includes/elex-html-product-price-adjustment.php:98
+msgid "Hide Product"
+msgstr "Dölj produkt"
+
+#: includes/elex-html-product-price-adjustment.php:103
+msgid "Check to hide product."
+msgstr "Kontrollera att dölja produkten."
+
+#: includes/elex-html-product-price-adjustment.php:109
+msgid " Remove Add to Cart"
+msgstr "Ta bort Lägg i varukorg"
+
+#: includes/elex-html-product-price-adjustment.php:123
+msgid " Select the user role(s) for which you want to remove Add to Cart."
+msgstr "Välj den användarroll som du vill ta bort Lägg till i kundvagnen."
+
+#: includes/elex-html-product-price-adjustment.php:142
+msgid " Customize Add to Cart"
+msgstr "Anpassa Lägg i varukorg"
+
+#: includes/elex-html-product-price-adjustment.php:156
+msgid " Select the user role(s) for which you want to customize Add to Cart."
+msgstr "Välj den användarroll som du vill anpassa Lägg till i kundvagnen för."
+
+#: includes/elex-html-product-price-adjustment.php:179
+msgid " Hide Price"
+msgstr "Dölj pris"
+
+#: includes/elex-html-product-price-adjustment.php:193
+msgid " Select the user role(s) for which you want to hide price."
+msgstr "Välj den användarroll som du vill dölja priset för."
+
+#: includes/elex-html-product-price-adjustment.php:204
+msgid " Hide Product"
+msgstr "Dölj produkt"
+
+#: includes/elex-html-product-price-adjustment.php:218
+msgid " Select the user role(s) for which you want to hide product."
+msgstr "Välj den användarroll som du vill dölja produkten för."
+
+#: includes/elex-html-product-price-adjustment.php:244
+msgid " Individual Product Price Adjustment"
+msgstr "Individuell produktprisjustering"
+
+#: includes/elex-html-product-price-adjustment.php:247
+msgid " Enable"
+msgstr "Aktivera"
+
+#: includes/elex-html-product-price-adjustment.php:253
+msgid ""
+" Drag and drop user roles to set priority. If a single user has multiple "
+"user roles assigned, the user role with the highest priority will be chosen. "
+"Choose 'D' for DISCOUNT and 'M' for MARKUP."
+msgstr ""
+"Dra och släpp användarroller för att ange prioritet. Om en enskild användare "
+"har flera användarroller tilldelade väljs användarrollen med högsta "
+"prioritet. Välj D för RABATT och \"M\" för MARKUP."
+
+#: includes/elex-html-product-price-adjustment_catalog.php:8
+msgid "Catalog mode options:"
+msgstr "Alternativ för katalogläge:"
+
+#: includes/elex-html-product-price-adjustment_catalog.php:9
+msgid ""
+"The changes you make here will be applicable across user roles. You can "
+"exclude Administrator role from these settings. Catalog Mode Settings will "
+"override Role Based & Unregistered User Settings."
+msgstr ""
+"De ändringar du gör här kommer att gälla i användarroller. Du kan utesluta "
+"administratörsroll från dessa inställningar. Inställningar för katalogläge "
+"åsidosätter rollbaserade & oregistrerade användarinställningar."
+
+#: includes/elex-html-product-price-adjustment_catalog.php:31
+msgid ""
+"Enter a text or html content to show as placeholder when Add to Cart button "
+"is removed. Leave it empty if you don't want to show any content."
+msgstr ""
+"Ange ett text- eller html-innehåll som ska visas som platshållare när "
+"knappen Lägg till i kundvagnen tas bort. Lämna det tomt om du inte vill visa "
+"något innehåll."
+
+#: includes/elex-html-product-price-adjustment_catalog.php:75
+msgid ""
+"Enter the text you want to show when price is removed. Leave it empty if you "
+"don't want to show any placeholder text."
+msgstr ""
+"Ange den text som du vill visa när priset tas bort. Lämna den tom om du inte "
+"vill visa någon platshållartext."
+
+#: includes/elex-html-product-price-adjustment_catalog.php:78
+#: includes/elex-price-discount-settings.php:371
+msgid "Exclude Administrator"
+msgstr "Uteslut administratören"
+
+#: includes/elex-html-product-price-adjustment_catalog.php:83
+msgid ""
+"Check to exclude Administrator role from the above catalog mode settings."
+msgstr ""
+"Kontrollera att utesluta administratörsrollen från ovanstående "
+"kataloglägesinställningarna."
+
+#: includes/elex-html-product-role-based-price.php:11
+#: includes/elex-html-variation-product-role-based-price.php:11
+msgid "Role Based Price"
+msgstr "Rollbaserat pris"
+
+#: includes/elex-html-product-role-based-price.php:20
+#: includes/elex-html-variation-product-role-based-price.php:19
+#, php-format
+msgid "Price (%s)"
+msgstr "Pris (%s)"
+
+#: includes/elex-html-product-role-based-price.php:58
+#: includes/elex-html-variation-product-role-based-price.php:58
+msgid "Role Based Price "
+msgstr "Rollbaserat pris"
+
+#: includes/elex-html-product-role-based-price.php:61
+#: includes/elex-html-variation-product-role-based-price.php:61
+msgid ""
+"For setting up user roles eligible for individual price adjustment, go to "
+"Role Based Pricing settings -> Add roles for the field \"Individual Price "
+"Adjustment\"."
+msgstr ""
+"Om du vill ställa in användarroller som är berättigade till individuell "
+"prisjustering går du till rollbaserade prisinställningar –> Lägg till roller "
+"för fältet \"Individuell prisjustering\"."
+
+#: includes/elex-html-tax-options.php:10
+msgid "Tax Options Table"
+msgstr "Tabell över skattealternativ"
+
+#: includes/elex-html-tax-options.php:11
+msgid "This table handles only tax display option. To modify tax rate go to "
+msgstr ""
+"Den här tabellen hanterar endast alternativ för skattevisning. Så här ändrar "
+"du skattesatsen gå till"
+
+#: includes/elex-html-tax-options.php:13
+msgid "of Woocommerce."
+msgstr "av Woocommerce."
+
+#: includes/elex-html-tax-options.php:19
+msgid "Tax Type"
+msgstr "Skattetyp"
+
+#: includes/elex-html-tax-options.php:26 includes/elex-html-tax-options.php:80
+msgid "Default"
+msgstr "Standard"
+
+#: includes/elex-html-tax-options.php:27
+msgid "Show Price Including Tax"
+msgstr "Visa pris inklusive skatt"
+
+#: includes/elex-html-tax-options.php:28
+msgid "Show Price Excluding Tax"
+msgstr "Visa pris exklusive skatt"
+
+#: includes/elex-html-tax-options.php:29
+msgid "Show Price Including Tax in Shop"
+msgstr "Visa pris inklusive skatt i Butik"
+
+#: includes/elex-html-tax-options.php:30
+msgid "Show Price Including Tax in Cart and Checkout"
+msgstr "Visa pris inklusive skatt i kundvagn och kassan"
+
+#: includes/elex-html-tax-options.php:31
+msgid "Show Price Excluding Tax in Shop"
+msgstr "Visa pris exklusive skatt i Butik"
+
+#: includes/elex-html-tax-options.php:32
+msgid "Show Price Excluding Tax in Cart and Checkout"
+msgstr "Visa pris exklusive skatt i kundvagn och kassa"
+
+#: includes/elex-price-discount-admin.php:1403
+#, php-format
+msgctxt "Price range: from-to"
+msgid "%1$s&ndash;%2$s"
+msgstr "%1$s&ndash;%2$s"
+
+#: includes/elex-price-discount-admin.php:1407
+msgid "String(Free!)"
+msgstr "Sträng (Gratis!)"
+
+#: includes/elex-price-discount-settings.php:62
+#: includes/elex-price-discount-settings.php:674
+msgid "Role-based Settings"
+msgstr "Rollbaserade inställningar"
+
+#: includes/elex-price-discount-settings.php:63
+msgid "Unregistered User"
+msgstr "Oregistrerad användare"
+
+#: includes/elex-price-discount-settings.php:64
+msgid "Tax Option"
+msgstr "Alternativ för skatt"
+
+#: includes/elex-price-discount-settings.php:65
+msgid "Manage User Role"
+msgstr "Hantera användarroll"
+
+#: includes/elex-price-discount-settings.php:81
+#: includes/elex-price-discount-settings.php:679
+msgid "Catalog Mode"
+msgstr "Katalogläge"
+
+#: includes/elex-price-discount-settings.php:163
+msgid "Please select atleast one role to delete"
+msgstr "Välj iallafall en roll att ta bort"
+
+#: includes/elex-price-discount-settings.php:182
+msgid "User Role created successfully"
+msgstr "Användarroll har skapats"
+
+#: includes/elex-price-discount-settings.php:187
+msgid "User Role creation failed"
+msgstr "Skapandet av användarroll misslyckades"
+
+#: includes/elex-price-discount-settings.php:200
+msgid "User Role deleted successfully"
+msgstr "Användarrollen har tagits bort"
+
+#: includes/elex-price-discount-settings.php:220
+msgid "General and Tax Options:"
+msgstr "Allmänna alternativ och skattealternativ:"
+
+#: includes/elex-price-discount-settings.php:226
+msgid "Enable Tax Options"
+msgstr "Aktivera momsalternativ"
+
+#: includes/elex-price-discount-settings.php:231
+msgid "Check to enable Role specific tax options."
+msgstr "Kontrollera att aktivera rollspecifika skattealternativ."
+
+#: includes/elex-price-discount-settings.php:239
+msgid "Price Suffix"
+msgstr "Prissuffix"
+
+#: includes/elex-price-discount-settings.php:242
+msgid ""
+"Select the price suffix option you want to have. Choose General to apply "
+"globally. Choose Role specific to set different suffixes to different Roles."
+msgstr ""
+"Välj det prissuffixalternativ du vill ha. Välj Allmänt för att tillämpa "
+"globalt. Välj Roll som är specifik för att ställa in olika suffix på olika "
+"roller."
+
+#: includes/elex-price-discount-settings.php:251
+msgid "Enter the text you want to add as suffix to the price."
+msgstr "Ange den text som du vill lägga till som suffix i priset."
+
+#: includes/elex-price-discount-settings.php:275
+msgid "Catalog Mode Option:"
+msgstr "Alternativ för katalogläge:"
+
+#: includes/elex-price-discount-settings.php:277
+msgid ""
+"The changes you make here will be applicable across the site. You can "
+"exclude Administrator role from these changes.<br>Catalog Mode Settings will "
+"override Role Based, Unregistered User & Individual Product Settings."
+msgstr ""
+"De ändringar du gör här kommer att gälla på hela webbplatsen. Du kan "
+"utesluta administratörsroll från dessa ändringar.<br>Inställningar för "
+"katalogläge åsidosätter rollbaserade, oregistrerade användarinställningar "
+"och individuella produktinställningar."
+
+#: includes/elex-price-discount-settings.php:286
+#: includes/elex-price-discount-settings.php:400
+msgid "Check to remove Add to Cart option."
+msgstr "Kontrollera att ta bort lägg i kundvagn alternativet."
+
+#: includes/elex-price-discount-settings.php:305
+#: includes/elex-price-discount-settings.php:355
+#: includes/elex-price-discount-settings.php:419
+#: includes/elex-price-discount-settings.php:475
+#: includes/elex-price-discount-settings.php:597
+msgid "Placeholder Text"
+msgstr "Platshållartext"
+
+#: includes/elex-price-discount-settings.php:352
+msgid "Check to hide product price. This will also remove Add to Cart button."
+msgstr ""
+"Kontrollera att dölja produktpriset. Detta kommer också att ta bort Lägg i "
+"varukorgsknappen."
+
+#: includes/elex-price-discount-settings.php:363
+#: includes/elex-price-discount-settings.php:483
+#: includes/elex-price-discount-settings.php:605
+msgid "Hide Cart and Checkout Page"
+msgstr "Dölj kundvagns- och utcheckningssida"
+
+#: includes/elex-price-discount-settings.php:368
+#: includes/elex-price-discount-settings.php:488
+msgid "Check to disable access to Cart and Checkout pages."
+msgstr ""
+"Kontrollera att du inaktiverar åtkomsten till kundvagns- och kassasidor."
+
+#: includes/elex-price-discount-settings.php:376
+msgid ""
+"Check to exclude Administrator role from the above catalog mode settings"
+msgstr ""
+"Kontrollera att utesluta administratörsroll från ovanstående inställningar "
+"för katalogläge"
+
+#: includes/elex-price-discount-settings.php:389
+msgid "Unregistered User Options:"
+msgstr "Oregistrerade användaralternativ:"
+
+#: includes/elex-price-discount-settings.php:432
+msgid "Check to customize Add to Cart option."
+msgstr "Markera om du vill anpassa alternativet Lägg till i kundvagnen."
+
+#: includes/elex-price-discount-settings.php:459
+#: includes/elex-price-discount-settings.php:579
+#: includes/elex-price-discount-settings.php:689
+msgid "Hide Regular Price"
+msgstr "Dölj ordinarie pris"
+
+#: includes/elex-price-discount-settings.php:464
+msgid "Check to hide regular price when sale price is provided."
+msgstr ""
+"Kontrollera att dölja ordinarie pris när försäljningspriset tillhandahålls."
+
+#: includes/elex-price-discount-settings.php:472
+msgid "Check to hide product price. This will also remove Add to Cart option."
+msgstr ""
+"Kontrollera att dölja produktpriset. Detta kommer också att ta bort Lägg i "
+"varukorgen alternativ."
+
+#: includes/elex-price-discount-settings.php:501
+msgid "Sale Price"
+msgstr "Reapris"
+
+#: includes/elex-price-discount-settings.php:502
+msgid "Regular & Sale Price"
+msgstr "Ordinarie & försäljningspris"
+
+#: includes/elex-price-discount-settings.php:507
+msgid "User Role Specific Options:"
+msgstr "Specifika alternativ för användarroll:"
+
+#: includes/elex-price-discount-settings.php:515
+msgid "Select the user role(s) for which you want to hide Add to Cart option."
+msgstr "Välj den användarroll som du vill dölja lägg till i kundvagnen."
+
+#: includes/elex-price-discount-settings.php:538
+msgid "Placeholder Content"
+msgstr "Platshållarinnehåll"
+
+#: includes/elex-price-discount-settings.php:548
+msgid ""
+"Select the user role(s) for which you want to customize Add to Cart option."
+msgstr ""
+"Välj den användarroll som du vill anpassa alternativet Lägg till i "
+"kundvagnen."
+
+#: includes/elex-price-discount-settings.php:581
+msgid ""
+"Select the user role(s) for which you want to hide regular price of all the "
+"simple products which have sale prices."
+msgstr ""
+"Välj den användarroll som du vill dölja ordinarie pris för alla enkla "
+"produkter som har försäljningspriser för."
+
+#: includes/elex-price-discount-settings.php:590
+msgid ""
+"Select the user role(s) for which you want to hide product price. This will "
+"also remove Add to Cart option."
+msgstr ""
+"Välj den användarroll som du vill dölja produktpriset för. Detta kommer "
+"också att ta bort Lägg i varukorgen alternativ."
+
+#: includes/elex-price-discount-settings.php:599
+msgid ""
+"Enter a text you want to display when price is removed. Leave it empty if "
+"you don't want to show any text."
+msgstr ""
+"Ange en text som du vill visa när priset tas bort. Lämna den tom om du inte "
+"vill visa någon text."
+
+#: includes/elex-price-discount-settings.php:607
+msgid ""
+"Select the user role(s) for which you do not want to provide access to Cart "
+"and Checkout page"
+msgstr ""
+"Välj den användarroll som du inte vill ge åtkomst till sidan Kundvagn och "
+"utcheckning"
+
+#: includes/elex-price-discount-settings.php:614
+msgid "Individual Product Adjustment"
+msgstr "Individuell produktjustering"
+
+#: includes/elex-price-discount-settings.php:616
+msgid ""
+"Select the user role(s) for product level price adjustments. The price "
+"adjustments can be made in the individual product edit page."
+msgstr ""
+"Välj användarrollen för prisjusteringar på produktnivå. Prisjusteringarna "
+"kan göras på den enskilda produktredigerasidan."
+
+#: includes/elex-price-discount-settings.php:627
+msgid "Price Adjustment: (Discount/Markup)"
+msgstr "Prisjustering: (Rabatt/pålägg)"
+
+#: includes/elex-price-discount-settings.php:629
+msgid ""
+"Drag and drop User Roles to set priority. If a single User has multiple User "
+"Roles assigned, the User Role with the highest priority will be chosen. "
+"Select a category to apply price adjustment to the products which belong to "
+"that category. If no particular category is selected, the price adjustment "
+"will be applied to all the products.<br><p><strong>Price Adjustment - Choose "
+"'D' for DISCOUNT and 'M' for MARKUP.</strong></p>"
+msgstr ""
+"Dra och släpp användarroller för att ange prioritet. Om en enskild användare "
+"har tilldelatflera användarroller väljs användarrollen med högsta prioritet. "
+"Välj en kategori om du vill tillämpa prisjustering på de produkter som "
+"tillhör den kategorin. Om ingen särskild kategori väljs tillämpas "
+"prisjusteringen på alla produkter.<br><p><strong>Prisjustering - Välj 'D' "
+"för RABATT och \"M\" för MARKUP.</strong></p>"
+
+#: includes/elex-price-discount-settings.php:633
+msgid " Price Adjustment applied to "
+msgstr "Prisjustering tillämpas på"
+
+#: includes/elex-price-discount-settings.php:636
+msgid ""
+"Select where you want to apply the discount/markup. This is applicable to "
+"individual product level price adjustment also. If a product does not have "
+"sale price, adjustment will be applied only to the regular price."
+msgstr ""
+"Välj var du vill använda rabatten/markeringen. Detta gäller även för "
+"individuell prisjustering på produktnivå. Om en produkt inte har "
+"försäljningspris kommer justeringendast att tillämpas på det ordinarie "
+"priset."
+
+#: includes/elex-price-discount-settings.php:691
+msgid "Check to hide product regular price"
+msgstr "Kontrollera att dölja produktens ordinarie pris"
+
+#: includes/elex-price-discount-settings.php:907
+msgid "Category Name Background Color"
+msgstr "Bakgrundsfärg för kategorinamn"
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:373
+#, php-format
+msgid ""
+"The license key for %s has expired. You can reactivate or purchase a license "
+"key from your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+"Licensnyckeln för %s har löpt ut. Du kan återaktivera eller köpa en "
+"licensnyckel från ditt konto <a href=\"%s\" target=\"_blank\"> "
+"instrumentpanel </a>."
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:384
+#, php-format
+msgid ""
+"The subscription for %s is on-hold. You can reactivate the subscription from "
+"your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+"Prenumerationen på %s är kvar. Du kan återaktivera prenumerationen från ditt "
+"konto <a href=\"%s\" target=\"_blank\"> instrumentpanel </a>."
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:395
+#, php-format
+msgid ""
+"The subscription for %s has been cancelled. You can renew the subscription "
+"from your account <a href=\"%s\" target=\"_blank\">dashboard</a>. A new "
+"license key will be emailed to you after your order has been completed."
+msgstr ""
+"Prenumerationen på %s har annullerats. Du kan förnya prenumerationen från "
+"ditt konto <a href=\"%s\" target=\"_blank\"> instrumentbräda </a>. En ny "
+"licensnyckel kommer att skickas till dig när din beställning är klar."
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:406
+#, php-format
+msgid ""
+"The subscription for %s has expired. You can reactivate the subscription "
+"from your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+"Prenumerationen på %s har löpt ut. Du kan återaktivera prenumerationen från "
+"ditt konto <a href=\"%s\" target=\"_blank\"> instrumentpanel </a>."
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:417
+#, php-format
+msgid ""
+"The subscription for %s has been suspended. You can reactivate the "
+"subscription from your account <a href=\"%s\" target=\"_blank\">dashboard</"
+"a>."
+msgstr ""
+"Prenumerationen på %s har avbrutits. Du kan återaktivera prenumerationen "
+"från ditt konto <a href=\"%s\" target=\"_blank\"> instrumentpanel </a>."
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:428
+#, php-format
+msgid ""
+"The subscription for %s is still pending. You can check on the status of the "
+"subscription from your account <a href=\"%s\" target=\"_blank\">dashboard</"
+"a>."
+msgstr ""
+"Prenumerationen på %s är fortfarande pågående. Du kan kontrollera statusen "
+"för prenumerationen från ditt konto <a href=\"%s\" target=\"_blank\"> "
+"instrumentpanel </a>."
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:439
+#, php-format
+msgid ""
+"The subscription for %s has been placed in the trash and will be deleted "
+"soon. You can purchase a new subscription from your account <a href=\"%s\" "
+"target=\"_blank\">dashboard</a>."
+msgstr ""
+"Prenumerationen på %s har placerats i papperskorgen och kommer snart att "
+"raderas. Du kan köpa en ny prenumeration från ditt konto <a href=\"%s\" "
+"target=\"_blank\"> instrumentbräda </a>."
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:450
+#, php-format
+msgid ""
+"A subscription for %s could not be found. You can purchase a subscription "
+"from your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+"En prenumeration på %s kunde inte hittas. Du kan köpa en prenumeration från "
+"ditt konto <a href=\"%s\" target=\"_blank\"> instrumentbräda </a>."
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:461
+#, php-format
+msgid ""
+"A license key for %s could not be found. Maybe you forgot to enter a license "
+"key when setting up %s, or the key was deactivated in your account. You can "
+"reactivate license key at your plugin <a href=\"%s\" target=\"_blank"
+"\">settings page</a>."
+msgstr ""
+"En licensnyckel för %s kunde inte hittas. Kanske har du glömt att skriva in "
+"en licensnyckel när du konfigurerar% s, eller om nyckeln inaktiverades i "
+"ditt konto. Du kan återaktivera licensnyckel på <a href=\"%s\" target="
+"\"_blank\"> inställningssidan </a> på din plugin."
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:472
+#, php-format
+msgid ""
+"Download permission for %s has been revoked possibly due to a license key or "
+"subscription expiring. You can reactivate or purchase a license key from "
+"your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+"Nedladdningstillstånd för %s har återkallats eventuellt på grund av att en "
+"licensnyckel eller abonnemang upphör. Du kan återaktivera eller köpa en "
+"licensnyckel från ditt konto <a href=\"%s\" target=\"_blank\"> "
+"instrumentpanel </a>."
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:483
+#, php-format
+msgid ""
+"%s has not been activated. Go to the plugin <a href=\"%s\" target=\"_blank"
+"\">settings page</a> and enter the license key and license email to activate "
+"%s."
+msgstr ""
+"% s har inte aktiverats. Gå till plugin <a href=\"%s\" target=\"_blank\"> "
+"inställningssidan </a> och ange licensnyckel och licens-e-post för att "
+"aktivera% s."
+
+#: includes/wf_api_manager/class-wc-am-plugin-update.php:494
+#, php-format
+msgid ""
+"You changed the subscription for %s, so you will need to enter your new API "
+"License Key in the settings page. The License Key should have arrived in "
+"your email inbox, if not you can get it by logging into your account <a href="
+"\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+"Du har ändrat prenumerationen för %s, så du måste ange din nya API-"
+"licensnyckel på inställningssidan. Licensnyckeln borde ha kommit i din e-"
+"postbrevlåda, om du inte kan få det genom att logga in på ditt konto <a href="
+"\"%s\" target=\"_blank\"> instrumentpanel </a>. "
+
+#. Plugin Name of the plugin/theme
+msgid "ELEX WooCommerce Role-based Pricing Plugin & WooCommerce Catalog Mode"
+msgstr ""
+"ELEX WooCommerce Rollbaserad Prissättning Plugin & WooCommerce Katalog Mode"
+
+#. Plugin URI of the plugin/theme
+msgid ""
+"https://elextensions.com/plugin/woocommerce-catalog-mode-wholesale-role-"
+"based-pricing/"
+msgstr ""
+"https://elextensions.com/plugin/woocommerce-catalog-mode-wholesale-role-"
+"based-pricing/"
+
+#. Description of the plugin/theme
+msgid ""
+"Hide Price or Add to Cart option for guest and specific registered users for "
+"simple, variable and grouped products. Create user role specific product "
+"price. Enforce markup/discount on price for selected user roles. Also, turn "
+"your shop into catalog mode."
+msgstr ""
+"Dölj pris eller Lägg till i kundvagnen för gäst och specifika registrerade "
+"användare för enkla, variabla och grupperade produkter. Skapa "
+"användarrollspecifikt produktpris. Framtvinga markering/rabatt på pris för "
+"valda användarroller. Förvandla även din butik till katalogläge."
+
+#. Author of the plugin/theme
+msgid "ELEXtensions"
+msgstr "ELEXtensions"
+
+#. Author URI of the plugin/theme
+msgid "https://elextensions.com"
+msgstr "https://elextensions.com"

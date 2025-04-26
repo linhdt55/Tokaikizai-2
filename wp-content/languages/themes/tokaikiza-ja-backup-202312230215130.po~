@@ -1,0 +1,516 @@
+# Copyright (C) 2020 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: _s 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/_s\n"
+"Last-Translator: \n"
+"Language-Team: 日本語\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-04-17T21:03:15+00:00\n"
+"PO-Revision-Date: 2023-12-22 05:24+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: _s\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Loco-Version: 2.6.6; wp-6.4.2"
+
+#: woocommerce/content-single-product.php:43
+msgid " products"
+msgstr "商品"
+
+#. used between list items, there is a space after the comma
+#: inc/template-tags.php:63
+msgid ", "
+msgstr ""
+
+#: woocommerce/myaccount/dashboard.php:34
+#: woocommerce/myaccount/dashboard.php:36
+#: woocommerce/myaccount/form-edit-account.php:21
+#: woocommerce/myaccount/navigation.php:30
+msgid "Account details"
+msgstr "アカウント詳細"
+
+#: functions.php:139 functions.php:150 functions.php:161
+msgid "Add widgets here."
+msgstr ""
+
+#: inc/functions-shipping-woo.php:676
+msgid "Address"
+msgstr "住所"
+
+#: inc/custom_woo.php:234 inc/custom_woo.php:236
+msgid "Availability: "
+msgstr "在庫状況："
+
+#: inc/elementor/parts-finder.php:60
+msgid "Brand"
+msgstr "ブランド"
+
+#: inc/elementor/breadcrumb_elementor.php:12
+msgid "Breadcrumb Elementor"
+msgstr ""
+
+#: inc/custom_woo.php:274
+msgid "Buy It Now"
+msgstr "即購入"
+
+#: woocommerce/myaccount/form-edit-account.php:44
+msgid "Change Password"
+msgstr "パスワードの変更"
+
+#: woocommerce/archive-product.php:236
+msgid "Clear All"
+msgstr "すべてクリア"
+
+#: woocommerce/archive-product.php:237
+msgid "Close Filters"
+msgstr "フィルターを閉じる"
+
+#: comments.php:68
+msgid "Comments are closed."
+msgstr "コメントは締め切りました。"
+
+#: inc/custom_woo.php:293
+msgid "Complete Order"
+msgstr "注文を確定"
+
+#: woocommerce/myaccount/form-edit-account.php:55
+msgid "Confirm password"
+msgstr "パスワードを認証する"
+
+#. %s: Name of current post. Only visible to screen readers
+#: template-parts/content.php:40
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "読み続けてください<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#: inc/functions-shipping-woo.php:673
+msgid "Country"
+msgstr "国"
+
+#: woocommerce/myaccount/form-edit-account.php:47
+msgid "Current Password"
+msgstr "現在のパスワード"
+
+#: inc/functions-shipping-woo.php:38 inc/functions-shipping-woo.php:201
+msgid "Delivery To:"
+msgstr "送料を確認："
+
+#. Description of the theme
+msgid "Description"
+msgstr "説明"
+
+#: woocommerce/myaccount/form-login.php:57
+msgid "Do not have an account?"
+msgstr "アカウントをお持ちでない場合"
+
+#: woocommerce/myaccount/dashboard.php:59
+#: woocommerce/myaccount/form-edit-account.php:64
+msgid "Edit"
+msgstr "編集"
+
+#. %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:100 template-parts/content-page.php:39
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "編集 <span class=\"screen-reader-text\">%s</span>"
+
+#: woocommerce/myaccount/form-edit-address.php:33
+msgid "Edit Address"
+msgstr "住所を編集"
+
+#: woocommerce/myaccount/form-edit-account.php:26
+msgid "Edit Information"
+msgstr "情報の編集"
+
+#: woocommerce/myaccount/dashboard.php:51
+#: woocommerce/myaccount/form-edit-account.php:37
+msgid "email"
+msgstr "Eメール"
+
+#: inc/functions-shipping-woo.php:660 inc/functions-shipping-woo.php:663
+#: inc/functions-shipping-woo.php:705
+msgid "Email Address"
+msgstr "電子メールアドレス"
+
+#: inc/functions-shipping-woo.php:675
+msgid "Enter a post code or ZIP"
+msgstr "郵便番号を入力"
+
+#: woocommerce/myaccount/form-edit-account.php:56
+msgid "Enter confirm password"
+msgstr "確認パスワードを入力"
+
+#: woocommerce/myaccount/form-edit-account.php:48
+msgid "Enter current password"
+msgstr "現在のパスワードを入力"
+
+#: woocommerce/myaccount/form-edit-account.php:52
+msgid "Enter new password"
+msgstr "新しいパスワードを入力"
+
+#: inc/functions-shipping-woo.php:666
+msgid "Enter notes about your orders, delivery, etc."
+msgstr "注文、配送などに関するメモを入力します。"
+
+#: inc/functions-shipping-woo.php:661 inc/functions-shipping-woo.php:664
+#: inc/functions-shipping-woo.php:706
+msgid "Enter your email address"
+msgstr "メールアドレスを入力してください"
+
+#: inc/functions-shipping-woo.php:678
+msgid "Enter your first name"
+msgstr "名を入力してください"
+
+#: inc/functions-shipping-woo.php:679
+msgid "Enter your last name"
+msgstr "姓を入力してください"
+
+#: inc/functions-shipping-woo.php:655 inc/functions-shipping-woo.php:658
+#: inc/functions-shipping-woo.php:702
+msgid "Enter your phone number"
+msgstr "電話番号を入力してください"
+
+#: woocommerce/cart/cart.php:179 woocommerce/checkout/form-coupon.php:34
+msgid "Enter your promotion code"
+msgstr "プロモーションコードを入力"
+
+#: inc/functions-shipping-woo.php:680
+msgid "Enter your town/city"
+msgstr "市区町村を入力してください"
+
+#: inc/functions-shipping-woo.php:131
+msgid "Enter: 0 or 1"
+msgstr "入力: 0 または 1"
+
+#: inc/custom_woo.php:60
+msgid "Filter"
+msgstr "フィルター"
+
+#: woocommerce/myaccount/dashboard.php:41
+#: woocommerce/myaccount/form-edit-account.php:29
+msgid "first name"
+msgstr "ファーストネーム"
+
+#: inc/functions-shipping-woo.php:302
+msgid "Free shipping"
+msgstr "送料無料"
+
+#: inc/elementor/hitch-member.php:12
+msgid "Hitch Member"
+msgstr "ヒッチメンバー"
+
+#: inc/functions-shipping-woo.php:677
+msgid "House number, street name, etc."
+msgstr "番地など"
+
+#. URI of the theme
+#. Author URI of the theme
+msgid "http://tokaikiza.me/"
+msgstr ""
+
+#: footer.php:16
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: inc/custom_woo.php:234 inc/custom_woo.php:236
+msgid "In stock"
+msgstr "在庫あり"
+
+#: 404.php:22
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr "この場所では何も見つからなかったようです。 以下のリンクのいずれかを試すか、検索してみてください。"
+
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "お探しのものが見つからないようです。 おそらく検索が役立つかもしれません。"
+
+#: woocommerce/myaccount/dashboard.php:46
+#: woocommerce/myaccount/form-edit-account.php:33
+msgid "last name"
+msgstr "苗字"
+
+#. %s: post title
+#: inc/template-tags.php:83
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "コメントを残す<span class=\"screen-reader-text\"> on %s</span>"
+
+#. used between list items, there is a space after the comma
+#: inc/template-tags.php:70
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#: woocommerce/myaccount/navigation.php:38
+msgid "Log Out"
+msgstr "ログアウト"
+
+#: woocommerce/archive-product.php:202 inc/elementor/parts-finder.php:77
+msgid "Model"
+msgstr "モデル"
+
+#: 404.php:31
+msgid "Most Used Categories"
+msgstr "最も使用されるカテゴリ"
+
+#: woocommerce/myaccount/form-edit-account.php:51
+msgid "New password"
+msgstr "新パスワード"
+
+#: single.php:25
+msgid "Next:"
+msgstr "次："
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "何も見つかりません"
+
+#: woocommerce/archive-product.php:166
+msgid "OEM Parts Finder"
+msgstr "OEM パーツ ファインダー"
+
+#. 1: title.
+#: comments.php:35
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr "ひとつの想い &ldquo;%1$s&rdquo;"
+
+#: 404.php:18
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "ページが見つかりません。"
+
+#: template-parts/content-page.php:25 template-parts/content.php:53
+msgid "Pages:"
+msgstr "ページ:"
+
+#: inc/elementor/parts-finder.php:12
+msgid "Parts Finder"
+msgstr "パーツファインダー"
+
+#: woocommerce/myaccount/dashboard.php:56
+msgid "password"
+msgstr "パスワード"
+
+#: woocommerce/checkout/payment.php:25
+msgid "Payment"
+msgstr "支払い"
+
+#: inc/functions-shipping-woo.php:654 inc/functions-shipping-woo.php:657
+#: inc/functions-shipping-woo.php:701
+msgid "Phone Number"
+msgstr "電話番号"
+
+#: functions.php:159
+msgid "Popup send mail"
+msgstr "ポップアップメール送信"
+
+#. %s: post author.
+#: inc/template-tags.php:46
+msgctxt "post author"
+msgid "by %s"
+msgstr "沿って  %s"
+
+#: inc/functions-shipping-woo.php:674
+msgid "Post Code/ZIP"
+msgstr "郵便番号"
+
+#. %s: post date.
+#: inc/template-tags.php:30
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "ポストする %s"
+
+#. 1: list of categories.
+#: inc/template-tags.php:66
+msgid "Posted in %1$s"
+msgstr "で掲示されます %1$s"
+
+#: single.php:24
+msgid "Previous:"
+msgstr "前："
+
+#: woocommerce/single-product/add-to-cart/grouped.php:46
+msgid "Price"
+msgstr "価格"
+
+#: functions.php:55
+msgid "Primary"
+msgstr "主要な"
+
+#: header.php:52
+msgid "Primary Menu"
+msgstr "メインメニュー"
+
+#: woocommerce/single-product/add-to-cart/grouped.php:45
+msgid "Product"
+msgstr "商品"
+
+#: inc/custom_woo.php:183
+msgid "Product Number: "
+msgstr "商品番号："
+
+#: woocommerce/cart/cart-totals.php:55
+msgid "Promotion"
+msgstr "昇進"
+
+#: woocommerce/checkout/form-coupon.php:27
+msgid "Promotion Code"
+msgstr "販売促進コード"
+
+#. %s: CMS name, i.e. WordPress.
+#: footer.php:19
+msgid "Proudly powered by %s"
+msgstr "が誇らしげに提供  %s"
+
+#: woocommerce/single-product/add-to-cart/grouped.php:47
+msgid "Qty"
+msgstr "数量"
+
+#: inc/custom_woo.php:224
+msgid "Quantity:"
+msgstr "数量："
+
+#. 1: link to WP admin new post page.
+#: template-parts/content-none.php:24
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "最初の投稿を公開する準備はできましたか? <a href=\"%1$s\">ここから始めましょう</a>."
+
+#: functions.php:148
+msgid "Recently viewed products widget"
+msgstr "最近見た商品ウィジェット"
+
+#: woocommerce/myaccount/form-login.php:57
+msgid "Register here"
+msgstr "ここに登録"
+
+#: woocommerce/archive-product.php:212 inc/elementor/hitch-member.php:106
+#: inc/elementor/parts-finder.php:105
+msgid "Reset"
+msgstr "リセット"
+
+#: woocommerce/myaccount/form-edit-account.php:64
+msgid "Save"
+msgstr "セーブ"
+
+#: functions.php:266 woocommerce/archive-product.php:213
+#: inc/elementor/hitch-member.php:105 inc/elementor/parts-finder.php:104
+msgid "Search"
+msgstr "検索"
+
+#. %s: search query.
+#: search.php:22
+msgid "Search Results for: %s"
+msgstr "検索結果: %s"
+
+#: inc/functions-shipping-woo.php:440 inc/elementor/parts-finder.php:62
+msgid "Select Brand"
+msgstr "ブランドを選択"
+
+#: inc/functions-shipping-woo.php:204
+msgid "Select delivery"
+msgstr "配送を選択"
+
+#: inc/functions-shipping-woo.php:45
+msgid "Select delivery shipping"
+msgstr "お届け送料を選択"
+
+#: inc/functions-shipping-woo.php:461 woocommerce/archive-product.php:204
+#: inc/elementor/parts-finder.php:79
+msgid "Select Model"
+msgstr "モデルを選択"
+
+#: inc/functions-shipping-woo.php:487 inc/functions-shipping-woo.php:508
+#: inc/elementor/hitch-member.php:45 inc/elementor/hitch-member.php:62
+#: inc/elementor/hitch-member.php:79
+msgid "Select option"
+msgstr "オプションを選択"
+
+#: woocommerce/archive-product.php:187 inc/elementor/parts-finder.php:45
+msgid "Select Year"
+msgstr "年を選択"
+
+#: inc/custom_woo.php:241
+msgid "Send An Email For Details"
+msgstr "商品詳細について問い合わせする"
+
+#: inc/functions-shipping-woo.php:34
+msgid "Setting Delivery Shipping"
+msgstr "配送方法の設定"
+
+#: inc/custom_woo.php:141
+msgid "Share via: "
+msgstr "シェア:"
+
+#: inc/functions-shipping-woo.php:218
+msgid "Shipping Fee:"
+msgstr "送料:"
+
+#: functions.php:137
+msgid "Sidebar"
+msgstr "サイドバー"
+
+#: woocommerce/myaccount/form-login.php:117
+msgid "Sign In Now"
+msgstr "今すぐサインイン"
+
+#: header.php:28
+msgid "Skip to content"
+msgstr "コンテンツへスキップ"
+
+#: template-parts/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr "申し訳ありませんが、検索用語に一致するものはありませんでした。 別のキーワードでもう一度お試しください。"
+
+#: woocommerce/loop/orderby.php:25
+msgid "Sort by"
+msgstr "並び替え"
+
+#. 1: list of tags.
+#: inc/template-tags.php:73
+msgid "Tagged %1$s"
+msgstr "タグ付き  %1$s"
+
+#. 1: Theme name, 2: Theme author.
+#: footer.php:25
+msgid "Theme: %1$s by %2$s."
+msgstr "テーマ: %2$s による %1$s。"
+
+#. Name of the theme
+msgid "tokaikiza"
+msgstr ""
+
+#. Author of the theme
+msgid "tokaikiza.me"
+msgstr ""
+
+#. %1$s: smiley
+#: 404.php:49
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "毎月のアーカイブで探してみてください。 %1$s"
+
+#: inc/custom_woo.php:63
+msgid "View as"
+msgstr "次のように表示"
+
+#: woocommerce/archive-product.php:185 inc/elementor/parts-finder.php:43
+msgid "Year"
+msgstr "年"
+
+#: inc/elementor/hitch-member.php:43
+msgid "メーカー"
+msgstr ""
+
+#: inc/elementor/hitch-member.php:60
+msgid "車種"
+msgstr ""
+
+#: inc/elementor/hitch-member.php:77
+msgid "適合型式"
+msgstr ""
