@@ -149,7 +149,14 @@ if ( ! defined( 'WPINC' ) ) {
 				<td>
 					<a class="wt_iew_delete_history" data-href="<?php echo str_replace('_history_id_', $history_item['id'], $delete_url);?>"><?php _e('Delete'); ?></a>
 					<?php
-					$form_data=maybe_unserialize($history_item['data']);
+
+					$form_data_raw = wp_unslash($history_item['data']);
+					$form_data = is_array($form_data_raw) ? 
+							array_map(function($item) {
+								return is_string($item) ? json_decode($item, true) : $item;
+							}, $form_data_raw) : 
+							json_decode($form_data_raw, true);
+
 					$action_type=$history_item['template_type'];
 					if($form_data && is_array($form_data))
 					{

@@ -23,13 +23,13 @@ class LoginLockdown_Stats extends LoginLockdown
 
     $days = array();
     for ($i = $ndays; $i >= 0; $i--) {
-      $days[date("Y-m-d", strtotime('-' . $i . ' days'))] = 0;
+      $days[gmdate("Y-m-d", strtotime('-' . $i . ' days'))] = 0;
     }
 
     if ($type == 'locks') {
-      $results = $wpdb->get_results("SELECT COUNT(*) as count,DATE_FORMAT(lockdown_date, '%Y-%m-%d') AS date FROM " . $wpdb->lockdown_lockdowns . " GROUP BY DATE_FORMAT(lockdown_date, '%Y%m%d')");
+      $results = $wpdb->get_results("SELECT COUNT(*) as count,DATE_FORMAT(lockdown_date, '%Y-%m-%d') AS date FROM " . $wpdb->lockdown_lockdowns . " GROUP BY DATE_FORMAT(lockdown_date, '%Y%m%d')"); //phpcs:ignore
     } else {
-      $results = $wpdb->get_results("SELECT COUNT(*) as count,DATE_FORMAT(login_attempt_date, '%Y-%m-%d') AS date FROM " . $wpdb->lockdown_login_fails . " GROUP BY DATE_FORMAT(login_attempt_date, '%Y%m%d')");
+      $results = $wpdb->get_results("SELECT COUNT(*) as count,DATE_FORMAT(login_attempt_date, '%Y-%m-%d') AS date FROM " . $wpdb->lockdown_login_fails . " GROUP BY DATE_FORMAT(login_attempt_date, '%Y%m%d')"); //phpcs:ignore
     }
 
     $total = 0;

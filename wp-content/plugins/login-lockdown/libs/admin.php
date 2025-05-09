@@ -34,8 +34,10 @@ class LoginLockdown_Admin extends LoginLockdown
       wp_enqueue_script('loginlockdown-tooltipster', LOGINLOCKDOWN_PLUGIN_URL . 'js/tooltipster.bundle.min.js', array('jquery'), self::$version, true);
       wp_enqueue_script('loginlockdown-dataTables', LOGINLOCKDOWN_PLUGIN_URL . 'js/jquery.dataTables.min.js', array(), self::$version, true);
       wp_enqueue_script('loginlockdown-chart', LOGINLOCKDOWN_PLUGIN_URL . 'js/chart.min.js', array(), self::$version, true);
-      wp_enqueue_script('loginlockdown-moment', LOGINLOCKDOWN_PLUGIN_URL . 'js/moment.min.js', array(), self::$version, true);
+      wp_enqueue_script('moment');
       wp_enqueue_script('loginlockdown-sweetalert', LOGINLOCKDOWN_PLUGIN_URL . 'js/sweetalert2.min.js', array(), self::$version, true);
+
+      $captcha = LoginLockdown_Functions::math_captcha_generate();
 
       $js_localize = array(
         'undocumented_error' => __('An undocumented error has occurred. Please refresh the page and try again.', 'login-lockdown'),
@@ -43,7 +45,8 @@ class LoginLockdown_Admin extends LoginLockdown
         'plugin_name' => __('Login Lockdown', 'login-lockdown'),
         'plugin_url' => LOGINLOCKDOWN_PLUGIN_URL,
         'icon_url' => LOGINLOCKDOWN_PLUGIN_URL . 'images/loginlockdown-loader.gif',
-        'captcha_url' => LOGINLOCKDOWN_PLUGIN_URL . 'libs/captcha.php?loginlockdown-generate-image=true&noise=1&rnd=' . esc_attr(rand(0, 10000)),
+        'captcha_admin_test' => $captcha['img'],
+        'captcha_admin_test_token' => wp_hash($captcha['value']),
         'settings_url' => admin_url('options-general.php?page=loginlockdown'),
         'version' => self::$version,
         'site' => get_home_url(),
@@ -54,7 +57,7 @@ class LoginLockdown_Admin extends LoginLockdown
         'stats_unavailable' => 'Stats will be available once enough data is collected.',
         'stats_locks' => LoginLockdown_Stats::get_stats('locks'),
         'stats_fails' => LoginLockdown_Stats::get_stats('fails'),
-        'wp301_install_url' => add_query_arg(array('action' => 'loginlockdown_install_wp301', '_wpnonce' => wp_create_nonce('install_wp301'), 'rnd' => rand()), admin_url('admin.php')),
+        'wp301_install_url' => add_query_arg(array('action' => 'loginlockdown_install_wp301', '_wpnonce' => wp_create_nonce('install_wp301'), 'rnd' => wp_rand()), admin_url('admin.php')),
       );
 
       $js_localize['chart_colors'] = array('#29b99a', '#ff5429', '#ff7d5c', '#ffac97');

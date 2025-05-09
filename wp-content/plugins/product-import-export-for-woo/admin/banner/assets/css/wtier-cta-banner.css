@@ -1,0 +1,188 @@
+.wtier-cta-banner { background: #fff; }
+
+.wtier-cta-content { margin: -6px -12px -12px -12px; }
+
+.wtier-cta-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding: 12px;
+    border-bottom: 1px solid #e2e4e7;
+    background: #F9FCFF;
+}
+
+.wtier-cta-icon {
+    width: 47px;
+    height: 47px;
+    border-radius: 4px;
+}
+
+.wt-smart-coupon-cta-icon {
+    width: 62px;
+    height: 61px;
+    border-radius: 4px;
+}
+
+.wtier-cta-header h3 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1d2327;
+    line-height: 130%;
+    padding: 0;
+}
+
+.wtier-cta-features {
+    margin: 0;
+    padding: 0 12px;
+    list-style: none;
+}
+
+.wtier-cta-features li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+    font-size: 12px;
+    color: #212121;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.wtier-cta-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 10%;
+    width: 13px;
+    height: 13px;
+    background: #4CAF50;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    line-height: 1;
+}
+
+.wtier-cta-footer {
+    margin-top: 20px;
+    padding: 0 12px 12px;
+    text-align: center;
+}
+
+.wtier-cta-button {
+    display: block;
+    background: #2270B1;
+    color: #fff !important;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 13px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.wtier-cta-button:hover,
+.wtier-cta-button:focus,
+.wtier-cta-button:active {
+    background: #135e96;
+    color: #fff !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.wtier-cta-guarantees {
+    margin: 15px 0;
+}
+
+.guarantee-icon {
+    font-size: 14px;
+}
+
+.wtier-cta-toggle {
+    display: inline-block;
+    color: #0500FF;
+    text-decoration: none;
+    font-size: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.wtier-cta-toggle:hover {
+    color: #135e96;
+    text-decoration: underline;
+}
+
+.wtier-cta-features .hidden-feature {
+    display: none;
+}
+
+.wtier-cta-features.show-all .hidden-feature {
+    display: flex;
+}
+
+/* Remove postbox-header arrows since we're using meta box */
+#wtier_product_import_export_pro .handle-actions,
+#wtier_coupon_import_export_pro .handle-actions {
+    display: none;
+}
+
+#wtier_product_import_export_pro h2.hndle,
+#wtier_coupon_import_export_pro h2.hndle {
+    display: none !important;
+}
+
+#wtier_product_import_export_pro .handlediv,
+#wtier_coupon_import_export_pro .handlediv {
+    display: none !important;
+}
+
+.wtier-cta-footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.wtier-cta-footer-links .wtier-cta-toggle {
+    color: #0500FF;
+    text-decoration: none;
+    font-size: 13px;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+.wtier-cta-footer-links .wtier-cta-toggle:focus,
+.wtier-cta-footer-links .wtier-cta-toggle:active {
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+.wtier-cta-footer-links .wtier-cta-button {
+    margin-bottom: 0;
+}
+
+.wtier-cta-footer-links a:first-child {
+    color: #0500FF;
+    text-decoration: none;
+    font-size: 13px;
+    text-decoration: underline;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+.wtier-cta-footer-links a:first-child:focus,
+.wtier-cta-footer-links a:first-child:active {
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+} 

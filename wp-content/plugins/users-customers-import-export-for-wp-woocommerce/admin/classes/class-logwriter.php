@@ -68,7 +68,7 @@ class Wt_Import_Export_For_Woo_Basic_Logwriter extends Wt_Import_Export_For_Woo_
 				$date_string = date_i18n( 'm-d-Y @ H:i:s' );
 				if ( is_array( $data ) ) {
 					foreach ( $data as $value ) {
-						self::write_row( $date_string . " - " . maybe_serialize( $value ) );
+						self::write_row( $date_string . " - " . wp_json_encode( $value ) );
 					}
 				} else {
 					self::write_row( $date_string . " - " . $data );
@@ -86,7 +86,7 @@ class Wt_Import_Export_For_Woo_Basic_Logwriter extends Wt_Import_Export_For_Woo_
 		self::init($file_path);
 		foreach($data_arr as $key => $data)
 		{
-			self::write_row(maybe_serialize($data));
+			self::write_row(wp_json_encode($data));
 		}
 		self::close_file_pointer();
 	}

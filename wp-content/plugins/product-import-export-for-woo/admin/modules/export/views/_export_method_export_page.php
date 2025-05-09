@@ -4,6 +4,34 @@ if (!defined('ABSPATH')) {
 }
 ?>
 <div class="wt_iew_export_main">
+    
+    <!-- <div id="product-type-notice" style="display:none;">
+        <div class="notice notice-warning" style="margin:0px; display:block; background:rgb(241, 239, 221);">
+            <?php
+            // Check if post type is product and has unsupported product types
+            $post_type = isset($_GET['wt_iew_export_post_type']) ? sanitize_text_field($_GET['wt_iew_export_post_type']) : '';
+                
+            $args = array(
+                    'post_type' => 'variable',
+                    'posts_per_page' => -1,
+                    'fields' => 'ids'
+                );
+                
+            $variable_products = wc_get_products( $args );
+                
+            if ($variable_products) {
+                ?>
+                <p>
+                    <strong>Uh oh! Unsupported Product Types Detected</strong><br/>
+                    Your site has variable products that the free version does not support. <a href="https://www.webtoffee.com/product/product-import-export-woocommerce/?utm_source=free_plugin_products_page&utm_medium=basic_revamp&utm_campaign=Product_Import_Export" target="_blank" rel="noopener noreferrer">Upgrade to Pro</a> to include them in your export/import.
+                </p>
+                    
+                <?php
+            }
+            ?>
+        </div>
+    </div> -->
+    
 	<p><?php echo $step_info['description']; ?></p>
 	
     <div class="wt_iew_warn wt_iew_method_export_wrn" style="display:none;">

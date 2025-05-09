@@ -529,7 +529,7 @@ jQuery(document).ready(function ($) {
 
   $(".settings_page_loginlockdown").on("click", "#verify-captcha", function (e) {
     e.preventDefault();
-    var captcha_response;
+    var captcha_response,captcha_response_token;
 
     loginlockdown_swal
       .fire({
@@ -541,10 +541,20 @@ jQuery(document).ready(function ($) {
             window.loginlockdown_captcha_script = document.createElement('script');
             if($('#captcha').val() == 'builtin'){
                 $('.loginlockdown-captcha-loader').remove();
-                $('#loginlockdown_captcha_box').html('<img src="' + loginlockdown_vars.captcha_url + '" /><br /><label for="captcha_response">Please solve</label><input id="captcha_response" type="number" value="" />');
+
+                var captcha_html = "";
+                captcha_html += '<p><label for="wpcaptcha_captcha">Are you human? Please solve:';
+                captcha_html += '<img class="loginlockdown-captcha-img" style="vertical-align: text-top;" src="' + loginlockdown_vars.captcha_admin_test + '" alt="Captcha" />';
+                captcha_html += '<input class="input" type="text" size="3" name="captcha_response" id="captcha_response" />';
+                captcha_html += '<input type="hidden" name="loginlockdown_captcha_token" id="loginlockdown_captcha_token" value="' + loginlockdown_vars.captcha_admin_test_token + '" />';
+                captcha_html += "</label></p>";
+
+                $('#loginlockdown_captcha_box').html(captcha_html);
                 $('#loginlockdown_captcha_box').on('change keyup blur', '#captcha_response', function(){
                     captcha_response = $(this).val();
                 });
+
+                captcha_response_token = $("#loginlockdown_captcha_token").val();
             }
         },
         heightAuto: false,
@@ -565,6 +575,7 @@ jQuery(document).ready(function ($) {
               tool: "verify_captcha",
               captcha_type: $('#captcha').val(),
               captcha_response: captcha_response,
+              captcha_response_token: captcha_response_token,
             },
           })
             .always(function (response) {

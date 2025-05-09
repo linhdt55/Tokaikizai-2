@@ -2,7 +2,7 @@
 /**
  * Order Status Rules for WooCommerce - Core Class
  *
- * @version 3.5.5
+ * @version 3.7.2
  * @since   1.0.0
  *
  * @author  Algoritmika Ltd.
@@ -262,7 +262,7 @@ class Alg_WC_Order_Status_Rules_Core {
 	/**
 	 * process_rules_url.
 	 *
-	 * @version 1.3.0
+	 * @version 3.7.2
 	 * @since   1.3.0
 	 *
 	 * @todo    (dev) optional "key" (for security)
@@ -270,7 +270,7 @@ class Alg_WC_Order_Status_Rules_Core {
 	 * @todo    (dev) optional "order ID to process" (https://wordpress.org/support/topic/orderid-trigger/)
 	 */
 	function process_rules_url() {
-		if ( isset( $_REQUEST['alg_wc_order_status_rules_process_rules'] ) ) {
+		if ( isset( $_REQUEST['alg_wc_order_status_rules_process_rules'] ) && ! is_admin() ) {
 			$this->process_rules();
 		}
 	}

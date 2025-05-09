@@ -183,10 +183,16 @@ class THWCFD_Utils_Field {
 	public static function prepare_field_from_posted_data($posted, $props){
 		$type = isset($posted['i_type']) ? trim(stripslashes($posted['i_type'])) : '';
 		$type = empty($type) ? trim(stripslashes($posted['i_original_type'])) : $type;
-	
+		$type = empty($type) ? trim(stripslashes($posted['i_otype'])) : $type;
+
+		$fname = isset($posted['i_name']) ? trim(stripslashes($posted['i_name'])) : '';
+		$fname = empty($fname) ? trim(stripslashes($posted['i_name_old'])) : $fname;
+
 		$field = self::create_field($type); 
+
 		
 		foreach( $props as $pname => $property ){
+
 			$iname  = 'i_'.$pname;
 			
 			$pvalue = '';
@@ -226,6 +232,10 @@ class THWCFD_Utils_Field {
 		$ftype = $field->get_property('type');
 		if(!$ftype){
 			$field->set_property('type', $type);
+		}
+		$new_fname = $field->get_property('name');
+		if(!$new_fname){
+			$field->set_property('name', $fname);
 		}
 		
 		//$field->set_property('order', isset($posted['order']) ? trim(stripslashes($posted['order'])) : 0);

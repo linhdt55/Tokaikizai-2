@@ -289,7 +289,12 @@ a.wps_wpr_premium--cta {
 .wps_wpr_general_setting.mwp_wpr_settings th,
 .wps_wpr_membership_setting td,
 .wps_wpr_membership_setting th {
-    padding: 10px !important
+    padding: 10px !important;
+    display: revert !important;
+}
+
+.mwp_wpr_settings td.forminp.forminp-text {
+    display: revert !important;
 }
 
 #wps_rwpr_other_setting_upload_image,
@@ -1294,7 +1299,9 @@ h3.wps_rwpr_setting_title span {
 }
 
 /* ========= css for dummy html ========= */
-.wps_wpr_reset_user_loader, .wps_wpr_export_user_loader {
+.wps_wpr_reset_user_loader,
+.wps_wpr_export_user_loader,
+.wps_wpr_update_user_loader {
     display: none;
 }
 
@@ -1489,4 +1496,44 @@ span.wps_wpr_all_referral_name:hover~span.wps_wpr_all_referral_view, span.wps_wp
 
 .wps_wpr_user_reports table th {
     background: #f2f2f2;
+}
+
+/** Floating button (Save Settings)  **/
+
+.wps_rwpr_content_template .submit {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    margin-left: -15px;
+    padding-left: 15px;
+}
+
+.wps_wpr_preview_whatsapp_template_img {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    z-index: 99999;
+}
+
+/* Centered Image */
+.wps_wpr_preview_whatsapp_template_img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+article.wps_wpr_general_row input[type=text],article.wps_wpr_general_row input[type=number] {
+    max-width: 220px;
+    width: 100%;
+    min-height: 40px;
 }

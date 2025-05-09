@@ -283,6 +283,7 @@ class THWCFD_Utils_Block {
 			foreach($fields as $name => $field){
 				if(!empty($name) && !empty($field) && is_array($field)){
 					$field['type'] = isset($field['type']) ? $field['type'] : 'text';
+					$field['order'] = isset($field['index']) ? $field['index'] : 0;
 					$field_object = THWCFD_Utils_Field::create_field($field['type'], $name, $field); 
 
 					if(array_key_exists($name, $default_fields_id) && is_object($field_object)){
@@ -294,7 +295,7 @@ class THWCFD_Utils_Block {
 					if(($name === 'billing_state' || $name === 'shipping_state') && isset($field['country'])){
 						$field_object->set_property('country', '');
 					}
-				
+
 					if($field_object){
 						$field_objects[$name] = $field_object;
 					}

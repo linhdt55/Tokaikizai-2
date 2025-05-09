@@ -76,3 +76,6 @@ $wf_img_path=WT_U_IEW_PLUGIN_URL.'images/';
     </div>
     <?php //include $wf_admin_view_path."market.php";  ?>
 </div>
+
+<?php
+include $wf_admin_view_path."admin-header-and-help.php";

@@ -125,12 +125,12 @@ class WC_Payments_WooPay_Button_Handler {
 
 		// Create WooPay button location option if it doesn't exist and enable all locations by default.
 		if ( ! array_key_exists( self::BUTTON_LOCATIONS, get_option( 'woocommerce_woocommerce_payments_settings' ) ) ) {
+			if ( isset( $this->gateway->get_form_fields()[ self::BUTTON_LOCATIONS ]['options'] ) ) {
+				$all_locations = $this->gateway->get_form_fields()[ self::BUTTON_LOCATIONS ]['options'];
 
-			$all_locations = $this->gateway->form_fields[ self::BUTTON_LOCATIONS ]['options'];
-
-			$this->gateway->update_option( self::BUTTON_LOCATIONS, array_keys( $all_locations ) );
-
-			WC_Payments::woopay_tracker()->woopay_locations_updated( $all_locations, array_keys( $all_locations ) );
+				$this->gateway->update_option( self::BUTTON_LOCATIONS, array_keys( $all_locations ) );
+				WC_Payments::woopay_tracker()->woopay_locations_updated( $all_locations, array_keys( $all_locations ) );
+			}
 		}
 
 		add_action( 'wp_enqueue_scripts', [ $this, 'scripts' ] );
@@ -367,12 +367,20 @@ class WC_Payments_WooPay_Button_Handler {
 		}
 
 		// Pre Orders products to be charged upon release are not supported.
-		if ( class_exists( 'WC_Pre_Orders_Product' ) && WC_Pre_Orders_Product::product_is_charged_upon_release( $product ) ) {
+		if (
+			class_exists( 'WC_Pre_Orders_Product' ) &&
+			method_exists( 'WC_Pre_Orders_Product', 'product_is_charged_upon_release' ) &&
+			WC_Pre_Orders_Product::product_is_charged_upon_release( $product )
+		) {
 			$is_supported = false;
 		}
 
 		// WC Bookings require confirmation products are not supported.
-		if ( is_a( $product, 'WC_Product_Booking' ) && $product->get_requires_confirmation() ) {
+		if (
+			is_a( $product, 'WC_Product_Booking' ) &&
+			method_exists( $product, 'get_requires_confirmation' ) &&
+			$product->get_requires_confirmation()
+		) {
 			$is_supported = false;
 		}
 

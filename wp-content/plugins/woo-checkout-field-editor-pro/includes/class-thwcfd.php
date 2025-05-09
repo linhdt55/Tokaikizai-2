@@ -152,7 +152,7 @@ class THWCFD {
 
                             <main class="form-container main-full">
                                 <p class="thwcfd-title-text"><?php esc_html_e('If you have a moment, please let us know why you want to deactivate this plugin', 'woo-checkout-field-editor-pro'); ?></p>
-                                <ul class="deactivation-reason" data-nonce="<?php esc_attr( wp_create_nonce('thwcfd_deactivate_nonce')); ?>">
+                                <ul class="deactivation-reason" data-nonce="<?php echo esc_attr( wp_create_nonce('thwcfd_deactivate_nonce')); ?>">
                                     <?php 
                                     if($deactivation_reasons){
                                         foreach($deactivation_reasons as $key => $reason){

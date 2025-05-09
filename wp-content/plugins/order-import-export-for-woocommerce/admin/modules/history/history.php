@@ -246,21 +246,28 @@ class Wt_Import_Export_For_Woo_Basic_History
 	public function admin_log_page($args)
 	{	
 		/* delete action */
-		if(isset($_GET['wt_iew_delete_log'])) 
-		{
-			if(Wt_Iew_Sh::check_write_access(WT_IEW_PLUGIN_ID_BASIC))
-			{
+		if(isset($_GET['wt_iew_delete_log'])) {
+			if(Wt_Iew_Sh::check_write_access(WT_IEW_PLUGIN_ID_BASIC)) {
 				$log_file_arr = isset($_GET['wt_iew_log_file']) ? explode(",", $_GET['wt_iew_log_file']) : array();
 				$log_file_arr = Wt_Iew_Sh::sanitize_item($log_file_arr, 'text_arr');
 
 				if (is_array($log_file_arr)) {
 					foreach ($log_file_arr as $log_file_name) {
-						$ext_arr = explode(".", $log_file_name);
-						$ext = end($ext_arr);
+						// Sanitize filename and validate extension
+						$safe_filename = basename(sanitize_file_name($log_file_name));  // Use basename() to remove any path components
+						$ext_arr = explode(".", $safe_filename);
+						$ext = strtolower(end($ext_arr));
 						if ($ext == 'log') {
 							$log_file_path = Wt_Import_Export_For_Woo_Basic_Log::get_file_path($log_file_name);
-							if (file_exists($log_file_path) && is_file($log_file_path)) {
-								@unlink($log_file_path);
+							
+							// Validate the final path is within allowed directory
+							$real_path = realpath($log_file_path);
+							$log_dir = WP_CONTENT_DIR.'/webtoffee_iew_log';
+							$real_log_dir = realpath($log_dir);
+							
+							// Validate the file is within allowed directory and is actually a file
+							if($real_path && $real_log_dir && strpos($real_path, $real_log_dir) === 0 && file_exists($real_path) && is_file($real_path)) {
+								@unlink($real_path);
 							}
 						}
 					}
@@ -268,15 +275,15 @@ class Wt_Import_Export_For_Woo_Basic_History
 			}
 		}
 
-		$delete_url_params['wt_iew_delete_log']=1;
-		$delete_url_params['wt_iew_log_file']='_log_file_';
-		$delete_url_params['page']=$this->module_id.'_log';
-		$delete_url=wp_nonce_url(admin_url('admin.php?'.http_build_query($delete_url_params)), WT_IEW_PLUGIN_ID_BASIC);
+		$delete_url_params['wt_iew_delete_log'] = 1;
+		$delete_url_params['wt_iew_log_file'] = '_log_file_';
+		$delete_url_params['page'] = $this->module_id.'_log';
+		$delete_url = wp_nonce_url(admin_url('admin.php?'.http_build_query($delete_url_params)), WT_IEW_PLUGIN_ID_BASIC);
 
-		$download_url=wp_nonce_url(admin_url('admin.php?wt_iew_log_download=1&file=_log_file_'), WT_IEW_PLUGIN_ID_BASIC);
+		$download_url = wp_nonce_url(admin_url('admin.php?wt_iew_log_download=1&file=_log_file_'), WT_IEW_PLUGIN_ID_BASIC);
 
 		//enqueue script
-		if(isset($_GET['page']) && $_GET['page']==$this->module_id.'_log')
+		if(isset($_GET['page']) && $this->module_id.'_log' == $_GET['page'])
 		{
 			$this->enqueue_scripts($delete_url);
 		}
@@ -327,22 +334,29 @@ class Wt_Import_Export_For_Woo_Basic_History
 		$list_by_cron=false;
 		if($cron_id>0)
 		{
-			$cron_module_obj=Wt_Import_Export_For_Woo_Basic::load_modules('cron');
+			$cron_module_obj = Wt_Import_Export_For_Woo_Basic::load_modules('cron');
+
 			if(!is_null($cron_module_obj))
 			{
-				$cron_data=$cron_module_obj->get_cron_by_id($cron_id);
+				$cron_data = $cron_module_obj->get_cron_by_id($cron_id);
 				if($cron_data)
 				{
-					$history_id_arr=($cron_data['history_id_list']!="" ? maybe_unserialize($cron_data['history_id_list']) : array());
-					$history_id_arr=(is_array($history_id_arr) ? $history_id_arr : array());
-					$list_by_cron=true;
+					$form_data_raw = wp_unslash($cron_data['history_id_list']);
+					$history_id_arr = is_array($form_data_raw) ? 
+							array_map(function($item) {
+								return is_string($item) ? json_decode($item, true) : $item;
+							}, $form_data_raw) : 
+							json_decode($form_data_raw, true);
+
+					$history_id_arr = (is_array($history_id_arr) ? $history_id_arr : array());
+					$list_by_cron = true;
 				}else
 				{
-					$cron_id=0; //invalid cron id
-				}
+					$cron_id = 0; //invalid cron id
+				} 
 			}else
 			{
-				$cron_id=0; //cron module not enabled	
+				$cron_id = 0; //cron module not enabled	
 			}
 		}
 
@@ -498,7 +512,7 @@ class Wt_Import_Export_For_Woo_Basic_History
 		$delete_url=wp_nonce_url(admin_url('admin.php?'.http_build_query($delete_url_params)), WT_IEW_PLUGIN_ID_BASIC);
 
 		//enqueue script
-		if(isset($_GET['page']) && $_GET['page']==$this->module_id)
+		if(isset($_GET['page']) && $this->module_id == $_GET['page'])
 		{
 			$this->enqueue_scripts($delete_url);
 		}
@@ -603,7 +617,7 @@ class Wt_Import_Export_For_Woo_Basic_History
 
 	public static function update_history_entry($history_id, $update_data, $update_data_type)
 	{
-		global $wpdb;
+		global $wpdb; 
 		//updating the data
 		$tb=$wpdb->prefix.Wt_Import_Export_For_Woo_Basic::$history_tb;
 		$update_where=array(
@@ -681,7 +695,7 @@ class Wt_Import_Export_For_Woo_Basic_History
 			'item_type'=>$to_process, //item type Eg: product
 			'file_name'=>$file_name, //export/import file name
 			'created_at'=>time(), //craeted time
-			'data'=>maybe_serialize($form_data), //formadata
+			'data'=>wp_json_encode($form_data), //formadata
 			'status'=>self::$status_arr['pending'], //pending
 			'status_text'=>'Pending', //pending, No need to add translate function. we can add this on printing page
 			'offset'=>0, //current offset, its always 0 on start
@@ -750,20 +764,28 @@ class Wt_Import_Export_For_Woo_Basic_History
 	*/
 	public function download_file()
 	{
-		if(isset($_GET['wt_iew_log_download']))
-		{ 
-			if(Wt_Iew_Sh::check_write_access(WT_IEW_PLUGIN_ID_BASIC)) /* check nonce and role */
-			{
-				$file_name=(isset($_GET['file']) ? sanitize_text_field($_GET['file']) : '');
-				if($file_name!="")
-				{
-					$file_arr=explode(".", $file_name);
-					$file_ext=end($file_arr);
-					if($file_ext=='log') /* Only allowed files. */
-					{
-						$file_path=Wt_Import_Export_For_Woo_Basic_Log::get_file_path($file_name);
-						if(file_exists($file_path) && is_file($file_path))
-						{	
+		if(isset($_GET['wt_iew_log_download'])) { 
+
+			if(Wt_Iew_Sh::check_write_access(WT_IEW_PLUGIN_ID_BASIC)) { /* check nonce and role */
+			
+				$file_name = (isset($_GET['file']) ? sanitize_text_field(wp_unslash($_GET['file'])) : '');
+				if($file_name != "") {
+
+					$file_arr = explode(".", $file_name);
+					$file_ext = strtolower(end($file_arr));
+					if($file_ext=='log') { /* Only allowed files. */
+					
+						// Get base log directory path
+						$file_path = Wt_Import_Export_For_Woo_Basic_Log::get_file_path($file_name);
+						$file_path = realpath($file_path);
+						
+						// Get the allowed log directory and its real path
+						$log_dir = WP_CONTENT_DIR.'/webtoffee_iew_log';
+						$real_log_dir = realpath($log_dir);
+						
+						// Validate the file is within allowed directory
+						if($file_path && $real_log_dir && strpos($file_path, $real_log_dir) === 0 && file_exists($file_path)) {
+
 							header('Pragma: public');
 						    header('Expires: 0');
 						    header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
@@ -774,10 +796,10 @@ class Wt_Import_Export_For_Woo_Basic_History
 						    header('Content-Type: application/octet-stream');
 						    //header('Content-Length: '.filesize($file_path));
 
-						    $chunk_size=1024 * 1024;
+						    $chunk_size = 1024 * 1024;
 						    $handle=@fopen($file_path, 'rb');
-						    while(!feof($handle))
-						    {
+						    while(!feof($handle)) {
+
 						        $buffer = fread($handle, $chunk_size);
 						        echo $buffer;
 						        ob_flush();
@@ -785,7 +807,6 @@ class Wt_Import_Export_For_Woo_Basic_History
 						    }
 						    fclose($handle);
 						    exit();
-
 						}
 					}
 				}	

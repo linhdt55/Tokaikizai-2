@@ -59,7 +59,20 @@ class Widgets_Config {
 				'is_pro'      => false,
 				'is_new'      => true,
 				'description' => __( 'Show author, dates, and reading time with customizable styles.', 'header-footer-elementor' ),
-				'demo_url'    => '',
+				'demo_url'    => 'https://ultimateelementor.com/widgets/post-info/',
+				'category'    => 'content',
+			],
+			'Infocard'         => [
+				'slug'        => 'hfe-infocard',
+				'title'       => __( 'Info Card', 'header-footer-elementor' ),
+				'keywords'    => [ 'uael', 'icon', 'dynamic', 'box', 'card', 'cta' ],
+				'icon'        => 'hfe-icon-infocard',
+				'title_url'   => '#',
+				'default'     => true,
+				'is_pro'      => false,
+				'doc_url'     => '',
+				'description' => __( 'Add icon, heading, description & button/link — all in one widget.', 'header-footer-elementor' ),
+				'demo_url'    => 'https://ultimateelementor.com/widgets/info-card/',
 				'category'    => 'content',
 			],
 			'Breadcrumbs_Widget' => [
@@ -73,7 +86,7 @@ class Widgets_Config {
 				'is_pro'      => false,
 				'is_new'      => true,
 				'description' => __( 'Add navigation links to guide visitors across your site.', 'header-footer-elementor' ),
-				'demo_url'    => '',
+				'demo_url'    => 'https://ultimateelementor.com/widgets/breadcrumbs/',
 				'category'    => 'content',
 			],
 			'Site_Logo'          => [
@@ -86,7 +99,7 @@ class Widgets_Config {
 				'is_pro'      => false,
 				'doc_url'     => '',
 				'description' => __( 'Add your site\'s primary logo with flexible customization options.', 'header-footer-elementor' ),
-				'demo_url'    => '',
+				'demo_url'    => 'https://ultimateelementor.com/widgets/site-logo/',
 				'category'    => 'content',
 			],
 			'Navigation_Menu'    => [
@@ -99,7 +112,7 @@ class Widgets_Config {
 				'doc_url'     => '',
 				'is_pro'      => false,
 				'description' => __( 'Add stylish and functional menus for seamless site navigation.', 'header-footer-elementor' ),
-				'demo_url'    => '',
+				'demo_url'    => 'https://ultimateelementor.com/widgets/navigation/',
 				'category'    => 'content',
 			],
 			'Scroll_To_Top'      => [
@@ -113,9 +126,8 @@ class Widgets_Config {
 				'is_pro'      => false,
 				'is_new'      => true,
 				'description' => __( 'Add a customizable button for quick, one-click top scrolling.', 'header-footer-elementor' ),
-				'demo_url'    => '',
+				'demo_url'    => 'https://ultimateelementor.com/widgets/scroll-to-top/',
 				'category'    => 'extension',
-				'demo_url'    => '',
 			],
 			'Site_Title'         => [
 				'slug'        => 'hfe-site-title',
@@ -127,7 +139,7 @@ class Widgets_Config {
 				'doc_url'     => '',
 				'is_pro'      => false,
 				'description' => __( 'Show your site’s name in a customizable style.', 'header-footer-elementor' ),
-				'demo_url'    => '',
+				'demo_url'    => 'https://ultimateelementor.com/widgets/site-title/',
 				'category'    => 'content',
 			],
 			'Site_Tagline'       => [
@@ -140,7 +152,7 @@ class Widgets_Config {
 				'is_pro'      => false,
 				'doc_url'     => '',
 				'description' => __( 'Display your site\'s tagline to enhance brand identity.', 'header-footer-elementor' ),
-				'demo_url'    => '',
+				'demo_url'    => 'https://ultimateelementor.com/widgets/site-tagline/',
 				'category'    => 'content',
 			],
 			'Search_Button'      => [
@@ -153,7 +165,7 @@ class Widgets_Config {
 				'is_pro'      => false,
 				'doc_url'     => '',
 				'description' => __( 'Add a search bar to help visitors find content easily.', 'header-footer-elementor' ),
-				'demo_url'    => '',
+				'demo_url'    => 'https://ultimateelementor.com/widgets/search/',
 				'category'    => 'content',
 			],
 			'Page_Title'         => [
@@ -166,7 +178,7 @@ class Widgets_Config {
 				'is_pro'      => false,
 				'doc_url'     => '',
 				'description' => __( 'Display the title of the current page dynamically.', 'header-footer-elementor' ),
-				'demo_url'    => '',
+				'demo_url'    => 'https://ultimateelementor.com/widgets/page-title/',
 				'category'    => 'content',
 			],
 			'Retina'             => [
@@ -179,7 +191,7 @@ class Widgets_Config {
 				'doc_url'     => '',
 				'is_pro'      => false,
 				'description' => __( 'Add a high-quality logo that looks sharp on any screen.', 'header-footer-elementor' ),
-				'demo_url'    => '',
+				'demo_url'    => 'https://ultimateelementor.com/widgets/retina-logo/',
 				'category'    => 'content',
 			],
 			'Cart'               => [
@@ -192,7 +204,7 @@ class Widgets_Config {
 				'is_pro'      => false,
 				'doc_url'     => '',
 				'description' => __( 'Show cart for seamless shopping experiences.', 'header-footer-elementor' ),
-				'demo_url'    => '',
+				'demo_url'    => 'https://ultimateelementor.com/widgets/cart/',
 				'category'    => 'content',
 			],
 			'Copyright'          => [
@@ -205,7 +217,7 @@ class Widgets_Config {
 				'doc_url'     => '',
 				'is_pro'      => false,
 				'description' => __( 'Display customizable copyright text for your site\'s footer.', 'header-footer-elementor' ),
-				'demo_url'    => '',
+				'demo_url'    => 'https://ultimateelementor.com/widgets/copyright/',
 				'category'    => 'content',
 			],
 		];
@@ -956,7 +968,7 @@ class Widgets_Config {
 	/**
 	 * Function for Astra Pro white labels with defaults.
 	 *
-	 * @since x.x.x
+	 * @since 2.2.1
 	 * @return array
 	 */
 	public static function get_white_label() {
@@ -1059,13 +1071,13 @@ class Widgets_Config {
 			],
 
 			'suretriggers/suretriggers.php'                => [
-				'icon'         => $images_url . 'suretriggers.svg',
+				'icon'         => $images_url . 'OttoKit-Symbol-Primary.svg',
 				'type'         => 'plugin',
-				'name'         => esc_html__( 'SureTriggers', 'header-footer-elementor' ),
+				'name'         => esc_html__( 'OttoKit (Formerly SureTriggers)', 'header-footer-elementor' ),
 				'desc'         => esc_html__( 'Automate WordPress tasks effortlessly.', 'header-footer-elementor' ),
 				'wporg'        => 'https://wordpress.org/plugins/suretriggers/',
 				'url'          => 'https://downloads.wordpress.org/plugin/suretriggers.zip',
-				'siteurl'      => 'https://suretriggers.com/',
+				'siteurl'      => 'https://ottokit.com/',
 				'slug'         => 'suretriggers',
 				'isFree'       => true,
 				'status'       => self::get_plugin_status( 'suretriggers/suretriggers.php' ),

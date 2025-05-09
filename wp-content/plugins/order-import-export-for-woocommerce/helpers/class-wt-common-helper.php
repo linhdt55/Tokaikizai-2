@@ -128,6 +128,128 @@ class Wt_Import_Export_For_Woo_Basic_Common_Helper
     }
 
     /**
+     * Safe custom unserialize function that handles only basic types
+     * 
+     * @since 2.6.1 Added to ensure data migration from serialized to JSON format
+     * @param string $data Serialized data
+     * @return mixed Unserialized data (only int, string, bool, array)
+     */
+    public static function wt_unserialize_safe($data) {
+
+        if( empty($data) ) {
+            return false;
+        } 
+        $offset = 0;
+    
+        // Recursive function to handle different types.
+        $unserialize_value = function(&$offset) use ($data, &$unserialize_value) {
+            $type = $data[$offset];
+            $offset++;
+    
+            switch ($type) {
+                case 's': // String.
+                    preg_match('/:(\d+):"/', $data, $matches, 0, $offset);
+                    $length = (int) $matches[1];
+                    $offset += strlen($matches[0]);
+                    $value = substr($data, $offset, $length);
+                    $offset += $length + 2; // Skip closing quotes and semicolon.
+                    return $value;
+    
+                case 'i': // Integer.
+                    preg_match('/:(-?\d+);/', $data, $matches, 0, $offset);
+                    $offset += strlen($matches[0]);
+                    return (int) $matches[1];
+    
+                case 'd': // Float/Double.
+                    preg_match('/:(-?\d+(\.\d+)?);/', $data, $matches, 0, $offset);
+                    $offset += strlen($matches[0]);
+                    return (float) $matches[1];
+    
+                case 'b': // Boolean.
+                    preg_match('/:(\d);/', $data, $matches, 0, $offset);
+                    $offset += strlen($matches[0]);
+                    return (bool) $matches[1];
+    
+                case 'N': // NULL.
+                    $offset += 1; // Move past ';'.
+                    return false;
+    
+                case 'a': // Array.
+                    preg_match('/:(\d+):{/', $data, $matches, 0, $offset);
+                    $num_elements = (int) $matches[1];
+                    $offset += strlen($matches[0]);
+    
+                    $result = array();
+                    for ($i = 0; $i < $num_elements; $i++) {
+                        $key = $unserialize_value($offset);
+                        $value = $unserialize_value($offset);
+                        $result[$key] = $value;
+                    }
+    
+                    $offset++; // Move past closing '}'.
+                    return $result;
+    
+                case 'O': // Object (Convert to Array).
+                    preg_match('/:(\d+):"([^"]+)":(\d+):{/', $data, $matches, 0, $offset);
+                    $num_properties = (int) $matches[3];
+                    $offset += strlen($matches[0]);
+    
+                    $result = array();
+                    for ($i = 0; $i < $num_properties; $i++) {
+                        $key = $unserialize_value($offset);
+                        $value = $unserialize_value($offset);
+                        $result[$key] = $value;
+                    }
+    
+                    $offset++; // Move past closing '}'.
+                    return $result; // Object converted into an array.
+    
+                default:
+                    // Skip unsupported type.
+                    return false;
+            }
+        };
+    
+        return $unserialize_value($offset);
+    }
+
+    /**
+	* Decode template data - handles both serialized and JSON data
+	* @since 2.6.1
+	* @param string $data The data to decode
+	* @return array The decoded data as array
+	*/
+	public static function decode_template_data($data) 
+	{
+		// Return empty array if data is empty
+		if (empty($data)) {
+			return array();
+		}
+
+		// If data is already an array, return it
+		if (is_array($data)) {
+			return $data;
+		}
+
+		// Check if data is serialized first
+		if (is_serialized($data)) {
+			$unserialized_data = Wt_Import_Export_For_Woo_Basic_Common_Helper::wt_unserialize_safe($data);
+			if ($unserialized_data !== false) {
+				return $unserialized_data;
+			}
+		}
+
+		// Try JSON decode
+		$decoded = json_decode($data, true);
+		if (json_last_error() === JSON_ERROR_NONE && is_array($decoded)) {
+			return $decoded;
+		}
+
+		// Return empty array if all decoding attempts fail
+		return array();
+	}
+
+    /**
     *   Form field generator
     */
     public static function field_generator($form_fields, $form_data)

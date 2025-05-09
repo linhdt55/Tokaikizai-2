@@ -1,10 +1,10 @@
 === Ultimate Addons for Elementor (Formerly Elementor Header & Footer Builder) ===  
 Contributors: @brainstormforce, @nikschavan, @pratikchaskar
-Tags: elementor, header footer builder, widgets, header template, footer template
+Tags: elementor, elementor addon, elementor widget, elementor template, header footer builder
 Requires at least: 5.0  
-Tested up to: 6.7.1 
+Tested up to: 6.8
 Requires PHP: 7.4  
-Stable tag: 2.0.6
+Stable tag: 2.3.0
 License: GPLv2 or later  
 License URI: https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -16,7 +16,7 @@ Create dynamic headers, footers, and design blocks effortlessly with Elementor's
 
 Ultimate Addons for Elementor is the improved and redesigned version of the Elementor Header & Footer Builder. It is designed to help you create dynamic headers, footers, and additional design blocks with ease. This plugin leverages Elementor's powerful drag-and-drop editor to give you complete design freedom and it integrates with any WordPress theme.
 
-[Try it out on a free dummy site](https://bsf.io/hfe-demo)
+[Try the live demo of Ultimate Addons for Elementor](https://zipwp.org/plugins/header-footer-elementor/)
 
 You can refer to our step-by-step article that will help you [set headers and footers](https://ultimateelementor.com/header-footer-with-elementor/?utm_source=wp-repo&utm_campaign=header-footer-elementor&utm_medium=description) quickly.
 
@@ -36,6 +36,7 @@ Ultimate Addons for Elementor comes equipped with a suite of Elementor-compatibl
 * **Breadcrumbs**: Improve site navigation and SEO with breadcrumb trails.
 * **Post Info**: Display important post-related information such as publish date, author, and categories.
 * **Scroll to Top**: Allow users to quickly return to the top of the page for a better user experience.
+* **Info Card**: Add headings, icons, and descriptions with CTA - all in one widget.
 
 ---
 
@@ -87,7 +88,7 @@ If you love Ultimate Addons, you’ll love our other products too:
 
 * **Astra**: The fastest, most flexible WordPress theme – perfect for any type of website.  
 * **Starter Templates**: Choose from hundreds of ready-to-use website designs or use AI to build a site tailored to your needs.  
-* **SureTriggers**: Automate repetitive tasks and connect your favorite apps for ultimate efficiency.  
+* **OttoKit (Formerly SureTriggers)**: Automate repetitive tasks and connect your favorite apps for ultimate efficiency.  
 * **SureForms**: Create stunning forms, quizzes, or surveys in minutes.  
 * **SureCart**: The ultimate plugin for effortless eCommerce – perfect for online sellers. 
 
@@ -128,6 +129,38 @@ To access the advanced features and premium widgets, you’ll need to upgrade to
 ---
 
 == Changelog ==
+
+= 2.3.0 =
+- New: Info Card Widget – Create engaging and elegant content sections with this customizable widget. Easily configure text, icons, and buttons/links to match your design needs.
+
+= 2.2.4 = 
+- Fix: Buttons now correctly load the default color and font settings as defined in the Theme Customizer.
+
+= 2.2.3 = 
+- Improvement: Improved accessibility compliance throughout the plugin.
+- Fix: Navigation Menu – The submenu now expands correctly when the "Full Width" option is enabled
+
+= 2.2.2 =
+- Improvement: Compatibility with latest Elementor and Elementor Pro 3.28 version.
+
+= 2.2.1 =
+- This update addressed a security bug. Please make sure you are using the latest version on your website.
+- Improvement: Added a notice in the Elementor editor to prompt users to flush permalinks if it gets stuck after a plugin update.
+- Improvement: Removed 'elementor-button-wrapper' to enhance performance and optimize the DOM structure.
+- Fix: Navigation Menu - Full-width dropdown menu now stays correctly positioned when resizing in responsive mode.
+
+= 2.2.0 =
+- New: Ultimate Addons for Elementor now includes translations for Dutch, French, Spanish, and German enhancing multilingual accessibility.
+- Fix: Navigation Menu - Anchor links now correctly scroll to sections/container when submenu items with IDs are clicked.
+- Fix: "Function map_meta_cap called incorrectly" notice appearing for logged out users when shortcode executed manually.
+- Fix: Deprecated constant FILTER_SANITIZE_STRING replaced to ensure compatibility with PHP.
+- Fix: Resolved PHP error with NPS library.
+
+= 2.1.0 =
+- New: Added NPS Survey to gather your valuable feedback for Ultimate Addons for Elementor.
+- Improvement: Compatibility with latest Elementor and Elementor Pro 3.27 version.
+- Fix: Resolved issue where icons were displaying too large on page load for the Elementor and WordPress menu widget.
+- Fix: Cart - Resolved an issue where icons were not displaying correctly for logged-out users.
 
 = 2.0.6 =
 - Fix: Load text domain PHP warning when Loco Translate plugin is active.

@@ -7,8 +7,8 @@ if (!defined('ABSPATH')) {
 	$click_to_use=__('Click to use');
 ?>
 <script type="text/javascript">
-	var wt_iew_file_head_default=<?php echo json_encode(wt_iew_utf8ize_basic($file_heading_default_fields));?>;
-	var wt_iew_file_head_meta=<?php echo json_encode(wt_iew_utf8ize_basic($file_heading_meta_fields));?>;
+	var wt_iew_file_head_default=<?php echo wp_json_encode(wt_iew_utf8ize_basic($file_heading_default_fields));?>;
+	var wt_iew_file_head_meta=<?php echo wp_json_encode(wt_iew_utf8ize_basic($file_heading_meta_fields));?>;
 </script>
 
 <!-- Mapping field editor popup -->

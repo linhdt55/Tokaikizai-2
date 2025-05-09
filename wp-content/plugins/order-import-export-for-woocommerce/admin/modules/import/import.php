@@ -341,7 +341,13 @@ class Wt_Import_Export_For_Woo_Basic_Import
 				$history_data=$history_module_obj->get_history_entry_by_id($rerun_id);
 				if($history_data && $history_data['template_type']==$this->module_base)
 				{
-					$form_data=maybe_unserialize($history_data['data']);
+					$form_data_raw = wp_unslash($history_data['data']);
+					$form_data = is_array($form_data_raw) ? 
+							array_map(function($item) {
+								return is_string($item) ? json_decode($item, true) : $item;
+							}, $form_data_raw) : 
+							json_decode($form_data_raw, true);
+
 					if($form_data && is_array($form_data))
 					{
 						$this->to_import=(isset($form_data['post_type_form_data']) && isset($form_data['post_type_form_data']['item_type']) ? $form_data['post_type_form_data']['item_type'] : '');
@@ -509,124 +515,120 @@ class Wt_Import_Export_For_Woo_Basic_Import
 	*/
 	public function download_remote_file($form_data)
 	{
-		$out=array(
-			'response'=>false,
-			'file_name'=>'',
-			'msg'=>'',
+		$out = array(
+			'response' => false,
+			'file_name' => '',
+			'msg' => '',
 		);
 
-		$method_import_form_data=(isset($form_data['method_import_form_data']) ? $form_data['method_import_form_data'] : array());
-		$file_from=(isset($method_import_form_data['wt_iew_file_from']) ? Wt_Iew_Sh::sanitize_item($method_import_form_data['wt_iew_file_from']) : '');
+		$method_import_form_data = isset($form_data['method_import_form_data']) ? $form_data['method_import_form_data'] : array();
+		$file_from = isset($method_import_form_data['wt_iew_file_from']) ? Wt_Iew_Sh::sanitize_item($method_import_form_data['wt_iew_file_from']) : '';
 		
-		if($file_from=="")
-		{
+		if($file_from == "") {
 			return $out;
 		}
-		if($file_from=='local' || $file_from=='url')
-		{
-			if($file_from=='local')
-			{
-				$file_url=(isset($method_import_form_data['wt_iew_local_file']) ? Wt_Iew_Sh::sanitize_item($method_import_form_data['wt_iew_local_file'], 'url') : '');
-				$local_file_path=Wt_Iew_IE_Basic_Helper::_get_local_file_path($file_url);
-				if(!$local_file_path) /* no local file found */
-				{
+		if($file_from == 'local' || $file_from=='url') {
+
+			if($file_from == 'local') {
+
+				$file_url = isset($method_import_form_data['wt_iew_local_file']) ? Wt_Iew_Sh::sanitize_item($method_import_form_data['wt_iew_local_file'], 'url') : '';
+				$local_file_path = realpath(Wt_Iew_IE_Basic_Helper::_get_local_file_path($file_url));
+				$import_dir = realpath(WP_CONTENT_DIR.'/webtoffee_import');
+				
+				if(!$local_file_path || !$import_dir || strpos($local_file_path, $import_dir) !== 0) { /* no local file found or file is outside allowed directory */
 					$file_url='';
 				}
-			}else
-			{
-				$file_url=(isset($method_import_form_data['wt_iew_url_file']) ? Wt_Iew_Sh::sanitize_item($method_import_form_data['wt_iew_url_file'], 'url') : '');	
+			} else {
+				$file_url = isset($method_import_form_data['wt_iew_url_file']) ? Wt_Iew_Sh::sanitize_item($method_import_form_data['wt_iew_url_file'], 'url') : '';	
 			}
 
-			if($file_url!="") /* file URL not empty */
-			{
-				if($this->is_extension_allowed($file_url)) /* file type is in allowed list */ 
-				{
-					$ext_arr=explode('.', $file_url);
-					$ext=end($ext_arr);
+			if($file_url!="") { /* file URL not empty */
+			
+				if($this->is_extension_allowed($file_url)) { /* file type is in allowed list */ 
+					$ext_arr = explode('.', $file_url);
+					$ext = end($ext_arr);
 
-					$file_name=$this->get_temp_file_name($ext);
-					$file_path=$this->get_file_path($file_name);
-					if($file_path)
-					{
-						if($file_from=='local')
-						{
+					$file_name = $this->get_temp_file_name($ext);
+					$file_dir = realpath($this->get_file_path());
+					$import_dir = realpath(WP_CONTENT_DIR.'/webtoffee_import');
+					$file_path = $this->get_file_path($file_name);
+					
+					if($file_dir && $import_dir && strpos($file_dir, $import_dir) === 0) {
+						if($file_from == 'local') {
 							if(@copy($local_file_path, $file_path))
 							{
-								$out=array(
-									'response'=>true,
-									'file_name'=>$file_name,
-									'msg'=>'',
+								$out = array(
+									'response' => true,
+									'file_name' => $file_name,
+									'msg' => '',
 								);
-							}else
-							{
-								$out['msg']=__('Unable to create temp file.');
+							} else {
+								$out['msg'] = __('Unable to create temp file.');
 							}
-						}else
-						{
-							$file_data=$this->remote_get($file_url);
+						} else {
+							$file_data = $this->remote_get($file_url);
 							
-							if(!is_wp_error($file_data) && wp_remote_retrieve_response_code($file_data)==200)
-							{
-								$file_data=wp_remote_retrieve_body($file_data);
+							if(!is_wp_error($file_data) && wp_remote_retrieve_response_code($file_data) == 200) {
+								$file_data = wp_remote_retrieve_body($file_data);
 								if(@file_put_contents($file_path, $file_data))
 								{
-									$out=array(
-										'response'=>true,
-										'file_name'=>$file_name,
-										'msg'=>'',
+									$out = array(
+										'response' => true,
+										'file_name' => $file_name,
+										'msg' => '',
 									);
-								}else
-								{
-									$out['msg']=__('Unable to create temp file.');
+								}else {
+									$out['msg'] = __('Unable to create temp file.');
 								}
-							}else
-							{
-								$out['msg']=__('Unable to fetch file data.');
+							} else {
+								$out['msg'] = __('Unable to fetch file data.');
 							}
 						}						
-					}else
-					{
-						$out['msg']=__('Unable to create temp directory.');
+					} else {
+						$out['msg'] = __('Unable to create temp directory.');
 					}				
-				}else
-				{
-					$out['msg']=__('File type not allowed.');
+				} else {
+					$out['msg'] = __('File type not allowed.');
 				}
-			}else
-			{
-				$out['msg']=__('File not found.');
+			} else {
+				$out['msg'] = __('File not found.');
 			}		
-		}else
-		{
-			$out['response']=true;
-			$out=apply_filters('wt_iew_validate_file_basic', $out, $file_from, $method_import_form_data);
+		} else {
+			$out['response'] = true;
+			$out = apply_filters('wt_iew_validate_file_basic', $out, $file_from, $method_import_form_data);
 			
-			if(is_array($out) && isset($out['response']) && $out['response']) /* a form validation hook for remote modules */
-			{
-				$remote_adapter=Wt_Import_Export_For_Woo_Basic::get_remote_adapters('import', $file_from);
+			if(is_array($out) && isset($out['response']) && $out['response']) { /* a form validation hook for remote modules */
+			
+				$remote_adapter = Wt_Import_Export_For_Woo_Basic::get_remote_adapters('import', $file_from);
 				
-				if(is_null($remote_adapter)) /* adapter object not found */
-				{
-					$msg=sprintf('Unable to initailize %s', $file_from);
-					$out['msg']=__($msg);
-					$out['response']=false;
-				}else
-				{
+				if(is_null($remote_adapter)) { /* adapter object not found */
+				
+					$msg = sprintf('Unable to initailize %s', $file_from);
+					$out['msg'] = __($msg);
+					$out['response'] = false;
+				} else {
 					/* download the file */
 					$out = $remote_adapter->download($method_import_form_data, $out, $this);
 				}
 			}
 		}
-		if($out['response']!==false)
-		{
-			$file_path=self::get_file_path($out['file_name']);
-			/**
-			*	Filter to modify the import file before processing.
-			*	@param 	string $file_name name of the file
-			*	@param 	string $file_path path of the file
-			*	@return  string $file_name name of the new altered file 
-			*/
-			$out['file_name']=apply_filters('wt_iew_alter_import_file_basic', $out['file_name'], $file_path);
+		if($out['response']!==false) {
+			$file_path = realpath(self::get_file_path($out['file_name']));
+			$import_dir = realpath(WP_CONTENT_DIR.'/webtoffee_import');
+			
+			if($file_path && $import_dir && strpos($file_path, $import_dir) === 0) {
+				/**
+				*	Filter to modify the import file before processing.
+				*	@param 	string $file_name name of the file
+				*	@param 	string $file_path path of the file
+				*	@return  string $file_name name of the new altered file 
+				*/
+				$out['file_name']=apply_filters('wt_iew_alter_import_file_basic', $out['file_name'], $file_path);
+			} else {
+				$out['msg'] = __('Invalid file path');
+				$out['response'] = false;
+				return $out;
+			}
 		}
                 
 		return $out;
@@ -841,10 +843,10 @@ class Wt_Import_Export_For_Woo_Basic_Import
 	*/
 	protected function _set_csv_delimiter($form_data, $import_id)
 	{
-		$form_data['method_import_form_data']['wt_iew_delimiter']=",";
+		$form_data['method_import_form_data']['wt_iew_delimiter']=","; 
 		
 		$update_data=array(
-			'data'=>maybe_serialize($form_data), //formadata
+			'data'=>json_decode($form_data), //formadata
 		);
 		$update_data_type=array(
 			'%s',
@@ -912,9 +914,12 @@ class Wt_Import_Export_For_Woo_Basic_Import
 			}
 
 			//processing form data
-			$form_data=(isset($import_data['data']) ? maybe_unserialize($import_data['data']) : array());
-
-		}
+			$form_data_raw = wp_unslash($import_data['data']);
+			$form_data = is_array($form_data_raw) ? 
+					array_map(function($item) {
+						return is_string($item) ? json_decode($item, true) : $item;
+					}, $form_data_raw) : 
+					json_decode($form_data_raw, true);		} 
 		else // No import id so it may be an error
 		{
 			return $out;

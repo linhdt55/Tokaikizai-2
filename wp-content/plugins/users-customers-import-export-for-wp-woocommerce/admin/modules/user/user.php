@@ -532,10 +532,10 @@ class Wt_Import_Export_For_Woo_basic_User {
             'type' => 'checkbox',
 			'merge_right' => true,
 			'checkbox_fields' => array( 1 => __( 'Enable' ) ),
-            'value' => 1,
+            'value' => 0,
             'field_name' => 'export_guest_user',
-            'help_text' => __('Disabling this option will exclude all guest customers in the export.'),
-			'tip_description' => __( 'Guest customers are those who checkout without creating an account, provided the store allows guest checkout. Their details won’t appear in the wp_users table used for exporting user data. Instead, minimal data like address and email is extracted from WooCommerce order details. Fields like password, username, and account creation date will remain empty for such users.' ),
+            'help_text' => __('Enabling this option will include all guest customers in the export.'),
+			'tip_description' => __( 'Guest users here means the users who checked out from the site without creating an account, provided that the store settings allow guest user checkout. These user details won’t be available in the wp_user table from where our plugin export the user data. Thus we are extracting minimal data like address, email, etc, and whatever data that we can get from the woocommerce order details. Obviously, for these users, the columns like password, username, user created date, etc will be empty.' ),
         );
 		}
         

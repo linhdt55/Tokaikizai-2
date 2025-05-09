@@ -626,8 +626,8 @@ class Wt_Import_Export_For_Woo_Basic_Product {
         $result = array();
 
         if (!empty($results)) {
-            foreach ($results as $_product_attributes) {
-                $attributes = maybe_unserialize(maybe_unserialize($_product_attributes));
+            foreach ($results as $_product_attributes) { 
+                $attributes = Wt_Import_Export_For_Woo_Basic_Common_Helper::wt_unserialize_safe($_product_attributes);
                 if (!empty($attributes) && is_array($attributes)) {
                     foreach ($attributes as $key => $attribute) {
                         if (!$key) {

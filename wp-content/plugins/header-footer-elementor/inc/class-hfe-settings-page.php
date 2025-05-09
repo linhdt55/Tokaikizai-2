@@ -40,6 +40,8 @@ class HFE_Settings_Page {
 		
 		add_action( 'admin_head', [ $this, 'hfe_global_css' ] );
 
+		add_action( 'admin_head', [ $this, 'fetch_user_email' ] );
+
 		if ( ! HFE_Helper::is_pro_active() ) {
 			if ( is_admin() && current_user_can( 'manage_options' ) ) {
 				add_action( 'admin_menu', [ $this, 'hfe_register_settings_page' ] );
@@ -48,7 +50,6 @@ class HFE_Settings_Page {
 			add_filter( 'views_edit-elementor-hf', [ $this, 'hfe_settings' ], 10, 1 );
 		}
 		
-		// add_filter( 'admin_footer_text', [ $this, 'admin_footer_text' ] );
 		add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_admin_scripts' ] );
 		add_filter( 'plugin_action_links_' . HFE_PATH, [ $this, 'settings_link' ] );
 
@@ -58,12 +59,13 @@ class HFE_Settings_Page {
 			add_filter( 'wp_check_filetype_and_ext', [ $this, 'real_mime_types' ], 10, 4 );
 		}
 
-		// Add the Action Links.
-		// phpcs:ignore Squiz.PHP.CommentedOutCode.Found, Squiz.Commenting.InlineComment.InvalidEndChar
-		// add_filter( 'plugin_action_links_' . HFE_PATH, array( $this, 'add_action_links' ) );
-
 		/* Flow content view */
 		add_action( 'hfe_render_admin_page_content', [ $this, 'render_content' ], 10, 2 );
+
+
+		if ( ! HFE_Helper::is_pro_active() ) {
+			add_action( 'admin_footer', __CLASS__ . '::show_nps_notice' );
+		}
 
 		if ( version_compare( get_bloginfo( 'version' ), '5.1.0', '>=' ) ) {
 			add_filter( 'wp_check_filetype_and_ext', [ $this, 'real_mime_types_5_1_0' ], 10, 5 );
@@ -72,9 +74,45 @@ class HFE_Settings_Page {
 		}
 	}
 
-		/**
-		 * Get Elementor edit page link
-		 */
+	
+
+	/**
+	 * Render UAE NPS Survey Notice.
+	 *
+	 * @since 2.1.0
+	 * @return void
+	 */
+	public static function show_nps_notice() {
+		if ( class_exists( 'Nps_Survey' ) ) {
+			$uae_logo = HFE_URL . 'assets/images/settings/logo.svg';
+			\Nps_Survey::show_nps_notice(
+				'nps-survey-header-footer-elementor',
+				[
+					'show_if'          => true, // Add your display conditions.
+					'dismiss_timespan' => 2 * WEEK_IN_SECONDS,
+					'display_after'    => 2 * WEEK_IN_SECONDS,
+					'plugin_slug'      => 'header-footer-elementor',
+					'show_on_screens'  => [ 'toplevel_page_hfe' ],
+					'message'          => [
+						// Step 1 i.e rating input.
+						'logo'                  => esc_url( $uae_logo ),
+						'plugin_name'           => __( 'Ultimate Addons for Elementor', 'header-footer-elementor' ),
+						'nps_rating_message'    => __( 'How likely are you to recommend Ultimate Addons for Elementor to your friends or colleagues?', 'header-footer-elementor' ),
+						// Step 2A i.e. positive.
+						'feedback_content'      => __( 'Could you please do us a favor and give us a 5-star rating on Trustpilot? It would help others choose Ultimate Addons for Elementor with confidence. Thank you!', 'header-footer-elementor' ),
+						'plugin_rating_link'    => esc_url( 'https://www.trustpilot.com/review/ultimateelementor.com' ),
+						// Step 2B i.e. negative.
+						'plugin_rating_title'   => __( 'Thank you for your feedback', 'header-footer-elementor' ),
+						'plugin_rating_content' => __( 'We value your input. How can we improve your experience?', 'header-footer-elementor' ),
+					],
+				]
+			);
+		}
+	}
+
+	/**
+	 * Get Elementor edit page link
+	 */
 	public static function get_elementor_new_page_url() {
 
 		if ( class_exists( '\Elementor\Plugin' ) && current_user_can( 'edit_pages' ) ) {
@@ -102,7 +140,7 @@ class HFE_Settings_Page {
 	 *
 	 * Fired by `admin_post_uaelite_rollback` action.
 	 *
-	 * @since x.x.x
+	 * @since 2.2.1
 	 * @access public
 	 */
 	public function post_uaelite_rollback() {
@@ -155,23 +193,6 @@ class HFE_Settings_Page {
 	}
 
 	/**
-	 * Show action on plugin page.
-	 *
-	 * @param  array $links links.
-	 * @return array
-	 */
-	public function add_action_links( $links ) {
-
-		$default_url = admin_url( 'admin.php?page=' . $this->menu_slug );
-
-		$mylinks = [
-			'<a href="' . $default_url . '">' . __( 'Settings', 'Elementor Header & Footer Builder' ) . '</a>', //phpcs:ignore WordPress.WP.I18n.TextDomainMismatch
-		];
-
-		return array_merge( $mylinks, $links );
-	}
-
-	/**
 	 * Settings tab array
 	 *
 	 * @var settings tabs
@@ -189,6 +210,21 @@ class HFE_Settings_Page {
 	}
 
 	/**
+	 * Fetch and return the user's email.
+	 *
+	 * @since 1.6.0
+	 * @return string|null The user's email if logged in, null otherwise.
+	 */
+	public function fetch_user_email() {
+		$current_user = wp_get_current_user();
+		if ( $current_user->ID !== 0 ) {
+			return $current_user->user_email;
+		} else {
+			return null;
+		}
+	}
+
+	/**
 	 * Load admin styles on header footer elementor edit screen.
 	 *
 	 * @return void
@@ -197,11 +233,11 @@ class HFE_Settings_Page {
 
 		global $pagenow, $post_type;
 	
-		$uae_logo   = HFE_URL . 'assets/images/settings/dashboard-logo.svg';
-		$white_logo = HFE_URL . 'assets/images/settings/white-logo.svg';
-		$show_view_all = ( $post_type === 'elementor-hf' && $pagenow === 'post.php' ) ? "yes" : "no";
+		$uae_logo      = HFE_URL . 'assets/images/settings/dashboard-logo.svg';
+		$white_logo    = HFE_URL . 'assets/images/settings/white-logo.svg';
+		$show_view_all = ( $post_type === 'elementor-hf' && $pagenow === 'post.php' ) ? 'yes' : 'no';
 		$hfe_edit_url  = admin_url( 'edit.php?post_type=elementor-hf' );
-		$is_hfe_post        = ( 'elementor-hf' === $post_type && ( 'post.php' === $pagenow || 'post-new.php' === $pagenow ) ) ? 'yes' : 'no';
+		$is_hfe_post   = ( 'elementor-hf' === $post_type && ( 'post.php' === $pagenow || 'post-new.php' === $pagenow ) ) ? 'yes' : 'no';
 	
 		$additional_condition = ( isset( $_GET['post_type'] ) && 'elementor-hf' === sanitize_text_field( $_GET['post_type'] ) && 
 			( 'edit.php' === $GLOBALS['pagenow'] || 'post.php' === $GLOBALS['pagenow'] || 'post-new.php' === $GLOBALS['pagenow'] ) ) ||
@@ -219,10 +255,13 @@ class HFE_Settings_Page {
 			$st_status         = HFE_Helper::free_starter_templates_status();
 			$stpro_status      = HFE_Helper::premium_starter_templates_status();
 			$st_link           = HFE_Helper::starter_templates_link();
-			$hfe_post_url 		= admin_url( 'post-new.php?post_type=elementor-hf' );
+			$hfe_post_url      = admin_url( 'post-new.php?post_type=elementor-hf' );
+			// Fetch the user's email.
+			$user_email = $this->fetch_user_email();
 			
 			$show_theme_support = 'no';
 			$hfe_theme_status   = get_option( 'hfe_is_theme_supported', false );
+			$analytics_status   = get_option( 'bsf_analytics_optin', false );
 	
 			if ( ( ! current_theme_supports( 'header-footer-elementor' ) ) && ! $hfe_theme_status ) {
 				$show_theme_support = 'yes';
@@ -236,6 +275,9 @@ class HFE_Settings_Page {
 				HFE_VER,
 				true
 			);
+
+			wp_set_script_translations( 'header-footer-elementor-react-app', 'header-footer-elementor', HFE_DIR . 'languages' );
+
 	
 			wp_localize_script(
 				'header-footer-elementor-react-app',
@@ -253,14 +295,22 @@ class HFE_Settings_Page {
 					'astra_url'                => HFE_URL . 'assets/images/settings/astra.svg',
 					'starter_url'              => HFE_URL . 'assets/images/settings/starter-templates.svg',
 					'surecart_url'             => HFE_URL . 'assets/images/settings/surecart.svg',
-					'suretriggers_url'         => HFE_URL . 'assets/images/settings/sure-triggers.svg',
+					'suretriggers_url'         => HFE_URL . 'assets/images/settings/OttoKit-Symbol-Primary.svg',
 					'theme_url_selected'       => HFE_URL . 'assets/images/settings/theme.svg',
 					'theme_url'                => HFE_URL . 'assets/images/settings/layout-template.svg',
 					'version_url'              => HFE_URL . 'assets/images/settings/version.svg',
 					'version__selected_url'    => HFE_URL . 'assets/images/settings/git-compare.svg',
+					'tracking_url'              => HFE_URL . 'assets/images/settings/tracking.svg',
+					'tracking__selected_url'    => HFE_URL . 'assets/images/settings/tracking_selected.svg',
 					'user_url'                 => HFE_URL . 'assets/images/settings/user.svg',
 					'user__selected_url'       => HFE_URL . 'assets/images/settings/user-selected.svg',
-					'integrations_url'         => HFE_URL . 'assets/images/settings/integrations.svg',  // Update the path to your assets folder.
+					'integrations_url'         => HFE_URL . 'assets/images/settings/integrations.svg', // Update the path to your assets folder.
+					'welcome_banner'           => HFE_URL . 'assets/images/settings/welcome-banner.png',
+					'build_banner'             => HFE_URL . 'assets/images/settings/build_banner.png',
+					'special_reward'           => HFE_URL . 'assets/images/settings/build_bg.png',
+					'success_banner'           => HFE_URL . 'assets/images/settings/success_bg.png',
+					'success_badge'            => HFE_URL . 'assets/images/settings/success_badge.svg',
+					'icon_svg'                 => HFE_URL . 'assets/images/settings/uae-logo-svg.svg',
 					'uaelite_previous_version' => isset( $rollback_versions[0]['value'] ) ? $rollback_versions[0]['value'] : '',
 					'uaelite_versions'         => $rollback_versions,
 					'uaelite_rollback_url'     => esc_url( add_query_arg( 'version', 'VERSION', wp_nonce_url( admin_url( 'admin-post.php?action=uaelite_rollback' ), 'uaelite_rollback' ) ) ),
@@ -268,12 +318,14 @@ class HFE_Settings_Page {
 					'show_theme_support'       => $show_theme_support,
 					'theme_option'             => $theme_option,
 					'st_status'                => $st_status,
-					'hfe_settings_url'      => admin_url( 'admin.php?page=hfe' ),
-					'header_footer_builder'    => admin_url('edit.php?post_type=elementor-hf'),
+					'hfe_settings_url'         => admin_url( 'admin.php?page=hfe' ),
+					'header_footer_builder'    => admin_url( 'edit.php?post_type=elementor-hf' ),
 					'st_pro_status'            => $stpro_status,
 					'st_link'                  => $st_link,
 					'hfe_post_url'             => $hfe_post_url,
 					'is_hfe_post'              => $is_hfe_post,
+					'user_email'               => $user_email,
+					'analytics_status'         => $analytics_status,
 				]
 			);
 	
@@ -287,19 +339,19 @@ class HFE_Settings_Page {
 	
 		if ( '' !== $uae_logo && '' !== $white_logo ) {
 	
-			$custom_css = "
+			$custom_css = '
 				#toplevel_page_hfe .wp-menu-image {
-					background-image: url(" . esc_url($uae_logo) . ") !important;
+					background-image: url(' . esc_url( $uae_logo ) . ') !important;
 					background-size: 23px 34px !important;
 					background-repeat: no-repeat !important;
 					background-position: center !important;
 				}
 				#toplevel_page_hfe.wp-menu-open .wp-menu-image,
 				#toplevel_page_hfe .wp-has-current-submenu .wp-menu-image {
-					background-image: url(" . esc_url($white_logo) . ") !important;
+					background-image: url(' . esc_url( $white_logo ) . ') !important;
 				}
-			";
-			wp_add_inline_style('wp-admin', $custom_css);
+			';
+			wp_add_inline_style( 'wp-admin', $custom_css );
 		}
 	
 		wp_enqueue_script( 'hfe-admin-script', HFE_URL . 'admin/assets/js/ehf-admin.js', [ 'jquery', 'updates' ], HFE_VER, true );
@@ -307,29 +359,29 @@ class HFE_Settings_Page {
 		$is_dismissed = get_user_meta( get_current_user_id(), 'hfe-popup' );
 	
 		$strings = [
-			'addon_activate'    => esc_html__( 'Activate', 'header-footer-elementor' ),
-			'addon_activated'   => esc_html__( 'Activated', 'header-footer-elementor' ),
-			'addon_active'      => esc_html__( 'Active', 'header-footer-elementor' ),
-			'addon_deactivate'  => esc_html__( 'Deactivate', 'header-footer-elementor' ),
-			'addon_inactive'    => esc_html__( 'Inactive', 'header-footer-elementor' ),
-			'addon_install'     => esc_html__( 'Install', 'header-footer-elementor' ),
-			'theme_installed'   => esc_html__( 'Theme Installed', 'header-footer-elementor' ),
-			'plugin_installed'  => esc_html__( 'Plugin Installed', 'header-footer-elementor' ),
-			'addon_download'    => esc_html__( 'Download', 'header-footer-elementor' ),
-			'addon_exists'      => esc_html__( 'Already Exists.', 'header-footer-elementor' ),
-			'visit_site'        => esc_html__( 'Visit Website', 'header-footer-elementor' ),
-			'plugin_error'      => esc_html__( 'Could not install. Please download from WordPress.org and install manually.', 'header-footer-elementor' ),
-			'subscribe_success' => esc_html__( 'Your details are submitted successfully.', 'header-footer-elementor' ),
-			'subscribe_error'   => esc_html__( 'Encountered an error while performing your request.', 'header-footer-elementor' ),
-			'ajax_url'          => admin_url( 'admin-ajax.php' ),
-			'nonce'             => wp_create_nonce( 'hfe-admin-nonce' ),
-			'installer_nonce'   => wp_create_nonce( 'updates' ),
-			'popup_dismiss'     => false,
-			'data_source'       => 'HFE',
-			'show_all_hfe'		=> $show_view_all,
-			'hfe_edit_url'      => $hfe_edit_url,
-			'view_all_text'     => esc_html__( 'View All', 'header-footer-elementor' ),
-			'header_footer_builder'	=> $hfe_edit_url
+			'addon_activate'        => esc_html__( 'Activate', 'header-footer-elementor' ),
+			'addon_activated'       => esc_html__( 'Activated', 'header-footer-elementor' ),
+			'addon_active'          => esc_html__( 'Active', 'header-footer-elementor' ),
+			'addon_deactivate'      => esc_html__( 'Deactivate', 'header-footer-elementor' ),
+			'addon_inactive'        => esc_html__( 'Inactive', 'header-footer-elementor' ),
+			'addon_install'         => esc_html__( 'Install', 'header-footer-elementor' ),
+			'theme_installed'       => esc_html__( 'Theme Installed', 'header-footer-elementor' ),
+			'plugin_installed'      => esc_html__( 'Plugin Installed', 'header-footer-elementor' ),
+			'addon_download'        => esc_html__( 'Download', 'header-footer-elementor' ),
+			'addon_exists'          => esc_html__( 'Already Exists.', 'header-footer-elementor' ),
+			'visit_site'            => esc_html__( 'Visit Website', 'header-footer-elementor' ),
+			'plugin_error'          => esc_html__( 'Could not install. Please download from WordPress.org and install manually.', 'header-footer-elementor' ),
+			'subscribe_success'     => esc_html__( 'Your details are submitted successfully.', 'header-footer-elementor' ),
+			'subscribe_error'       => esc_html__( 'Encountered an error while performing your request.', 'header-footer-elementor' ),
+			'ajax_url'              => admin_url( 'admin-ajax.php' ),
+			'nonce'                 => wp_create_nonce( 'hfe-admin-nonce' ),
+			'installer_nonce'       => wp_create_nonce( 'updates' ),
+			'popup_dismiss'         => false,
+			'data_source'           => 'HFE',
+			'show_all_hfe'          => $show_view_all,
+			'hfe_edit_url'          => $hfe_edit_url,
+			'view_all_text'         => esc_html__( 'View All', 'header-footer-elementor' ),
+			'header_footer_builder' => $hfe_edit_url,
 	
 		];
 	
@@ -514,14 +566,25 @@ class HFE_Settings_Page {
 			9
 		);
 
+		// Add the Settings Submenu.
+		add_submenu_page(
+			$menu_slug,
+			__( 'Onboarding', 'header-footer-elementor' ),
+			__( 'Onboarding', 'header-footer-elementor' ),
+			$capability,
+			$menu_slug . '#onboarding',
+			[ $this, 'render' ],
+			9
+		);
 	}
+	
 
 	/**
 	 * Settings page.
 	 *
 	 * Call back function for add submenu page function.
 	 *
-	 * @since x.x.x
+	 * @since 2.2.1
 	 * @return void
 	 */
 	public function render() {
@@ -541,8 +604,8 @@ class HFE_Settings_Page {
 	 * Renders the admin settings content.
 	 *
 	 * @since 1.0.0
-	 * @param sting $menu_page_slug current page name.
-	 * @param sting $page_action current page action.
+	 * @param string $menu_page_slug current page name.
+	 * @param string $page_action current page action.
 	 *
 	 * @return void
 	 */
@@ -552,7 +615,7 @@ class HFE_Settings_Page {
 			return;
 		}
 
-		if ( self::is_current_page( 'hfe' )  ) {
+		if ( self::is_current_page( 'hfe' ) ) {
 			include_once HFE_DIR . 'inc/settings/settings-app.php';
 		}
 	}
@@ -575,8 +638,8 @@ class HFE_Settings_Page {
 		$hfe_radio_button = get_option( 'hfe_compatibility_option', '1' );
 		?>
 		<?php
-		if ( isset( $_GET['page'] ) ) { // PHPCS:Ignore WordPress.Security.NonceVerification.Recommended
-			switch ( $_GET['page'] ) { // PHPCS:Ignore WordPress.Security.NonceVerification.Recommended
+		if ( isset( $_GET['page'] ) ) { // PHPCS:Ignore WordPress.Security.NonceVerification.Recommended -- This code is deprecated and will be removed in future versions.
+			switch ( $_GET['page'] ) { // PHPCS:Ignore WordPress.Security.NonceVerification.Recommended -- This code is deprecated and will be removed in future versions.
 				case 'hfe-settings':
 					$this->get_themes_support();
 					break;
@@ -642,7 +705,7 @@ class HFE_Settings_Page {
 
 				$tab_slug = str_replace( '_', '-', $tab_id );
 
-				$active_tab = ( ( isset( $_GET['page'] ) && $tab_slug == $_GET['page'] ) || ( ! isset( $_GET['page'] ) && 'hfe_templates' == $tab_id ) ) ? $tab_id : ''; // PHPCS:Ignore WordPress.Security.NonceVerification.Recommended
+				$active_tab = ( ( isset( $_GET['page'] ) && $tab_slug == $_GET['page'] ) || ( ! isset( $_GET['page'] ) && 'hfe_templates' == $tab_id ) ) ? $tab_id : ''; // PHPCS:Ignore WordPress.Security.NonceVerification.Recommended --This code is deprecated and will be removed in future versions.
 
 				$active = ( $active_tab == $tab_id ) ? ' nav-tab-active' : '';
 
@@ -736,7 +799,7 @@ class HFE_Settings_Page {
 					</div>
 					<div class="hfe-privacy-policy-container">
 						<?php /* translators: %1$s and %3$s are opening anchor tags, and %2$s and %4$s is closing anchor tags. */ ?>
-						<p class="hfe-subscription-policy"><?php printf( __( 'By submitting, you agree to our %1$sTerms%2$s and %3$sPrivacy Policy%4$s.', 'header-footer-elementor' ), '<a href="https://store.brainstormforce.com/terms-and-conditions/" target="_blank">', '</a>', '<a href="https://store.brainstormforce.com/privacy-policy/" target="_blank">', '</a>' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+						<p class="hfe-subscription-policy"><?php printf( __( 'By submitting, you agree to our %1$sTerms%2$s and %3$sPrivacy Policy%4$s.', 'header-footer-elementor' ), '<a href="https://store.brainstormforce.com/terms-and-conditions/" target="_blank">', '</a>', '<a href="https://store.brainstormforce.com/privacy-policy/" target="_blank">', '</a>' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- This code is deprecated and will be removed in future versions?></p>
 					</div>
 				</div>
 			<?php } ?>
@@ -1172,34 +1235,34 @@ class HFE_Settings_Page {
 	}
 
 	
-/**
- * Add settings link to the Plugins page.
- *
- * @since 1.6.0
- *
- * @param array $links Plugin row links.
- *
- * @return array $links
- */
-public function settings_link( $links ) {
-    $menu_setting = HFE_Helper::is_pro_active() ? 'uaepro' : 'hfe'; // Replace with your actual menu slug
+	/**
+	 * Add settings link to the Plugins page.
+	 *
+	 * @since 1.6.0
+	 *
+	 * @param array $links Plugin row links.
+	 *
+	 * @return array $links
+	 */
+	public function settings_link( $links ) {
+		$menu_setting = HFE_Helper::is_pro_active() ? 'uaepro' : 'hfe'; // Replace with your actual menu slug.
 
-    $custom['settings'] = sprintf(
-        '<a href="%s" aria-label="%s">%s</a>',
-        esc_url(
-            add_query_arg(
-                [
-                    'page' => $menu_setting,
-                ],
-                admin_url( 'admin.php' )
-            ) . '#dashboard'
-        ),
-        esc_attr__( 'Go to HFE Settings page', 'header-footer-elementor' ),
-        esc_html__( 'Settings', 'header-footer-elementor' )
-    );
+		$custom['settings'] = sprintf(
+			'<a href="%s" aria-label="%s">%s</a>',
+			esc_url(
+				add_query_arg(
+					[
+						'page' => $menu_setting,
+					],
+					admin_url( 'admin.php' )
+				) . '#dashboard'
+			),
+			esc_attr__( 'Go to UAE Settings page', 'header-footer-elementor' ),
+			esc_html__( 'Settings', 'header-footer-elementor' )
+		);
 
-    return array_merge( $custom, (array) $links );
-}
+		return array_merge( $custom, (array) $links );
+	}
 
 	/**
 	 * Different MIME type of different PHP version

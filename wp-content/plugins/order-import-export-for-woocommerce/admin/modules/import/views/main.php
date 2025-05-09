@@ -136,12 +136,7 @@ Wt_Iew_IE_Basic_Helper::debug_panel($this->module_base);
 ?>
 <?php include WT_O_IEW_PLUGIN_PATH . "/admin/views/_save_template_popup.php"; ?>
 
-<h2 class="wt_iew_page_hd"><?php _e('Import'); ?><span class="wt_iew_post_type_name"></span></h2>
-<span class="wt-webtoffee-icon" style="float: <?php echo (!is_rtl()) ? 'right' : 'left'; ?>; padding-<?php echo (!is_rtl()) ? 'right' : 'left'; ?>:30px; margin-top: -25px;">
-	<?php _e('Developed by'); ?> <a target="_blank" href="https://www.webtoffee.com">
-		<img src="<?php echo WT_O_IEW_PLUGIN_URL . '/assets/images/webtoffee-logo_small.png'; ?>" style="max-width:100px;">
-	</a>
-</span>
+
 
 <?php
 if ($requested_rerun_id > 0 && $this->rerun_id == 0) {
@@ -185,6 +180,8 @@ if ($requested_rerun_id > 0 && $this->rerun_id == 0) {
 </div>
 <?php
 include $wf_admin_view_path . "market.php";
+include $wf_admin_view_path."admin-header-and-help.php";
+
 ?>
 <script type="text/javascript">
 	/* external modules can hook */

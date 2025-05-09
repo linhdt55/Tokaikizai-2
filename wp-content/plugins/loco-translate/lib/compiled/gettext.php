@@ -28,7 +28,7 @@ public function jsonSerialize() { return $this->getArrayCopy(); } }
 function loco_normalize_charset(  $cs ) { if( preg_match('/^UTF-?(8|16-?(LE|BE)?)$/i',$cs,$r,PREG_UNMATCHED_AS_NULL) ){ return '8' === $r[1] ? 'UTF-8' : 'UTF-16'.$r[2]; } try { return mb_preferred_mime_name($cs); } catch( ValueError $e ){ try { if( preg_match('/^csISO(\\w+)/i',$cs,$r) || preg_match('/^(\\w+)8$/',$cs,$r) ){ return mb_preferred_mime_name($r[1]); } throw $e; } catch( ValueError $e ){ throw new InvalidArgumentException('Unsupported character encoding: '.$cs ); } } }
 class LocoPoHeaders extends LocoHeaders { 
 private  $cs = null; 
-public function getCharset() { $cs = $this->cs; if( is_null($cs) ){ $cs = ''; $raw = $this->offsetGet('content-type'); if( $raw && preg_match('!\\bcharset[= ]+([-\\w]+)!',$raw,$r) ){ try { $cs = loco_normalize_charset($r[1]); } catch( InvalidArgumentException $e ){ } catch( Exception $e ){ trigger_error( $e->getMessage(), E_USER_NOTICE ); } } $this->cs = $cs; } return $cs; } 
+public function getCharset() { $cs = $this->cs; if( is_null($cs) ){ $cs = ''; $raw = $this->offsetGet('content-type'); if( $raw && preg_match('!\\bcharset[= ]+([-\\w]+)!',$raw,$r) ){ try { $cs = loco_normalize_charset($r[1]); } catch( InvalidArgumentException $e ){ } catch( Throwable $e ){ trigger_error( $e->getMessage(), E_USER_NOTICE ); } } $this->cs = $cs; } return $cs; } 
 public function setCharset(  $to ) { $to = loco_normalize_charset($to); $from = $this->getCharset(); $this->cs = $to; $this['Content-Type'] = 'text/plain; charset='.$to; if( '' !== $from && $from !== $to ){ foreach( $this as $key => $val ){ $this[$key] = mb_convert_encoding($val,$to,$from); } } return $to; } 
 public static function fromMsgstr(  $str ) { $headers = new LocoPoHeaders; $key = ''; foreach( preg_split('/[\\r\\n]+/',$str) as $line ){ $i = strpos($line,':'); if( is_int($i) ){ $key = trim( substr($line,0,$i), " \t" ); $headers->offsetSet( $key, ltrim( substr($line,++$i)," \t" ) ); } else if( '' !== $key ){ $headers->offsetSet( $key, $headers->offsetGet($key)."\n".$line ); } } $cs = $headers->getCharset(); if( '' !== $cs && 'UTF-8' !== $cs && 'UTF-8' !== mb_detect_encoding($str,['UTF-8',$cs],true) ){ foreach( $headers as $key => $val ){ $headers[$key] = mb_convert_encoding($val,'UTF-8',[$cs]); } } return $headers; } 
 public static function fromSource(  $raw ) { $po = new LocoPoParser($raw); $po->parse(0); return $po->getHeader(); } }
@@ -218,6 +218,7 @@ public function generate(  $src ) { $this->init($src); while( $this->valid() ){ 
 public function init(  $src ) { $this->src = $src; $this->rewind(); return $this; } 
 public function define(  $grep,  $t = 0 ) { if('^' !== $grep[1] ){ throw new InvalidArgumentException('Expression '.$grep.' isn\'t anchored'); } if( ! is_int($t) && ! is_callable($t) ){ throw new InvalidArgumentException('Non-integer token must be valid callback'); } $sniff = $grep[2]; if( $sniff === preg_quote($sniff,$grep[0]) ){ $this->rules[$sniff][] = [ $grep, $t ]; } else { $this->rules[''][] = [ $grep, $t ]; } return $this; } 
 public function ignore( ...$symbols ) { $this->skip += array_fill_keys( $symbols, true ); return $this; } 
+public function allow( ...$symbols ) { $this->skip = array_diff_key( $this->skip, array_fill_keys($symbols,true) ); return $this; } 
 #[ReturnTypeWillChange]
 public function current() { return $this->tok; } 
 public function advance() { $tok = $this->current(); $this->next(); return $tok; } 
@@ -367,4 +368,4 @@ private function distance(  $a,  $b ) { $a = strtolower($a); $b = strtolower($b)
 public function getFuzzyMatches() { $pairs = []; usort( $this->diff, [__CLASS__,'compareDistance'] ); foreach( $this->diff as $pair ){ list($old,$new) = $pair; if( ! array_key_exists($new,$this->pot) || ! array_key_exists($old,$this->po) ){ continue; } $pairs[] = [ $this->po[$old], $this->pot[$new], ]; unset($this->po[$old]); unset($this->pot[$new]); if( ! $this->po || ! $this->pot ){ break; } } $this->diff = []; return $pairs; } 
 public function exportPo() { $p = new LocoPoIterator([ ['source' => ''], ]); $p->concat($this->pot); return $p; } 
 private static function compareDistance( array $a, array $b ) { return $a[2] - $b[2]; } }
-defined('T_FINALLY') || define('T_FINALLY',500); if( function_exists('loco_check_extension') ) { loco_check_extension('mbstring'); } 
+if( function_exists('loco_check_extension') ) { loco_check_extension('mbstring'); } 

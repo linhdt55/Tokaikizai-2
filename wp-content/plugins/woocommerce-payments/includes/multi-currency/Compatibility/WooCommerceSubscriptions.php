@@ -75,7 +75,7 @@ class WooCommerceSubscriptions extends BaseCompatibility {
 				add_filter( MultiCurrency::FILTER_PREFIX . 'should_disable_currency_switching', [ $this, 'should_disable_currency_switching' ], 50 );
 				add_filter( 'woocommerce_subscription_price_string_details', [ $this, 'maybe_set_current_my_account_subscription' ], 50, 2 );
 				add_filter( 'woocommerce_get_formatted_subscription_total', [ $this, 'maybe_clear_current_my_account_subscription' ], 50, 2 );
-				add_filter( 'wc_price', [ $this, 'maybe_get_explicit_format_for_subscription_total' ], 50, 5 );
+				add_filter( 'wc_price', [ $this, 'maybe_get_explicit_format_for_subscription_total' ], 50, 1 );
 			}
 		}
 	}
@@ -235,18 +235,30 @@ class WooCommerceSubscriptions extends BaseCompatibility {
 			return $return;
 		}
 
-		// Check for subscription renewal or resubscribe.
-		if ( $this->get_subscription_type_from_cart( 'renewal' )
-			|| $this->get_subscription_type_from_cart( 'resubscribe' ) ) {
-			$calls = [
-				'WC_Cart_Totals->calculate_item_totals',
-				'WC_Cart->get_product_subtotal',
-				'wc_get_price_excluding_tax',
-				'wc_get_price_including_tax',
-			];
+		$calls = [
+			'WC_Cart_Totals->calculate_item_totals',
+			'WC_Cart->get_product_subtotal',
+			'wc_get_price_excluding_tax',
+			'wc_get_price_including_tax',
+		];
+
+		// Check for renewal.
+		if ( $this->get_subscription_type_from_cart( 'renewal' ) ) {
+			// When WCPay Subs programmatically sets up the cart, we need to return the
+			// converted price so the user lands at the checkout with the correct price.
+			if ( $this->utils->is_call_in_backtrace( [ 'WCS_Cart_Renewal->setup_cart' ] ) ) {
+				return $return;
+			}
+
 			if ( $this->utils->is_call_in_backtrace( $calls ) ) {
 				return false;
 			}
+		}
+
+		// Check for resubscribe.
+		if ( $this->get_subscription_type_from_cart( 'resubscribe' )
+			&& $this->utils->is_call_in_backtrace( $calls ) ) {
+			return false;
 		}
 
 		// WCPay Subs does a check against the product price and the total, we need to return the actual product price for this check.
@@ -378,15 +390,11 @@ class WooCommerceSubscriptions extends BaseCompatibility {
 	/**
 	 * If the current_my_account_subscription var is set, then we use that subscription's currency in order to set the explicit total.
 	 *
-	 * @param string       $html_price        Price HTML markup.
-	 * @param string       $price             Formatted price.
-	 * @param array        $args              Pass on the args.
-	 * @param float        $unformatted_price Price as float to allow plugins custom formatting. Since 3.2.0.
-	 * @param float|string $original_price    Original price as float, or empty string. Since 5.0.0.
+	 * @param string $html_price Price HTML markup.
 	 *
 	 * @return string The wc_price with HTML wrapping, possibly with the currency code added for explicit formatting.
 	 */
-	public function maybe_get_explicit_format_for_subscription_total( $html_price, $price, $args, $unformatted_price, $original_price ): string {
+	public function maybe_get_explicit_format_for_subscription_total( $html_price ): string {
 		if ( ! $this->is_current_my_account_subscription_set() ) {
 			return $html_price;
 		}

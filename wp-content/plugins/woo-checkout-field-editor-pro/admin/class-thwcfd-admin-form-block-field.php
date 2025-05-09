@@ -156,6 +156,7 @@ class THWCFD_Admin_Form_Block_Field extends THWCFD_Admin_Form{
 									<input type="hidden" name="i_autocomplete" value="" >
 									<input type="hidden" name="i_rowid" value="" />
                     				<input type="hidden" name="i_original_type" value="" />
+									<input type="hidden" name="i_otype" value="" />
 
 									<div class="data-panel data_panel_0">
 										<?php $this->render_form_tab_general_info($section); ?>

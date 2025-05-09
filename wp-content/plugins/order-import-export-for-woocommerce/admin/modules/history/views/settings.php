@@ -2,6 +2,7 @@
 if ( ! defined( 'WPINC' ) ) {
     die;
 }
+$wf_admin_view_path=plugin_dir_path(WT_O_IEW_PLUGIN_FILENAME).'admin/views/';
 ?>
 <style type="text/css">
 .wt_iew_history_page{ padding:15px; }
@@ -43,4 +44,6 @@ if(isset($_GET['page']) && $_GET['page']==$this->module_id.'_log')
 {
 	include plugin_dir_path(__FILE__)."/_history_list.php";	
 }
+include $wf_admin_view_path."admin-header-and-help.php";
+
 ?>

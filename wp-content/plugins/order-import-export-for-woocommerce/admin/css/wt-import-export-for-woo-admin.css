@@ -1691,3 +1691,23 @@ ul.wt-ierpro-newfeat li {
   height: 63px;
   background-color:#E6CE5C
 }
+
+
+#wpbody-content {
+  margin-top:80px;
+}
+
+.wbte_oimpexp_help-widget {
+  left: 202px !important;
+}
+
+.wbte_oimpexp_help-widget_popupover{
+  left: -10px !important;
+  right: unset !important;
+}
+
+.wbte_oimpexp_help-widget_popupover::after {
+  left: 20px !important;
+  right: unset !important;
+}
+

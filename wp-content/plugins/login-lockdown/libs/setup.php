@@ -61,7 +61,8 @@ class LoginLockdown_Setup extends LoginLockdown
      */
     static function notice_min_wp_version()
     {
-        LoginLockdown_Utility::wp_kses_wf('<div class="error"><p>' . sprintf(__('Login Lockdown plugin <b>requires WordPress version 4.6</b> or higher to function properly. You are using WordPress version %s. Please <a href="%s">update it</a>.', 'login-lockdown'), get_bloginfo('version'), admin_url('update-core.php')) . '</p></div>');
+        /* translators: %1$s is the current WordPress version; %2$s is the link to the Dashboard Update page (update-core.php) */
+        LoginLockdown_Utility::wp_kses_wf('<div class="error"><p>' . sprintf(__('Login Lockdown plugin <b>requires WordPress version 4.6</b> or higher to function properly. You are using WordPress version %1$s. Please <a href="%2$s">update it</a>.', 'login-lockdown'), get_bloginfo('version'), admin_url('update-core.php')) . '</p></div>');
     } // notice_min_wp_version_error
 
     /**
@@ -72,7 +73,8 @@ class LoginLockdown_Setup extends LoginLockdown
      */
     static function notice_min_php_version()
     {
-        LoginLockdown_Utility::wp_kses_wf('<div class="error"><p>' . sprintf(__('Login Lockdown plugin <b>requires PHP version 5.6.20</b> or higher to function properly. You are using PHP version %s. Please <a href="%s" target="_blank">update it</a>.', 'login-lockdown'), phpversion(), 'https://wordpress.org/support/update-php/') . '</p></div>');
+        /* translators: %1$s is the current PHP version; %2$s is the URL of the WordPress Update PHP page https://wordpress.org/support/update-php/. */
+        LoginLockdown_Utility::wp_kses_wf('<div class="error"><p>' . sprintf(__('Login Lockdown plugin <b>requires PHP version 5.6.20</b> or higher to function properly. You are using PHP version %1$s. Please <a href="%2$s" target="_blank">update it</a>.', 'login-lockdown'), phpversion(), 'https://wordpress.org/support/update-php/') . '</p></div>');
     } // notice_min_wp_version_error
 
 
@@ -144,7 +146,7 @@ class LoginLockdown_Setup extends LoginLockdown
      */
     static function register_settings()
     {
-        register_setting(LOGINLOCKDOWN_OPTIONS_KEY, LOGINLOCKDOWN_OPTIONS_KEY, array(__CLASS__, 'sanitize_settings'));
+        register_setting(LOGINLOCKDOWN_OPTIONS_KEY, LOGINLOCKDOWN_OPTIONS_KEY, array(__CLASS__, 'sanitize_settings')); //phpcs:ignore
     } // register_settings
 
 
@@ -167,7 +169,7 @@ class LoginLockdown_Setup extends LoginLockdown
             'global_block'                 => 0,
             'uninstall_delete'             => 0,
             'block_message'                => 'We\'re sorry, but your IP has been blocked due to too many recent failed login attempts.',
-            'global_unblock_key'           => 'll' . md5(time() . rand(10000, 9999)),
+            'global_unblock_key'           => 'll' . md5(time() . wp_rand(10000, 9999)),
             'whitelist'                    => array()
         );
 
@@ -229,36 +231,7 @@ class LoginLockdown_Setup extends LoginLockdown
         if (!is_array($options['whitelist'])) {
             $options['whitelist'] = explode(PHP_EOL, $options['whitelist']);
         }
-
-        if (isset($_POST['loginlockdown_import_file'])) {
-            $mimes = array(
-                'text/plain',
-                'text/anytext',
-                'application/txt'
-            );
-
-            if (!in_array($_FILES['loginlockdown_import_file']['type'], $mimes)) {
-                LoginLockdown_Utility::display_notice(
-                    sprintf(
-                        "WARNING: Not a valid CSV file - the Mime Type '%s' is wrong! No settings have been imported.",
-                        $_FILES['loginlockdown_import_file']['type']
-                    ),
-                    "error"
-                );
-            } else if (($handle = fopen($_FILES['loginlockdown_import_file']['tmp_name'], "r")) !== false) {
-                $options_json = json_decode(fread($handle, 8192), ARRAY_A);
-
-                if (is_array($options_json) && array_key_exists('max_login_retries', $options_json) && array_key_exists('retries_within', $options_json) && array_key_exists('lockout_length', $options_json)) {
-                    $options = $options_json;
-                    LoginLockdown_Utility::display_notice("Settings have been imported.", "success");
-                } else {
-                    LoginLockdown_Utility::display_notice("Invalid import file! No settings have been imported.", "error");
-                }
-            } else {
-                LoginLockdown_Utility::display_notice("Invalid import file! No settings have been imported.", "error");
-            }
-        }
-
+        
         LoginLockdown_Utility::clear_3rdparty_cache();
         $options['last_options_edit'] = current_time('mysql', true);
 
@@ -384,8 +357,9 @@ class LoginLockdown_Setup extends LoginLockdown
             delete_option(LOGINLOCKDOWN_POINTERS_KEY);
             delete_option(LOGINLOCKDOWN_NOTICES_KEY);
 
-            $wpdb->query("DROP TABLE IF EXISTS " . $wpdb->prefix . "login_fails");
-            $wpdb->query("DROP TABLE IF EXISTS " . $wpdb->prefix . "lockdowns");
+            //phpcs:ignore no built in query function or need to cache
+            $wpdb->query("DROP TABLE IF EXISTS " . $wpdb->prefix . "login_fails"); //phpcs:ignore
+            $wpdb->query("DROP TABLE IF EXISTS " . $wpdb->prefix . "lockdowns"); //phpcs:ignore
         }
     } // uninstall
 } // class

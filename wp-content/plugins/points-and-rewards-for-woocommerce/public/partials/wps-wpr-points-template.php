@@ -56,6 +56,10 @@ if ( isset( $_POST['wps_wpr_save_level'] ) && isset( $_POST['membership-save-lev
 				update_user_meta( $user_id, 'wps_wpr_points', $remaining_points );
 				update_user_meta( $user_id, 'membership_level', $selected_role );
 				update_user_meta( $user_id, 'membership_expiration', $expiration_date );
+				// send sms.
+				wps_wpr_send_sms_org( $user_id, /* translators: %s: sms msg */ sprintf( esc_html__( "Your membership has been upgraded, and %1\$s points have been deducted from your account. Your total points balance is now %2\$s", 'points-and-rewards-for-woocommerce' ), $values['Points'], $remaining_points ) );
+				// send messages on whatsapp.
+				wps_wpr_send_messages_on_whatsapp( $user_id, /* translators: %s: whatsapp msg */ sprintf( esc_html__( "Your membership has been upgraded, and %1\$s points have been deducted from your account. Your total points balance is now %2\$s", 'points-and-rewards-for-woocommerce' ), $values['Points'], $remaining_points ) );
 				/*Send mail*/
 				$user              = get_user_by( 'ID', $user_id );
 				$wps_wpr_shortcode = array(
@@ -128,16 +132,15 @@ if ( ! is_array( $coupon_settings ) ) {
 			?>
 		</div>
 		<?php
-		if ( isset( $wps_user_point_expiry ) && ! empty( $wps_user_point_expiry ) && $get_points > 0 ) {
-			$expiration_settings = get_option( 'wps_wpr_points_expiration_settings', true );
-			if ( ! empty( $expiration_settings['wps_wpr_points_exp_onmyaccount'] ) ) {
-				$wps_wpr_points_exp_onmyaccount = $expiration_settings['wps_wpr_points_exp_onmyaccount'];
-			}
-			if ( isset( $wps_wpr_points_exp_onmyaccount ) && ! empty( $wps_wpr_points_exp_onmyaccount ) ) {
+		if ( ! empty( $wps_user_point_expiry ) && $get_points > 0 ) {
 
-				$date_format           = get_option( 'date_format' );
-				$expiry_date_timestamp = strtotime( $wps_user_point_expiry );
-				$expirydate_format     = date_i18n( $date_format, $expiry_date_timestamp );
+			$expiration_settings            = get_option( 'wps_wpr_points_expiration_settings', true );
+			$expiration_settings            = ! empty( $expiration_settings ) && is_array( $expiration_settings ) ? $expiration_settings : array();
+			$wps_wpr_points_exp_onmyaccount = ! empty( $expiration_settings['wps_wpr_points_exp_onmyaccount'] ) ? $expiration_settings['wps_wpr_points_exp_onmyaccount'] : 0;
+			if ( 1 === $wps_wpr_points_exp_onmyaccount ) {
+
+				$date_format       = get_option( 'date_format' );
+				$expirydate_format = date_i18n( $date_format, strtotime( $wps_user_point_expiry ) );
 				?>
 				<div class="wps_wpr_points_expiry"><?php echo esc_html__( 'Expiring On : ', 'points-and-rewards-for-woocommerce' ) . esc_html( $expirydate_format ); ?></div>
 				<?php
@@ -199,7 +202,7 @@ if ( ! is_array( $coupon_settings ) ) {
 							<span class="wps_wpr_nobr"><?php echo esc_html__( 'Required Points', 'points-and-rewards-for-woocommerce' ); ?></span>
 						</th>
 						<?php
-						if ( ! is_plugin_active( 'ultimate-woocommerce-points-and-rewards/ultimate-woocommerce-points-and-rewards.php' ) ) {
+						if ( ! wps_wpr_is_par_pro_plugin_active() ) {
 							?>
 							<th class="wps-wpr-points-expiry">
 								<span class="wps_wpr_nobr"><?php echo esc_html__( 'Membership Expiry', 'points-and-rewards-for-woocommerce' ); ?></span>
@@ -221,26 +224,43 @@ if ( ! is_array( $coupon_settings ) ) {
 						<tr>
 							<td>
 								<?php
-								$wps_member_name = strtolower( str_replace( ' ', '_', $wps_role ) );
+
+								$enable_mem_reward_points = ! empty( $values['enable_mem_reward_points'] ) ? $values['enable_mem_reward_points'] : 0;
+								$assign_mem_points_type   = ! empty( $values['assign_mem_points_type'] ) ? $values['assign_mem_points_type'] : 'fixed';
+								$mem_rewards_points_val   = ! empty( $values['mem_rewards_points_val'] ) ? $values['mem_rewards_points_val'] : 0;
+								$wps_member_name          = strtolower( str_replace( ' ', '_', $wps_role ) );
+								$discount_value           = ! empty( $values['Discount'] ) ? $values['Discount'] : 0;
 								echo esc_html( $wps_role ) . '<br/><a class = "wps_wpr_level_benefits" data-id = "' . esc_html( $wps_member_name ) . '" href="javascript:;">' . esc_html__( 'View Benefits', 'points-and-rewards-for-woocommerce' ) . '</a>'; //phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited,WordPress.WP.I18n.NonSingularStringLiteralText
 								?>
 								</td>
 								<div class="wps_wpr_popup_wrapper wps_rwpr_settings_display_none" id="wps_wpr_popup_wrapper_<?php echo esc_html( $wps_member_name ); ?>">
 									<div class="wps_wpr_popup_content_section">
 										<div class="wps_wpr_popup_content">
-											<div class="wps_wpr_popup_notice_section">					
-												<p>
-													<span class="wps_wpr_intro_text">
+											<div class="wps_wpr_popup_notice_section">
+												<?php
+												if ( $discount_value > 0 ) {
+												?>				
+													<p>
+														<span class="wps_wpr_intro_text">
+														<?php
+														esc_html_e( 'You will get ', 'points-and-rewards-for-woocommerce' );
+														echo esc_html( $discount_value );
+														esc_html_e( '% discount on below products or categories', 'points-and-rewards-for-woocommerce' );
+														?>
+														</span>
+													</p>
 													<?php
-													esc_html_e( 'You will get ', 'points-and-rewards-for-woocommerce' );
-													echo esc_html( $values['Discount'] );
-													esc_html_e( '% discount on below products or categories', 'points-and-rewards-for-woocommerce' );
+												} else {
+
 													?>
-													</span>
-													<span class="wps_wpr_close">
-														<a href="javascript:;"><img src="<?php echo esc_url( WPS_RWPR_DIR_URL ); ?>public/images/cancel.png" alt=""></a>
-													</span>
-												</p>
+													<p>
+														<span class="wps_wpr_intro_text"><?php echo esc_html( ucfirst( $wps_member_name ) ); ?></span>
+													</p>
+													<?php
+												} ?>
+												<span class="wps_wpr_close">
+													<a href="javascript:;"><img src="<?php echo esc_url( WPS_RWPR_DIR_URL ); ?>public/images/cancel.png" alt=""></a>
+												</span>
 											</div>
 											<div class="wps_wpr_popup_thumbnail_section">
 												<ul>
@@ -303,7 +323,35 @@ if ( ! is_array( $coupon_settings ) ) {
 														}
 													}
 													?>
-											</div>								
+											</div>
+											<?php
+											if ( 1 == $enable_mem_reward_points ) {
+												if ( 'percent' === $assign_mem_points_type ) {
+
+													?>
+													<p class="wps_wpr_mems_rewards">
+														<span class="wps_wpr_intro_text">
+															<?php
+															/* translators: %s: list of percent wise points rewards */
+															echo sprintf( esc_html__( 'As a %1$s member, you will earn an additional %2$s of your order total as bonus points as a reward!' , 'points-and-rewards-for-woocommerce' ), esc_html( ucfirst( $wps_member_name ) ), esc_html( $mem_rewards_points_val . '%' ) );
+															?>
+														</span>
+													</p>
+													<?php
+												} else {
+													?>
+													<p class="wps_wpr_mems_rewards">
+														<span class="wps_wpr_intro_text">
+															<?php
+															/* translators: %s: list of fixed points rewards */
+															echo sprintf( esc_html__( 'As a %1$s member, you will earn an additional %2$s bonus points as a reward!' , 'points-and-rewards-for-woocommerce' ), esc_html( ucfirst( $wps_member_name ) ), esc_html( $mem_rewards_points_val ) );
+															?>
+														</span>
+													</p>
+													<?php
+												}
+											}
+											?>
 										</div>
 									</div>
 								</div>
@@ -314,7 +362,7 @@ if ( ! is_array( $coupon_settings ) ) {
 							</td>
 							<td>
 									<?php
-									if ( ! is_plugin_active( 'ultimate-woocommerce-points-and-rewards/ultimate-woocommerce-points-and-rewards.php' ) ) {
+									if ( ! wps_wpr_is_par_pro_plugin_active() ) {
 										echo esc_html( $values['Exp_Number'] ) . ' ' . esc_html( $values['Exp_Days'] );
 									}
 									do_action( 'wps_wpr_membership_expiry_date_for_user', $user_id, $values, $wps_role );
@@ -347,7 +395,15 @@ if ( ! is_array( $coupon_settings ) ) {
 		<?php
 	}
 
-	if ( isset( $enable_drop ) && $enable_drop ) {
+	// check pro plugin is not and auto value is true, than make it false.
+	$wps_wpr_enable_automate_membership = ! empty( $membership_settings_array['wps_wpr_enable_automate_membership'] ) ? $membership_settings_array['wps_wpr_enable_automate_membership'] : '';
+	if ( ! wps_wpr_is_par_pro_plugin_active() && '1' == $wps_wpr_enable_automate_membership ) {
+
+		$wps_wpr_enable_automate_membership = 0;
+	}
+
+	// check auto membership upgrade is enable than no need to show manual upgrade option.
+	if ( 1 != $wps_wpr_enable_automate_membership && ( isset( $enable_drop ) && $enable_drop ) ) {
 		if ( isset( $wps_user_level ) && ! empty( $wps_user_level ) && array_key_exists( $wps_user_level, $wps_wpr_membership_roles ) ) {
 
 			$mem_expire_time = get_user_meta( $user_id, 'membership_expiration', true );
@@ -358,34 +414,34 @@ if ( ! is_array( $coupon_settings ) ) {
 		}
 		if ( ! empty( $wps_wpr_membership_roles ) && is_array( $wps_wpr_membership_roles ) ) {
 			?>
-		<div class="wps_wpr_upgrade_level_main_wrap wps_wpr_main_section_all_wrap">
-			<p class="wps_wpr_heading wps_wpr_membrship_update_heading"><?php echo esc_html_e( 'Upgrade User Level', 'points-and-rewards-for-woocommerce' ); ?></p>
-			<fieldset class="wps_wpr_each_section wps_wpr_membership_listing_class">	
-				<span class="wps_wpr_membership_message"><?php echo esc_html_e( 'Upgrade Your User Level: ', 'points-and-rewards-for-woocommerce' ); ?></span>
-				<form action="" method="post" id="wps_wpr_membership">
-					<?php wp_nonce_field( 'membership-save-level', 'membership-save-level' ); ?>
-					<select id="wps_wpr_membership_roles" class="wps_wpr_membership_roles" name="wps_wpr_membership_roles">
-						<option><?php echo esc_html__( 'Select Level', 'points-and-rewards-for-woocommerce' ); ?></option>
-						<?php
-						foreach ( $wps_wpr_membership_roles as $wps_role => $values ) {
-							if ( $values['Points'] == $get_points
-								|| $values['Points'] < $get_points ) {
-								?>
-								<option value="<?php echo esc_html( $wps_role ); ?>">
-								<?php
-								echo esc_html( $wps_role );
-								?>
-								</option>
-								<?php
+			<div class="wps_wpr_upgrade_level_main_wrap wps_wpr_main_section_all_wrap">
+				<p class="wps_wpr_heading wps_wpr_membrship_update_heading"><?php echo esc_html_e( 'Upgrade User Level', 'points-and-rewards-for-woocommerce' ); ?></p>
+				<fieldset class="wps_wpr_each_section wps_wpr_membership_listing_class">	
+					<span class="wps_wpr_membership_message"><?php echo esc_html_e( 'Upgrade Your User Level: ', 'points-and-rewards-for-woocommerce' ); ?></span>
+					<form action="" method="post" id="wps_wpr_membership">
+						<?php wp_nonce_field( 'membership-save-level', 'membership-save-level' ); ?>
+						<select id="wps_wpr_membership_roles" class="wps_wpr_membership_roles" name="wps_wpr_membership_roles">
+							<option><?php echo esc_html__( 'Select Level', 'points-and-rewards-for-woocommerce' ); ?></option>
+							<?php
+							foreach ( $wps_wpr_membership_roles as $wps_role => $values ) {
+								if ( $values['Points'] == $get_points
+									|| $values['Points'] < $get_points ) {
+									?>
+									<option value="<?php echo esc_html( $wps_role ); ?>">
+									<?php
+									echo esc_html( $wps_role );
+									?>
+									</option>
+									<?php
+								}
 							}
-						}
-						?>
-					</select>
-					<input type="submit" id = "wps_wpr_upgrade_level" value='<?php esc_html_e( 'Upgrade Level', 'points-and-rewards-for-woocommerce' ); ?>' class="wps_rwpr_settings_display_none button-primary woocommerce-save-button wps_wpr_save_changes" name="wps_wpr_save_level">
-					<input type="button" id = "wps_wpr_upgrade_level_click" value='<?php esc_html_e( 'Upgrade Level', 'points-and-rewards-for-woocommerce' ); ?>' class="button-primary woocommerce-save-button wps_wpr_save_changes" name="wps_wpr_save_level_click">
-				</form>
-			</fieldset>
-		</div>
+							?>
+						</select>
+						<input type="submit" id = "wps_wpr_upgrade_level" value='<?php esc_html_e( 'Upgrade Level', 'points-and-rewards-for-woocommerce' ); ?>' class="wps_rwpr_settings_display_none button-primary woocommerce-save-button wps_wpr_save_changes" name="wps_wpr_save_level">
+						<input type="button" id = "wps_wpr_upgrade_level_click" value='<?php esc_html_e( 'Upgrade Level', 'points-and-rewards-for-woocommerce' ); ?>' class="button-primary woocommerce-save-button wps_wpr_save_changes" name="wps_wpr_save_level_click">
+					</form>
+				</fieldset>
+			</div>
 			<?php
 		}
 	}

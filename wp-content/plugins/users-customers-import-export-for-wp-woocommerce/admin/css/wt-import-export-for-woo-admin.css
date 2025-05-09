@@ -1676,3 +1676,22 @@ border: 1px solid #E4E4E4;
   height: 63px;
   background-color:#E6CE5C
 }
+
+#wpbody-content {
+  margin-top: 80px;
+}
+
+.wbte_uimpexp_help-widget {
+  left: 202px !important;
+}
+
+.wbte_uimpexp_help-widget_popupover{
+  left: -10px !important;
+  right: unset !important;
+}
+
+.wbte_uimpexp_help-widget_popupover::after {
+  left: 20px !important;
+  right: unset !important;
+}
+

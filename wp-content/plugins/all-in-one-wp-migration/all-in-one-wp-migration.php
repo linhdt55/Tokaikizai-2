@@ -1,16 +1,17 @@
 <?php
 /**
- * Plugin Name: All-in-One WP Migration
+ * Plugin Name: All-in-One WP Migration and Backup
  * Plugin URI: https://servmask.com/
  * Description: All-in-One WP Migration makes moving your entire WordPress site simple. Export or import your database, media, plugins, and themes with just a few clicks.
  * Author: ServMask
  * Author URI: https://servmask.com/
- * Version: 7.88
+ * Version: 7.93
  * Text Domain: all-in-one-wp-migration
  * Domain Path: /languages
  * Network: True
+ * License: GPLv3
  *
- * Copyright (C) 2014-2023 ServMask Inc.
+ * Copyright (C) 2014-2025 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,6 +25,8 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Attribution: This code is part of the All-in-One WP Migration plugin, developed by
  *
  * ███████╗███████╗██████╗ ██╗   ██╗███╗   ███╗ █████╗ ███████╗██╗  ██╗
  * ██╔════╝██╔════╝██╔══██╗██║   ██║████╗ ████║██╔══██╗██╔════╝██║ ██╔╝

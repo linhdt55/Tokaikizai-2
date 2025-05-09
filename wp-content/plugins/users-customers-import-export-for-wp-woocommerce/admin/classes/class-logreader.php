@@ -84,7 +84,12 @@ class Wt_Import_Export_For_Woo_Basic_Logreader
 		$data_arr=array();
 		while(($data=fgets($this->file_pointer))!==false)
 		{
-			$data=maybe_unserialize($data);
+			$form_data_raw = wp_unslash($data);
+			$data = is_array($form_data_raw) ? 
+				array_map(function($item) {
+					return is_string($item) ? json_decode($item, true) : $item;
+				}, $form_data_raw) : 
+				json_decode($form_data_raw, true);
 			if(is_array($data))
 			{
 				$data_arr[]=$data;

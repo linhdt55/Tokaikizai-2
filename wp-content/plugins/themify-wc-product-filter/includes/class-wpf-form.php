@@ -185,7 +185,18 @@ class WPF_Form {
         );
         ?>
         <div class="wpf_lightbox_row">
-            <div class="wpf_lightbox_label"><label for="wpf_tax_relation_or"><?php _e('Logical Relationship Between Taxonomies', 'wpf'); ?></label></div>
+            <div class="wpf_lightbox_label">
+				<label for="wpf_tax_relation_or">
+					<?php _e('Logical Relationship Between Taxonomies', 'wpf'); ?>
+					<small class="wpf_help_icon">
+						<span><?php _e( '(?)', 'wpf' ); ?></span>
+						<div class="wpf_help_content">
+							AND = Display products matching ALL of the chosen terms.<br><br>
+							OR = Display products matching ANY of the chosen terms.
+						</div>
+					</small>
+				</label>
+			</div>
             <div class="wpf_lightbox_input">
                 <?php foreach ($relations as $k => $v): ?>
                     <label for="wpf_tax_relation_<?php echo $k ?>">
@@ -235,22 +246,22 @@ class WPF_Form {
                             <?php endif; ?>
                         </select>
                     </div><br>
-                    <label for="wpf_result_page">
-                        <?php
-                        if ( function_exists( 'themify_builder_init' ) ) {
-                            if ( is_plugin_active( 'themify-builder-pro/themify-builder-pro.php' ) ) {
-                                printf( __( 'Please add the <a href="%s">Advanced Products module</a> to the page in order to display the search results.', 'wpf' ), 'https://themify.me/docs/builder-pro-documentation' );
-                            } else if ( is_plugin_active( 'builder-woocommerce/init.php' ) ) {
-                                printf( __( 'Please add the <a href="%s">WooCommerce Products module</a> to the page in order to display the search results.', 'wpf' ), 'https://themify.me/docs/woocommerce-documentation#using-WooCommerce-addons' );
-                            } else {
-                                printf( __( 'Please install the <a href="%s">WooCommerce Products module</a> and add it to the page in order to display the search results.', 'wpf' ), 'https://themify.me/docs/woocommerce-documentation#using-WooCommerce-addons' );
-                            }
-                        } else {
-                            _e('Please add [products] shortcode to the page in order to display the search results.', 'wpf');
-                        }
-                        ?>
-                    </label>
                 </div>
+                <label for="wpf_result_page">
+                    <?php
+                    if ( function_exists( 'themify_builder_init' ) ) {
+                        if ( is_plugin_active( 'themify-builder-pro/themify-builder-pro.php' ) ) {
+                            printf( __( 'Please add the <a href="%s">Advanced Products module</a> to the page in order to display the search results.', 'wpf' ), 'https://themify.me/docs/builder-pro-documentation' );
+                        } else if ( is_plugin_active( 'builder-woocommerce/init.php' ) ) {
+                            printf( __( 'Please add the <a href="%s">WooCommerce Products module</a> to the page in order to display the search results.', 'wpf' ), 'https://themify.me/docs/woocommerce-documentation#using-WooCommerce-addons' );
+                        } else {
+                            printf( __( 'Please install the <a href="%s">WooCommerce Products module</a> and add it to the page in order to display the search results.', 'wpf' ), 'https://themify.me/docs/woocommerce-documentation#using-WooCommerce-addons' );
+                        }
+                    } else {
+                        _e('Please add [products] shortcode to the page in order to display the search results.', 'wpf');
+                    }
+                    ?>
+                </label>
             </div>
         </div>
         <div class="wpf_lightbox_row ">
@@ -615,7 +626,7 @@ class WPF_Form {
 					</div>
                     <div class="wpf_back_active_module_row">
                         <div class="wpf_back_active_module_label">
-                            <label for="wpf_<?php echo $type ?>[arch_ctx]"><?php _e('Child Categories', 'wpf') ?></label>
+                            <label for="wpf_<?php echo $type ?>[arch_ctx]"><?php _e('Child Categories Only', 'wpf') ?></label>
                         </div>
                         <div class="wpf_back_active_module_input">
                             <label>
@@ -664,12 +675,8 @@ class WPF_Form {
 							<small class="wpf_help_icon">
 								<span><?php _e( '(?)', 'wpf' ); ?></span>
 								<div class="wpf_help_content">
-									<dl>
-										<dt><?php _e( 'AND', 'wpf' ); ?></dt>
-										<dd><?php _e( 'Display products matching ALL of the chosen terms.', 'wpf' ); ?></dd>
-										<dt><?php _e( 'OR', 'wpf' ); ?></dt>
-										<dd><?php _e( 'Display products matching ANY of the chosen terms.', 'wpf' ); ?></dd>
-									</dl>
+									AND = Display products matching ALL of the chosen terms.<br><br>
+									OR = Display products matching ANY of the chosen terms.
 								</div>
 							</small>
 						</label>
@@ -853,16 +860,7 @@ class WPF_Form {
             $clasess[] = 'wpf_form_ajax';
         }
 
-		// clear previous WPF parameters from current page URL
-		$wpf_parameters = array();
-		if ( ! empty( $_GET ) ) {
-			foreach ( $_GET as $key => $value ) {
-				if ( substr( $key, 0, 3 ) === 'wpf' ) {
-					$wpf_parameters[] = $key;
-				}
-			}
-		}
-		$action = remove_query_arg( $wpf_parameters, $action );
+		$action = WPF_Utils::get_unfiltered_url( $action );
         ?>
         <form
 			data-post-id="<?php echo $post_id; ?>"
@@ -900,7 +898,7 @@ class WPF_Form {
                         <?php if ($view || empty($template['data']['empty'])): ?>
                             <div class="wpf_item wpf_item_<?php echo $type ?>">
                                 <?php if ($type !== 'submit' && ($is_horizontal || empty($module['hide_field']))): ?>
-                                    <label class="wpf_item_name"><?php echo WPF_Utils::get_field_name($module, $sort_cmb[$type]) ?></label>
+                                    <div class="wpf_item_name"><?php echo WPF_Utils::get_field_name($module, $sort_cmb[$type]) ?></div>
                                 <?php endif; ?>
                                 <?php if ($is_group && $type !== 'submit'): ?><div class="wpf_items_group"><?php endif; ?>
                                 <?php echo $view ?>
@@ -1189,8 +1187,8 @@ class WPF_Form {
                         <?php else: ?>
                             <ul class="<?php if ($link): ?>wpf_links <?php endif; ?><?php if (!$hierarchy): ?>wpf_column_<?php echo $args['display'] ?><?php if ($column): ?> wpf_column_<?php echo $column ?><?php endif; ?><?php else: ?>wpf_hierachy<?php endif; ?><?php if ($color): ?> wpf_color_icons<?php endif; ?><?php if ($hide_text): ?> wpf_hide_text<?php endif; ?>">
                             <?php endif; ?>
-                            <?php if (!empty($args['hierachy'])): ?>
-                                <?php $this->category_walker($cats[0], $cats, $type, $args, $value, !empty($data['empty']), $lang); ?>
+                            <?php if (!empty($args['hierachy']) && is_taxonomy_hierarchical( $taxonomy ) ): ?>
+                                <?php $this->category_walker( isset( $cats[0] ) ? $cats[0] : reset( $cats ), $cats, $type, $args, $value, !empty($data['empty']), $lang); ?>
                             <?php else: ?>
                                 <?php $this->category_walker($cats, array(), $type, $args, $value, !empty($data['empty']), $lang); ?>
                             <?php endif; ?>

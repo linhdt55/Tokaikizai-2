@@ -331,7 +331,15 @@ class Wt_Import_Export_For_Woo_Basic_Export
 
 		$delimiter_default = isset($advanced_form_data['wt_iew_delimiter']) ? $advanced_form_data['wt_iew_delimiter'] : ",";
 		$advanced_screen_fields=array(
-
+			'file_name'=>array(
+				'label'=>__("Export file name"),
+				'type'=>'text',
+				'field_name'=>'file_name',
+				'help_text'=>__('Specify a filename for the exported file. If left blank, the system generates the name automatically.', 'wt-import-export-for-woo'),
+				'after_form_field_html'=>'<div class="wt_iew_file_ext_info_basic">.csv</div>',
+				'td_class3'=>'wt_iew_file_ext_info_td',
+				'validation_rule'=>array('type'=>'file_name'),
+			),
 			'batch_count'=>array(
 				'label'=>__("Export in batches of"),
 				'type'=>'text',
@@ -395,7 +403,12 @@ class Wt_Import_Export_For_Woo_Basic_Export
 				$history_data=$history_module_obj->get_history_entry_by_id($rerun_id);
 				if($history_data && $history_data['template_type']==$this->module_base)
 				{
-					$form_data=maybe_unserialize($history_data['data']);
+					$form_data_raw = wp_unslash($history_data['data']);
+					$form_data = is_array($form_data_raw) ? 
+							array_map(function($item) {
+								return is_string($item) ? json_decode($item, true) : $item;
+							}, $form_data_raw) : 
+							json_decode($form_data_raw, true);
 					if($form_data && is_array($form_data))
 					{
 						$this->to_export=(isset($form_data['post_type_form_data']) && isset($form_data['post_type_form_data']['item_type']) ? $form_data['post_type_form_data']['item_type'] : '');
@@ -434,6 +447,9 @@ class Wt_Import_Export_For_Woo_Basic_Export
 				'choose_template'=>__('Please select an export template.'),
 				'step'=>__('Step'),
 				'choose_ftp_profile'=>__('Please select an FTP profile.'),
+				//localized strings for filename validation
+				'filename_title' => __('Only letters, numbers and hyphens are allowed', 'product-import-export-for-woo'),
+				'filename_placeholder' => __('Enter file name (letters, numbers, hyphens only)', 'product-import-export-for-woo'),
 			),
 		);
 		wp_localize_script($this->module_id, 'wt_iew_export_basic_params', $params);
@@ -494,7 +510,12 @@ class Wt_Import_Export_For_Woo_Basic_Export
 			return $out;
 		}
 
-		$form_data=maybe_unserialize($export_data['data']);
+		$form_data_raw = wp_unslash($export_data['data']);
+		$form_data = is_array($form_data_raw) ? 
+				array_map(function($item) {
+					return is_string($item) ? json_decode($item, true) : $item;
+				}, $form_data_raw) : 
+				json_decode($form_data_raw, true);
 
 		//taking file name
 		$file_name=(isset($export_data['file_name']) ? $export_data['file_name'] : '');
@@ -605,7 +626,13 @@ class Wt_Import_Export_For_Woo_Basic_Export
 			}
 
 			//processing form data
-			$form_data=(isset($export_data['data']) ? maybe_unserialize($export_data['data']) : array());
+			$form_data_raw = wp_unslash($export_data['data']);
+			$unserialized_data = is_array($form_data_raw) ? 
+					array_map(function($item) {
+						return is_string($item) ? json_decode($item, true) : $item;
+					}, $form_data_raw) : 
+					json_decode($form_data_raw, true);
+			$form_data = (isset($unserialized_data) ? $unserialized_data : array()); 
 		}
 		$this->to_export=$to_process;
 		$default_batch_count=$this->_get_default_batch_count($form_data);
@@ -809,20 +836,24 @@ class Wt_Import_Export_For_Woo_Basic_Export
 	*/
 	public function download_file()
 	{
-		if(isset($_GET['wt_iew_export_download']))
-		{ 
-			if(Wt_Iew_Sh::check_write_access(WT_IEW_PLUGIN_ID_BASIC)) /* check nonce and role */
-			{
-				$file_name=(isset($_GET['file']) ? sanitize_file_name($_GET['file']) : '');
-				if($file_name!="")
-				{
-					$file_arr=explode(".", $file_name);
-					$file_ext=end($file_arr);
-					if(isset($this->allowed_export_file_type[$file_ext]) || $file_ext=='zip') /* Only allowed files. Zip file in image export */
-					{
-						$file_path=self::$export_dir.'/'.$file_name;
-						if(file_exists($file_path) && is_file($file_path)) /* check existence of file */
-						{	
+		if(isset($_GET['wt_iew_export_download'])) {
+
+			if(Wt_Iew_Sh::check_write_access(WT_IEW_PLUGIN_ID_BASIC)) { /* check nonce and role */
+			
+				$file_name = isset($_GET['file']) ? sanitize_file_name(wp_unslash($_GET['file'])) : '';
+				if($file_name != "") {
+					$file_arr = explode(".", $file_name);
+					$file_ext = strtolower(end($file_arr));
+					if(isset($this->allowed_export_file_type[$file_ext]) || $file_ext == 'zip') { /* Only allowed files. Zip file in image export */
+					
+						$file_path = realpath(self::$export_dir . '/' . $file_name);
+						
+						// Get the allowed export directory and its real path
+						$export_dir = realpath(WP_CONTENT_DIR.'/webtoffee_export');
+						
+						// Verify file is within allowed export directory
+						if($file_path && $export_dir && strpos($file_path, $export_dir) === 0 && file_exists($file_path) && is_file($file_path)) { /* check existence of file and verify path */
+
 							header('Pragma: public');
 						    header('Expires: 0');
 						    header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
@@ -833,7 +864,7 @@ class Wt_Import_Export_For_Woo_Basic_Export
 						    header('Content-Type: application/octet-stream');
 						    //header('Content-Length: '.filesize($file_path));
 
-						    $chunk_size=1024 * 1024;
+						    $chunk_size = 1024 * 1024;
 						    $handle=@fopen($file_path, 'rb');
 						    while(!feof($handle))
 						    {
@@ -844,7 +875,6 @@ class Wt_Import_Export_For_Woo_Basic_Export
 						    }
 						    fclose($handle);
 						    exit();
-
 						}
 					}
 				}	

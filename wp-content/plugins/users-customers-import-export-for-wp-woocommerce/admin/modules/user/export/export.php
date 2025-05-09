@@ -201,9 +201,15 @@ class Wt_Import_Export_For_Woo_basic_User_Export {
             if ($key == 'customer_id') {
                 $customer_data[$key] = !empty($user->ID) ? $user->ID : '';
                 continue;
-            }            
+            }             
             if ($key == 'session_tokens') {
-                $customer_data[$key] = !empty($user->{$key}) ? base64_encode(json_encode(maybe_unserialize($user->{$key}))) : '';
+                $raw_data = wp_unslash($user->{$key});
+			    $unserialized_data = is_array($raw_data) ? 
+				array_map(function($item) {
+					return is_string($item) ? json_decode($item, true) : $item;
+				}, $raw_data) :  json_decode($raw_data, true); 
+                
+                $customer_data[$key] = !empty($user->{$key}) ? base64_encode(json_encode($unserialized_data)) : '';
                 continue;
             }
             if ( 'orders' === $key ) {

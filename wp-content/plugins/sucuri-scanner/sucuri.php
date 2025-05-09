@@ -8,7 +8,7 @@
  * Author: Sucuri Inc.
  * Text Domain: sucuri-scanner
  * Domain Path: /lang
- * Version: 1.9.7
+ * Version: 2.1
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  *
@@ -87,7 +87,7 @@ define('SUCURISCAN', 'sucuriscan');
 /**
  * Current version of the plugin's code.
  */
-define('SUCURISCAN_VERSION', '1.9.7');
+define('SUCURISCAN_VERSION', '2.1');
 
 /**
  * Defines the human readable name of the plugin.
@@ -222,6 +222,7 @@ require_once 'src/firewall.lib.php';
 require_once 'src/installer-skin.lib.php';
 require_once 'src/cachecontrol.lib.php';
 require_once 'src/csp.lib.php';
+require_once 'src/cors.lib.php';
 
 /* Load page and ajax handlers */
 require_once 'src/pagehandler.php';
@@ -242,6 +243,7 @@ require_once 'src/settings-alerts.php';
 require_once 'src/settings-headers.php';
 require_once 'src/settings-apiservice.php';
 require_once 'src/settings-webinfo.php';
+require_once 'src/vulnerability.lib.php';
 
 /* Load global variables and triggers */
 require_once 'src/globals.php';
@@ -266,6 +268,13 @@ function sucuriscanSetSecurityHeaders()
     if ($isCSPHeaderEnabled) {
         $sucuriScanCSPHeaders = new SucuriScanCSPHeaders();
         $sucuriScanCSPHeaders->setCSPHeaders();
+    }
+
+    $isCORSHeaderEnabled = SucuriScanOption::getOption(':headers_cors') === 'enabled';
+
+    if ($isCORSHeaderEnabled) {
+        $sucuriScanCORSHeaders = new SucuriScanCORSHeaders();
+        $sucuriScanCORSHeaders->setCORSHeaders();
     }
 }
 

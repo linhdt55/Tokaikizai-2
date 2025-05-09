@@ -92,10 +92,14 @@ class LoginLockdown_Tab_Login_Form extends LoginLockdown
     echo '<br /><span>Message displayed to visitors blocked due to too many failed login attempts. Default: <i>We\'re sorry, but your IP has been blocked due to too many recent failed login attempts.</i></span>';
     echo '</td></tr>';
 
+    $remote_addr = '';
+    if(isset($_SERVER['REMOTE_ADDR'])){
+        $remote_addr = sanitize_text_field(wp_unslash($_SERVER['REMOTE_ADDR']));
+    }
     echo '<tr valign="top">
         <th scope="row"><label for="whitelist">Whitelisted IPs</label></th>
         <td><textarea class="regular-text" id="whitelist" rows="6" name="' . esc_attr(LOGINLOCKDOWN_OPTIONS_KEY) . '[whitelist]">' . (is_array($options['whitelist']) ? esc_html(implode(PHP_EOL, $options['whitelist'])) : esc_html($options['whitelist'])) . '</textarea>';
-    echo '<br /><span>List of IP addresses that will never be blocked. Enter one IP per line.<br>Your current IP is: <code>' . esc_html($_SERVER['REMOTE_ADDR']) . '</code></span>';
+    echo '<br /><span>List of IP addresses that will never be blocked. Enter one IP per line.<br>Your current IP is: <code>' . esc_html($remote_addr) . '</code></span>';
     echo '</td></tr>';
 
     echo '<tr valign="top">
@@ -213,20 +217,23 @@ class LoginLockdown_Tab_Login_Form extends LoginLockdown
     echo '</td></tr>';
 
     echo '<tr valign="top">
-        <th><label>Import Settings</label></th>
-        <td>
-        <input accept="txt" type="file" name="loginlockdown_import_file" value="">
-        <button name="loginlockdown_import_file" id="submit" class="button button-primary button-large" value="">Upload</button>
-        </td>
-        </tr>';
+        <th><label class="open-upsell open-upsell-block" data-feature="import_file">Import Settings</label><a title="This feature is available in the PRO version. Click for details." href="#" data-feature="import_file" class="open-upsell pro-label">PRO</a></th>
+        <td>';
+    echo '<div class="open-upsell open-upsell-block" data-feature="import_file">';
+    echo '<input accept="txt" type="file" name="lockdown_import_file" value="">
+        <button name="lockdown_import_file" id="submit" class="button button-primary button-large" value="">Upload</button>';
+    echo '</div>';
+    echo '</td>
+    </tr>';
 
     echo '<tr valign="top">
-        <th><label>Export Settings</label></th>
-        <td>
-        <a class="button button-primary button-large" style="padding-top: 3px;" href="' . esc_url(add_query_arg(array('action' => 'loginlockdown_export_settings'), admin_url('admin.php'))) . '">Download Export File</a>
-        </td>
+        <th><label class="open-upsell open-upsell-block" data-feature="export_file">Export Settings</label><a title="This feature is available in the PRO version. Click for details." href="#" data-feature="export" class="open-upsell pro-label">PRO</a></th>
+        <td>';
+    echo '<div class="open-upsell open-upsell-block" data-feature="export">';
+    echo '<a class="button button-primary button-large" style="padding-top: 3px;" href="#">Download Export File</a>';
+    echo '</div>';
+    echo '</td>
         </tr>';
-
     echo '</tbody></table>';
   }
 } // class LoginLockdown_Tab_Login_Form

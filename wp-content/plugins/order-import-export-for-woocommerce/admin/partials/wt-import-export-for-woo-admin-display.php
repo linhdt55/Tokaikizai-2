@@ -75,3 +75,5 @@ $wf_img_path=WT_O_IEW_PLUGIN_URL.'images/';
         <?php do_action('wt_iew_plugin_out_settings_form');?> 
     </div>
 </div>
+
+<?php include $wf_admin_view_path."admin-header-and-help.php"; ?>

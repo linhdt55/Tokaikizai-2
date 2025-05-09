@@ -5,10 +5,10 @@
   Description: Export and Import User/Customers details From and To your WordPress/WooCommerce.
   Author: WebToffee
   Author URI: https://www.webtoffee.com/product/wordpress-users-woocommerce-customers-import-export/
-  Version: 2.6.0
+  Version: 2.6.3
   Text Domain: users-customers-import-export-for-wp-woocommerce
   Domain Path: /languages
-  WC tested up to: 9.5.1
+  WC tested up to: 9.7.0
   Requires at least: 3.0
   Requires PHP: 5.6
   License: GPLv3
@@ -48,7 +48,7 @@ if (!defined('WT_IEW_DEBUG_BASIC_TROUBLESHOOT')) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define('WT_U_IEW_VERSION', '2.6.0');
+define('WT_U_IEW_VERSION', '2.6.3');
 
 /**
  * The code that runs during plugin activation.
@@ -58,6 +58,7 @@ function activate_wt_import_export_for_woo_basic_user() {
     wt_user_activation_check();
     require_once plugin_dir_path(__FILE__) . 'includes/class-wt-import-export-for-woo-activator.php';
     Wt_Import_Export_For_Woo_Basic_Activator_User::activate();
+    wt_user_imp_exp_basic_migrate_serialized_data_to_json();
 }
 
 require_once plugin_dir_path( __FILE__ ) . 'user_import_export_welcome-script.php';
@@ -262,3 +263,74 @@ add_action( 'before_woocommerce_init', function() {
 		\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', __FILE__, true );
 	}
 } );
+
+/**
+ * Convert serialized data to JSON in database tables
+ * 
+ * @since    2.6.3 Added to migrate serialized data to JSON format for better compatibility and security
+ * @access   public
+ * @return   boolean    Success status of the conversion
+ */
+function wt_user_imp_exp_basic_migrate_serialized_data_to_json() {
+    global $wpdb;
+        
+    $tables = array(
+        'mapping' => $wpdb->prefix . 'wt_iew_mapping_template',
+        'history' => $wpdb->prefix . 'wt_iew_action_history'
+    );
+        
+    $success = true;
+        
+    foreach ($tables as $table_type => $table_name) {
+        $rows = $wpdb->get_results("SELECT id, data FROM {$table_name}", ARRAY_A);
+            
+        if ($rows) {
+            foreach ($rows as $row) {
+                // Check if data is already in JSON format
+                $json_check = json_decode($row['data'], true);
+                if (json_last_error() === JSON_ERROR_NONE) {
+                    // Skip if already valid JSON
+                    continue;
+                }
+                    
+                // Check if data is serialized
+                if (is_serialized($row['data'])) {
+                    // $unserialized_data = Wt_Import_Export_For_Woo_Basic_Common_Helper::wt_unserialize_safe($row['data']);
+                    $unserialized_data = maybe_unserialize($row['data']);
+                    if ($unserialized_data !== false) {
+                        $json_data = wp_json_encode($unserialized_data);
+                        $update_result = $wpdb->update(
+                            $table_name,
+                            array('data' => $json_data),
+                            array('id' => $row['id']),
+                            array('%s'),
+                            array('%d')
+                        );
+                        if ($update_result === false) {
+                            $success = false;
+                            break 2; // Break both loops if update fails
+                        }
+                    }
+                }
+            }
+        }
+    }
+        
+    // If migration was successful, store the option
+    if ($success) {
+        update_option('wt_u_iew_basic_json_migration_complete', 'yes');
+    }
+        
+    return $success;
+}
+
+/**
+ * Check and convert serialized data to JSON if not already done
+ */
+function wt_user_imp_exp_basic_check_and_convert_to_json() {
+    $migration_complete = get_option('wt_u_iew_basic_json_migration_complete');
+    if (empty($migration_complete) || $migration_complete !== 'yes') {
+        wt_user_imp_exp_basic_migrate_serialized_data_to_json();
+    }
+}
+add_action('admin_init', 'wt_user_imp_exp_basic_check_and_convert_to_json');

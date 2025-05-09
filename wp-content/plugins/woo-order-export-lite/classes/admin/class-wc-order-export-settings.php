@@ -9,6 +9,7 @@ class WC_Order_Export_Main_Settings {
 
 		$settings = array(
 			'default_tab'                          => 'export',
+			'status_change_use_queue'              => false,
 			'cron_tasks_active'                    => true,
 			'show_export_status_column'            => '1',
 			'show_export_actions_in_bulk'          => '1',
@@ -25,7 +26,7 @@ class WC_Order_Export_Main_Settings {
 			'notify_failed_jobs_email_subject'     => '',
 			'notify_failed_jobs_email_recipients'  => '',
 
-			'zapier_api_key'                       => '12345678',
+			'zapier_api_key'                       => '',
 			'zapier_file_timeout'                  => 60,
 			'show_date_time_picker_for_date_range' => false,
 			'display_profiles_export_date_range'   => false,

@@ -4,6 +4,9 @@
  *
  * @since 2.3
  */
+
+use InstagramFeed\Helpers\Util;
+
 class SB_Instagram_Blocks {
 
 	/**

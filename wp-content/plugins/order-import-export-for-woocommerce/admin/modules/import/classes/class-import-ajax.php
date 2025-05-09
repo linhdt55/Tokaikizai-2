@@ -177,19 +177,33 @@ class Wt_Import_Export_For_Woo_Basic_Import_Ajax
 	public function validate_file($out)
 	{
 		/* process form data */
-		$form_data=(isset($_POST['form_data']) ? Wt_Import_Export_For_Woo_Basic_Common_Helper::process_formdata(maybe_unserialize(($_POST['form_data']))) : array());
-		$response=$this->import_obj->download_remote_file($form_data);
+		
+		// PHPCS:ignore WordPress.Security.NonceVerification.Recommended -- Nonce handled in check_write_access().
+		$form_data_raw = wp_unslash($_POST['form_data']);
+		$unserialized_data = is_array($form_data_raw) ? 
+				array_map(function($item) {
+					return is_string($item) ? json_decode($item, true) : $item;
+				}, $form_data_raw) : 
+				json_decode($form_data_raw, true);		
+
+		$form_data = isset($_POST['form_data']) ? Wt_Import_Export_For_Woo_Basic_Common_Helper::process_formdata($unserialized_data) : array();
+		$response = $this->import_obj->download_remote_file($form_data);
 
 		if($response['response']) /* temp file created. Then delete old temp file if exists */
 		{
-			$temp_import_file=(isset($_POST['temp_import_file']) ? sanitize_file_name($_POST['temp_import_file']) : '');
-			if($temp_import_file!="")
-			{
-				$file_path=$this->import_obj->get_file_path($temp_import_file);
-				if(file_exists($file_path))
-				{
-					@unlink($file_path);
+			$temp_import_file = isset($_POST['temp_import_file']) ? sanitize_file_name(wp_unslash($_POST['temp_import_file'])) : '';
+			if ($temp_import_file !== '') {
+				
+				$file_path = $this->import_obj->get_file_path($temp_import_file);
+				
+				// Validate file path is within allowed directory
+				$allowed_dir = WP_CONTENT_DIR . '/webtoffee_import/';
+				$real_file_path = realpath($file_path);
+				$real_allowed_dir = realpath($allowed_dir);
+				if (!$real_file_path || !$real_allowed_dir || strpos($real_file_path, $real_allowed_dir) !== 0) {
+					wp_die(__('Invalid file path'));
 				}
+				@unlink($file_path);
 			}
 		}
 			
@@ -204,7 +218,7 @@ class Wt_Import_Export_For_Woo_Basic_Import_Ajax
 	* 	Ajax function to retrive meta step data
 	*/
 	public function get_meta_mapping_fields($out)
-	{
+	{ 
 		if($this->selected_template>0) /* taking selected tamplate formdata */
 		{
 			$this->get_template_form_data($this->selected_template);
@@ -390,8 +404,14 @@ class Wt_Import_Export_For_Woo_Basic_Import_Ajax
 		if($offset==0)
 		{
 			/* process form data */
-			$form_data=(isset($_POST['form_data']) ? Wt_Import_Export_For_Woo_Basic_Common_Helper::process_formdata(maybe_unserialize(($_POST['form_data']))) : array());
+			$form_data_raw = wp_unslash($_POST['form_data']);
+			$unserialized_data = is_array($form_data_raw) ? 
+					array_map(function($item) {
+						return is_string($item) ? json_decode($item, true) : $item;
+					}, $form_data_raw) : 
+					json_decode($form_data_raw, true);		
 
+			$form_data = isset($_POST['form_data']) ? Wt_Import_Export_For_Woo_Basic_Common_Helper::process_formdata($unserialized_data) : array();
 			//sanitize form data
 			$form_data=Wt_Iew_IE_Basic_Helper::sanitize_formdata($form_data, $this->import_obj);
 		}else
@@ -458,7 +478,7 @@ class Wt_Import_Export_For_Woo_Basic_Import_Ajax
 		$is_update=($step=='update' ? true : false);
 
 		/* take template name from post data, if not then create from time stamp */
-		$template_name=(isset($_POST['template_name']) ? sanitize_text_field($_POST['template_name']) : date('d-M-Y h:i:s A'));
+		$template_name = (isset($_POST['template_name']) ? sanitize_text_field(wp_unslash($_POST['template_name'])) : date('d-M-Y h:i:s A'));
 		
 		$template_name = stripslashes($template_name);
 		$out['name']= $template_name;
@@ -508,7 +528,14 @@ class Wt_Import_Export_For_Woo_Basic_Import_Ajax
 			$tb=$wpdb->prefix.Wt_Import_Export_For_Woo_Basic::$template_tb;
 			
 			/* process form data */
-			$form_data=(isset($_POST['form_data']) ? Wt_Import_Export_For_Woo_Basic_Common_Helper::process_formdata(maybe_unserialize(($_POST['form_data']))) : array());
+			$form_data_raw = wp_unslash($_POST['form_data']);
+			$unserialized_data = is_array($form_data_raw) ? 
+					array_map(function($item) {
+						return is_string($item) ? json_decode($item, true) : $item;
+					}, $form_data_raw) : 
+					json_decode($form_data_raw, true);
+
+			$form_data = isset($unserialized_data) ? Wt_Import_Export_For_Woo_Basic_Common_Helper::process_formdata($unserialized_data) : array();
 
 			//sanitize form data
 			$form_data=Wt_Iew_IE_Basic_Helper::sanitize_formdata($form_data, $this->import_obj);
@@ -518,7 +545,7 @@ class Wt_Import_Export_For_Woo_Basic_Import_Ajax
 			{ 
 							
 				$update_data=array(
-					'data'=>maybe_serialize($form_data),
+					'data'=>wp_json_encode($form_data),
 					'name'=>$template_name, //may be a rename
 				);
 				$update_data_type=array(
@@ -544,7 +571,7 @@ class Wt_Import_Export_For_Woo_Basic_Import_Ajax
 					'template_type'=>'import',
 					'item_type'=>$this->to_import,
 					'name'=>$template_name,
-					'data'=>maybe_serialize($form_data),
+					'data'=>wp_json_encode($form_data),
 				);
 				$insert_data_type=array(
 					'%s','%s','%s','%s'
@@ -686,7 +713,7 @@ class Wt_Import_Export_For_Woo_Basic_Import_Ajax
 			$this->prepare_footer_button_list();
 
 			
-			$temp_import_file=(isset($_POST['temp_import_file']) ? sanitize_file_name($_POST['temp_import_file']) : '');
+			$temp_import_file=(isset($_POST['temp_import_file']) ? sanitize_file_name(wp_unslash($_POST['temp_import_file'])) : '');
 			$file_path=$this->import_obj->get_file_path($temp_import_file);
 			if($temp_import_file!="" && file_exists($file_path))
 			{
@@ -845,11 +872,11 @@ class Wt_Import_Export_For_Woo_Basic_Import_Ajax
 		$template_data=$this->get_mapping_template_by_id($id);
 		if($template_data)
 		{
-			$decoded_form_data=Wt_Import_Export_For_Woo_Basic_Common_Helper::process_formdata(maybe_unserialize($template_data['data']));
-			$this->selected_template_form_data=(!is_array($decoded_form_data) ? array() : $decoded_form_data);
+			$decoded_data = Wt_Import_Export_For_Woo_Basic_Common_Helper::decode_template_data($template_data['data']);
+			$decoded_form_data = Wt_Import_Export_For_Woo_Basic_Common_Helper::process_formdata($decoded_data);
+			$this->selected_template_form_data = !is_array($decoded_form_data) ? array() : $decoded_form_data;
 		}
 	}
-
 
 	/**
 	* Taking mapping template by Name
@@ -1025,7 +1052,14 @@ class Wt_Import_Export_For_Woo_Basic_Import_Ajax
 		$import_data=Wt_Import_Export_For_Woo_Basic_History::get_history_entry_by_id($import_id);
 
 		//processing form data
-		$form_data=(isset($import_data['data']) ? maybe_unserialize($import_data['data']) : array());
+		$form_data_raw = wp_unslash($import_data['data']);
+		$unserialized_data = is_array($form_data_raw) ? 
+				array_map(function($item) {
+					return is_string($item) ? json_decode($item, true) : $item;
+				}, $form_data_raw) : 
+				json_decode($form_data_raw, true);
+
+		$form_data=(isset($unserialized_data) ? $unserialized_data : array());
 
 
 		$ext_arr=explode('.', $this->import_obj->temp_import_file);
@@ -1203,8 +1237,8 @@ class Wt_Import_Export_For_Woo_Basic_Import_Ajax
 				
 
 		$update_data=array(
-			'data'=>maybe_serialize($form_data), //formadata
-		);
+			'data'=>json_encode($form_data), //formadata
+		); 
 		$update_data_type=array(
 			'%s',
 		);

@@ -68,6 +68,10 @@ $wps_wpr_setting_tab = array(
 		'title'     => __( 'Badges', 'points-and-rewards-for-woocommerce' ),
 		'file_path' => WPS_RWPR_DIR_PATH . 'admin/partials/templates/wps-wpr-user-badges-settings.php',
 	),
+	'wps-sms-settings'  => array(
+		'title'     => __( 'SMS / Whatsapp Integration', 'points-and-rewards-for-woocommerce' ),
+		'file_path' => WPS_RWPR_DIR_PATH . 'admin/partials/templates/wps-wpr-sms-integration-settings.php',
+	),
 	'wps-wpr-user-report-settings'  => array(
 		'title'     => '',
 		'file_path' => WPS_RWPR_DIR_PATH . 'admin/partials/templates/wps-wpr-user-report-settings.php',
@@ -105,13 +109,13 @@ if ( ! current_user_can( 'manage_options' ) ) {
 						</a>
 					</li>
 					<li class="wps_wpr_get_pro">
-						<a href="https://docs.wpswings.com/points-and-rewards-for-woocommerce/?utm_source=wpswings-par-doc&utm_medium=par-org-backend&utm_campaign=documentation" target="_blank">
+						<a href="https://docs.wpswings.com/points-and-rewards-for-woocommerce/?utm_source=wpswings-par-doc&utm_medium=par-org-backend&utm_campaign=doc" target="_blank">
 							<span class="dashicons dashicons-media-document"></span>
 							<span class="wps_wpr_contact_doc_text"><?php esc_html_e( 'Doc', 'points-and-rewards-for-woocommerce' ); ?></span>
 						</a>
 					</li>
 					<?php
-					if ( ! is_plugin_active( 'ultimate-woocommerce-points-and-rewards/ultimate-woocommerce-points-and-rewards.php' ) ) {
+					if ( ! wps_wpr_is_par_pro_plugin_active() ) {
 						?>
 						<li class="wps_wpr_get_pro">
 							<a href="https://wpswings.com/product/points-and-rewards-for-woocommerce-plugin/?utm_source=wpswings-par-pro&utm_medium=par-org-backend&utm_campaign=go-pro"  target="_blank"><?php esc_html_e( 'GO PRO NOW', 'points-and-rewards-for-woocommerce' ); ?></a>

@@ -26,7 +26,7 @@ $file_int_field_tr_arr=array();
 $file_int_field_tr_arr=apply_filters('wt_iew_exporter_file_into_fields_row_id_basic', $file_int_field_tr_arr);
 ?>
 <script type="text/javascript">
-var file_int_field_tr_arr=<?php echo json_encode($file_int_field_tr_arr); ?>;
+var file_int_field_tr_arr=<?php echo wp_json_encode($file_int_field_tr_arr); ?>;
 /* remote file modules can hook */
 function wt_iew_set_file_into_fields(file_into)
 {

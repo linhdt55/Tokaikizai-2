@@ -439,7 +439,8 @@ class Wt_Import_Export_For_Woo_Basic_Order_Export {
     
                         if (is_object($value)){
                             $value = $value->meta_value;
-                            $value = json_encode(maybe_unserialize($value));
+                            $value = json_encode(Wt_Import_Export_For_Woo_Basic_Common_Helper::wt_unserialize_safe($value));
+
                         }
 
                         if (is_array($value))

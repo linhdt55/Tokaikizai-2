@@ -31,6 +31,7 @@ class THWCFD_Public_Checkout {
 
 			$wcfd_var = array(
 				'is_override_required' => $this->is_override_required_prop(),
+				'is_wc_version_grt_9_x' => version_compare(THWCFD_Utils::get_wc_version(), '9.7.0', ">="),
 			);
 			wp_localize_script('thwcfd-checkout-script', 'thwcfd_public_var', $wcfd_var);
 		}
@@ -71,6 +72,11 @@ class THWCFD_Public_Checkout {
 		add_filter('woocommerce_form_field_heading', array($this, 'woo_form_field_heading'), 10, 4);
 		add_filter('woocommerce_form_field_paragraph', array($this, 'woo_form_field_paragraph'), 10, 4);
 
+		//Radio field required indicator fix
+		if(version_compare(THWCFD_Utils::get_wc_version(), '9.7.0', ">=")){
+			add_filter('woocommerce_form_field_radio', array($this, 'woo_form_field_radio'), 10, 4);
+		}
+		
 	}
 
 	/**
@@ -654,7 +660,11 @@ class THWCFD_Public_Checkout {
 
 		if ( $args['required'] ) {
 			$args['class'][] = 'validate-required';
-			$required        = '&nbsp;<abbr class="required" title="' . esc_attr__( 'required', 'woocommerce' ) . '">*</abbr>';
+			if(version_compare(THWCFD_Utils::get_wc_version(), '9.7.0', ">=")){
+				$required        ='&nbsp;<span class="required" aria-hidden="true">*</span>';
+			}else{
+				$required        = '&nbsp;<abbr class="required" title="' . esc_attr__( 'required', 'woocommerce' ) . '">*</abbr>';
+			}		
 		} else {
 			$required = '&nbsp;<span class="optional">(' . esc_html__( 'optional', 'woocommerce' ) . ')</span>';
 		}
@@ -854,6 +864,14 @@ class THWCFD_Public_Checkout {
 			$field .= '<div class="form-row '.esc_attr(implode(' ', $args['class'])).'" id="'.esc_attr($key).'_field" data-name="'.esc_attr($key).'" >'. $heading_html .'</div>';
 		}
 		return $field;		
+	}
+
+	public function woo_form_field_radio($field, $key, $args, $value){
+		//replace unwanted required indicator from wc version > 9.7. 
+		$field = preg_replace('/(<input[^>]*>)(<label[^>]*>)(.*?)(&nbsp;<span class="required" aria-hidden="true">\*<\/span>)/', '$1$2$3', $field);
+		$field = preg_replace('/(<input[^>]*>)(<label[^>]*>)(.*?)(&nbsp;<span class="optional">\(optional\)<\/span>)/', '$1$2$3', $field);
+		return $field;
+
 	}
 	
 }

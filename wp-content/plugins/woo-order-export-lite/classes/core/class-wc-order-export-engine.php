@@ -20,17 +20,17 @@ class WC_Order_Export_Engine {
 		$time = apply_filters( 'woe_make_filename_current_time', current_time( 'timestamp' ) );
 		$date = WC_Order_Export_Data_Extractor::get_date_range( self::$current_job_settings, false );
 		$args = array(
-			'%d'          		=> date( 'd', $time ),
-			'%m'          		=> date( 'm', $time ),
-			'%y'          		=> date( 'Y', $time ),
-			'%h'          		=> date( 'H', $time ),
-			'%i'          		=> date( 'i', $time ),
-			'%s'          		=> date( 's', $time ),
+			'%d'          		=> gmdate( 'd', $time ),
+			'%m'          		=> gmdate( 'm', $time ),
+			'%y'          		=> gmdate( 'Y', $time ),
+			'%h'          		=> gmdate( 'H', $time ),
+			'%i'          		=> gmdate( 'i', $time ),
+			'%s'          		=> gmdate( 's', $time ),
 			'%order_id'   		=> self::$order_id,
 			'%orderid'    		=> self::$order_id,
 			'%id'         		=> self::$order_id,
-			'{from_date}' 		=> isset( $date['from_date'] ) ? date( "Y-m-d", strtotime( $date['from_date'] ) ) : '',
-			'{to_date}'   		=> isset( $date['to_date'] ) ? date( "Y-m-d", strtotime( $date['to_date'] ) ) : '',
+			'{from_date}' 		=> isset( $date['from_date'] ) ? gmdate( "Y-m-d", strtotime( $date['from_date'] ) ) : '',
+			'{to_date}'   		=> isset( $date['to_date'] ) ? gmdate( "Y-m-d", strtotime( $date['to_date'] ) ) : '',
 		);
 
 		if ( $called_for_filename && self::$make_separate_orders && strpos( $mask, '%order_id' ) === false  && strpos( $mask, '{order_number}' ) === false ) {
@@ -78,7 +78,7 @@ class WC_Order_Export_Engine {
 			// kill expired tmp file
 			foreach ( glob( $tmp_folder . "/*" ) as $f ) {
 				if ( time() - filemtime( $f ) > 24 * 3600 ) {
-					unlink( $f );
+					wp_delete_file( $f );
 				}
 			}
 			$filename = tempnam( $tmp_folder, $prefix );
@@ -279,7 +279,7 @@ class WC_Order_Export_Engine {
 
 	}
 
-	protected static function _install_options( $settings ) {
+	protected static function _install_options( $settings, $order_ids ) {
 		global $wpdb;
 
 		$format = strtolower( $settings['format'] );
@@ -293,7 +293,18 @@ class WC_Order_Export_Engine {
 		if ( ! empty( $settings['all_products_from_order'] ) ) {
 			$options['include_products'] = false;
 		} else {
-			$options['include_products'] = $wpdb->get_col( WC_Order_Export_Data_Extractor::sql_get_product_ids( $settings ) );
+			// we get exact order ids -- export started via Bulk Actions
+			if( $order_ids ) {
+				$main_settings = WC_Order_Export_Main_Settings::get_settings();
+				if( apply_filters("woe_filter_bulk_action_export", $main_settings['apply_filters_to_bulk_actions']) )
+					// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.DirectDatabaseQuery
+					$options['include_products'] = $wpdb->get_col( WC_Order_Export_Data_Extractor::sql_get_product_ids( $settings ) );
+				else
+					$options['include_products'] = false;//don't filter products by default
+			}
+			else
+				// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.DirectDatabaseQuery
+				$options['include_products'] = $wpdb->get_col( WC_Order_Export_Data_Extractor::sql_get_product_ids( $settings ) );
 		}
 
 		if ( empty( $settings['export_matched_items'] ) ) {
@@ -302,6 +313,8 @@ class WC_Order_Export_Engine {
 			$options['export_matched_items']['item_metadata'] = WC_Order_Export_Data_Extractor::parse_complex_pairs($settings['item_metadata']);
 			$options['export_matched_items']['item_names'] = WC_Order_Export_Data_Extractor::parse_complex_pairs($settings['item_names']);
 		}
+
+		$options['exclude_free_items'] = ! empty( $settings['exclude_free_items'] );
 
 		if ( isset( $settings['date_format'] ) ) {
 			$options['date_format'] = $settings['date_format'];
@@ -322,11 +335,16 @@ class WC_Order_Export_Engine {
 		$options['export_refund_notes']       = $settings['export_refund_notes'];
 		$options['format_number_fields']      = $settings['format_number_fields'];
 		$options['convert_serialized_values'] = $settings['convert_serialized_values'];
-		if ( $settings['enable_debug'] AND ! ini_get( 'display_errors' ) ) {
+		//following secton runs only for ADMIN users!
+		if ( $settings['enable_debug'] AND ! ini_get( 'display_errors' ) AND is_super_admin() ) {
+			// phpcs:ignore Squiz.PHP.DiscouragedFunctions.Discouraged
 			ini_set( 'display_errors', 1 );
+			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.prevent_path_disclosure_error_reporting
 			$old_error_reporting = error_reporting( E_ALL );
 			add_action( 'woe_export_finished', function () use ( $old_error_reporting ) {
+				// phpcs:ignore Squiz.PHP.DiscouragedFunctions.Discouraged
 				ini_set( 'display_errors', 0 );
+				// phpcs:ignore WordPress.PHP.DevelopmentFunctions.prevent_path_disclosure_error_reporting
 				error_reporting( $old_error_reporting );
 			} );
 		}
@@ -365,11 +383,12 @@ class WC_Order_Export_Engine {
 		//  
 		if ( $settings['custom_php'] ) {  
 			ob_start( array( 'WC_Order_Export_Engine', 'code_error_callback' ) );
+			// phpcs:ignore Generic.PHP.ForbiddenFunctions.Found
 			$result = eval( $settings['custom_php_code'] );
 			ob_end_clean();
 		}
 		if( !empty($settings['product_sku']) ) {
-			$sku_array = preg_split( "#,|\r?\n#", $settings['product_sku'], null, PREG_SPLIT_NO_EMPTY ) ;
+			$sku_array = preg_split( "#,|\r?\n#", $settings['product_sku'], -1, PREG_SPLIT_NO_EMPTY ) ;
 			foreach($sku_array as $sku) {
 				$sku = "_sku = " . $sku;
 				$settings['product_custom_fields'][] = $sku;
@@ -380,7 +399,21 @@ class WC_Order_Export_Engine {
 			$settings['order_fields']['products']['checked'] = 1;
 		}
 
+		if( ! self::has_product_filters($settings) )
+			$settings['all_products_from_order'] = 1;
+
 		return apply_filters( 'woe_settings_validate_defaults', $settings );
+	}
+
+	protected static function has_product_filters($settings){
+		$has_product_filter = false;
+		$keys = ['product_categories','product_vendors','products','product_sku','exclude_products',
+				'product_taxonomies','product_custom_fields','product_attributes','product_itemmeta'];
+		foreach($keys as $key) {
+			if( !empty($settings[$key]) )
+				$has_product_filter = true;
+		}
+		return $has_product_filter;
 	}
 
 	protected static function code_error_callback( $out ) {
@@ -390,8 +423,9 @@ class WC_Order_Export_Engine {
 			return $out;
 		}
 
-		$m = '<h2>' . __( "Don't Panic", 'woo-order-export-lite' ) . '</h2>';
-		$m .= '<p>' . sprintf( __( 'The code you are trying to save produced a fatal error on line %d:',
+		$m = '<h2>' . esc_html__( "Don't Panic", 'woo-order-export-lite' ) . '</h2>';
+		/* translators: position of error in custom PHP code added to "Misc Settings" */
+		$m .= '<p>' . sprintf( esc_html__( 'The code you are trying to save produced a fatal error on line %d:',
 				'woo-order-export-lite' ), $error['line'] ) . '</p>';
 		$m .= '<strong>' . $error['message'] . '</strong>';
 
@@ -403,17 +437,20 @@ class WC_Order_Export_Engine {
 			$order_data_store = WC_Data_Store::load( 'order' );
 			$order_type = $order_data_store->get_order_type( $order_id );
 			if($order_type == "shop_order") { //set new status only for order!
-				$order = new WC_Order( $order_id );
-				$order->update_status( $settings['change_order_status_to'] );
+				$order = wc_get_order( $order_id );
+				if( $order )
+					$order->update_status( $settings['change_order_status_to'] );
 			}
 		}
 	}
 
 	protected static function try_mark_order( $order_id, $settings ) {
 		if ( $settings['mark_exported_orders'] ) {
-            $order = new WC_Order($order_id);
-            $order->add_meta_data('woe_order_exported' . apply_filters("woe_exported_postfix",''), current_time( 'timestamp' ), true);
-            $order->save();
+            $order = wc_get_order($order_id);
+			if( $order ) {
+				$order->add_meta_data('woe_order_exported' . apply_filters("woe_exported_postfix",''), current_time( 'timestamp' ), true);
+				$order->save();
+			}
 		}
 	}
 
@@ -440,7 +477,7 @@ class WC_Order_Export_Engine {
 			WC_Order_Export_Data_Extractor::start_track_queries();
 		}
 		// might run sql!
-		self::$extractor_options = self::_install_options( $settings );
+		self::$extractor_options = self::_install_options( $settings, [] );
 
 		if ( $output_mode == 'browser' ) {
 			$filename = 'php://output';
@@ -463,9 +500,10 @@ class WC_Order_Export_Engine {
 
 		//get IDs
 		$sql = WC_Order_Export_Data_Extractor::sql_get_order_ids( $settings );//backtrace
-                $sort_field = $settings['sort'];
+		$sort_field = $settings['sort'];
 		$settings = self::replace_sort_field( $settings );
 		if ( $make_mode == 'estimate' OR $make_mode =='estimate_preview' ) { //if estimate return total count
+			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.DirectDatabaseQuery
 			return $wpdb->get_var( str_replace( 'orders.ID AS order_id', 'COUNT(orders.ID) AS order_count', $sql ) );
 		} elseif ( $make_mode == 'preview' ) {
                         if (preg_match('/setup_field_/i', $sort_field)) {
@@ -486,6 +524,7 @@ class WC_Order_Export_Engine {
 			$sql     .= " LIMIT $startat,$limit";
 		}
 
+		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.DirectDatabaseQuery
 		$order_ids = apply_filters( "woe_get_order_ids", $wpdb->get_col( $sql ) );
 		self::$orders_for_export = $order_ids;
 
@@ -503,6 +542,7 @@ class WC_Order_Export_Engine {
 			if ( $make_mode == 'start_estimate' ) { //Start return total count
 				$duplicate_settings = $formater->get_duplicate_settings();
 				return array(
+					// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.DirectDatabaseQuery
 					'total' => $wpdb->get_var( str_replace( 'orders.ID AS order_id', 'COUNT(orders.ID) AS order_count', $sql ) ),
 					'max_line_items' => isset( $duplicate_settings['products']['max_cols'] ) ? $duplicate_settings['products']['max_cols'] : 0,
 					'max_coupons' => isset( $duplicate_settings['coupons']['max_cols'] ) ? $duplicate_settings['coupons']['max_cols'] : 0,
@@ -544,13 +584,13 @@ class WC_Order_Export_Engine {
 //			self::maybe_output_summary_report( $formater );
 			//limit debug output
 			if ( $settings['enable_debug'] AND self::is_plain_format( $settings['format'] ) ) {
-				echo "<b>" . __( 'Main SQL queries are listed below', 'woo-order-export-lite' ) . "</b>";
+				echo "<b>" . esc_html__( 'Main SQL queries are listed below', 'woo-order-export-lite' ) . "</b>";
 				echo '<textarea rows=5 style="width:100%">';
 				$s = array();
 				foreach ( WC_Order_Export_Data_Extractor::get_sql_queries() as $sql ) {
 					$s[] = preg_replace( "#\s+#", " ", $sql );
 				}
-				echo join( "\n\n", $s );
+				echo esc_html(join( "\n\n", $s ));
 				echo '</textarea>';
 			}
 
@@ -570,7 +610,7 @@ class WC_Order_Export_Engine {
 		self::$current_job_settings   = $settings;
 		self::$current_job_build_mode = 'full';
 		self::$date_format            = trim( $settings['date_format'] . ' ' . $settings['time_format'] );
-		self::$extractor_options      = self::_install_options( $settings );
+		self::$extractor_options      = self::_install_options( $settings, $order_ids );
 		
 		$main_settings = WC_Order_Export_Main_Settings::get_settings();
 
@@ -586,6 +626,7 @@ class WC_Order_Export_Engine {
 		$settings['order_ids'] = $order_ids;
 		//get IDs
 		$sql = WC_Order_Export_Data_Extractor::sql_get_order_ids( $settings );
+		$sort_field = $settings['sort'];
 		$settings = self::replace_sort_field( $settings );
 		$sql .= apply_filters( "woe_sql_get_order_ids_order_by",
 			" ORDER BY " . $settings['sort'] . " " . $settings['sort_direction'] );
@@ -594,17 +635,19 @@ class WC_Order_Export_Engine {
 		}
 
 		if ( !$order_ids OR apply_filters("woe_filter_bulk_action_export", $main_settings['apply_filters_to_bulk_actions'] ) ) {
+			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.DirectDatabaseQuery
 			$order_ids = apply_filters( "woe_get_order_ids", $wpdb->get_col( $sql ) );
 		}
 		self::$orders_for_export = $order_ids;
 
 		if ( empty( $order_ids ) AND apply_filters( 'woe_schedule_job_skip_empty_file',
 				(bool) $settings['skip_empty_file'] ) ) {
-			unlink( $filename );
+			wp_delete_file( $filename );
 
 			return false;
 		}
 
+		$settings['sort'] = $sort_field;
 		$settings = apply_filters('woe_adjust_settings_for_known_orders', $settings, $order_ids);
 
 		$formater = self::init_formater( '', $settings, $filename, $labels, $static_vals, 0 );

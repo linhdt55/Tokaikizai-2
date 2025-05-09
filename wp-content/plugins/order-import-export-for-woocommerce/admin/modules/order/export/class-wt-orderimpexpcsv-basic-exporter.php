@@ -305,7 +305,7 @@ class Wt_Import_Export_For_Woo_Basic_Order_Bulk_Export {
          * 
          */
         //shipping items is just product x qty under shipping method
-        $line_items_shipping = $order->get_items('shipping');
+        $line_items_shipping = $order->get_items('shipping'); 
         foreach ($line_items_shipping as $item_id => $item) {
             $item_meta = self::get_order_line_item_meta($item_id);
             foreach ($item_meta as $key => $value) {
@@ -325,8 +325,7 @@ class Wt_Import_Export_For_Woo_Basic_Order_Bulk_Export {
                         if (is_array($value))
                             $value = implode(',', $value);
 
-                        $value = maybe_unserialize($value);
-                        $meta[$key] = json_encode($value);
+                        $meta[$key] = json_encode(Wt_Import_Export_For_Woo_Basic_Common_Helper::wt_unserialize_safe($value));
                         break;
                 }
             }

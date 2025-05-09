@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2023 ServMask Inc.
+ * Copyright (C) 2014-2025 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,6 +14,8 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Attribution: This code is part of the All-in-One WP Migration plugin, developed by
  *
  * ███████╗███████╗██████╗ ██╗   ██╗███╗   ███╗ █████╗ ███████╗██╗  ██╗
  * ██╔════╝██╔════╝██╔══██╗██║   ██║████╗ ████║██╔══██╗██╔════╝██║ ██╔╝
@@ -78,7 +80,8 @@ class Ai1wm_Export_Controller {
 							do_action( 'ai1wm_status_export_error', $params, $e );
 
 							if ( defined( 'WP_CLI' ) ) {
-								WP_CLI::error( sprintf( __( 'Export failed (database error). Code: %s. Message: %s', AI1WM_PLUGIN_NAME ), $e->getCode(), $e->getMessage() ) );
+								/* translators: 1: Error code, 2: Error message. */
+								WP_CLI::error( sprintf( __( 'Export failed (database error). Code: %1$s. Message: %2$s', 'all-in-one-wp-migration' ), $e->getCode(), $e->getMessage() ) );
 							}
 
 							status_header( $e->getCode() );
@@ -88,11 +91,12 @@ class Ai1wm_Export_Controller {
 							do_action( 'ai1wm_status_export_error', $params, $e );
 
 							if ( defined( 'WP_CLI' ) ) {
-								WP_CLI::error( sprintf( __( 'Export failed: %s', AI1WM_PLUGIN_NAME ), $e->getMessage() ) );
+								/* translators: 1: Error message. */
+								WP_CLI::error( sprintf( __( 'Export failed: %s', 'all-in-one-wp-migration' ), $e->getMessage() ) );
 							}
 
-							Ai1wm_Status::error( __( 'Export failed', AI1WM_PLUGIN_NAME ), $e->getMessage() );
-							Ai1wm_Notification::error( __( 'Export failed', AI1WM_PLUGIN_NAME ), $e->getMessage() );
+							Ai1wm_Status::error( __( 'Export failed', 'all-in-one-wp-migration' ), $e->getMessage() );
+							Ai1wm_Notification::error( __( 'Export failed', 'all-in-one-wp-migration' ), $e->getMessage() );
 							exit;
 						}
 					}

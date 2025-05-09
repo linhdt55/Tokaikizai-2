@@ -523,7 +523,7 @@ var thwcfd_settings_field = (function($, window, document) {
 	var _nx = _wp$i18n._nx;	
 
 	var MSG_INVALID_NAME = __('NAME/ID must begin with a lowercase letter ([a-z]) or underscores ("_") and may be followed by any number of lowercase letters, digits ([0-9]) and underscores ("_")', 'woo-checkout-field-editor-pro');
-	var SPECIAL_FIELD_TYPES = ["country", "state", "city"];
+	var SPECIAL_FIELD_TYPES = ["country", "state", "city", "tel"];
 
 	var FIELD_FORM_PROPS = {
 		name  : {name : 'name', type : 'text'},
@@ -846,7 +846,6 @@ var thwcfd_settings_field = (function($, window, document) {
 		var fvalue = thwcfd_base.get_property_field_value(form, 'text', 'default');
 		var option_values = form.find("input[name='i_options_key[]']").map(function(){ return $(this).val(); }).get();
 
-
 		if(ftype == '' && ($.inArray(fotype, SPECIAL_FIELD_TYPES) == -1) ){
 			err_msgs = 'Type is required';
 
@@ -891,7 +890,7 @@ var thwcfd_settings_field = (function($, window, document) {
 	function prepare_field_form(form){
 		var options_json = get_options(form);
 		thwcfd_base.set_property_field_value(form, 'hidden', 'options_json', options_json, 0);
-		thwcfd_base.set_property_field_value(form, 'hidden', 'options', options_json, 0);
+		thwcfd_base.set_property_field_value(form, 'hidden', 'options', options_json, 0); //Replaced `options_json` with `options` for block-based checkout inorder to make identical code base.
 	}
    /*------------------------------------
 	*---- PRODUCT FIELDS - END ----------

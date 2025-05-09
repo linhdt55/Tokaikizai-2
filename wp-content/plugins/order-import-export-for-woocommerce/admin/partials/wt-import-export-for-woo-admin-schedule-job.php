@@ -145,3 +145,8 @@ $wf_img_path = WT_O_IEW_PLUGIN_URL . 'images/';
     </div>
 </div>
 
+<?php
+
+include $wf_admin_view_path."admin-header-and-help.php";
+
+?>

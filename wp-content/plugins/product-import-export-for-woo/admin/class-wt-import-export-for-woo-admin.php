@@ -33,6 +33,9 @@ if (!class_exists('Wt_Import_Export_For_Woo_Admin_Basic')) {
 		 */
 		private $plugin_name;
 
+		private $ds_loaded = false;
+		private $top_header_loaded = 0;
+		private $top_header_loadedoption_name = '';
 		/**
 		 * The version of this plugin.
 		 *
@@ -66,9 +69,24 @@ if (!class_exists('Wt_Import_Export_For_Woo_Admin_Basic')) {
 		 */
 		public function __construct($plugin_name, $version)
 		{
-
+			$this->set_vars();
 			$this->plugin_name = $plugin_name;
 			$this->version = $version;
+			$this->include_design_system();
+
+			add_action( 'admin_print_scripts', array( $this, 'filter_admin_notices' ) );
+
+			// Add AJAX action hooks
+			add_action('wp_ajax_wt_piew_top_header_loaded', array($this, 'update_top_header_loaded'));
+		}
+
+		/**
+		 *	Set config vars
+		 */
+		public function set_vars()
+		{
+			$this->top_header_loadedoption_name = 'wbft_product_top_header_loaded';
+			$this->top_header_loaded = absint(get_option($this->top_header_loadedoption_name));
 		}
 
 		/**
@@ -97,11 +115,16 @@ if (!class_exists('Wt_Import_Export_For_Woo_Admin_Basic')) {
 				}
 				if (is_plugin_active('woocommerce/woocommerce.php')) {
 					wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/wt-import-export-for-woo-admin.js', array('jquery', 'jquery-tiptip'), $this->version, false);
+					wp_enqueue_script($this->plugin_name . '_wbftHeaderScripts', plugin_dir_url(__FILE__) . 'js/wbftHeaderScripts.js', array('jquery'), $this->version, false);
 				} else {
 					wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/wt-import-export-for-woo-admin.js', array('jquery'), $this->version, false);
 					wp_enqueue_script(WT_IEW_PLUGIN_ID_BASIC . '-tiptip', WT_P_IEW_PLUGIN_URL . 'admin/js/tiptip.js', array('jquery'), WT_P_IEW_VERSION, false);
 				}
 
+				// Localize script with AJAX URL and nonce
+				wp_localize_script($this->plugin_name . '_wbftHeaderScripts', 'wt_piew_params', array(
+					'ajax_url' => admin_url('admin-ajax.php'),
+				));
 				$order_addon_active_status = false;
 				$user_addon_active_status = false;
 
@@ -126,20 +149,22 @@ if (!class_exists('Wt_Import_Export_For_Woo_Admin_Basic')) {
 					'ajax_url' => admin_url('admin-ajax.php'),
 					'plugin_id' => WT_IEW_PLUGIN_ID_BASIC,
 					'msgs' => array(
-						'settings_success' => __('Settings updated.'),
-						'all_fields_mandatory' => __('All fields are mandatory'),
-						'settings_error' => __('Unable to update Settings.'),
-						'template_del_error' => __('Unable to delete template'),
-						'template_del_loader' => __('Deleting template...'),
-						'value_empty' => __('Value is empty.'),
+						'settings_success' => __('Settings updated.', 'product-import-export-for-woo'),
+						'all_fields_mandatory' => __('All fields are mandatory', 'product-import-export-for-woo'),
+						'settings_error' => __('Unable to update Settings.', 'product-import-export-for-woo'),
+						'template_del_error' => __('Unable to delete template', 'product-import-export-for-woo'),
+						'template_del_loader' => __('Deleting template...', 'product-import-export-for-woo'),
+						'value_empty' => __('Value is empty.', 'product-import-export-for-woo'),
 						'error' => sprintf(__('An unknown error has occurred! Refer to our %stroubleshooting guide%s for assistance.'), '<a href="' . WT_IEW_DEBUG_BASIC_TROUBLESHOOT . '" target="_blank">', '</a>'),
-						'success' => __('Success.'),
-						'loading' => __('Loading...'),
-						'sure' => __('Are you sure?'),
-						'use_expression' => __('Apply'),
-						'cancel' => __('Cancel'),
-						'hide_features' => __('Hide features'),
-						'show_features' => __('Show features'),
+						'success' => __('Success.', 'product-import-export-for-woo'),
+						'loading' => __('Loading...', 'product-import-export-for-woo'),
+						'sure' => __('Are you sure?', 'product-import-export-for-woo'),
+						'use_expression' => __('Apply', 'product-import-export-for-woo'),
+						'cancel' => __('Cancel', 'product-import-export-for-woo'),
+						'hide_features' => __('Hide features', 'product-import-export-for-woo'),
+						'show_features' => __('Show features', 'product-import-export-for-woo'),
+						'changes_not_saved'=> __('Changes that you made may not be saved.', 'product-import-export-for-woo')
+
 					),
 					'is_variable_product_exist' => $is_variable_product_exist,
 					'pro_plugins' => array(
@@ -344,7 +369,7 @@ if (!class_exists('Wt_Import_Export_For_Woo_Admin_Basic')) {
 
 
 		/**
-		 * 	Delete pre-saved temaplates entry from DB - ajax hook
+		 * 	Delete pre-saved templates entry from DB - ajax hook
 		 */
 		public function delete_template()
 		{
@@ -452,18 +477,18 @@ if (!class_exists('Wt_Import_Export_For_Woo_Admin_Basic')) {
 		{
 ?>
 			<div class="wt-iew-tab-content" data-id="<?php echo esc_attr($target_id); ?>"></div>
-				<?php
-				if ($view_file != "" && file_exists($view_file)) {
-					include_once $view_file;
-				} else {
-					echo wp_kses_post($html);
-				}
-				?>
-				<?php
-				if ($need_submit_btn == 1) {
-					include WT_P_IEW_PLUGIN_PATH . "admin/views/admin-settings-save-button.php";
-				}
-				?>
+			<?php
+			if ($view_file != "" && file_exists($view_file)) {
+				include_once $view_file;
+			} else {
+				echo wp_kses_post($html);
+			}
+			?>
+			<?php
+			if ($need_submit_btn == 1) {
+				include WT_P_IEW_PLUGIN_PATH . "admin/views/admin-settings-save-button.php";
+			}
+			?>
 			</div>
 <?php
 		}
@@ -503,6 +528,109 @@ if (!class_exists('Wt_Import_Export_For_Woo_Admin_Basic')) {
 			} else {
 				echo "<p><b>" . sprintf(__('Export WooCommerce orders and coupons in CSV format using <a href="%s">this exporter</a>.'), esc_url(admin_url('admin.php?page=wt_import_export_for_woo_basic_export&wt_to_export=order'))) . "</b></p>";
 			}
+		}
+
+		/**
+		 * 	Load the design system files and initiate it.
+		 * 	
+		 *  @since    3.0.0
+		 */
+		public function include_design_system()
+		{
+			if (!$this->ds_loaded) {
+				include_once plugin_dir_path(__FILE__) . 'wt-ds/class-wbte-ds.php';
+				/**
+				 * Just initiate it. This is to load the CSS and JS.
+				 */
+				Wbte\Pimpexp\Ds\Wbte_Ds::get_instance(WT_P_IEW_VERSION);
+				$this->ds_loaded = true;
+			}
+		}
+
+		public function update_top_header_loaded()
+		{
+			$result = update_option($this->top_header_loadedoption_name, 1);
+			wp_send_json_success(array(
+				'success' => $result,
+				'message' => $result ? 'Updated successfully' : 'Update failed'
+			));
+		}
+
+		public function filter_admin_notices() { 
+			// Exit if not on the plugin screen.
+			if ( empty( $_REQUEST['page'] ) || ! $this->is_plugin_page() ) { 
+				return;
+			}
+			
+			global $wp_filter;
+			
+			// Notices types to filter.
+			$notices_types = array(
+				'user_admin_notices',
+				'admin_notices',
+				'all_admin_notices',
+			); 
+
+			// List of classes to preserve
+			$preserve_classes = array(
+				'product_import_export_review_request',
+				'order_import_export_review_request', 
+				'user_import_export_review_request',
+				'woocommerce',
+			);
+
+			foreach ( $notices_types as $type ) { 
+				// Check if there are callbacks for this notice type.
+				if ( empty( $wp_filter[ $type ]->callbacks ) || ! is_array( $wp_filter[ $type ]->callbacks ) ) {
+					continue;
+				}
+				// Process each callback for the given priority.
+				foreach ( $wp_filter[ $type ]->callbacks as $priority => $hooks ) {  
+					foreach ( $hooks as $name => $arr ) {
+						// If the callback is a closure, remove it.
+						if ( is_object( $arr['function'] ) && $arr['function'] instanceof \Closure ) {
+							unset( $wp_filter[ $type ]->callbacks[ $priority ][ $name ] );
+							continue;
+						}
+
+						$class = ! empty( $arr['function'][0] ) && is_object( $arr['function'][0] ) ? strtolower( get_class( $arr['function'][0] ) ) : '';
+						
+						// Skip if class matches any of the preserve classes
+						$should_preserve = false;
+						foreach ($preserve_classes as $preserve_class) {
+							if (!empty($class) && strpos($class, $preserve_class) === 0) {
+								$should_preserve = true;
+								break;
+							}
+						}
+						
+						if ($should_preserve) {
+							continue;
+						}
+						// Remove other callbacks
+						unset( $wp_filter[ $type ]->callbacks[ $priority ][ $name ] );
+					}
+				}
+			}
+		}
+	
+		private function is_plugin_page() {
+			// Early return if 'page' parameter is not set.
+			if ( ! isset( $_GET['page'] ) ) {
+				return false;
+			}
+			// List of plugin pages.
+			$plugin_pages = array(
+				'wt_import_export_for_woo_basic_export', 
+				'wt_import_export_for_woo_basic_import', 
+				'wt_import_export_for_woo_basic_history',
+				'wt_import_export_for_woo_basic_history_log', 
+				'wt_iew_scheduled_job',
+				'wt_import_export_for_woo_basic',
+			);
+	
+			// Check if the current 'page' parameter contains any of the plugin pages.
+			return in_array( $_GET['page'], $plugin_pages, true );
 		}
 	}
 }

@@ -459,4 +459,18 @@ class WPF_Utils {
 
 		return $page;
 	}
+
+    // clear previous WPF parameters from $url
+    public static function get_unfiltered_url( $url = false ) : string {
+		$wpf_parameters = array();
+		if ( ! empty( $_GET ) ) {
+			foreach ( $_GET as $key => $value ) {
+				if ( substr( $key, 0, 3 ) === 'wpf' ) {
+					$wpf_parameters[] = $key;
+				}
+			}
+		}
+
+        return remove_query_arg( $wpf_parameters, $url );
+    }
 }

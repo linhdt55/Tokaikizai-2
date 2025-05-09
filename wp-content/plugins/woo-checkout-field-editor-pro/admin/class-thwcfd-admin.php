@@ -89,11 +89,14 @@ class THWCFD_Admin {
 	
 	public function output_settings(){
 		echo '<div class="wrap">';
+		
 		echo '<h2>'. esc_html__('Checkout Form', 'woo-checkout-field-editor-pro') .'</h2>';
-
 		$tab = $this->get_current_tab();
 
 		echo '<div class="thwcfd-wrap">';
+		//Block Compatibility Warning
+		$this->compatibility_warning();
+
 		if($tab === 'advanced_settings'){			
 			$advanced_settings = THWCFD_Admin_Settings_Advanced::instance();	
 			$advanced_settings->render_page();
@@ -112,6 +115,39 @@ class THWCFD_Admin {
 		}
 		echo '</div>';
 		echo '</div>';
+	}
+
+	public function compatibility_warning(){
+
+		?>
+		<div id="th_block_warning" class="th-block-warning-msg">
+            <div class="th-warning-message-panel__text th-warning-message-panel__text--center">
+                <div class = "th-warning-img">
+					<svg width="30" height="30" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M9.65703 0H0.496145C0.221904 0 0 0.208925 0 0.467124V2.30211C0 2.55966 0.221904 2.76924 0.496145 2.76924H9.65773C9.93127 2.76924 10.1539 2.56031 10.1539 2.30211V0.467124C10.1539 0.209582 9.93197 0 9.65773 0H9.65703Z" fill="white"/>
+						<path d="M14.737 4.61539H3.72396C3.45206 4.61539 3.2308 4.82431 3.2308 5.08251V6.9175C3.2308 7.17504 3.45137 7.38462 3.72396 7.38462H14.7377C15.0096 7.38462 15.2308 7.1757 15.2308 6.9175V5.08251C15.2308 4.82497 15.0103 4.61539 14.7377 4.61539H14.737Z" fill="white"/>
+						<path d="M14.7172 9.23077H12.0522C11.769 9.23077 11.5386 9.4397 11.5386 9.6979V11.5329C11.5386 11.7904 11.7683 12 12.0522 12H14.7172C15.0004 12 15.2309 11.7911 15.2309 11.5329V9.6979C15.2309 9.44036 15.0012 9.23077 14.7172 9.23077Z" fill="white"/>
+						<path d="M9.64009 9.23077H6.97526C6.69202 9.23077 6.46152 9.4397 6.46152 9.6979V11.5329C6.46152 11.7904 6.69129 12 6.97526 12H9.64009C9.92333 12 10.1538 11.7911 10.1538 11.5329V9.6979C10.1538 9.44036 9.92406 9.23077 9.64009 9.23077Z" fill="white"/>
+						<path d="M14.7172 0H12.0522C11.769 0 11.5386 0.208925 11.5386 0.467124V2.30211C11.5386 2.55966 11.7683 2.76924 12.0522 2.76924H14.7172C15.0004 2.76924 15.2309 2.56031 15.2309 2.30211V0.467124C15.2309 0.209582 15.0012 0 14.7172 0Z" fill="white"/>
+					</svg>
+				</div>
+				<div class="th-warning">
+             	
+					<span class="th-warning-message-panel__inner-text">
+					<?php
+						printf(
+							esc_html__("Our Checkout Field Editor now supports WooCommerce Checkout Blocks! Currently, a few field types are available, and more will be added soon. 
+							If you're using Block Checkout, make sure to switch to the Block Checkout Fields tab, otherwise, your changes won’t be reflected. Have questions or need help? 
+							Reach out to our  %s .", 'woocommerce-checkout-field-editor-pro'),
+							'<a href="https://www.themehigh.com/docs/support/" target="_blank" class="quick-widget-support-link">' . esc_html__(' Support team', 'woo-checkout-field-editor-pro') . '</a>'
+						);
+       				?>
+					</span>
+				</div>
+            </div>
+        </div>
+		<?php
+
 	}
 
 	public function wcfd_notice_actions(){
@@ -503,7 +539,7 @@ class THWCFD_Admin {
 		$now = time();
 
 		// $render_time = apply_filters('thwcfd_show_discount_popup_render_time' , 3 * MONTH_IN_SECONDS);
-		$render_time  = apply_filters('thwcfd_show_discount_popup_render_time', 6 * MONTH_IN_SECONDS);
+		$render_time  = apply_filters('thwcfd_show_discount_popup_render_time', 1.5 * MONTH_IN_SECONDS);
 		$render_time = $thwcfd_since + $render_time;
 
 		if (isset($_GET['thwcfd_discount_popup_dismiss'])) {

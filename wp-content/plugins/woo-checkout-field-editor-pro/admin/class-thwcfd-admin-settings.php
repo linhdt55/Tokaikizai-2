@@ -21,7 +21,7 @@ abstract class THWCFD_Admin_Settings{
 
 	public function __construct() {
 		$this->tabs = array(
-			'fields' => __('Checkout Fields', 'woo-checkout-field-editor-pro'),
+			'fields' => __('Classic Checkout Fields', 'woo-checkout-field-editor-pro'),
 			'block_fields' => __('Block Checkout Fields', 'woo-checkout-field-editor-pro'),
 			'advanced_settings' => __('Advanced Settings', 'woo-checkout-field-editor-pro'),
 			'pro' => __('Premium Features', 'woo-checkout-field-editor-pro'),

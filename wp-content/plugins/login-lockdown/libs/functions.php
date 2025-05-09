@@ -14,12 +14,12 @@ class LoginLockdown_Functions extends LoginLockdown
     $options = LoginLockdown_Setup::get_options();
     $ip = LoginLockdown_Utility::getUserIP();
 
-    $numFails = $wpdb->get_var(
+    $numFails = $wpdb->get_var( //phpcs:ignore
       $wpdb->prepare(
         "SELECT COUNT(login_attempt_ID) FROM " . $wpdb->lockdown_login_fails . " WHERE login_attempt_date + INTERVAL %d MINUTE > %s AND login_attempt_IP = %s",
         array($options['retries_within'], current_time('mysql'), $ip)
       )
-    );
+    ); 
 
     return $numFails;
   }
@@ -40,7 +40,8 @@ class LoginLockdown_Functions extends LoginLockdown
         $user_id = $user->ID;
       }
 
-      $wpdb->insert(
+      //phpcs:ignore no need to cache
+      $wpdb->insert( //phpcs:ignore
         $wpdb->lockdown_login_fails,
         array(
           'user_id' => $user_id,
@@ -68,12 +69,13 @@ class LoginLockdown_Functions extends LoginLockdown
         $user_id = $user->ID;
       }
 
-      $wpdb->insert(
+      //phpcs:ignore no need to cache
+      $wpdb->insert( //phpcs:ignore
         $wpdb->lockdown_lockdowns,
         array(
           'user_id' => $user_id,
           'lockdown_date' => current_time('mysql'),
-          'release_date' => date('Y-m-d H:i:s', strtotime(current_time('mysql')) + $options['lockout_length'] * 60),
+          'release_date' => gmdate('Y-m-d H:i:s', strtotime(current_time('mysql')) + $options['lockout_length'] * 60),
           'lockdown_IP' => $ip,
           'reason' => $reason
         )
@@ -86,14 +88,16 @@ class LoginLockdown_Functions extends LoginLockdown
     global $wpdb;
     $ip = LoginLockdown_Utility::getUserIP();
 
-    $stillLocked = $wpdb->get_var($wpdb->prepare("SELECT user_id FROM " . $wpdb->lockdown_lockdowns . " WHERE release_date > %s AND lockdown_IP = %s AND unlocked = 0", array(current_time('mysql'), $ip)));
+    //phpcs:ignore no need to cache as we always need live data
+    $stillLocked = $wpdb->get_var($wpdb->prepare("SELECT user_id FROM " . $wpdb->lockdown_lockdowns . " WHERE release_date > %s AND lockdown_IP = %s AND unlocked = 0", array(current_time('mysql'), $ip))); //phpcs:ignore
 
     return $stillLocked;
   }
 
   static function is_rest_request()
   {
-    if (defined('REST_REQUEST') && REST_REQUEST || isset($_GET['rest_route']) && strpos(sanitize_text_field(wp_unslash($_GET['rest_route'])), '/', 0) === 0) {
+    //phpcs: this is a safe check for REST requests, not data processing
+    if (defined('REST_REQUEST') && REST_REQUEST || isset($_GET['rest_route']) && strpos(sanitize_text_field(wp_unslash($_GET['rest_route'])), '/', 0) === 0) { //phpcs:ignore
       return true;
     }
 
@@ -175,6 +179,7 @@ class LoginLockdown_Functions extends LoginLockdown
     }
 
     if ($userdata === false) {
+      /* translators: %s is the url of the WordPress lost password page. */
       return new WP_Error('invalid_username', sprintf(__('<strong>ERROR</strong>: Invalid username. <a href="%s" title="Password Lost and Found">Lost your password</a>?', 'login-lockdown'), site_url('wp-login.php?action=lostpassword', 'login')));
     }
 
@@ -184,6 +189,7 @@ class LoginLockdown_Functions extends LoginLockdown
     }
 
     if (!is_string($password) || !is_string($userdata->user_pass) || is_null($userdata->ID) || !wp_check_password($password, $userdata->user_pass, $userdata->ID)) {
+      /* translators: %s is the url of the WordPress lost password page. */
       return new WP_Error('incorrect_password', sprintf(__('<strong>ERROR</strong>: Incorrect password. <a href="%s" title="Password Lost and Found">Lost your password</a>?', 'login-lockdown'), site_url('wp-login.php?action=lostpassword', 'login')));
     }
 
@@ -196,8 +202,17 @@ class LoginLockdown_Functions extends LoginLockdown
     $options = LoginLockdown_Setup::get_options();
 
     if ($options['captcha'] == 'builtin') {
-      if (isset($_POST['loginlockdown_captcha']) && sanitize_text_field($_POST['loginlockdown_captcha']) === $_COOKIE['loginlockdown_captcha']) {
-        return true;
+      if (isset($_POST['loginlockdown_captcha'])) { // phpcs:ignore
+        $captcha_responses = array_map('sanitize_text_field', wp_unslash($_POST['loginlockdown_captcha'])); // phpcs:ignore
+        $captcha_tokens = array_map('sanitize_text_field', wp_unslash($_POST['loginlockdown_captcha_token'])); // phpcs:ignore
+        
+        foreach ($captcha_responses as $captcha_id => $captcha_val) {
+            if (wp_hash($captcha_val) === $captcha_tokens[$captcha_id]) {
+                return true;
+            } else {
+                return new WP_Error('lockdown_builtin_captcha_failed', __("<strong>ERROR</strong>: captcha verification failed.<br /><br />Please try again.", 'login-lockdown'));
+            }
+        }
       } else {
         return new WP_Error('lockdown_builtin_captcha_failed', __("<strong>ERROR</strong>: captcha verification failed.<br /><br />Please try again.", 'login-lockdown'));
       }
@@ -221,28 +236,42 @@ class LoginLockdown_Functions extends LoginLockdown
     return $error;
   }
 
-  static function login_form_fields()
+  static function login_form_fields_print()
+  {
+      //phpcs:ignore this just prints the recaptcha HTML inline and all variables are already escaped
+      echo self::login_form_fields(false); //phpcs:ignore
+  }
+
+  static function login_form_fields($output)
   {
     $options = LoginLockdown_Setup::get_options();
     $showcreditlink = $options['show_credit_link'];
 
+    if(false === $output){
+        $output = '';
+    }
+
     if ($options['captcha'] == 'builtin') {
-      echo '<p><label for="loginlockdown_captcha">' . esc_html__('Are you human? Please solve: ', 'login-lockdown');
-      echo '<img class="loginlockdown-captcha-img" style="vertical-align: text-top;" src="' . esc_url(LOGINLOCKDOWN_PLUGIN_URL) . '/libs/captcha.php?loginlockdown-generate-image=true&noise=1&rnd=' . esc_attr(rand(0, 10000)) . '" alt="Captcha" />';
-      echo '<input class="input" type="text" size="3" name="loginlockdown_captcha" id="loginlockdown_captcha" />';
-      echo '</label></p><br />';
+        $output .= '<p><label for="loginlockdown_captcha">Are you human? Please solve: ';
+        $captcha_id = wp_rand(1000, 9999);
+        $captcha = self::math_captcha_generate($captcha_id);
+        $output .= '<img class="loginlockdown-captcha-img" style="vertical-align: text-top;" src="' . $captcha['img'] . '" alt="Captcha" />';
+        $output .= '<input class="input" type="text" size="3" name="loginlockdown_captcha[' . intval($captcha_id) . ']" id="loginlockdown_captcha" value=""/>';
+        $output .= '<input type="hidden" name="loginlockdown_captcha_token[' . intval($captcha_id) . ']" id="loginlockdown_captcha_token" value="' . wp_hash($captcha['value'])  . '" />';
+        $output .= '</label></p><br />';
     }
 
     if ($showcreditlink != "no" && $showcreditlink != 0) {
-      echo "<div id='loginlockdown-protected-by' style='display: block; clear: both; padding-top: 20px; text-align: center;'>";
-      esc_html_e('Login form protected by', 'login-lockdown');
-      echo ' <a target="_blank" href="' . esc_url('https://wploginlockdown.com/') . '">Login Lockdown</a></div>';
-      echo '<script>
+      $output .=  "<div id='loginlockdown-protected-by' style='display: block; clear: both; padding-top: 20px; text-align: center;'>";
+      $output .= esc_html__('Login form protected by', 'login-lockdown');
+      $output .=  ' <a target="_blank" href="' . esc_url('https://wploginlockdown.com/') . '">Login Lockdown</a></div>';
+      $output .=  '<script>
             document.addEventListener("DOMContentLoaded", function() {
                 document.querySelector("#loginform").append(document.querySelector("#loginlockdown-protected-by"));
             });
             </script>';
     }
+    return $output;
   }
 
   static function lockdown_screen($block_message = false)
@@ -331,14 +360,15 @@ class LoginLockdown_Functions extends LoginLockdown
 
     echo '<form method="POST">';
 
-    if (isset($_POST['loginlockdown_recovery_submit']) && wp_verify_nonce($_POST['loginlockdown_recovery_nonce'], 'loginlockdown_recovery')) {
-      $email = sanitize_text_field($_POST['loginlockdown_recovery_email']);
-      if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    if (isset($_POST['loginlockdown_recovery_nonce']) && wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['loginlockdown_recovery_nonce'])), 'loginlockdown_recovery')) {
+      
+      if (!isset($_POST['loginlockdown_recovery_email']) || !filter_var(wp_unslash($_POST['loginlockdown_recovery_email']), FILTER_VALIDATE_EMAIL)) {
         $display_message = '<p class="error">Invalid email address.</p>';
       } else {
-        $user = get_user_by('email', $email);
+        $email = sanitize_text_field(wp_unslash($_POST['loginlockdown_recovery_email']));
+        $user = get_user_by('email', $email);        
         if (user_can($user, 'administrator')) {
-          $unblock_key = md5(time() . rand(10000, 9999));
+          $unblock_key = md5(time() . wp_rand(10000, 9999));
           $unblock_attempts = get_transient('loginlockdown_unlock_count_' . $user->ID);
           if (!$unblock_attempts) {
             $unblock_attempts = 0;
@@ -402,8 +432,9 @@ class LoginLockdown_Functions extends LoginLockdown
   static function handle_unblock()
   {
     global $wpdb;
+    //phpcs:ignore missing nonce as this is called via a link in email or stored by user
     $options = LoginLockdown_Setup::get_options();
-    if (isset($_GET['loginlockdown_unblock']) && $options['global_unblock_key'] === sanitize_text_field($_GET['loginlockdown_unblock'])) {
+    if (isset($_GET['loginlockdown_unblock']) && $options['global_unblock_key'] === sanitize_text_field(wp_unslash($_GET['loginlockdown_unblock']))) { //phpcs:ignore
       $user_ip = LoginLockdown_Utility::getUserIP();
       if (!in_array($user_ip, $options['whitelist'])) {
         $options['whitelist'][] = LoginLockdown_Utility::getUserIP();
@@ -411,12 +442,13 @@ class LoginLockdown_Functions extends LoginLockdown
       update_option(LOGINLOCKDOWN_OPTIONS_KEY, $options);
     }
 
-    if (isset($_GET['loginlockdown_unblock']) && strlen($_GET['loginlockdown_unblock']) == 32) {
-      $unblock_key = sanitize_key($_GET['loginlockdown_unblock']);
+    if (isset($_GET['loginlockdown_unblock']) && strlen($_GET['loginlockdown_unblock']) == 32) { //phpcs:ignore
+      $unblock_key = sanitize_key(wp_unslash($_GET['loginlockdown_unblock'])); //phpcs:ignore
       $unblock_transient = get_transient('loginlockdown_unlock_' . $unblock_key);
       if ($unblock_transient == $unblock_key) {
         $user_ip = LoginLockdown_Utility::getUserIP();
-        $wpdb->delete(
+        //phpcs:ignore no need to cache
+        $wpdb->delete( //phpcs:ignore
           $wpdb->lockdown_lockdowns,
           array(
             'lockdown_IP' => $user_ip
@@ -486,35 +518,6 @@ class LoginLockdown_Functions extends LoginLockdown
         break;
     }
   }
-
-  static function generate_export_file()
-  {
-    if (false === current_user_can('manage_options')) {
-      wp_die('Sorry, you have to be an admin to run this action.');
-    }
-
-    $filename = str_replace(array('http://', 'https://'), '', home_url());
-    $filename = str_replace(array('/', '\\', '.'), '-', $filename);
-    $filename .= '-' . date('Y-m-d') . '-loginlockdown.txt';
-
-    $options = LoginLockdown_Setup::get_options();
-    $options_json = json_encode($options);
-
-    header('Content-type: text/txt');
-    header('Content-Disposition: attachment; filename=' . $filename);
-    header('Expires: 0');
-    header('Cache-Control: must-revalidate');
-    header('Pragma: public');
-    header('Content-Length: ' . strlen($options_json));
-
-    @ob_end_clean();
-    flush();
-
-    LoginLockdown_Utility::wp_kses_wf($options_json);
-
-    exit;
-  } // generate_export_file
-
 
   // auto download / install / activate WP 301 Redirects plugin
   static function install_wp301()
@@ -596,4 +599,102 @@ class LoginLockdown_Functions extends LoginLockdown
       return false;
     }
   } // is_plugin_installed
+
+  // convert HEX(HTML) color notation to RGB
+  static function hex2rgb($color)
+  {
+      if ($color[0] == '#') {
+          $color = substr($color, 1);
+      }
+
+      if (strlen($color) == 6) {
+          list($r, $g, $b) = array(
+              $color[0] . $color[1],
+              $color[2] . $color[3],
+              $color[4] . $color[5]
+          );
+      } elseif (strlen($color) == 3) {
+          list($r, $g, $b) = array($color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2]);
+      } else {
+          return array(255, 255, 255);
+      }
+
+      $r = hexdec($r);
+      $g = hexdec($g);
+      $b = hexdec($b);
+
+      return array($r, $g, $b);
+  } // html2rgb
+
+
+  // output captcha image
+  static function math_captcha_generate($captcha_id = false)
+  {
+      ob_start();
+      
+      $a = wp_rand(0, (int) 10);
+      $b = wp_rand(0, (int) 10);
+      if(isset($_GET['color'])){ // phpcs:ignore
+          $color = substr($_GET['color'],0,7); // phpcs:ignore
+          $color = urldecode($color);
+      } else{
+          $color = '#FFFFFF';
+      }
+
+      if ($a > $b) {
+          $out = "$a - $b";
+          $captcha_value = $a - $b;
+      } else {
+          $out = "$a + $b";
+          $captcha_value = $a + $b;
+      }
+
+      $font   = 5;
+      $width  = ImageFontWidth($font) * strlen($out);
+      $height = ImageFontHeight($font);
+      $im     = ImageCreate($width, $height);
+
+      $x = imagesx($im) - $width;
+      $y = imagesy($im) - $height;
+
+      $white = imagecolorallocate($im, 255, 255, 255);
+      $gray = imagecolorallocate($im, 66, 66, 66);
+      $black = imagecolorallocate($im, 0, 0, 0);
+      $trans_color = $white; //transparent color
+
+      if ($color) {
+          $color = self::hex2rgb($color);
+          $new_color = imagecolorallocate($im, $color[0], $color[1], $color[2]);
+          imagefill($im, 1, 1, $new_color);
+      } else {
+          imagecolortransparent($im, $trans_color);
+      }
+
+      imagestring($im, $font, $x, $y, $out, $black);
+
+      // always add noise
+      if (1 == 1) {
+          $color_min = 100;
+          $color_max = 200;
+          $rand1 = imagecolorallocate($im, wp_rand($color_min, $color_max), wp_rand($color_min, $color_max), wp_rand($color_min, $color_max));
+          $rand2 = imagecolorallocate($im, wp_rand($color_min, $color_max), wp_rand($color_min, $color_max), wp_rand($color_min, $color_max));
+          $rand3 = imagecolorallocate($im, wp_rand($color_min, $color_max), wp_rand($color_min, $color_max), wp_rand($color_min, $color_max));
+          $rand4 = imagecolorallocate($im, wp_rand($color_min, $color_max), wp_rand($color_min, $color_max), wp_rand($color_min, $color_max));
+          $rand5 = imagecolorallocate($im, wp_rand($color_min, $color_max), wp_rand($color_min, $color_max), wp_rand($color_min, $color_max));
+
+          $style = array($rand1, $rand2, $rand3, $rand4, $rand5);
+          imagesetstyle($im, $style);
+          imageline($im, wp_rand(0, $width), 0, wp_rand(0, $width), $height, IMG_COLOR_STYLED);
+          imageline($im, wp_rand(0, $width), 0, wp_rand(0, $width), $height, IMG_COLOR_STYLED);
+          imageline($im, wp_rand(0, $width), 0, wp_rand(0, $width), $height, IMG_COLOR_STYLED);
+          imageline($im, wp_rand(0, $width), 0, wp_rand(0, $width), $height, IMG_COLOR_STYLED);
+          imageline($im, wp_rand(0, $width), 0, wp_rand(0, $width), $height, IMG_COLOR_STYLED);
+      }
+
+      imagegif($im);
+
+      // Get image data
+      $image_data = ob_get_clean();
+      return array('value' => $captcha_value, 'img' => 'data:image/png;base64,' . base64_encode($image_data));
+  } // create
 } // class

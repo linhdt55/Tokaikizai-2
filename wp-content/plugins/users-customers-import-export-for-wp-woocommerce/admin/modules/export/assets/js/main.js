@@ -215,8 +215,10 @@ var wt_iew_basic_export=(function( $ ) {
 				wt_iew_popup.showPopup(pop_elm);
 				$('[name="wt_iew_template_name_field"]').val(this.selected_template_name).focus();
 
-				$('.wt_iew_template_create_btn').unbind('click').click(function(){
-					var name=$.trim($('.wt_iew_template_name_field').val());
+				$('.wt_iew_template_create_btn').off('click').on('click',function(){
+
+					var name = $('.wt_iew_template_name_field').val().trim();
+
 					if(name=='')
 					{
 						$('.wt_iew_template_name_wrn').show();
@@ -325,7 +327,8 @@ var wt_iew_basic_export=(function( $ ) {
 		},
 		reg_button_actions:function()
 		{
-			$('.wt_iew_export_action_btn').unbind('click').click(function(e){
+			$('.wt_iew_export_action_btn').off('click').on('click', function(e){
+
 				e.preventDefault();
                                 wt_iew_basic_export.remove_ajax_page_loader(); /* remove any loader that are open */
 				var action=$(this).attr('data-action');
@@ -654,7 +657,7 @@ var wt_iew_basic_export=(function( $ ) {
 					$('.wt_iew_free_addon').hide();
 					$('.wt_iew_export_action_btn').prop('disabled', false);
 					
-					$('.wt_iew_post-type-card').unbind('click').click(function () {
+					$('.wt_iew_post-type-card').off('click').on('click', function () {
 
 
 						var selectedPostTypes = wt_iew_basic_params.pro_plugins;
@@ -696,7 +699,8 @@ var wt_iew_basic_export=(function( $ ) {
 				this.export_method=$('[name="wt_iew_export_method_export"]:checked').val();
 				this.toggle_export_method_options();
 
-				$('[name="wt_iew_export_method_export"]').unbind('click').click(function(){
+				$('[name="wt_iew_export_method_export"]').off('click').on('click', function(){
+
 					var vl=$(this).val();
 					if(wt_iew_basic_export.export_method==vl)
 					{
@@ -712,7 +716,8 @@ var wt_iew_basic_export=(function( $ ) {
 						}else
 						{
 							wt_iew_basic_export.selected_template=$('.wt-iew-export-template-sele').val();
-							wt_iew_basic_export.selected_template_name=$.trim($('.wt-iew-export-template-sele option:selected').text());
+							wt_iew_basic_export.selected_template_name = $('.wt-iew-export-template-sele option:selected').text().trim();
+
 							wt_iew_basic_export.load_pending_steps();
 						}		
 					}else
@@ -729,7 +734,8 @@ var wt_iew_basic_export=(function( $ ) {
 						$('.wt_iew_export_template_wrn').show();
 					}else
 					{
-						wt_iew_basic_export.selected_template_name=$.trim($('.wt-iew-export-template-sele option:selected').text());
+						wt_iew_basic_export.selected_template_name = $('.wt-iew-export-template-sele option:selected').text().trim();
+
 						wt_iew_basic_export.load_pending_steps();
 					}
 				});
@@ -750,6 +756,14 @@ var wt_iew_basic_export=(function( $ ) {
 			}
 			else if(step=='advanced')
 			{	
+				// File name input validation
+				$('input[name="wt_iew_file_name"]').on('input', function() {
+					// Allow only letters (A-Z, a-z), numbers (0-9), and hyphens (-)
+					let sanitizedValue = $(this).val().replace(/[^a-zA-Z0-9-]/g, '');
+					$(this).val(sanitizedValue);
+				}).attr('title', wt_iew_export_basic_params.msgs.filename_title)
+				  .attr('placeholder', wt_iew_export_basic_params.msgs.filename_placeholder);
+
 				/* callback for external adapters */
 				if($('select[name="wt_iew_file_into"]').length>0) /* multiple adapter exists so select box */
 				{
@@ -782,7 +796,8 @@ var wt_iew_basic_export=(function( $ ) {
 				{
 					$('.iew_export_image_btn').hide();
 				}
-				$('.wt_iew_separate_image_export').unbind('click').click(function(){
+					$('.wt_iew_separate_image_export').off('click').on('click', function(){
+
 					if($(this).val()=='Yes')
 					{
 						$('.iew_export_image_btn').show();
@@ -836,8 +851,9 @@ var wt_iew_basic_export=(function( $ ) {
 		},
 		mapping_box_accordian:function()
 		{
-			$('.meta_mapping_box_hd').unbind('click').click(function()
-			{
+
+				$('.meta_mapping_box_hd').off('click').on('click', function(){
+
 				var c_dv=$(this).parents('.meta_mapping_box').find('.meta_mapping_box_con');
 				if(c_dv.is(':visible'))
 				{
@@ -872,7 +888,8 @@ var wt_iew_basic_export=(function( $ ) {
 				wt_iew_basic_export.mapping_fields_selected_count(tb);
 			});
 
-			$('.wt_iew_mapping_checkbox_main').unbind('click').click(function()
+
+				$('.wt_iew_mapping_checkbox_main').off('click').on('click', function()
 			{
 				var tb=$(this).parents('.wt-iew-mapping-tb');
 				if($(this).is(':checked'))
@@ -884,7 +901,8 @@ var wt_iew_basic_export=(function( $ ) {
 				}
 				wt_iew_basic_export.mapping_fields_selected_count(tb);
 			});
-			$('.wt_iew_mapping_checkbox_sub').unbind('click').click(function()
+			$('.wt_iew_mapping_checkbox_sub').off('click').on('click', function()
+
 			{
 				var tb=$(this).parents('.wt-iew-mapping-tb');
 				if($(this).is(':checked') && tb.find('.wt_iew_mapping_checkbox_sub:checked').length==tb.find('.wt_iew_mapping_checkbox_sub').length)
@@ -917,7 +935,8 @@ var wt_iew_basic_export=(function( $ ) {
 						}else
 						{
 							wt_iew_basic_export.selected_template=$('.wt-iew-export-template-sele').val();
-							wt_iew_basic_export.selected_template_name=$.trim($('.wt-iew-export-template-sele option:selected').text());
+							wt_iew_basic_export.selected_template_name = $('.wt-iew-export-template-sele option:selected').text().trim();
+
 						}
 			  		}
 			  	}
@@ -940,7 +959,8 @@ var wt_iew_basic_export=(function( $ ) {
                 warn_on_refresh: function () {
                     window.onbeforeunload = function (event)
                     {   if(!wt_iew_basic_export.export_finished && 'post_type' != wt_iew_basic_export.current_step){
-                            return confirm("Changes that you made may not be saved.");
+							return confirm(wt_iew_basic_params.msgs.changes_not_saved);
+
                         }
                     };
                 },
@@ -986,7 +1006,8 @@ var wt_plugin_advt = {
     Set: function ()
     {
 
-        jQuery('.wt-hide-features-post-types').click(function (e) {
+		jQuery('.wt-hide-features-post-types').on('click', function(e){
+
             e.preventDefault();
             var invisible_mtop = '20px';
             var visible_mtop = '-200px';

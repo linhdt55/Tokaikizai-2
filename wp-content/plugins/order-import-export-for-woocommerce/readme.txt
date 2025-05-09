@@ -2,9 +2,9 @@
 Contributors: webtoffee
 Tags: woocommerce export orders, woocommerce import orders, advanced order export, coupon import export, woocommerce order import export
 Requires at least: 3.0
-Tested up to: 6.7.1
+Tested up to: 6.7.2
 Requires PHP: 5.6
-Stable tag: 2.5.9
+Stable tag: 2.6.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -18,29 +18,33 @@ Order Export Import Plugin for WooCommerce is a perfect tool for migrating order
 
 The plugin will also allow you to migrate thousands of coupons from your old eCommerce platform or campaigns. Coupon CSV import and coupon export are essential features if you have a store with a large number of coupons. 
 
+= Key Features = 
+
 The following are functionalities offered by the basic version of the order import and order export plugin.
 
- &#128312; WooCommerce Export orders to CSV.
- &#128312; Import orders from CSV to WooCommerce.
- &#128312; Export coupons to CSV.
- &#128312; Import coupons from CSV to WooCommerce.
- &#128312; Supports importing selected columns from the order import CSV file. 
- &#128312; Bulk update WooCommerce orders and coupons.
- &#128312; Compatible with YITH WooCommerce Order Tracking plugin.
- &#128312; Supports various export filters (order status, product, coupon, customer, date range) for order export to CSV.
- &#128312; Tested OK with WooCommerce 9.4.3
- &#128312; Tested OK with WordPress 6.7.1
- &#128312; Tested OK with PHP 8.3
+ &#128312; **Export Orders:** WooCommerce export orders to CSV.
+ &#128312; **Import Orders:** Import orders from CSV to WooCommerce.
+ &#128312; **Export Coupons:** Export coupons to CSV.
+ &#128312; **Import Coupons:** Import coupons from CSV to WooCommerce.
+ &#128312; **Selective Column Import:** Supports importing selected columns from the order import CSV file. 
+ &#128312; **Bulk Updates:** Bulk update WooCommerce orders and coupons.
+ &#128312; **YITH Compatibility:** Compatible with YITH WooCommerce Order Tracking plugin.
+ &#128312; **Export Filters:** Supports various export filters (order status, product, coupon, customer, date range) for order export to CSV.
+ &#9989; Tested OK with WooCommerce 9.7.0
+ &#9989; Tested OK with WordPress 6.7.2
+ &#9989; Tested OK with PHP 8.3
+
+= Advanced Features for Seamless CSV Export and Import =
 
 Additional features of the order import and order export plugin that will help you in the CSV export and import process:
 
- &#128312; Import and Export WooCommerce orders in batches
- &#128312; Import coupons from CSV and Export coupons to CSV
- &#128312; Create a pre-saved template for quick and easy export of orders and coupons
- &#128312; Mapping and re-ordering of export columns
- &#128312; Export orders starting after an offset value
+ &#128312; Import and Export WooCommerce orders in batches.
+ &#128312; Import coupons from CSV and Export coupons to CSV.
+ &#128312; Create a pre-saved template for quick and easy export of orders and coupons.
+ &#128312; Mapping and re-ordering of export columns.
+ &#128312; Export orders starting after an offset value.
  &#128312; Skip or update existing orders/coupons while importing.
- &#128312; Create and maintain import and export history with options to re-run, view logs, and delete an entry
+ &#128312; Create and maintain import and export history with options to re-run, view logs, and delete an entry.
  &#128312; Log of the import and export will help in identifying what went wrong for debugging purposes.
  &#128312; Auto-suggestion of coupon codes making coupon-based filtering easier.
  &#128312; Export Subscription orders to a CSV file.
@@ -57,46 +61,42 @@ More information about the setup of the plugin and a sample CSV that is taken as
 * [WooCommerce PDF Invoices & Packing Slips](https://wordpress.org/plugins/woocommerce-pdf-invoices-packing-slips/)
 * [WooCommerce Order Proposal plugin](https://wpovernight.com/downloads/woocommerce-order-proposal/)
 
-<blockquote>
+
+= Premium Version Features: Order Export & Order Import for WooCommerce  =
+
+ &#9989; **Flexible Export Formats:** Export WooCommerce orders, subscriptions and coupons to CSV/XML/Excel (XLS/XLSX) file formats.
+ &#9989; **Versatile Import Formats:** Import WooCommerce orders, subscriptions and coupons using CSV/XML/Excel (XLS/XLSX) file formats.
+ &#9989; **Subscription Order Management:** Import and export subscription orders.
+ &#9989; **Custom Field Support:** Import and export custom fields and third-party plugin fields.
+ &#9989; **Third-Party Plugin Compatibility:** <a href="https://www.webtoffee.com/order-import-export-plugin-for-woocommerce-third-party-compatibility/">Support for third-party plugins</a>.
+ &#9989; **Column Mapping:** Column Mapping Feature to Import from any CSV format.
+ &#9989; **FTP Integration:** Import and Export via FTP.
+ &#9989; **Automated Imports:** Schedule automatic import using Cron Job Feature.
+ &#9989; **Automated Exports:** Scheduled export using Cron Job Feature.
+ &#9989; **Dedicated Support:** Excellent Support for setting it up!
 
 
-= Order Export & Order Import for WooCommerce Premium Version Features =
+For complete list of features and details, please visit <a rel="nofollow" href="https://www.webtoffee.com/product/woocommerce-order-coupon-subscription-export-import/">Order Export Import Plugin for WooCommerce</a> for more details
 
- &#9989; Export WooCommerce orders, subscriptions and coupons to CSV/XML/Excel (XLS/XLSX) file formats.
- &#9989; Import WooCommerce orders, subscriptions and coupons using CSV/XML/Excel (XLS/XLSX) file formats.
- &#9989; Import and export subscription orders.
- &#9989; Import and export custom fields and third-party plugin fields.
- &#9989; <a href="https://www.webtoffee.com/order-import-export-plugin-for-woocommerce-third-party-compatibility/">Support for third-party plugins</a>.
- &#9989; Column Mapping Feature to Import from any CSV format.
- &#9989; Import and Export via FTP.
- &#9989; Schedule automatic import using Cron Job Feature.
- &#9989; Scheduled export using Cron Job Feature.
- &#9989; Excellent Support for setting it up!
+**Note:** Please note that the below section applies to our free version and premium version. While the flow is the same, some of the features are only available in the premium version.
 
-
-For complete list of features and details, Please visit <a rel="nofollow" href="https://www.webtoffee.com/product/woocommerce-order-coupon-subscription-export-import/">Order Export Import Plugin for WooCommerce</a> for more details
-
-</blockquote>
-
-Note: Please note that the below section applies to our free version and premium version. While the flow is the same, some of the features are only available in the premium version.
-
-= How to export orders from WooCommerce? =
+= How to Export Orders from WooCommerce? =
 
 The Order Export & Order Import for WooCommerce Plugin's simple interface makes it extremely easy to map the data in your CSV file to the appropriate fields in WooCommerce. The order import export plugin supports custom fields, dates, and pretty much every other WooCommerce Order / WooCommerce Subscription / WooCommerce coupon field.
 
 Our order export plugin helps you to export WooCommerce bulk order data in XML format prescribed by other Service Providers. Using exported XML, you can import the orders to the Service Provider. It also provides an option to export XML using WooCommerce format, using which you will be able to import the orders to another WooCommerce website.
 
-**WooCommerce Export Orders**
+**Export WooCommerce Orders**
 
 You can select the order or subscription statuses and coupon types that you want to export. The ‘export order CSV file’ will contain the order-related data that you have configured to export via the plugin. So ensure to configure all required export settings for a smooth WooCommerce order export. To Export WooCommerce Orders to CSV just click the Export Orders button from the plugin page. 
 
-= How to import orders to WooCommerce? =
+= How to Import Orders to WooCommerce? =
 
-The Order Export & Order Import for WooCommerce Plugin's simple interface makes it extremely easy to map the data in your CSV file to the appropriate fields in WooCommerce. The WooCommerce order import plugin supports custom fields, dates, and pretty much every other WooCommerce Order / WooCommerce Subscription / WooCommerce Coupon field.
+The Order Export & Order Import for WooCommerce Plugin's simple interface makes it extremely easy to map the data in your CSV file to the appropriate fields in WooCommerce. The import WooCommerce orders plugin supports custom fields, dates, and pretty much every other WooCommerce Order / WooCommerce Subscription / WooCommerce Coupon field.
 
-Our Plugin is designed to be efficient with large imports as it splits large import files into smaller chunks, making it possible to import large files with thousands of data and records, even on slow hosting providers. All the data in the import file CSV will be automatically added to your WooCommerce store upon successful import. 
+Our plugin is designed to be efficient with large imports as it splits large import files into smaller chunks, making it possible to import large files with thousands of data and records, even on slow hosting providers. All the data in the import file CSV will be automatically added to your WooCommerce store upon successful import. 
 
-**WooCommerce Import Orders**
+**Import WooCommerce Orders**
 
 To Import WooCommerce Orders by uploading CSV, use the Import Orders button from the plugin page. The columns of your CSV may not always correspond with the WooCommerce order data fields. In such a case, you will have to manually provide a mapping and then save the mapping settings for later imports.
 
@@ -206,7 +206,20 @@ Yes.
 14. Exported coupon CSV
 
 == Changelog ==
+= 2.6.1 2025-03-19 =
+* [Fix] - Vulnerable to Server-Side Request Forgery.
+* [Fix] - Vulnerable to Arbitrary File Deletion.
+* [Fix] - Vulnerable to PHP Object Injection.
+* [Fix] - Vulnerable to Directory Traversal.
 
+= 2.6.0 2025-02-28 =
+* [Add] - Feature request functionality.
+* [Add] - New header section.
+* [Add] - Help button.
+* [Add] - Setup guide, FAQ, and support contact link.
+* [Add] - New review banner for feedback.
+* [Compatibility] - Tested OK with WooCommerce 9.7.0
+* [Compatibility] - Tested OK with WordPress 6.7.2
 = 2.5.9 2024-12-16 =
 * [Fix] - Blank CSV generated when exporting line items without Order ID.
 * [Fix] - Coupon updates failed during import.
@@ -602,9 +615,8 @@ Yes.
 
 == Upgrade Notice ==
 
-= 2.5.9 =
-* [Fix] - Blank CSV generated when exporting line items without Order ID.
-* [Fix] - Coupon updates failed during import.
-* [Add] - Support for WebToffee Gift Cards Pro wallet coupons.
-* [Compatibility] - Tested OK with WooCommerce 9.4.3
-* [Compatibility] - Tested OK with WordPress 6.7.1
+= 2.6.1 =
+* [Fix] - Vulnerable to Server-Side Request Forgery.
+* [Fix] - Vulnerable to Arbitrary File Deletion.
+* [Fix] - Vulnerable to PHP Object Injection.
+* [Fix] - Vulnerable to Directory Traversal.

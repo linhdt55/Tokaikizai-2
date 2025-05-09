@@ -2,8 +2,8 @@
 Contributors: smashballoon, craig-at-smash-balloon, am, smub
 Tags: Instagram, Instagram feed, Instagram photos, Instagram widget, Instagram gallery
 Requires at least: 4.1
-Tested up to: 6.7
-Stable tag: 6.6.1
+Tested up to: 6.8
+Stable tag: 6.8.0
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -307,6 +307,21 @@ For more FAQs related to the Instagram Feed plugin please visit the [FAQ section
 6. Just copy and paste the shortcode into any page, post or widget on your site. You can also use the block editor with our handy Instagram Feed block.
 
 == Changelog ==
+= 6.8.0 =
+* New - Added a new setting to support Instagram's new 3:4 aspect ratio. Edit your feed, select the "Layout" tab and choose among a 1:1 square, 4:5 portrait, or 3:4 Instagram official aspect ratio.
+* New - Added support for a new GDPR consent plugin [WPConsent](https://wpconsent.com/?utm_campaign=instagram-free-readme&utm_source=changelog&utm_medium=wpconsentannouncement).
+
+= 6.7.1 =
+* Fix - Prevented PHP error "Fatal error: Uncaught TypeError: unserialize()"
+* Fix - Removed advertisements for ClickSocial that appear in the block editor.
+
+= 6.7.0 =
+* New - Added information regarding our newest product [ClickSocial](https://clicksocial.com/?utm_campaign=instagram-free-readme&utm_source=changelog&utm_medium=clicksocialannouncement)! Schedule your social media posts through the WordPress dashboard.
+* Fix - Added a notice and more details if a database update fails. Most commonly this is due to the MySQL user not having permissions to alter tables.
+* Fix - Improved our compatibility with the latest versions of Divi and Elementor.
+* Fix - Resolved a PHP warning related to _load_textdomain_just_in_time.
+* Fix - Additional plugin hardening.
+
 = 6.6.1 =
 * Tweak: Added support for our new [Feed Analytics](https://smashballoon.com/?utm_campaign=instagram-free-readme&utm_source=changelog&utm_medium=feedanalyticsannouncement) product. Get insights as to how your feeds are being used by site visitors.
 

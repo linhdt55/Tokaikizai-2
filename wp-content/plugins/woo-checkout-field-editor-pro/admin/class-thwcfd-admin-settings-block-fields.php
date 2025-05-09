@@ -154,8 +154,9 @@ class THWCFD_Admin_Settings_Block_Fields extends THWCFD_Admin_Settings{
 						$disabled_cb = $disable_actions ? 'disabled' : '';
 						
 						$non_editable_field = $name === 'email' ? ' not-editable' : '';
+						$not_deletable_field = $name === 'country' ? ' not-deletable' : '';
 					?>
-						<tr class="row_<?php echo esc_attr($i); echo($is_enabled === 1 ? '' : ' thpladmin-disabled');  echo esc_attr($non_editable_field);?>">
+						<tr class="row_<?php echo esc_attr($i); echo($is_enabled === 1 ? '' : ' thpladmin-disabled');  echo esc_attr($non_editable_field); echo esc_attr($not_deletable_field);?>">
 							<td width="1%" class="sort ui-sortable-handle">
 								<input type="hidden" name="f_name[<?php echo esc_attr($i); ?>]" class="f_name" value="<?php echo esc_attr($name); ?>" />
 								<input type="hidden" name="f_order[<?php echo esc_attr($i); ?>]" class="f_order" value="<?php echo esc_attr($i); ?>" />
@@ -282,7 +283,7 @@ class THWCFD_Admin_Settings_Block_Fields extends THWCFD_Admin_Settings{
 
 		try {
 			$field = THWCFD_Utils_Field::prepare_field_from_posted_data($_POST, $this->field_form_props);
-			
+			$this->add_wpml_support($field);
 			if(is_object($field) && isset($field->name) && !empty($field->name) && isset($field->type) && !empty($field->type)){
 				if($action === 'edit'){
 					$section = THWCFD_Utils_Section::update_field($section, $field);
@@ -607,31 +608,36 @@ class THWCFD_Admin_Settings_Block_Fields extends THWCFD_Admin_Settings{
 	}
 
 	private function add_wpml_support($field){
-		$context = 'woo-checkout-field-editor-pro';
-		
-		$label = isset($field['label']) ? $field['label'] : '';
-		if($label){
-			$name = 'Field label - ' . $label;
-			do_action( 'wpml_register_single_string', 'woo-checkout-field-editor-pro', $name, $label );
-		}
 
-		$placeholder = isset($field['placeholder']) ? $field['placeholder'] : '';
-		if($placeholder){
-			$name = 'Field placeholder - ' . $placeholder;
-			do_action( 'wpml_register_single_string', 'woo-checkout-field-editor-pro', $name, $placeholder );
-		}
+		if(isset($field->property_set) && $field->property_set){
+			$field = $field->property_set;
+			$context = 'woo-checkout-field-editor-pro';
+			
+			$label = isset($field['label']) ? $field['label'] : '';
+			if($label){
+				$name = 'Field label - ' . $label;
+				do_action( 'wpml_register_single_string', 'woo-checkout-field-editor-pro', $name, $label );
+			}
 
-		$options = isset($field['options']) ? $field['options'] : '';
-		if($options){
-			if(is_array($options)){
-				$index = 0;
-				foreach($options as $option_value => $option_text){
-					$name = 'Field option text - ' . $option_text;
-					do_action( 'wpml_register_single_string', 'woo-checkout-field-editor-pro', $name, $option_text );
-					$index++;
+			$placeholder = isset($field['placeholder']) ? $field['placeholder'] : '';
+			if($placeholder){
+				$name = 'Field placeholder - ' . $placeholder;
+				do_action( 'wpml_register_single_string', 'woo-checkout-field-editor-pro', $name, $placeholder );
+			}
+
+			$options = isset($field['options']) ? $field['options'] : '';
+			if($options){
+				if(is_array($options)){
+					$index = 0;
+					foreach($options as $option_value => $option_text){
+						$name = 'Field option text - ' . $option_text;
+						do_action( 'wpml_register_single_string', 'woo-checkout-field-editor-pro', $name, $option_text );
+						$index++;
+					}
 				}
 			}
 		}
+		
 	}
 }
 

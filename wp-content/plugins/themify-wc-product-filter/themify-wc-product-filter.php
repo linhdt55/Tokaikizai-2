@@ -4,7 +4,7 @@
  * Plugin Name:       Themify - WooCommerce Product Filter
  * Plugin URI:        https://themify.me/themify-product-filter
  * Description:       This plugin allows you to create unlimited product filters for WooCommerce. Users can refine product search by applying multiple filters/conditions such as categories, tags, price, in-stock, on-sale, and even attributes such as colors and sizes.
- * Version:           1.5.2 
+ * Version:           1.5.4 
  * Author:            Themify
  * Author URI:        https://themify.me
  * Text Domain:       wpf
@@ -52,7 +52,7 @@ function run_wpf() {
     */
     require plugin_dir_path(__FILE__) . 'includes/class-wpf.php';
     $wpf = WPF::get_instance();
-    $wpf->set_version( '1.5.2' );
+    $wpf->set_version( '1.5.4' );
     $wpf->init();
 }
 

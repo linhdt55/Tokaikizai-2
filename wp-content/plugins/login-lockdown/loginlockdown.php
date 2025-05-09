@@ -3,16 +3,16 @@
   Plugin Name: Login Lockdown
   Plugin URI: https://wploginlockdown.com/
   Description: Protect the login form by banning IPs after multiple failed login attempts.
-  Version: 2.11
+  Version: 2.12
   Author: WebFactory Ltd
   Author URI: https://www.webfactoryltd.com/
   License: GNU General Public License v3.0
   Text Domain: login-lockdown
   Requires at least: 4.0
-  Tested up to: 6.6
+  Tested up to: 6.8
   Requires PHP: 5.2
 
-  Copyright 2022 - 2024  WebFactory Ltd  (email: support@webfactoryltd.com)
+  Copyright 2022 - 2025  WebFactory Ltd  (email: support@webfactoryltd.com)
   Copyright 2007 - 2022  M. VanDeMar
 
   This program is free software; you can redistribute it and/or modify
@@ -106,14 +106,13 @@ class LoginLockdown
       add_action('admin_enqueue_scripts', array('LoginLockdown_Admin', 'admin_enqueue_scripts'));
 
       // admin actions
-      add_action('admin_action_loginlockdown_export_settings', array('LoginLockdown_Functions', 'generate_export_file'));
       add_action('admin_action_loginlockdown_install_wp301', array('LoginLockdown_Functions', 'install_wp301'));
 
       // AJAX endpoints
       add_action('wp_ajax_loginlockdown_run_tool', array('LoginLockdown_AJAX', 'ajax_run_tool'));
     } else {
-      add_action('login_form', array('LoginLockdown_Functions', 'login_form_fields'));
-      add_action('woocommerce_login_form', array('LoginLockdown_Functions', 'login_form_fields'));
+      add_action('login_form', array('LoginLockdown_Functions', 'login_form_fields_print'));
+      add_action('woocommerce_login_form', array('LoginLockdown_Functions', 'login_form_fields_print'));
 
       add_action('wp_login_failed', array('LoginLockdown_Functions', 'loginFailed'), 10, 2);
       add_filter('login_errors', array('LoginLockdown_Functions', 'login_error_message'));

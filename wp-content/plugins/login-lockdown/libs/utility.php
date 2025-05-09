@@ -130,7 +130,7 @@ class LoginLockdown_Utility extends LoginLockdown
     $ip = '';
 
     if (!empty($_SERVER['REMOTE_ADDR'])) {
-      $ip = $_SERVER['REMOTE_ADDR'];
+      $ip = sanitize_text_field(wp_unslash($_SERVER['REMOTE_ADDR']));
     }
 
     return $ip;

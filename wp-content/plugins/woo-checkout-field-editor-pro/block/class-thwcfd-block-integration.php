@@ -34,15 +34,21 @@ class THWCFD_Block_Integration implements IntegrationInterface {
 	public function initialize() {
 
 		$this->register_contact_info_block_frontend_scripts();
-		$this->register_contact_info_block_frontend_styles();
-		$this->register_contact_info_block_editor_scripts();
-		$this->register_contact_info_block_editor_styles();
-
 		$this->register_additional_sections_editor_scripts();
-		//$this->register_additional_sections_editor_styles();
+		$this->register_contact_info_block_editor_scripts();
 		$this->register_additional_sections_frontend_scripts();
-		$this->register_additional_sections_frontend_styles();
-		//$this->register_main_integration();
+
+		add_action('wp_enqueue_scripts', array($this, 'register_styles'));
+		add_action('admin_enqueue_scripts', array($this, 'register_styles'));
+	}
+
+	public function register_styles(){
+
+		if (function_exists('has_block') && has_block('woocommerce/checkout')) {
+			$this->register_contact_info_block_frontend_styles();
+			$this->register_contact_info_block_editor_styles();
+			$this->register_additional_sections_frontend_styles();
+		}
 	}
 
 	/**

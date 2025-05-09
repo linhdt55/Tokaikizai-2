@@ -5,7 +5,6 @@
 	 	
 	 	$(".wt-iew-tips").tipTip({'attribute': 'data-wt-iew-tip'});
 
-
 	 	/* tab view */
 	 	var wf_tab_view=
 		{
@@ -688,7 +687,6 @@ var wt_iew_popover=
                         }
 		});
 
-            
 	},
 	regclosePop:function()
 	{

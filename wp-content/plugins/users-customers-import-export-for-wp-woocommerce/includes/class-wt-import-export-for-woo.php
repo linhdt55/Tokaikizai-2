@@ -80,7 +80,7 @@ class Wt_Import_Export_For_Woo_Basic {
 		if ( defined( 'WT_U_IEW_VERSION' ) ) {
 			$this->version = WT_U_IEW_VERSION;
 		} else {
-			$this->version = '2.6.0';
+			$this->version = '2.6.3';
 		}
 		$this->plugin_name = 'wt-import-export-for-woo-basic';
 
@@ -157,7 +157,11 @@ class Wt_Import_Export_For_Woo_Basic {
 		 * Class includes helper functions for bfcm banner
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/banner/class-wtier-bfcm-twenty-twenty-four.php';
-
+	
+		/**
+		 * Includes request a feature class file
+		 */
+		require_once plugin_dir_path(dirname(__FILE__)) . 'admin/modules/request_feature/request_feature.php';
 
 		/**
 		 * Class includes log writing functions
@@ -183,7 +187,7 @@ class Wt_Import_Export_For_Woo_Basic {
 
 		$plugin_i18n = new Wt_Import_Export_For_Woo_i18n_Basic();
 
-		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
+		$this->loader->add_action( 'init', $plugin_i18n, 'load_plugin_textdomain' );
 
 	}
 

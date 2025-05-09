@@ -159,7 +159,7 @@ class Wt_Import_Export_For_Woo_Basic_Product_Export {
         );
 		if( 0 == $batch_offset && 0 == $total_products ){
 				$return_products['no_post'] = __( 'Nothing to export under the selected criteria. Please check if any supported product type ( simple, grouped or external ) is available in the shop or try adjusting the filters.' );
-		}
+		} 
 		return $return_products;
 
     }        
@@ -195,8 +195,12 @@ class Wt_Import_Export_For_Woo_Basic_Product_Export {
                 continue;
             }
 
-            $meta_value = maybe_unserialize(maybe_unserialize($value[0]));
-            
+            if(is_serialized($value[0])){
+                $meta_value = Wt_Import_Export_For_Woo_Basic_Common_Helper::wt_unserialize_safe($value[0]); 
+            } else {
+                $meta_value = $value[0];
+            }
+                        
             if (is_array($meta_value)) {
                 $meta_value = json_encode($meta_value);
             }
@@ -224,7 +228,7 @@ class Wt_Import_Export_For_Woo_Basic_Product_Export {
         // Product attributes
         if (isset($meta_data['_product_attributes'][0])) {
 
-            $attributes = maybe_unserialize(maybe_unserialize($meta_data['_product_attributes'][0]));
+            $attributes = Wt_Import_Export_For_Woo_Basic_Common_Helper::wt_unserialize_safe($meta_data['_product_attributes'][0]);
             
             if (!empty($attributes) && is_array($attributes)) {
                 foreach ($attributes as $key => $attribute) {
@@ -259,7 +263,7 @@ class Wt_Import_Export_For_Woo_Basic_Product_Export {
                     }
 
                     $attribute_data = $attribute['position'] . '|' . $attribute['is_visible'] . '|' . $attribute['is_variation'];
-                    $_default_attributes = isset($meta_data['_default_attributes'][0]) ? maybe_unserialize(maybe_unserialize($meta_data['_default_attributes'][0])) : '';
+                    $_default_attributes = isset($meta_data['_default_attributes'][0]) ? Wt_Import_Export_For_Woo_Basic_Common_Helper::wt_unserialize_safe($meta_data['_default_attributes'][0]) : ''; 
 
                     if (is_array($_default_attributes)) {
                         $default_attribute = isset($_default_attributes[$key_to_find_default_attribute]) ? $_default_attributes[$key_to_find_default_attribute] : '';                        
@@ -357,7 +361,16 @@ class Wt_Import_Export_For_Woo_Basic_Product_Export {
                     }
 
                     // Images
-                    $images = isset($meta_data['_product_image_gallery'][0]) ? explode(',', maybe_unserialize(maybe_unserialize($meta_data['_product_image_gallery'][0]))) : false;
+                    $product_image_gallery = isset($meta_data['_product_image_gallery'][0]) ? $meta_data['_product_image_gallery'][0] : '';
+                    $images = array(); // Ensure $images is always an array
+                    if (is_serialized($product_image_gallery)) { 
+                        $images = Wt_Import_Export_For_Woo_Basic_Common_Helper::wt_unserialize_safe($product_image_gallery);
+                        if( ! is_array( $images ) ) { 
+                            $images = explode(',', $product_image_gallery); 
+                        } 
+                    } else {
+                        $images = is_string($product_image_gallery) ? explode(',', $product_image_gallery) : array();
+                    }
                     $results = array();
                     if ($images) {
                         foreach ($images as $image_id) {
@@ -397,7 +410,7 @@ class Wt_Import_Export_For_Woo_Basic_Product_Export {
                 if ('file_paths' == $column || 'downloadable_files' == $column) {
                     $file_paths_to_export = array();
                     if (!function_exists('wc_get_filename_from_url')) {
-                        $file_paths = maybe_unserialize(maybe_unserialize($meta_data['_file_paths'][0]));
+                        $file_paths = Wt_Import_Export_For_Woo_Basic_Common_Helper::wt_unserialize_safe($meta_data['_file_paths'][0]);
 
                         if ($file_paths) {
                             foreach ($file_paths as $file_path) {
@@ -408,7 +421,7 @@ class Wt_Import_Export_For_Woo_Basic_Product_Export {
                         $file_paths_to_export = implode(' | ', $file_paths_to_export);
                         $row[] = self::format_data($file_paths_to_export);
                     } elseif (isset($meta_data['_downloadable_files'][0])) {
-                        $file_paths = maybe_unserialize(maybe_unserialize($meta_data['_downloadable_files'][0]));
+                        $file_paths = Wt_Import_Export_For_Woo_Basic_Common_Helper::wt_unserialize_safe($meta_data['_downloadable_files'][0]);
 
                         if (is_array($file_paths) || is_object($file_paths)) {
                             foreach ($file_paths as $file_path) {
